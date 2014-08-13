@@ -108,16 +108,14 @@ SELECT DISTINCT * WHERE {
     
     resultset=json.loads(json_string)
 
-    #print resultset.values()
-    print str(len(resultset["results"]["bindings"]))
-    
+    print resultset.values()
+
 
     if len(resultset["results"]["bindings"]) == 0:
         print "INFO: No result!"
     else:
         #print json.dumps(resultset,indent=1)
-        #for i in range(0, len(resultset["results"]["bindings"])):
-        for i in range(0, 1):
+        for i in range(0, len(resultset["results"]["bindings"])):
              newPDDI = getPDDIDict()
              newPDDI["evidence"] = resultset["results"]["bindings"][i]["evidence"]["value"]
              newPDDI["researchStatement"] = resultset["results"]["bindings"][i]["asrt"]["value"]
@@ -144,9 +142,8 @@ SELECT DISTINCT * WHERE {
              newPDDI["researchStatementLabel"] = resultset["results"]["bindings"][i]["researchStatementLabel"]["value"]
 
              pddiDictL.append(newPDDI)
-    print str(pddiDictL)
 
-    f = open("../data/dikb-observed-ddis-test.pickle","w")
+    f = open("dikb-observed-ddis.pickle","w")
     pickle.dump(pddiDictL, f)
     f.close()
    

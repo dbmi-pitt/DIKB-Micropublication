@@ -30,31 +30,39 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from rdflib import Graph, BNode, Literal, Namespace, URIRef, RDF, RDFS
 
 ## to retrieve from PubMed
-from Bio import Entrez
-
+from Bio.EUtils  import HistoryClient
 
 ################################################################################
 # Globals
 ################################################################################
 PRE_POST_CHARS=50
-#OUT_FILE="../data/initial-dikb-mp-oa-Aug2014.xml"
-OUT_FILE="../data/initial-dikb-mp-oa-Aug2014-test.xml"
-
+OUT_FILE="../data/initial-dikb-mp-oa-Aug2014.xml"
+# THE GLOBAL QUERY CLIENT
+client1 = HistoryClient.HistoryClient()
 
 ################################################################################
 # Functions
 ################################################################################
 
-## correctly retrieve PubMed abstracts using PMIDs
+## TODO: modify this function to correctly retrieve PubMed abstracts using PMIDs
 def retrieveByEUtils(pmid, limit=None):
     rslt_D = {}
+    q = '''%s [UID]''' % (pmid)
+    rslts = client1.search(q)
 
-    Entrez.email = 'pharmgx@gmail.com'
-    rec_abs = Entrez.efetch(db="pubmed", id=pmid, rettype="abstract", Retmode="text")
-    data = rec_abs.read()
+    print "INFO: %d results" % len(rslts)
+    
+    if len(rslts) == 1:
+        rec = rslts[0].efetch(retmode = "text", rettype = "abstract").read()
+        id = re.findall("PMID: \d+",rec)
+        id = " ".join(id)
+        id = id[6:]
+        newD = {"pmid":id,
+                "abstract":rec}
+                
+        rslt_D[id] = newD
 
-    return data
-
+    return rslt_D
 
 def getSPLSectionsSparql(spl, sparql):
     splUri = "http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/" + spl.strip()
@@ -147,8 +155,6 @@ linkedspls = Namespace('file:///home/rdb20/Downloads/d2rq-0.8.1/linkedSPLs-dump.
 poc = Namespace('http://purl.org/net/nlprepository/spl-ddi-annotation-poc#')
 ncbit = Namespace('http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#')
 dikbEvidence = Namespace('http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#')
-mp = Namespace('http://purl.org/mp/') # namespace for micropublication
-
 
 
 graph = Graph()
@@ -172,7 +178,7 @@ graph.namespace_manager.bind('linkedspls','file:///home/rdb20/Downloads/d2rq-0.8
 graph.namespace_manager.bind('poc','http://purl.org/net/nlprepository/spl-ddi-annotation-poc#')
 graph.namespace_manager.bind('ncbit','http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#')
 graph.namespace_manager.bind('dikbEvidence','http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#')
-graph.namespace_manager.bind('mp','http://purl.org/mp/')
+
 
 ### open annotation ontology properties and classes
 graph.add((dctypes["Collection"], RDFS.label, Literal("Collection"))) # Used in lieau of the AnnotationSet https://code.google.com/p/annotation-ontology/wiki/AnnotationSet
@@ -262,167 +268,141 @@ graph.add((poc['not-important'], dcterms["description"], Literal("The pharmacoge
 ################################################################################
 
 # OBSERVED DDIs
-data_set = pickle.load( open( "../data/dikb-observed-ddis-test.pickle", "rb" ) )
-#data_set = pickle.load( open( "../data/dikb-observed-ddis.pickle", "rb" ) )
+data_set = pickle.load( open( "../data/dikb-observed-ddis.pickle", "rb" ) )
 
 annotationSetCntr = 1
 annotationItemCntr = 1
-
-annotationDataCntr = 1
-annotationMaterialCntr = 1
-annotationMethodCntr = 1
-
+annotationBodyCntr = 1
 annotationEvidenceCntr = 1
 annotationReStatementCntr = 1
-
 splSetIdCache = {} 
-source = ""
+
 graph = Graph()
 
 ## TODO: the code needs to be modified so that the same targets have multiple bodies if that is necessary
 
 for item in data_set:     ## <-------- Use the list of PDDI dictionary instances from the pickle
 
+    ###################################################################
+    ### EACH SPL HAS A SET OF ANNOTATIONS, EACH WITH A TARGET AND BODY 
+    ###################################################################
+    setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/","") 
+    print setid
 
-    ## parse oa:selector in OA, extract the 'exact' drug interaction statement
+    if setid not in splSetIdCache.keys():
+        currentAnnotSet = 'ddi-spl-annotation-set-%s' % annotationSetCntr # this is what is indicated by "ex:" in the diagram, a resource with a unique id. I recall that the convention is used in the Open Data Annotation specification too
+        splSetIdCache[setid] = currentAnnotSet
+        annotationSetCntr += 1
+        
+        graph.add((poc[currentAnnotSet], RDF.type, oa["DataAnnotation"])) # TODO: find out what is being used for collections in OA
+        graph.add((poc[currentAnnotSet], oa["annotatedAt"], Literal(datetime.date.today())))
+        graph.add((poc[currentAnnotSet], oa["annotatedBy"], URIRef(u"http://www.pitt.edu/~rdb20/triads-lab.xml#TRIADS")))
+        graph.add((poc[currentAnnotSet], oa["hasSource"], Literal(item["evidenceSource"]))) 
+         
+    else:
+        currentAnnotSet = splSetIdCache[setid]
+         
+    currentAnnotItem = "ddi-spl-annotation-item-%s" % annotationItemCntr
+    annotationItemCntr += 1
+
+    graph.add((poc[currentAnnotSet], aoOld["item"], poc[currentAnnotItem])) # TODO: find out what is being used for items of collections in OA
+    graph.add((poc[currentAnnotItem], RDF.type, oa["DataAnnotation"]))
+    graph.add((poc[currentAnnotItem], oa["annotatedAt"], Literal(item["dateAnnotated"])))
+    graph.add((poc[currentAnnotItem], oa["annotatedBy"], Literal(item["whoAnnotated"]))) # TODO: add 'boycer' to the TRIADS graph and change this annotatedBy to use #boycer
+    graph.add((poc[currentAnnotItem], oa["motivatedBy"], oa["tagging"]))
+    
+### SPECIFY THE TARGET OF THE ANNOTATION - FOR THIS PROJECT, TARGETS ARE ONE OR MORE PORTIONS OF TEXT FROM A GIVEN SPL
+    currentAnnotItemUuid = URIRef(u"urn:uuid:%s" % uuid.uuid4())
+    textConstraintUuid = URIRef(u"urn:uuid:%s" % uuid.uuid1())
+
+    graph.add((poc[currentAnnotItem], oa["hasTarget"], currentAnnotItemUuid))
+
+    if item["evidenceType"] == u'http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement':
+        graph.add((currentAnnotItemUuid, oa["constrains"], Literal(u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid))))
+    else:
+        ## TODO: handle those items from the scientific literature  - i.e., sources from PubMed
+        continue
+
+    graph.add((currentAnnotItemUuid, RDF.type, poc["SPLConstrainedTarget"]))
+    graph.add((currentAnnotItemUuid, RDF.type, oa["ConstrainedTarget"]))
+    graph.add((currentAnnotItemUuid, oa["constrainedBy"], textConstraintUuid))
+         
+    graph.add((textConstraintUuid, RDF.type, oa["SpecificResource"]))
+    graph.add((textConstraintUuid, RDF.type, poc["SPLConstrainedTarget"]))
+
+    contentD == {}
+    if item["evidenceType"] != u'http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement':
+        ## TODO: handle those items from the scientific literature  - i.e., sources from PubMed. Use eutils to retrieve the abstract
+    else:
+        ## TODO: handle those items from the structured product labels
+
+        ## TODO: locate the section within the SPL
+        # The process would be something like this:
+        # 1. extract the 'exact' drug interaction statement (i.e., the string that is the exact quote from the product label)
+        # 2. identify the 'pre' and 'post' string. 
+        # 2a. First, acquire the text for the sections that are important in the SPL that is indicated by the setid
+        # 2b. then search for the 'exact' string in each section until you find a match.
+        # 2c. then pull the 'pre' and 'post' text - say 50 characters (PRE_POST_CHAR_NUM = 50)
+        # NOTE: its important to process the text as Unicode (e.g., a bytestream)
+        print "GETTING SECTIONS FOR SETID: %s" % setid
+        
+        try:
+            contentD = getSPLSectionsSparql(setid, lsplsparql)
+        except urllib2.HTTPError:
+            print "There is a problem retreiving the SPL content for setid %s. %s" % (setid, urllib2.HTTPError)
+
+    if contentD == {}:
+        continue
+        
+    ####extract the 'exact' drug interaction statement
     index_quoted = item["evidenceStatement"].find('Quote') ## TODO: use a regular expression because the quote syntax is sometimes slightly different
     
     if index_quoted > 0:
         exact=item["evidenceStatement"][index_quoted:]
     else:
-        exact=item["evidenceStatement"]        
-        rgx = re.compile(u"quote ?:", re.I)
-        exact = unicode(rgx.sub(u"",exact))
-
-    
-## when evidence froms from dailymed
-    if item["evidenceType"] == u'http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement':
-
-        if "resource/structuredProductLabelMetadata/" in item["evidenceSource"]:
-            setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/","")
-        if "page/structuredProductLabelMetadata/" in item["evidenceSource"]:
-            setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/","")
-
-
-        if setid not in splSetIdCache.keys():
-# this is what is indicated by "ex:" in the diagram, a resource with a unique id. I recall that the convention is used in the Open Data Annotation specification too         
-            currentAnnotSet = 'ddi-spl-annotation-set-%s' % annotationSetCntr 
-        else:
-            currentAnnotSet = splSetIdCache[setid]         
-
-            splSetIdCache[setid] = currentAnnotSet
-        annotationSetCntr += 1
+        exact=item["evidenceStatement"]
         
-        #print "SETID:" + setid
-        source = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
+    rgx = re.compile(u"quote ?:", re.I)
+    exact = rgx.sub(u"",exact)
 
-        print source + "|"
-        print "GETTING SECTIONS FOR DAILYMED: %s" % source
-        
-        try:
-            contentD = getSPLSectionsSparql(setid, lsplsparql)
-            if contentD == {}:
-                continue
     
-        #identify the 'pre' and 'post' string
-            section_text = ""
-            index_exact = -1
-            max_match = 0
+    ####identify the 'pre' and 'post' string
+    section_text = ""
+    index_exact = -1
+    max_match = 0
     
-            for k,v in contentD.iteritems(): 
-                if not v:
-                    continue
+    for k,v in contentD.iteritems(): 
+        if not v:
+            continue
             
-                s = difflib.SequenceMatcher(None, exact, v)
-                match_tuples = s.find_longest_match(0, len(exact),0 , len(v))
+        s = difflib.SequenceMatcher(None, exact, v)
+        match_tuples = s.find_longest_match(0, len(exact),0 , len(v))
         
-                if match_tuples[2] > max_match :
-                    max_match = match_tuples[2]
-                    index_exact = match_tuples[1]
-                    section_text = v
+        if match_tuples[2] > max_match :
+            max_match = match_tuples[2]
+            index_exact = match_tuples[1]
+            section_text = v
         
-                #print max_match
-                print "index_exact - dailymed: " + str(index_exact)
+    print max_match
+    print index_exact
 
-        except urllib2.HTTPError:
-            print "problem in retrieving SPL contents"
-            #print "There is a problem retreiving the SPL content for setid %s. %s" % (setid, urllib2.HTTPError)
+    if index_exact < PRE_POST_CHARS:
+        prefix = section_text[0:index_exact]
+    else: 
+        prefix = section_text[0:PRE_POST_CHARS]
 
-
-
-## when evidence forms from pubmed
+    if index_exact + len(exact) + PRE_POST_CHARS > len(section_text):
+        postfix = section_text[index_exact+len(exact):]
     else:
-        currentAnnotSet = 'ddi-spl-annotation-set-%s' % annotationSetCntr
-        annotationSetCntr += 1 
-        pmid = item["evidenceSource"].replace("http://www.ncbi.nlm.nih.gov/pubmed/","")
-        srouce = unicode(item["evidenceSource"])
+        postfix = section_text[index_exact+len(exact):index_exact+len(exact)+PRE_POST_CHARS]
 
-
-       ## TODO: handle those items from the scientific literature  - i.e., sources from PubMed. Use eutils to retrieve the abstract                    
-        #print "GETTING SECTIONS FOR PUBMED: %s" % item["evidenceSource"]
-
-        section_text = retrieveByEUtils(pmid).decode("utf8")
-        #print str("Abstract:"+section_text)
-
-        # match exact in abstract to get prefix and postfix
-        index_exact = section_text.find(exact)
-
-            
-## parse to get prefix and postfix based on exact and index_exact
-    if index_exact >= 0:
-
-        if index_exact < PRE_POST_CHARS:
-            prefix = section_text[0:index_exact]
-        else: 
-            prefix = section_text[int(index_exact - PRE_POST_CHARS):int(index_exact-1)]
-
-        if index_exact + len(exact) + PRE_POST_CHARS > len(section_text):
-            postfix = section_text[index_exact+len(exact):]
-        else:
-            postfix = section_text[index_exact+len(exact):index_exact+len(exact)+PRE_POST_CHARS]
-    else:
-        prefix = ""
-        postfix = ""
 		      	  
-    #print u"EXACT: %s" % exact
+    print u"EXACT: %s" % exact
 	
     print u"PRE: %s" % prefix
 	
     print u"POST: %s" % postfix
-
-
-##### create RDF graph begins, based on OA and MicroPublications Standards        
-
-    ###################################################################
-    ### EACH SPL HAS A SET OF ANNOTATIONS, EACH WITH A TARGET AND BODY 
-    ###################################################################
-
-    currentAnnotItem = "ddi-spl-annotation-item-%s" % annotationItemCntr
-    annotationItemCntr += 1
-
-    graph.add((poc[currentAnnotSet], aoOld["item"], poc[currentAnnotItem])) 
-    
-    graph.add((poc[currentAnnotItem], RDF.type, oa["Annotation"]))
-
-    graph.add((poc[currentAnnotItem], oa["annotatedAt"], Literal(item["dateAnnotated"])))
-    graph.add((poc[currentAnnotItem], oa["annotatedBy"], Literal(item["whoAnnotated"]))) 
-# TODO: add 'boycer' to the TRIADS graph and change this annotatedBy to use #boycer
-    graph.add((poc[currentAnnotItem], oa["motivatedBy"], oa["tagging"]))
-    
-### SPECIFY THE TARGET OF THE ANNOTATION - FOR THIS PROJECT, TARGETS ARE ONE OR MORE PORTIONS OF TEXT FROM A GIVEN SPL
-    currentAnnotTargetUuid = URIRef(u"urn:uuid:%s" % uuid.uuid4())
-    textConstraintUuid = URIRef(u"urn:uuid:%s" % uuid.uuid1())
-
-
-    graph.add((poc[currentAnnotItem], oa["hasTarget"], currentAnnotTargetUuid))
-
-    #graph.add((currentAnnotTargetUuid, RDF.type, poc["SPLConstrainedTarget"]))
-    #graph.add((currentAnnotTargetUuid, RDF.type, oa["ConstrainedTarget"]))
-    graph.add((currentAnnotTargetUuid, RDF.type, oa["SpecificResource"]))
-    graph.add((currentAnnotTargetUuid, oa["hasSource"], Literal(source)))
-
-    graph.add((currentAnnotTargetUuid, oa["hasSelector"], textConstraintUuid))
-    graph.add((textConstraintUuid, RDF.type, oa["TextQuoteSelector"]))
+        
     graph.add((textConstraintUuid, oa["exact"], Literal(exact)))
     graph.add((textConstraintUuid, oa["prefix"], Literal(prefix)))
     graph.add((textConstraintUuid, oa["postfix"], Literal(postfix))) 
@@ -430,58 +410,33 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
 
     ## SPECIFY THE BODIES OF THE ANNOTATION - FOR THIS PROJECT, EACH
     ##  BODY CONTAINS A DDI SEMANTIC LABEL ASSIGNED TO THE TARGET
+    currentAnnotationBody = "ddi-spl-annotation-body-%s" % annotationBodyCntr
+    annotationBodyCntr += 1
+         
+    graph.add((poc[currentAnnotItem], oa["hasBody"], poc[currentAnnotationBody]))
+    graph.add((poc[currentAnnotationBody], RDF.type, poc["PDDIStatement"])) # TODO: this is not yet formalized in a public ontology but should be
+    graph.add((poc[currentAnnotationBody], RDFS.label, Literal("%s (object) - %s (precipitant)" % (item["object"], item["precip"]))))
 
+    #SIO Describes
+    graph.add((poc[currentAnnotationBody], sio["SIO_000563"], poc["PharmacokineticImpact"]))  
+    graph.add((poc[currentAnnotationBody], poc["PharmacokineticImpact"], poc['metabolism-decrease']))
 
-    ## multiple bodies - mp:data, mp:Method, mp:Reference, mp:statement, mp:representation
-
-
-    # Material
-    currentAnnotationMaterial = "ddi-spl-annotation-material-%s" % annotationMaterialCntr
-    annotationMaterialCntr += 1
-
-    graph.add((poc[currentAnnotationMaterial], RDF.type, mp["Material"])) 
-    graph.add((poc[currentAnnotationMaterial], RDFS.label, Literal("%s (object) - %s (precipitant)" % (item["object"], item["precip"]))))
+    #SIO refers to
+    graph.add((poc[currentAnnotationBody], sio["SIO_000628"], dikbD2R['ObjectDrugOfInteraction']))
+    graph.add((poc[currentAnnotationBody], dikbD2R['ObjectDrugOfInteraction'], URIRef(item["objectURI"])))
     
-    graph.add((poc[currentAnnotationMaterial], sio["SIO_000563"], poc["PharmacokineticImpact"]))#SIO Describes  
-    graph.add((poc[currentAnnotationMaterial], poc["PharmacokineticImpact"], poc['metabolism-decrease']))
-
-    graph.add((poc[currentAnnotationMaterial], sio["SIO_000628"], dikbD2R['ObjectDrugOfInteraction']))#SIO refers to
-    graph.add((poc[currentAnnotationMaterial], dikbD2R['ObjectDrugOfInteraction'], URIRef(item["objectURI"])))
+    graph.add((poc[currentAnnotationBody], sio["SIO_000628"], dikbD2R['PrecipitantDrugOfInteraction']))
+    graph.add((poc[currentAnnotationBody], dikbD2R['PrecipitantDrugOfInteraction'], URIRef(item["precipURI"])))
     
-    graph.add((poc[currentAnnotationMaterial], sio["SIO_000628"], dikbD2R['PrecipitantDrugOfInteraction']))
-    graph.add((poc[currentAnnotationMaterial], dikbD2R['PrecipitantDrugOfInteraction'], URIRef(item["precipURI"])))
-
-    # Method : used in data to supports statement
-    currentAnnotationMethod = "ddi-spl-annotation-method-%s" % annotationMethodCntr
-    annotationMethodCntr += 1    
-    graph.add((poc[currentAnnotationMethod], RDF.type, Literal(item["evidenceType"])))
-    graph.add((poc[currentAnnotationMethod], RDF.type, mp["Method"]))
-    graph.add((poc[currentAnnotationMethod], RDF.type, mp["Representation"]))    
-
-    # Data : supports statement
-    currentAnnotationData = "ddi-spl-annotation-data-%s" % annotationDataCntr
-    annotationDataCntr += 1
-    graph.add((poc[currentAnnotationData], RDF.type, mp["Data"]))
-    graph.add((poc[currentAnnotationData], RDF.type, mp["Representation"]))
-    graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal(item["numericVal"])))
-
-    # Claim : is a research statement
-    graph.add((URIRef(item["researchStatement"]), RDF.type, mp["Claim"]))
-    graph.add((URIRef(item["researchStatement"]), RDF.type, mp["Representation"]))
-    graph.add((URIRef(item["researchStatement"]), RDF.type, mp["Statement"]))
-    graph.add((URIRef(item["researchStatement"]), RDFS.label, Literal(item['researchStatementLabel'])))
-    graph.add((URIRef(item["researchStatement"]), mp["qualifiedBy"], Literal("stubbed out")))  
-
-    # relationships
-    graph.add((poc[currentAnnotationMaterial], mp["usedIn"], poc[currentAnnotationMethod]))
-    graph.add((poc[currentAnnotationMethod], mp["supports"], poc[currentAnnotationData]))
-    graph.add((poc[currentAnnotationData], mp["supports"], URIRef(item["researchStatement"])))
-
-    graph.add((poc[currentAnnotationMethod], mp["represents"], poc[currentAnnotItem]))
-    graph.add((poc[currentAnnotationData],mp["represents"], poc[currentAnnotItem]))
- 
-    graph.add((poc[currentAnnotItem], oa["hasBody"], poc[currentAnnotationMethod]))
-    graph.add((poc[currentAnnotItem], oa["hasBody"], poc[currentAnnotationData]))
+    #ex: evidence
+    graph.add((URIRef(item["evidence"]), siocns["content"], poc[currentAnnotItem]))
+    graph.add((URIRef(item["evidence"]), RDF.type, ncbit["Evidence"])) 
+    graph.add((URIRef(item["evidence"]), dikbEvidence["EvidenceType"], dikbEvidence["Non_traceable_Drug_Label_Statement"])) 
+    
+    #ex:researchStatement
+    graph.add((URIRef(item["researchStatement"]), swande["citesAsSupportiveEvidence"],URIRef(item["evidence"]))) 
+    graph.add((URIRef(item["researchStatement"]), RDF.type, swande["ResearchStatement"]))  
+    graph.add((URIRef(item["researchStatement"]), RDFS.label, Literal(item['researchStatementLabel']))) 
 
 # display the graph
 f = codecs.open(OUT_FILE,"w","utf8")
