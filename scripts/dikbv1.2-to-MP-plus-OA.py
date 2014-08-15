@@ -19,7 +19,8 @@ import json
 import urllib2
 import urllib
 import traceback
-import pickle
+#import pickle
+import csv
 import difflib
 
 
@@ -32,13 +33,16 @@ from rdflib import Graph, BNode, Literal, Namespace, URIRef, RDF, RDFS
 ## to retrieve from PubMed
 from Bio import Entrez
 
+#reload(sys);
+#sys.setdefaultencoding("utf8")
+
 
 ################################################################################
 # Globals
 ################################################################################
 PRE_POST_CHARS=50
-#OUT_FILE="../data/initial-dikb-mp-oa-Aug2014.xml"
-OUT_FILE="../data/initial-dikb-mp-oa-Aug2014-test.xml"
+OUT_FILE="../data/initial-dikb-mp-oa-Aug2014.xml"
+#OUT_FILE="../data/initial-dikb-mp-oa-Aug2014-test.xml"
 
 
 ################################################################################
@@ -91,7 +95,6 @@ WHERE {
     sparql.setQuery(qry)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-
     #print "%s" % results
 
     if len(results["results"]["bindings"]) == 0:
@@ -126,7 +129,8 @@ WHERE {
 
 
 ## set up SPARQL for acquiring the SPL sections
-lsplsparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/sparql")
+#lsplsparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/sparql")
+lsplsparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu:8080/sparql")
 
 ## set up RDF graph
 # identify namespaces for other ontologies to be used                                                                                    
@@ -262,8 +266,10 @@ graph.add((poc['not-important'], dcterms["description"], Literal("The pharmacoge
 ################################################################################
 
 # OBSERVED DDIs
-data_set = pickle.load( open( "../data/dikb-observed-ddis-test.pickle", "rb" ) )
+#data_set = pickle.load( open( "../data/dikb-observed-ddis-test.pickle", "rb" ) )
 #data_set = pickle.load( open( "../data/dikb-observed-ddis.pickle", "rb" ) )
+data_set = csv.DictReader(open("../data/dikb-observed-ddis.tsv","rb"), delimiter='\t')
+
 
 annotationSetCntr = 1
 annotationItemCntr = 1
@@ -278,21 +284,28 @@ annotationReStatementCntr = 1
 splSetIdCache = {} 
 source = ""
 graph = Graph()
+mp_list = []
 
 ## TODO: the code needs to be modified so that the same targets have multiple bodies if that is necessary
 
+#for row in data_set:
+#    yield dict([(key, unicode(value, 'utf-8')) for key, value in row.iteritems()])
+
 for item in data_set:     ## <-------- Use the list of PDDI dictionary instances from the pickle
 
-
+    
     ## parse oa:selector in OA, extract the 'exact' drug interaction statement
     index_quoted = item["evidenceStatement"].find('Quote') ## TODO: use a regular expression because the quote syntax is sometimes slightly different
     
     if index_quoted > 0:
         exact=item["evidenceStatement"][index_quoted:]
     else:
-        exact=item["evidenceStatement"]        
+        #decoded_str = html.decode("windows-1252")
+        #encoded_str = decoded_str.encode("utf8")
+        #print "test*****"
+        exact= item["evidenceStatement"]
         rgx = re.compile(u"quote ?:", re.I)
-        exact = unicode(rgx.sub(u"",exact))
+        exact = rgx.sub(u"",exact)
 
     
 ## when evidence froms from dailymed
@@ -316,37 +329,37 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
         #print "SETID:" + setid
         source = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
 
-        print source + "|"
+        #print source + "|"
         print "GETTING SECTIONS FOR DAILYMED: %s" % source
         
         try:
             contentD = getSPLSectionsSparql(setid, lsplsparql)
-            if contentD == {}:
-                continue
-    
-        #identify the 'pre' and 'post' string
-            section_text = ""
-            index_exact = -1
-            max_match = 0
-    
-            for k,v in contentD.iteritems(): 
-                if not v:
-                    continue
-            
-                s = difflib.SequenceMatcher(None, exact, v)
-                match_tuples = s.find_longest_match(0, len(exact),0 , len(v))
-        
-                if match_tuples[2] > max_match :
-                    max_match = match_tuples[2]
-                    index_exact = match_tuples[1]
-                    section_text = v
-        
-                #print max_match
-                print "index_exact - dailymed: " + str(index_exact)
-
         except urllib2.HTTPError:
             print "problem in retrieving SPL contents"
             #print "There is a problem retreiving the SPL content for setid %s. %s" % (setid, urllib2.HTTPError)
+            
+        if contentD == {}:
+            continue
+            
+        print "get spl resultsets from sparql"
+        section_text = ""
+        index_exact = -1
+        max_match = 0
+    
+        for k,v in contentD.iteritems(): 
+            if not v:
+                continue
+
+            s = difflib.SequenceMatcher(None, exact, v)
+            match_tuples = s.find_longest_match(0, len(exact),0 , len(v))
+        
+            if match_tuples[2] > max_match :
+                max_match = match_tuples[2]
+                index_exact = match_tuples[1]
+                section_text = v
+        
+                #print max_match
+            #print "index_exact - dailymed: " + str(index_exact)
 
 
 
@@ -359,9 +372,9 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
 
 
        ## TODO: handle those items from the scientific literature  - i.e., sources from PubMed. Use eutils to retrieve the abstract                    
-        #print "GETTING SECTIONS FOR PUBMED: %s" % item["evidenceSource"]
+        print "GETTING SECTIONS FOR PUBMED: %s" % item["evidenceSource"]
 
-        section_text = retrieveByEUtils(pmid).decode("utf8")
+        section_text = retrieveByEUtils(pmid)
         #print str("Abstract:"+section_text)
 
         # match exact in abstract to get prefix and postfix
@@ -483,6 +496,15 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
     graph.add((poc[currentAnnotItem], oa["hasBody"], poc[currentAnnotationMethod]))
     graph.add((poc[currentAnnotItem], oa["hasBody"], poc[currentAnnotationData]))
 
+
+    ## add prefix, exact, postfix into dict
+    item["prefix"] = prefix
+    item["exact"] = exact
+    item["postfix"] = postfix
+    #print "ITEM:" + str(item)
+    mp_list.append(item)
+
+
 # display the graph
 f = codecs.open(OUT_FILE,"w","utf8")
 #graph.serialize(destination=f,format="xml",encoding="utf8")
@@ -492,10 +514,17 @@ s = graph.serialize(format="xml",encoding="utf8")
 f.write(unicode(s,errors='replace'))
 #print graph.serialize(format="xml")
 f.close
-
 graph.close()
 
 
+## write in tsv file
+try:
+    with open('../data/processed-dikb-observed-ddis.tsv', 'wb') as tsvfile:
 
-
+        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["prefix","postfix","exact","drug1","drug2","objectUri","ddiPkMechanism","contraindication","severity","source","dateAnnotated","precipUri","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel"])
+        writer.writeheader()
+        writer.writerows(mp_list)
+except:
+    print "encoding exception.......  skipped"
+    pass
 

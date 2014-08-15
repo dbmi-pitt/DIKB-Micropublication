@@ -16,9 +16,14 @@ import json
 import urllib2
 import urllib
 import traceback
-import pickle
+#import pickle
+import csv
 import sys
+reload(sys);
+sys.setdefaultencoding("utf8")
+
 sys.path = sys.path + ['.']
+
 
 from PDDI_Model import getPDDIDict
 
@@ -116,41 +121,44 @@ SELECT DISTINCT * WHERE {
         print "INFO: No result!"
     else:
         #print json.dumps(resultset,indent=1)
-        #for i in range(0, len(resultset["results"]["bindings"])):
-        for i in range(0, 1):
+        for i in range(0, len(resultset["results"]["bindings"])):
+        #for i in range(0, 1):
              newPDDI = getPDDIDict()
-             newPDDI["evidence"] = resultset["results"]["bindings"][i]["evidence"]["value"]
-             newPDDI["researchStatement"] = resultset["results"]["bindings"][i]["asrt"]["value"]
-             newPDDI["uri"] = resultset["results"]["bindings"][i]["s"]["value"]
+             newPDDI["evidence"] = resultset["results"]["bindings"][i]["evidence"]["value"].encode("utf8")
+             newPDDI["researchStatement"] = resultset["results"]["bindings"][i]["asrt"]["value"].encode("utf8")
+             newPDDI["uri"] = resultset["results"]["bindings"][i]["s"]["value"].encode("utf8")
 
-             obj =  resultset["results"]["bindings"][i]["object"]["value"]
-             newPDDI["object"] = obj.replace(u"http://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Drugs/",u"").upper()
+             obj =  resultset["results"]["bindings"][i]["object"]["value"].encode("utf8")
+             newPDDI["object"] = obj.replace(u"http://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Drugs/",u"").upper().encode("utf8")
 
-             precip = resultset["results"]["bindings"][i]["precip"]["value"]
-             newPDDI["precip"] = precip.replace(u"http://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Drugs/",u"").upper()
+             precip = resultset["results"]["bindings"][i]["precip"]["value"].encode("utf8")
+             newPDDI["precip"] = precip.replace(u"http://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Drugs/",u"").upper().encode("utf8")
 
-             newPDDI["objectURI"] = resultset["results"]["bindings"][i]["objectURI"]["value"]
-             newPDDI["precipURI"] = resultset["results"]["bindings"][i]["precipURI"]["value"]
-             newPDDI["label"] = resultset["results"]["bindings"][i]["label"]["value"]
-             newPDDI["homepage"] = resultset["results"]["bindings"][i]["homepage"]["value"]
-             newPDDI["numericVal"] = resultset["results"]["bindings"][i]["numericVal"]["value"]
-             newPDDI["contVal"] = resultset["results"]["bindings"][i]["contVal"]["value"]
-             newPDDI["ddiPkEffect"] = resultset["results"]["bindings"][i]["ddiPkEffect"]["value"]
-             newPDDI["evidenceSource"] = resultset["results"]["bindings"][i]["evSource"]["value"]
-             newPDDI["evidenceType"] = resultset["results"]["bindings"][i]["evType"]["value"]
-             newPDDI["evidenceStatement"] = resultset["results"]["bindings"][i]["content"]["value"]
-             newPDDI["dateAnnotated"] = resultset["results"]["bindings"][i]["dateAnnotated"]["value"]
-             newPDDI["whoAnnotated"] = resultset["results"]["bindings"][i]["whoAnnotated"]["value"]
-             newPDDI["researchStatementLabel"] = resultset["results"]["bindings"][i]["researchStatementLabel"]["value"]
+             newPDDI["objectURI"] = resultset["results"]["bindings"][i]["objectURI"]["value"].encode("utf8")
+             newPDDI["precipURI"] = resultset["results"]["bindings"][i]["precipURI"]["value"].encode("utf8")
+             newPDDI["label"] = resultset["results"]["bindings"][i]["label"]["value"].encode("utf8")
+             newPDDI["homepage"] = resultset["results"]["bindings"][i]["homepage"]["value"].encode("utf8")
+             newPDDI["numericVal"] = resultset["results"]["bindings"][i]["numericVal"]["value"].encode("utf8")
+             newPDDI["contVal"] = resultset["results"]["bindings"][i]["contVal"]["value"].encode("utf8")
+             newPDDI["ddiPkEffect"] = resultset["results"]["bindings"][i]["ddiPkEffect"]["value"].encode("utf8")
+             newPDDI["evidenceSource"] = resultset["results"]["bindings"][i]["evSource"]["value"].encode("utf8")
+             newPDDI["evidenceType"] = resultset["results"]["bindings"][i]["evType"]["value"].encode("utf8")
+             newPDDI["evidenceStatement"] = resultset["results"]["bindings"][i]["content"]["value"].encode("utf8")
+             newPDDI["dateAnnotated"] = resultset["results"]["bindings"][i]["dateAnnotated"]["value"].encode("utf8")
+             newPDDI["whoAnnotated"] = resultset["results"]["bindings"][i]["whoAnnotated"]["value"].encode("utf8")
+             newPDDI["researchStatementLabel"] = resultset["results"]["bindings"][i]["researchStatementLabel"]["value"].encode("utf8")
 
              pddiDictL.append(newPDDI)
-    print str(pddiDictL)
+#    print str(pddiDictL)
 
-    f = open("../data/dikb-observed-ddis-test.pickle","w")
-    pickle.dump(pddiDictL, f)
-    f.close()
-   
+#    f = open("../data/dikb-observed-ddis-test.pickle","w")
+#    pickle.dump(pddiDictL, f)
+#    f.close()
 
-    
-    
-    
+    ## write dict to tsv file
+
+    with open('../data/dikb-observed-ddis.tsv', 'wb') as tsvfile:
+        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["drug1","drug2","objectUri","ddiPkMechanism","contraindication","severity","source","dateAnnotated","precipUri","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel"])
+        writer.writeheader()
+        for line in pddiDictL:
+            writer.writerow(line)
