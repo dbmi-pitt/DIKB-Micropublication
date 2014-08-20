@@ -122,7 +122,7 @@ SELECT DISTINCT * WHERE {
     else:
         #print json.dumps(resultset,indent=1)
         for i in range(0, len(resultset["results"]["bindings"])):
-        #for i in range(0, 1):
+        #for i in range(10, 11):
              newPDDI = getPDDIDict()
              newPDDI["evidence"] = resultset["results"]["bindings"][i]["evidence"]["value"].encode("utf8")
              newPDDI["researchStatement"] = resultset["results"]["bindings"][i]["asrt"]["value"].encode("utf8")

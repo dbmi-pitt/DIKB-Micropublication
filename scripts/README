@@ -1,0 +1,28 @@
+---------------------------------------------------------------------------
+pre-requisition
+---------------------------------------------------------------------------
+
+python libraries:
+
+(1) Bio 
+from "http://biopython.org/wiki/Download"
+
+(2) rdflib 
+
+(3) SPARQLWrapper 
+from "https://github.com/RDFLib/sparqlwrapper/releases"
+
+(4) rdflib-jsonld
+from "https://github.com/RDFLib/rdflib-jsonld"
+
+---------------------------------------------------------------------------
+how this program works
+---------------------------------------------------------------------------
+
+(1) run python script to send sparql query against virtuoso endpoint.
+output is a tsv file contains DDI assertions associated with evidences in DIKB.
+
+$ python query-DIKB-DDIs.py
+
+(2) run script to create XML/RDF graph representes drug drug interactions in OA and Micropublication standard
+

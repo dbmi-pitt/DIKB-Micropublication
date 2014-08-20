@@ -332,12 +332,15 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
         #print source + "|"
         print "GETTING SECTIONS FOR DAILYMED: %s" % source
         
+        contentD = {}
+
         try:
             contentD = getSPLSectionsSparql(setid, lsplsparql)
+            
         except urllib2.HTTPError:
             print "problem in retrieving SPL contents"
             #print "There is a problem retreiving the SPL content for setid %s. %s" % (setid, urllib2.HTTPError)
-            
+
         if contentD == {}:
             continue
             
@@ -469,26 +472,40 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
     annotationMethodCntr += 1    
     graph.add((poc[currentAnnotationMethod], RDF.type, Literal(item["evidenceType"])))
     graph.add((poc[currentAnnotationMethod], RDF.type, mp["Method"]))
-    graph.add((poc[currentAnnotationMethod], RDF.type, mp["Representation"]))    
+    #graph.add((poc[currentAnnotationMethod], RDF.type, mp["Representation"]))    
 
     # Data : supports statement
     currentAnnotationData = "ddi-spl-annotation-data-%s" % annotationDataCntr
     annotationDataCntr += 1
     graph.add((poc[currentAnnotationData], RDF.type, mp["Data"]))
-    graph.add((poc[currentAnnotationData], RDF.type, mp["Representation"]))
+
+    if item["ddiPkEffect"]:
+        graph.add((poc[currentAnnotationData], dikbD2R["ddiPkEffect"], URIRef(item["ddiPkEffect"])))
+    else:
+        graph.add((poc[currentAnnotationData], dikbD2R["ddiPkEffect"], Literal("stubbed out")))
+
     graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal(item["numericVal"])))
+#    else:
+#        graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal("stubbed out")))
 
     # Claim : is a research statement
     graph.add((URIRef(item["researchStatement"]), RDF.type, mp["Claim"]))
-    graph.add((URIRef(item["researchStatement"]), RDF.type, mp["Representation"]))
+    #graph.add((URIRef(item["researchStatement"]), RDF.type, mp["Representation"]))
     graph.add((URIRef(item["researchStatement"]), RDF.type, mp["Statement"]))
-    graph.add((URIRef(item["researchStatement"]), RDFS.label, Literal(item['researchStatementLabel'])))
+
+    if item['researchStatementLabel']:
+        graph.add((URIRef(item["researchStatement"]), RDFS.label, Literal(item['researchStatementLabel'])))
+    else:
+        graph.add((URIRef(item["researchStatement"]), RDFS.label, Literal("stubbed out")))
+
     graph.add((URIRef(item["researchStatement"]), mp["qualifiedBy"], Literal("stubbed out")))  
 
     # relationships
     graph.add((poc[currentAnnotationMaterial], mp["usedIn"], poc[currentAnnotationMethod]))
     graph.add((poc[currentAnnotationMethod], mp["supports"], poc[currentAnnotationData]))
-    graph.add((poc[currentAnnotationData], mp["supports"], URIRef(item["researchStatement"])))
+    
+    if item["researchStatement"]:
+        graph.add((poc[currentAnnotationData], mp["supports"], URIRef(item["researchStatement"])))
 
     graph.add((poc[currentAnnotationMethod], mp["represents"], poc[currentAnnotItem]))
     graph.add((poc[currentAnnotationData],mp["represents"], poc[currentAnnotItem]))
