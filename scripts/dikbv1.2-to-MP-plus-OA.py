@@ -27,7 +27,7 @@ import difflib
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 ## import RDF related
-from rdflib import Graph, BNode, Literal, Namespace, URIRef, RDF, RDFS
+from rdflib import Graph, BNode, Literal, Namespace, URIRef, RDF, RDFS, XSD
 
 ## to retrieve from PubMed
 from Bio import Entrez
@@ -274,12 +274,14 @@ annotationSetCntr = 1
 annotationItemCntr = 1
 
 annotationDataCntr = 1
+annotationClaimCntr = 1
 annotationMaterialCntr = 1
 annotationMethodCntr = 1
 
 annotationEvidenceCntr = 1
 annotationReStatementCntr = 1
 annotationStatementCntr = 1
+
 
 splSetIdCache = {} 
 source = ""
@@ -420,8 +422,8 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
     
     graph.add((poc[currentAnnotItem], RDF.type, oa["Annotation"]))
 
-    graph.add((poc[currentAnnotItem], oa["annotatedAt"], Literal(item["dateAnnotated"])))
-    graph.add((poc[currentAnnotItem], oa["annotatedBy"], Literal(item["whoAnnotated"]))) 
+    graph.add((poc[currentAnnotItem], oa["annotatedAt"], Literal(item["dateAnnotated"], datatype=XSD.String)))
+    graph.add((poc[currentAnnotItem], oa["annotatedBy"], Literal(item["whoAnnotated"], datatype=XSD.String))) 
 # TODO: add 'boycer' to the TRIADS graph and change this annotatedBy to use #boycer
     graph.add((poc[currentAnnotItem], oa["motivatedBy"], oa["tagging"]))
     
@@ -429,19 +431,19 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
     currentAnnotTargetUuid = URIRef(u"urn:uuid:%s" % uuid.uuid4())
     textConstraintUuid = URIRef(u"urn:uuid:%s" % uuid.uuid1())
 
-
     graph.add((poc[currentAnnotItem], oa["hasTarget"], currentAnnotTargetUuid))
 
     #graph.add((currentAnnotTargetUuid, RDF.type, poc["SPLConstrainedTarget"]))
     #graph.add((currentAnnotTargetUuid, RDF.type, oa["ConstrainedTarget"]))
     graph.add((currentAnnotTargetUuid, RDF.type, oa["SpecificResource"]))
-    graph.add((currentAnnotTargetUuid, oa["hasSource"], Literal(source)))
+    graph.add((currentAnnotTargetUuid, oa["hasSource"], Literal(source, datatype=XSD.String)))
 
     graph.add((currentAnnotTargetUuid, oa["hasSelector"], textConstraintUuid))
     graph.add((textConstraintUuid, RDF.type, oa["TextQuoteSelector"]))
-    graph.add((textConstraintUuid, oa["exact"], Literal(exact)))
-    graph.add((textConstraintUuid, oa["prefix"], Literal(prefix)))
-    graph.add((textConstraintUuid, oa["postfix"], Literal(postfix))) 
+    graph.add((textConstraintUuid, oa["exact"], Literal(exact, datatype=XSD.String)))
+
+    graph.add((textConstraintUuid, oa["prefix"], Literal(prefix, datatype=XSD.String)))
+    graph.add((textConstraintUuid, oa["postfix"], Literal(postfix, datatype=XSD.String))) 
 
 
     ## SPECIFY THE BODIES OF THE ANNOTATION - FOR THIS PROJECT, EACH
@@ -457,60 +459,66 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
         currentAnnotationMaterial = "ddi-spl-annotation-material-%s" % annotationMaterialCntr
         annotationMaterialCntr += 1
 
-        graph.add((poc[currentAnnotationMaterial], RDF.type, mp["Material"])) 
+        graph.add((poc[currentAnnotationMaterial], RDF.type, URIRef(item["evidenceType"]+"_Material"))) 
+        graph.add((URIRef(item["evidenceType"]+"_Material"), RDFS.subClassOf, mp["Material"])) 
+
         graph.add((poc[currentAnnotationMaterial], RDFS.label, Literal("%s (object) - %s (precipitant)" % (item["object"], item["precip"]))))
     
-        graph.add((poc[currentAnnotationMaterial], sio["SIO_000563"], poc["PharmacokineticImpact"]))#SIO Describes  
-        graph.add((poc[currentAnnotationMaterial], poc["PharmacokineticImpact"], poc['metabolism-decrease']))
-
-        graph.add((poc[currentAnnotationMaterial], sio["SIO_000628"], dikbD2R['ObjectDrugOfInteraction']))#SIO refers to
         graph.add((poc[currentAnnotationMaterial], dikbD2R['ObjectDrugOfInteraction'], URIRef(item["objectURI"])))
     
-        graph.add((poc[currentAnnotationMaterial], sio["SIO_000628"], dikbD2R['PrecipitantDrugOfInteraction']))
         graph.add((poc[currentAnnotationMaterial], dikbD2R['PrecipitantDrugOfInteraction'], URIRef(item["precipURI"])))
+
+        ## should revise the query to get dose for object and precipt from old DIKB 
+        graph.add((poc[currentAnnotationMaterial], dikbD2R['precipitantDose'], Literal("stubbed out")))
+        graph.add((poc[currentAnnotationMaterial], dikbD2R['objectDose'], Literal("stubbed out")))
+
+        graph.add((poc[currentAnnotationMaterial], dikbD2R['numberOfParticipants'], Literal("stubbed out")))
+
 
         # Method : used in data to supports statement
         currentAnnotationMethod = "ddi-spl-annotation-method-%s" % annotationMethodCntr
         annotationMethodCntr += 1    
-        graph.add((poc[currentAnnotationMethod], RDF.type, Literal(item["evidenceType"])))
-        graph.add((poc[currentAnnotationMethod], RDF.type, mp["Method"]))
+        graph.add((poc[currentAnnotationMethod], RDF.type, URIRef(item["evidenceType"])))
+        graph.add((URIRef(item["evidenceType"]), RDFS.subClassOf, mp["Method"]))
 
         # Data : supports statement
         currentAnnotationData = "ddi-spl-annotation-data-%s" % annotationDataCntr
         annotationDataCntr += 1
-        graph.add((poc[currentAnnotationData], RDF.type, mp["Data"]))
+        graph.add((poc[currentAnnotationData], RDF.type, URIRef(item["evidenceType"]+"_Data")))
+        graph.add((URIRef(item["evidenceType"]), RDFS.subClassOf, mp["Data"]))
 
         if item["ddiPkEffect"]:
             graph.add((poc[currentAnnotationData], dikbD2R["ddiPkEffect"], URIRef(item["ddiPkEffect"])))
         else:
             graph.add((poc[currentAnnotationData], dikbD2R["ddiPkEffect"], Literal("stubbed out")))
 
-            if item["numericVal"]:
-                graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal(item["numericVal"])))
-            else:
-                graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal("stubbed out")))
+        if item["numericVal"]:
+            graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal(item["numericVal"])))
+        else:
+            graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal("stubbed out")))
 
         # Claim : is a research statement label qualified by assertion URI
+
+	currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % annotationClaimCntr
+        annotationClaimCntr += 1
+
+	graph.add((poc[currentAnnotationClaim],RDF.type, mp["Claim"]))
+
         if item['researchStatementLabel']:
-            graph.add((Literal(item["researchStatementLabel"]),RDF.type, mp["Claim"]))
-            graph.add((Literal(item["researchStatementLabel"]), RDF.type, mp["Statement"]))
+	    graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
 
-            if item['researchStatement']:
-                graph.add((Literal(item["researchStatementLabel"]), mp["qualifiedBy"], URIRef(item["researchStatement"])))
-                graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
+        if item['researchStatement']:
+	    graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["researchStatement"])))
+	    graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
+	else:
+            graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], Literal("stubbed out"))) 
 
-            else:
-                graph.add((Literal(item["researchStatementLabel"]), mp["qualifiedBy"], Literal("stubbed out")))  
 
         # relationships
         graph.add((poc[currentAnnotationMaterial], mp["usedIn"], poc[currentAnnotationMethod]))
         graph.add((poc[currentAnnotationMethod], mp["supports"], poc[currentAnnotationData]))
     
-        if item["researchStatement"]:
-            graph.add((poc[currentAnnotationData], mp["supports"], Literal(item["researchStatementLabel"])))
-
-        graph.add((poc[currentAnnotationMethod], mp["represents"], poc[currentAnnotItem]))
-        graph.add((poc[currentAnnotationData],mp["represents"], poc[currentAnnotItem]))
+        graph.add((poc[currentAnnotationData], mp["supports"], poc[currentAnnotationClaim]))
  
         graph.add((poc[currentAnnotItem], oa["hasBody"], poc[currentAnnotationMethod]))
         graph.add((poc[currentAnnotItem], oa["hasBody"], poc[currentAnnotationData]))
@@ -526,27 +534,31 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
         annotationStatementCntr += 1
 
         graph.add((poc[currentAnnotationStatement], RDF.type, dikbEvidence["Non_traceable_Drug_Label_Statement"]))
-        graph.add((dikbEvidence["Non_traceable_Drug_Label_Statement"], RDF.type, mp["Statement"]))
+        graph.add((dikbEvidence["Non_traceable_Drug_Label_Statement"], RDFS.subClassOf, mp["Statement"]))
 
         # Claim : is a research statement label qualified by assertion URI
+
         if item['researchStatementLabel']:
-            graph.add((Literal(item["researchStatementLabel"]),RDF.type, mp["Claim"]))
-            graph.add((Literal(item["researchStatementLabel"]), RDF.type, mp["Statement"]))
+            currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % annotationClaimCntr
+            annotationClaimCntr += 1
+
+            graph.add((poc[currentAnnotationClaim],RDF.type, mp["Claim"]))
+            graph.add((poc[currentAnnotationClaim], RDF.type, mp["Statement"]))
+
+            graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
 
             if item['researchStatement']:
-                graph.add((Literal(item["researchStatementLabel"]), mp["logicalClaim"], URIRef(item["researchStatement"])))
+                graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], URIRef(item["researchStatement"])))
                 graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
-
             else:
-                graph.add((Literal(item["researchStatementLabel"]), mp["qualifiedBy"], Literal("stubbed out")))  
+                graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], Literal("stubbed out")))  
 
 
         # relationships
         graph.add((poc[currentAnnotItem], oa["hasBody"], poc[currentAnnotationStatement]))
-        graph.add((poc[currentAnnotationStatement], mp["represents"], poc[currentAnnotItem]))
         
         if item['researchStatementLabel']:
-            graph.add((poc[currentAnnotationStatement], mp["supports"], Literal(item["researchStatementLabel"])))
+            graph.add((poc[currentAnnotationStatement], mp["supports"], poc[currentAnnotationClaim]))
         else:
             graph.add((poc[currentAnnotationStatement], mp["supports"], Literal(item["stubbed out"])))
 
@@ -555,7 +567,7 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
     item["prefix"] = prefix
     item["exact"] = exact
     item["postfix"] = postfix
-    #print "ITEM:" + str(item)
+
     mp_list.append(item)
 
 
