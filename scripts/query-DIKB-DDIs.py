@@ -105,6 +105,13 @@ SELECT DISTINCT * WHERE {
    dc:date ?dateAnnotated;
    dc:creator ?whoAnnotated. 
 
+   
+   ?evidence dikbD2R:Evidence_object_dose ?objectDose. 
+
+   ?evidence dikbD2R:Evidence_precip_dose ?precipDose.
+  
+   ?evidence dikbD2R:Evidence_numb_subjects ?numOfSubjects.
+  
 }
      
 """
@@ -147,6 +154,13 @@ SELECT DISTINCT * WHERE {
              newPDDI["dateAnnotated"] = resultset["results"]["bindings"][i]["dateAnnotated"]["value"].encode("utf8")
              newPDDI["whoAnnotated"] = resultset["results"]["bindings"][i]["whoAnnotated"]["value"].encode("utf8")
              newPDDI["researchStatementLabel"] = resultset["results"]["bindings"][i]["researchStatementLabel"]["value"].encode("utf8")
+             
+             #if resultset["results"]["bindings"][i]["objectDose"]:
+             newPDDI["objectDose"] = resultset["results"]["bindings"][i]["objectDose"]["value"].encode("utf8")
+             #if resultset["results"]["bindings"][i]["precipDose"]:
+             newPDDI["precipDose"] = resultset["results"]["bindings"][i]["precipDose"]["value"].encode("utf8")
+             newPDDI["numOfSubjects"] = resultset["results"]["bindings"][i]["numOfSubjects"]["value"].encode("utf8")
+             
 
              pddiDictL.append(newPDDI)
 #    print str(pddiDictL)
@@ -158,7 +172,7 @@ SELECT DISTINCT * WHERE {
     ## write dict to tsv file
 
     with open('../data/dikb-observed-ddis.tsv', 'wb') as tsvfile:
-        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["drug1","drug2","objectUri","ddiPkMechanism","contraindication","severity","source","dateAnnotated","precipUri","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel"])
+        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["drug1","drug2","objectUri","ddiPkMechanism","contraindication","severity","source","dateAnnotated","precipUri","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel","objectDose", "precipDose", "numOfSubjects"])
         writer.writeheader()
         for line in pddiDictL:
             writer.writerow(line)

@@ -468,11 +468,11 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
     
         graph.add((poc[currentAnnotationMaterial], dikbD2R['PrecipitantDrugOfInteraction'], URIRef(item["precipURI"])))
 
-        ## should revise the query to get dose for object and precipt from old DIKB 
-        graph.add((poc[currentAnnotationMaterial], dikbD2R['precipitantDose'], Literal("stubbed out")))
-        graph.add((poc[currentAnnotationMaterial], dikbD2R['objectDose'], Literal("stubbed out")))
+        graph.add((poc[currentAnnotationMaterial], dikbD2R['objectDose'], Literal(item["objectDose"])))
 
-        graph.add((poc[currentAnnotationMaterial], dikbD2R['numberOfParticipants'], Literal("stubbed out")))
+        graph.add((poc[currentAnnotationMaterial], dikbD2R['precipitantDose'], Literal(item["precipDose"])))
+
+        graph.add((poc[currentAnnotationMaterial], dikbD2R['numOfSubjects'], Literal(item["numOfSubjects"])))
 
 
         # Method : used in data to supports statement
@@ -587,7 +587,7 @@ graph.close()
 try:
     with open('../data/processed-dikb-observed-ddis.tsv', 'wb') as tsvfile:
 
-        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["prefix","postfix","exact","drug1","drug2","objectUri","ddiPkMechanism","contraindication","severity","source","dateAnnotated","precipUri","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel"])
+        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["prefix","postfix","exact","drug1","drug2","objectUri","ddiPkMechanism","contraindication","severity","source","dateAnnotated","precipUri","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel","objectDose", "precipDose", "numOfSubjects"])
         writer.writeheader()
         writer.writerows(mp_list)
 except:
