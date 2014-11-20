@@ -30,6 +30,7 @@ np = Namespace('http://www.nanopub.org/nschema#')
 
 def createNanopubs(g):
 	ds = Dataset()
+	ds.namespace_manager.bind("ddi","http://purl.org/net/nlprepository/spl-ddi-annotation-poc#")
 	
 	bindings = g.query(interactSelect)
 	for b in bindings:
@@ -56,13 +57,13 @@ def createNanopubs(g):
 		a.add((b['s'], RDF.type, sio["SIO_010038"]))
 		a.add((b['o'], RDF.type,  sio["SIO_010038"]))
 		
- 	ds.serialize(format='trix')
+ 	print ds.serialize(format='trig')
 
 def main():
 	parser = argparse.ArgumentParser()
 	parser.add_argument('filename', metavar='name', type=str, help='file to process', nargs='+')
 	args = parser.parse_args()
-	print args
+	#print args
 	fnames = args.filename
 	for fn in fnames:
 		g = Graph()
