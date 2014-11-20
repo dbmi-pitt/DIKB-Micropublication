@@ -27,10 +27,13 @@ WHERE {
 
 sio = Namespace('http://semanticscience.org/resource/')
 np = Namespace('http://www.nanopub.org/nschema#')
+w3prov = Namespace('http://www.w3.org/ns/prov#')
 
 def createNanopubs(g):
 	ds = Dataset()
 	ds.namespace_manager.bind("ddi","http://purl.org/net/nlprepository/spl-ddi-annotation-poc#")
+	ds.namespace_manager.bind("prov","http://www.w3.org/ns/prov#")
+	ds.namespace_manager.bind("np", "http://www.nanopub.org/nschema#")
 	
 	bindings = g.query(interactSelect)
 	for b in bindings:
@@ -56,6 +59,9 @@ def createNanopubs(g):
 		a.add((b['s'], URIRef('http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/interactsWith'), b['o']))
 		a.add((b['s'], RDF.type, sio["SIO_010038"]))
 		a.add((b['o'], RDF.type,  sio["SIO_010038"]))
+		
+		prov = ds.add_graph(provURI)
+		prov.add((aURI, w3prov['wasDerivedFrom'], b['inter']))
 		
  	print ds.serialize(format='trig')
 
