@@ -7,787 +7,6 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<ddi:ddi-spl-annotation-material-69-provenance> = {
-    ddi:ddi-spl-annotation-material-69-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-69 .
-}
-
-<ddi:ddi-spl-annotation-material-63-provenance> = {
-    ddi:ddi-spl-annotation-material-63-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-63 .
-}
-
-<ddi:ddi-spl-annotation-material-52-head> = {
-    ddi:ddi-spl-annotation-material-52-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-52-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-52-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-52-pubInfo .
-
-    ddi:ddi-spl-annotation-material-52-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-52-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-52-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-75-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00175> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00175> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-38-head> = {
-    ddi:ddi-spl-annotation-material-38-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-38-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-38-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-38-pubInfo .
-
-    ddi:ddi-spl-annotation-material-38-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-38-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-38-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-72-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00758> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01156> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01156> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-15-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-23-provenance> = {
-    ddi:ddi-spl-annotation-material-23-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-23 .
-}
-
-<ddi:ddi-spl-annotation-material-65-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00343> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-65-head> = {
-    ddi:ddi-spl-annotation-material-65-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-65-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-65-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-65-pubInfo .
-
-    ddi:ddi-spl-annotation-material-65-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-65-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-65-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-12-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00734> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00734> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-8-provenance> = {
-    ddi:ddi-spl-annotation-material-8-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-8 .
-}
-
-<ddi:ddi-spl-annotation-material-37-provenance> = {
-    ddi:ddi-spl-annotation-material-37-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-37 .
-}
-
-<ddi:ddi-spl-annotation-material-31-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-4-provenance> = {
-    ddi:ddi-spl-annotation-material-4-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-4 .
-}
-
-<ddi:ddi-spl-annotation-material-30-provenance> = {
-    ddi:ddi-spl-annotation-material-30-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-30 .
-}
-
-<ddi:ddi-spl-annotation-material-26-provenance> = {
-    ddi:ddi-spl-annotation-material-26-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-26 .
-}
-
-<ddi:ddi-spl-annotation-material-20-head> = {
-    ddi:ddi-spl-annotation-material-20-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-20-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-20-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-20-pubInfo .
-
-    ddi:ddi-spl-annotation-material-20-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-20-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-20-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-29-head> = {
-    ddi:ddi-spl-annotation-material-29-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-29-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-29-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-29-pubInfo .
-
-    ddi:ddi-spl-annotation-material-29-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-29-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-29-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-76-provenance> = {
-    ddi:ddi-spl-annotation-material-76-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-76 .
-}
-
-<ddi:ddi-spl-annotation-material-61-provenance> = {
-    ddi:ddi-spl-annotation-material-61-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-61 .
-}
-
-<ddi:ddi-spl-annotation-material-27-provenance> = {
-    ddi:ddi-spl-annotation-material-27-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-27 .
-}
-
-<ns2:default> = {}
-
-<ddi:ddi-spl-annotation-material-70-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-64-head> = {
-    ddi:ddi-spl-annotation-material-64-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-64-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-64-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-64-pubInfo .
-
-    ddi:ddi-spl-annotation-material-64-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-64-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-64-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-30-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-32-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00715> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01267> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01267> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-46-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-32-head> = {
-    ddi:ddi-spl-annotation-material-32-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-32-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-32-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-32-pubInfo .
-
-    ddi:ddi-spl-annotation-material-32-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-32-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-32-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-50-provenance> = {
-    ddi:ddi-spl-annotation-material-50-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-50 .
-}
-
-<ddi:ddi-spl-annotation-material-3-head> = {
-    ddi:ddi-spl-annotation-material-3-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-3-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-3-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-3-pubInfo .
-
-    ddi:ddi-spl-annotation-material-3-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-3-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-3-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-49-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-49-head> = {
-    ddi:ddi-spl-annotation-material-49-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-49-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-49-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-49-pubInfo .
-
-    ddi:ddi-spl-annotation-material-49-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-49-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-49-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-57-head> = {
-    ddi:ddi-spl-annotation-material-57-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-57-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-57-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-57-pubInfo .
-
-    ddi:ddi-spl-annotation-material-57-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-57-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-57-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-53-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-51-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01238> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-50-head> = {
-    ddi:ddi-spl-annotation-material-50-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-50-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-50-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-50-pubInfo .
-
-    ddi:ddi-spl-annotation-material-50-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-50-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-50-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-58-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00472> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00334> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00334> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-59-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-26-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00246> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00246> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-17-head> = {
-    ddi:ddi-spl-annotation-material-17-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-17-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-17-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-17-pubInfo .
-
-    ddi:ddi-spl-annotation-material-17-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-17-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-17-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-38-provenance> = {
-    ddi:ddi-spl-annotation-material-38-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-38 .
-}
-
-<ddi:ddi-spl-annotation-material-14-provenance> = {
-    ddi:ddi-spl-annotation-material-14-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-14 .
-}
-
-<ddi:ddi-spl-annotation-material-1-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00343> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-45-head> = {
-    ddi:ddi-spl-annotation-material-45-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-45-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-45-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-45-pubInfo .
-
-    ddi:ddi-spl-annotation-material-45-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-45-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-45-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-7-head> = {
-    ddi:ddi-spl-annotation-material-7-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-7-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-7-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-7-pubInfo .
-
-    ddi:ddi-spl-annotation-material-7-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-7-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-7-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-64-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01238> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-36-provenance> = {
-    ddi:ddi-spl-annotation-material-36-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-36 .
-}
-
-<ddi:ddi-spl-annotation-material-9-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-71-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-32-provenance> = {
-    ddi:ddi-spl-annotation-material-32-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-32 .
-}
-
-<ddi:ddi-spl-annotation-material-46-provenance> = {
-    ddi:ddi-spl-annotation-material-46-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-46 .
-}
-
-<ddi:ddi-spl-annotation-material-3-provenance> = {
-    ddi:ddi-spl-annotation-material-3-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-3 .
-}
-
-<ddi:ddi-spl-annotation-material-68-head> = {
-    ddi:ddi-spl-annotation-material-68-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-68-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-68-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-68-pubInfo .
-
-    ddi:ddi-spl-annotation-material-68-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-68-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-68-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-55-provenance> = {
-    ddi:ddi-spl-annotation-material-55-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-55 .
-}
-
-<ddi:ddi-spl-annotation-material-22-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00472> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01182> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01182> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-45-provenance> = {
-    ddi:ddi-spl-annotation-material-45-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-45 .
-}
-
-<ddi:ddi-spl-annotation-material-37-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-74-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00656> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00656> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-36-head> = {
-    ddi:ddi-spl-annotation-material-36-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-36-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-36-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-36-pubInfo .
-
-    ddi:ddi-spl-annotation-material-36-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-36-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-36-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-16-provenance> = {
-    ddi:ddi-spl-annotation-material-16-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-16 .
-}
-
-<ddi:ddi-spl-annotation-material-12-head> = {
-    ddi:ddi-spl-annotation-material-12-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-12-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-12-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-12-pubInfo .
-
-    ddi:ddi-spl-annotation-material-12-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-12-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-12-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-14-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-61-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00277> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00277> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-57-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-40-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01104> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-15-provenance> = {
-    ddi:ddi-spl-annotation-material-15-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-15 .
-}
-
-<ddi:ddi-spl-annotation-material-43-head> = {
-    ddi:ddi-spl-annotation-material-43-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-43-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-43-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-43-pubInfo .
-
-    ddi:ddi-spl-annotation-material-43-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-43-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-43-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-9-provenance> = {
-    ddi:ddi-spl-annotation-material-9-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-9 .
-}
-
-<ddi:ddi-spl-annotation-material-24-provenance> = {
-    ddi:ddi-spl-annotation-material-24-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-24 .
-}
-
-<ddi:ddi-spl-annotation-material-67-provenance> = {
-    ddi:ddi-spl-annotation-material-67-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-67 .
-}
-
-<ddi:ddi-spl-annotation-material-33-head> = {
-    ddi:ddi-spl-annotation-material-33-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-33-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-33-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-33-pubInfo .
-
-    ddi:ddi-spl-annotation-material-33-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-33-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-33-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-7-provenance> = {
-    ddi:ddi-spl-annotation-material-7-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-7 .
-}
-
-<ddi:ddi-spl-annotation-material-3-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-4-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01124> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01124> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-23-head> = {
-    ddi:ddi-spl-annotation-material-23-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-23-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-23-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-23-pubInfo .
-
-    ddi:ddi-spl-annotation-material-23-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-23-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-23-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-68-provenance> = {
-    ddi:ddi-spl-annotation-material-68-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-68 .
-}
-
-<ddi:ddi-spl-annotation-material-16-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00277> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00277> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-42-head> = {
-    ddi:ddi-spl-annotation-material-42-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-42-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-42-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-42-pubInfo .
-
-    ddi:ddi-spl-annotation-material-42-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-42-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-42-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-16-head> = {
-    ddi:ddi-spl-annotation-material-16-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-16-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-16-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-16-pubInfo .
-
-    ddi:ddi-spl-annotation-material-16-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-16-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-16-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-53-provenance> = {
-    ddi:ddi-spl-annotation-material-53-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-53 .
-}
-
-<ddi:ddi-spl-annotation-material-60-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-35-head> = {
-    ddi:ddi-spl-annotation-material-35-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-35-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-35-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-35-pubInfo .
-
-    ddi:ddi-spl-annotation-material-35-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-35-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-35-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-18-head> = {
-    ddi:ddi-spl-annotation-material-18-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-18-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-18-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-18-pubInfo .
-
-    ddi:ddi-spl-annotation-material-18-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-18-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-18-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-21-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00425> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00425> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-67-head> = {
-    ddi:ddi-spl-annotation-material-67-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-67-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-67-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-67-pubInfo .
-
-    ddi:ddi-spl-annotation-material-67-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-67-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-67-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-54-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-66-head> = {
-    ddi:ddi-spl-annotation-material-66-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-66-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-66-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-66-pubInfo .
-
-    ddi:ddi-spl-annotation-material-66-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-66-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-66-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-39-head> = {
-    ddi:ddi-spl-annotation-material-39-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-39-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-39-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-39-pubInfo .
-
-    ddi:ddi-spl-annotation-material-39-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-39-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-39-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-10-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00227> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00227> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-71-head> = {
-    ddi:ddi-spl-annotation-material-71-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-71-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-71-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-71-pubInfo .
-
-    ddi:ddi-spl-annotation-material-71-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-71-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-71-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-39-provenance> = {
-    ddi:ddi-spl-annotation-material-39-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-39 .
-}
-
-<ddi:ddi-spl-annotation-material-12-provenance> = {
-    ddi:ddi-spl-annotation-material-12-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-12 .
-}
-
-<ddi:ddi-spl-annotation-material-72-provenance> = {
-    ddi:ddi-spl-annotation-material-72-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-72 .
-}
-
-<ddi:ddi-spl-annotation-material-19-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00277> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00277> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-8-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00448> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00448> .
-}
-
-<ddi:ddi-spl-annotation-material-25-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00715> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00370> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00370> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-60-head> = {
-    ddi:ddi-spl-annotation-material-60-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-60-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-60-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-60-pubInfo .
-
-    ddi:ddi-spl-annotation-material-60-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-60-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-60-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-18-provenance> = {
-    ddi:ddi-spl-annotation-material-18-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-18 .
-}
-
-<ddi:ddi-spl-annotation-material-28-provenance> = {
-    ddi:ddi-spl-annotation-material-28-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-28 .
-}
-
-<ddi:ddi-spl-annotation-material-58-head> = {
-    ddi:ddi-spl-annotation-material-58-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-58-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-58-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-58-pubInfo .
-
-    ddi:ddi-spl-annotation-material-58-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-58-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-58-pubInfo a np:PublicationInfo .
-}
-
 <ddi:ddi-spl-annotation-material-22-head> = {
     ddi:ddi-spl-annotation-material-22-nanopub a np:Nanopublication ;
         np:hasAssertion ddi:ddi-spl-annotation-material-22-assertion ;
@@ -801,15 +20,19 @@
     ddi:ddi-spl-annotation-material-22-pubInfo a np:PublicationInfo .
 }
 
+<ddi:ddi-spl-annotation-material-51-provenance> = {
+    ddi:ddi-spl-annotation-material-51-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-51 .
+}
+
 <ddi:ddi-spl-annotation-material-65-provenance> = {
     ddi:ddi-spl-annotation-material-65-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-65 .
 }
 
 <ddi:ddi-spl-annotation-material-39-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00857> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00715> .
+    <http://bio2rdf.org/drugbank:DB00857> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00715> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00715> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00715> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-70-provenance> = {
@@ -829,8 +52,8 @@
     ddi:ddi-spl-annotation-material-74-pubInfo a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-material-6-provenance> = {
-    ddi:ddi-spl-annotation-material-6-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-6 .
+<ddi:ddi-spl-annotation-material-61-provenance> = {
+    ddi:ddi-spl-annotation-material-61-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-61 .
 }
 
 <ddi:ddi-spl-annotation-material-62-head> = {
@@ -844,13 +67,6 @@
     ddi:ddi-spl-annotation-material-62-provenance a np:Provenance .
 
     ddi:ddi-spl-annotation-material-62-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-62-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00715> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-53-head> = {
@@ -867,38 +83,31 @@
 }
 
 <ddi:ddi-spl-annotation-material-66-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00425> .
+    <http://bio2rdf.org/drugbank:DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00425> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00425> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00425> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
-<ddi:ddi-spl-annotation-material-73-provenance> = {
-    ddi:ddi-spl-annotation-material-73-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-73 .
+<ddi:ddi-spl-annotation-material-64-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01238> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00285> .
+
+    <http://bio2rdf.org/drugbank:DB00285> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
-<ddi:ddi-spl-annotation-material-4-head> = {
-    ddi:ddi-spl-annotation-material-4-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-4-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-4-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-4-pubInfo .
+<ddi:ddi-spl-annotation-material-12-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00285> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00734> .
 
-    ddi:ddi-spl-annotation-material-4-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-4-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-4-pubInfo a np:PublicationInfo .
+    <http://bio2rdf.org/drugbank:DB00734> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
-<ddi:ddi-spl-annotation-material-38-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00857> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285> .
+<ddi:ddi-spl-annotation-material-3-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00683> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-33-provenance> = {
-    ddi:ddi-spl-annotation-material-33-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-33 .
+    <http://bio2rdf.org/drugbank:DB00683> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-6-head> = {
@@ -932,10 +141,10 @@
 }
 
 <ddi:ddi-spl-annotation-material-41-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01104> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151> .
+    <http://bio2rdf.org/drugbank:DB01104> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01151> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB01151> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-17-provenance> = {
@@ -955,11 +164,17 @@
     ddi:ddi-spl-annotation-material-19-pubInfo a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-material-56-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> .
+<ddi:ddi-spl-annotation-material-38-head> = {
+    ddi:ddi-spl-annotation-material-38-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-38-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-38-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-38-pubInfo .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> a <http://semanticscience.org/resource/SIO_010038> .
+    ddi:ddi-spl-annotation-material-38-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-38-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-38-pubInfo a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-material-29-provenance> = {
@@ -970,24 +185,12 @@
     ddi:ddi-spl-annotation-material-22-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-22 .
 }
 
-<ddi:ddi-spl-annotation-material-56-head> = {
-    ddi:ddi-spl-annotation-material-56-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-56-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-56-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-56-pubInfo .
-
-    ddi:ddi-spl-annotation-material-56-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-56-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-56-pubInfo a np:PublicationInfo .
+<ddi:ddi-spl-annotation-material-33-provenance> = {
+    ddi:ddi-spl-annotation-material-33-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-33 .
 }
 
-<ddi:ddi-spl-annotation-material-73-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00448> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00448> a <http://semanticscience.org/resource/SIO_010038> .
+<ddi:ddi-spl-annotation-material-6-provenance> = {
+    ddi:ddi-spl-annotation-material-6-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-6 .
 }
 
 <ddi:ddi-spl-annotation-material-28-head> = {
@@ -1004,10 +207,10 @@
 }
 
 <ddi:ddi-spl-annotation-material-7-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> .
+    <http://bio2rdf.org/drugbank:DB00196> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00897> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00897> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-55-head> = {
@@ -1057,28 +260,12 @@
     ddi:ddi-spl-annotation-material-60-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-60 .
 }
 
-<ddi:ddi-spl-annotation-material-13-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
 <ddi:ddi-spl-annotation-material-62-provenance> = {
     ddi:ddi-spl-annotation-material-62-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-62 .
 }
 
-<ddi:ddi-spl-annotation-material-59-head> = {
-    ddi:ddi-spl-annotation-material-59-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-59-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-59-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-59-pubInfo .
-
-    ddi:ddi-spl-annotation-material-59-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-59-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-59-pubInfo a np:PublicationInfo .
+<ddi:ddi-spl-annotation-material-56-provenance> = {
+    ddi:ddi-spl-annotation-material-56-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-56 .
 }
 
 <ddi:ddi-spl-annotation-material-41-head> = {
@@ -1092,6 +279,13 @@
     ddi:ddi-spl-annotation-material-41-provenance a np:Provenance .
 
     ddi:ddi-spl-annotation-material-41-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-69-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01076> .
+
+    <http://bio2rdf.org/drugbank:DB01076> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-1-head> = {
@@ -1121,10 +315,36 @@
 }
 
 <ddi:ddi-spl-annotation-material-29-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00472> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151> .
+    <http://bio2rdf.org/drugbank:DB00472> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01151> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB01151> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-4-head> = {
+    ddi:ddi-spl-annotation-material-4-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-4-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-4-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-4-pubInfo .
+
+    ddi:ddi-spl-annotation-material-4-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-4-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-4-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-8-head> = {
+    ddi:ddi-spl-annotation-material-8-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-8-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-8-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-8-pubInfo .
+
+    ddi:ddi-spl-annotation-material-8-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-8-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-8-pubInfo a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-material-40-head> = {
@@ -1154,10 +374,17 @@
 }
 
 <ddi:ddi-spl-annotation-material-50-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285> .
+    <http://bio2rdf.org/drugbank:DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00285> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00285> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-47-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00363> .
+
+    <http://bio2rdf.org/drugbank:DB00363> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-20-provenance> = {
@@ -1169,10 +396,10 @@
 }
 
 <ddi:ddi-spl-annotation-material-2-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641> .
+    <http://bio2rdf.org/drugbank:DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00641> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00641> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-13-head> = {
@@ -1200,24 +427,15 @@
     ddi:ddi-spl-annotation-material-64-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-64 .
 }
 
-<ddi:ddi-spl-annotation-material-14-head> = {
-    ddi:ddi-spl-annotation-material-14-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-14-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-14-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-14-pubInfo .
+<ddi:ddi-spl-annotation-material-57-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00641> .
 
-    ddi:ddi-spl-annotation-material-14-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-14-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-14-pubInfo a np:PublicationInfo .
+    <http://bio2rdf.org/drugbank:DB00641> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
-<ddi:ddi-spl-annotation-material-33-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> a <http://semanticscience.org/resource/SIO_010038> .
+<ddi:ddi-spl-annotation-material-24-provenance> = {
+    ddi:ddi-spl-annotation-material-24-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-24 .
 }
 
 <ddi:ddi-spl-annotation-material-9-head> = {
@@ -1250,11 +468,17 @@
     ddi:ddi-spl-annotation-material-15-pubInfo a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-material-42-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01104> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151> .
+<ddi:ddi-spl-annotation-material-34-head> = {
+    ddi:ddi-spl-annotation-material-34-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-34-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-34-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-34-pubInfo .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151> a <http://semanticscience.org/resource/SIO_010038> .
+    ddi:ddi-spl-annotation-material-34-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-34-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-34-pubInfo a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-material-46-head> = {
@@ -1270,15 +494,18 @@
     ddi:ddi-spl-annotation-material-46-pubInfo a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-material-75-provenance> = {
-    ddi:ddi-spl-annotation-material-75-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-75 .
+<ddi:ddi-spl-annotation-material-71-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00683> .
+
+    <http://bio2rdf.org/drugbank:DB00683> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-48-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01098> .
+    <http://bio2rdf.org/drugbank:DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01098> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01098> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB01098> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-51-head> = {
@@ -1295,73 +522,47 @@
 }
 
 <ddi:ddi-spl-annotation-material-27-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00448> .
+    <http://bio2rdf.org/drugbank:DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00448> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00448> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00448> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-66-provenance> = {
     ddi:ddi-spl-annotation-material-66-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-66 .
 }
 
-<ddi:ddi-spl-annotation-material-25-head> = {
-    ddi:ddi-spl-annotation-material-25-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-25-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-25-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-25-pubInfo .
-
-    ddi:ddi-spl-annotation-material-25-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-25-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-25-pubInfo a np:PublicationInfo .
+<ddi:ddi-spl-annotation-material-57-provenance> = {
+    ddi:ddi-spl-annotation-material-57-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-57 .
 }
 
 <ddi:ddi-spl-annotation-material-36-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00370> .
+    <http://bio2rdf.org/drugbank:DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00370> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00370> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00370> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
-<ddi:ddi-spl-annotation-material-43-provenance> = {
-    ddi:ddi-spl-annotation-material-43-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-43 .
+<ddi:ddi-spl-annotation-material-38-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00857> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00285> .
+
+    <http://bio2rdf.org/drugbank:DB00285> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
-<ddi:ddi-spl-annotation-material-25-provenance> = {
-    ddi:ddi-spl-annotation-material-25-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-25 .
-}
-
-<ddi:ddi-spl-annotation-material-35-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00343> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641> a <http://semanticscience.org/resource/SIO_010038> .
+<ddi:ddi-spl-annotation-material-44-provenance> = {
+    ddi:ddi-spl-annotation-material-44-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-44 .
 }
 
 <ddi:ddi-spl-annotation-material-47-provenance> = {
     ddi:ddi-spl-annotation-material-47-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-47 .
 }
 
-<ddi:ddi-spl-annotation-material-47-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00363> .
+<ddi:ddi-spl-annotation-material-73-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00448> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00363> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-34-head> = {
-    ddi:ddi-spl-annotation-material-34-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-34-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-34-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-34-pubInfo .
-
-    ddi:ddi-spl-annotation-material-34-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-34-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-34-pubInfo a np:PublicationInfo .
+    <http://bio2rdf.org/drugbank:DB00448> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-44-head> = {
@@ -1377,19 +578,24 @@
     ddi:ddi-spl-annotation-material-44-pubInfo a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-material-56-provenance> = {
-    ddi:ddi-spl-annotation-material-56-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-56 .
-}
+<ddi:ddi-spl-annotation-material-14-head> = {
+    ddi:ddi-spl-annotation-material-14-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-14-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-14-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-14-pubInfo .
 
-<ddi:ddi-spl-annotation-material-35-provenance> = {
-    ddi:ddi-spl-annotation-material-35-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-35 .
+    ddi:ddi-spl-annotation-material-14-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-14-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-14-pubInfo a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-material-23-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> .
+    <http://bio2rdf.org/drugbank:DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00897> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00897> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-54-head> = {
@@ -1406,51 +612,28 @@
 }
 
 <ddi:ddi-spl-annotation-material-43-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00379> .
+    <http://bio2rdf.org/drugbank:DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00379> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00379> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00379> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
-<ddi:ddi-spl-annotation-material-69-head> = {
-    ddi:ddi-spl-annotation-material-69-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-69-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-69-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-69-pubInfo .
+<ddi:ddi-spl-annotation-material-33-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01149> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00683> .
 
-    ddi:ddi-spl-annotation-material-69-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-69-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-69-pubInfo a np:PublicationInfo .
+    <http://bio2rdf.org/drugbank:DB00683> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
-<ddi:ddi-spl-annotation-material-24-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01095> .
+<ddi:ddi-spl-annotation-material-67-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00897> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01095> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-57-provenance> = {
-    ddi:ddi-spl-annotation-material-57-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-57 .
+    <http://bio2rdf.org/drugbank:DB00897> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-1-provenance> = {
     ddi:ddi-spl-annotation-material-1-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-1 .
-}
-
-<ddi:ddi-spl-annotation-material-76-head> = {
-    ddi:ddi-spl-annotation-material-76-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-76-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-76-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-76-pubInfo .
-
-    ddi:ddi-spl-annotation-material-76-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-76-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-76-pubInfo a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-material-59-provenance> = {
@@ -1478,15 +661,15 @@
     ddi:ddi-spl-annotation-material-11-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-11 .
 }
 
-<ddi:ddi-spl-annotation-material-51-provenance> = {
-    ddi:ddi-spl-annotation-material-51-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-51 .
+<ddi:ddi-spl-annotation-material-3-provenance> = {
+    ddi:ddi-spl-annotation-material-3-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-3 .
 }
 
 <ddi:ddi-spl-annotation-material-44-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00338> .
+    <http://bio2rdf.org/drugbank:DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00338> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00338> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00338> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-11-head> = {
@@ -1510,26 +693,32 @@
     ddi:ddi-spl-annotation-material-10-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-10 .
 }
 
-<ddi:ddi-spl-annotation-material-54-provenance> = {
-    ddi:ddi-spl-annotation-material-54-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-54 .
+<ddi:ddi-spl-annotation-material-26-provenance> = {
+    ddi:ddi-spl-annotation-material-26-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-26 .
 }
 
 <ddi:ddi-spl-annotation-material-6-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> .
+    <http://bio2rdf.org/drugbank:DB01149> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00404> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00404> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-21-provenance> = {
     ddi:ddi-spl-annotation-material-21-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-21 .
 }
 
-<ddi:ddi-spl-annotation-material-69-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076> .
+<ddi:ddi-spl-annotation-material-3-head> = {
+    ddi:ddi-spl-annotation-material-3-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-3-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-3-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-3-pubInfo .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076> a <http://semanticscience.org/resource/SIO_010038> .
+    ddi:ddi-spl-annotation-material-3-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-3-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-3-pubInfo a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-material-31-head> = {
@@ -1550,32 +739,28 @@
 }
 
 <ddi:ddi-spl-annotation-material-18-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> .
+    <http://bio2rdf.org/drugbank:DB00196> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00683> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00683> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
-<ddi:ddi-spl-annotation-material-48-provenance> = {
-    ddi:ddi-spl-annotation-material-48-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-48 .
+<ddi:ddi-spl-annotation-material-46-provenance> = {
+    ddi:ddi-spl-annotation-material-46-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-46 .
 }
 
-<ddi:ddi-spl-annotation-material-44-provenance> = {
-    ddi:ddi-spl-annotation-material-44-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-44 .
-}
+<ddi:ddi-spl-annotation-material-5-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01149> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00404> .
 
-<ddi:ddi-spl-annotation-material-67-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00404> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-20-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00338> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175> .
+    <http://bio2rdf.org/drugbank:DB00338> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01175> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB01175> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-21-head> = {
@@ -1592,31 +777,37 @@
 }
 
 <ddi:ddi-spl-annotation-material-68-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076> .
+    <http://bio2rdf.org/drugbank:DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01076> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB01076> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
-<ddi:ddi-spl-annotation-material-63-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01224> .
+<ddi:ddi-spl-annotation-material-76-head> = {
+    ddi:ddi-spl-annotation-material-76-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-76-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-76-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-76-pubInfo .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01224> a <http://semanticscience.org/resource/SIO_010038> .
+    ddi:ddi-spl-annotation-material-76-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-76-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-76-pubInfo a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-material-28-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00448> .
+    <http://bio2rdf.org/drugbank:DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00448> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00448> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00448> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-45-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> .
+    <http://bio2rdf.org/drugbank:DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00683> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00683> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-34-provenance> = {
@@ -1658,17 +849,10 @@
 }
 
 <ddi:ddi-spl-annotation-material-52-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00908> .
+    <http://bio2rdf.org/drugbank:DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00908> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00908> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-34-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01224> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01224> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00908> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-75-head> = {
@@ -1684,11 +868,11 @@
     ddi:ddi-spl-annotation-material-75-pubInfo a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-material-76-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00661> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00734> .
+<ddi:ddi-spl-annotation-material-10-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00227> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00734> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00227> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-24-head> = {
@@ -1704,24 +888,8 @@
     ddi:ddi-spl-annotation-material-24-pubInfo a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-material-2-head> = {
-    ddi:ddi-spl-annotation-material-2-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-2-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-2-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-2-pubInfo .
-
-    ddi:ddi-spl-annotation-material-2-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-2-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-2-pubInfo a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-material-17-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683> a <http://semanticscience.org/resource/SIO_010038> .
+<ddi:ddi-spl-annotation-material-75-provenance> = {
+    ddi:ddi-spl-annotation-material-75-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-75 .
 }
 
 <ddi:ddi-spl-annotation-material-37-head> = {
@@ -1741,17 +909,8 @@
     ddi:ddi-spl-annotation-material-42-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-42 .
 }
 
-<ddi:ddi-spl-annotation-material-72-head> = {
-    ddi:ddi-spl-annotation-material-72-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-72-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-72-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-72-pubInfo .
-
-    ddi:ddi-spl-annotation-material-72-assertion a np:Assertion .
-
-    ddi:ddi-spl-annotation-material-72-provenance a np:Provenance .
-
-    ddi:ddi-spl-annotation-material-72-pubInfo a np:PublicationInfo .
+<ddi:ddi-spl-annotation-material-35-provenance> = {
+    ddi:ddi-spl-annotation-material-35-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-35 .
 }
 
 <ddi:ddi-spl-annotation-material-63-head> = {
@@ -1780,31 +939,24 @@
     ddi:ddi-spl-annotation-material-73-pubInfo a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-material-8-head> = {
-    ddi:ddi-spl-annotation-material-8-nanopub a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-material-8-assertion ;
-        np:hasProvenance ddi:ddi-spl-annotation-material-8-provenance ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-material-8-pubInfo .
+<ddi:ddi-spl-annotation-material-68-head> = {
+    ddi:ddi-spl-annotation-material-68-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-68-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-68-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-68-pubInfo .
 
-    ddi:ddi-spl-annotation-material-8-assertion a np:Assertion .
+    ddi:ddi-spl-annotation-material-68-assertion a np:Assertion .
 
-    ddi:ddi-spl-annotation-material-8-provenance a np:Provenance .
+    ddi:ddi-spl-annotation-material-68-provenance a np:Provenance .
 
-    ddi:ddi-spl-annotation-material-8-pubInfo a np:PublicationInfo .
+    ddi:ddi-spl-annotation-material-68-pubInfo a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-material-11-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00472> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> .
+    <http://bio2rdf.org/drugbank:DB00472> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00404> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> a <http://semanticscience.org/resource/SIO_010038> .
-}
-
-<ddi:ddi-spl-annotation-material-5-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> .
-
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00404> a <http://semanticscience.org/resource/SIO_010038> .
 }
 
 <ddi:ddi-spl-annotation-material-26-head> = {
@@ -1825,10 +977,858 @@
 }
 
 <ddi:ddi-spl-annotation-material-55-assertion> = {
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
-        ns1:interactsWith <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00175> .
+    <http://bio2rdf.org/drugbank:DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00175> .
 
-    <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00175> a <http://semanticscience.org/resource/SIO_010038> .
+    <http://bio2rdf.org/drugbank:DB00175> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-69-provenance> = {
+    ddi:ddi-spl-annotation-material-69-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-69 .
+}
+
+<ddi:ddi-spl-annotation-material-63-provenance> = {
+    ddi:ddi-spl-annotation-material-63-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-63 .
+}
+
+<ddi:ddi-spl-annotation-material-52-head> = {
+    ddi:ddi-spl-annotation-material-52-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-52-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-52-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-52-pubInfo .
+
+    ddi:ddi-spl-annotation-material-52-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-52-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-52-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-75-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00175> .
+
+    <http://bio2rdf.org/drugbank:DB00175> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-25-head> = {
+    ddi:ddi-spl-annotation-material-25-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-25-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-25-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-25-pubInfo .
+
+    ddi:ddi-spl-annotation-material-25-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-25-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-25-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-72-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00758> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01156> .
+
+    <http://bio2rdf.org/drugbank:DB01156> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-15-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01175> .
+
+    <http://bio2rdf.org/drugbank:DB01175> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-23-provenance> = {
+    ddi:ddi-spl-annotation-material-23-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-23 .
+}
+
+<ddi:ddi-spl-annotation-material-62-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00715> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01151> .
+
+    <http://bio2rdf.org/drugbank:DB01151> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-65-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00343> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00683> .
+
+    <http://bio2rdf.org/drugbank:DB00683> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-65-head> = {
+    ddi:ddi-spl-annotation-material-65-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-65-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-65-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-65-pubInfo .
+
+    ddi:ddi-spl-annotation-material-65-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-65-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-65-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-43-provenance> = {
+    ddi:ddi-spl-annotation-material-43-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-43 .
+}
+
+<ddi:ddi-spl-annotation-material-8-provenance> = {
+    ddi:ddi-spl-annotation-material-8-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-8 .
+}
+
+<ddi:ddi-spl-annotation-material-37-provenance> = {
+    ddi:ddi-spl-annotation-material-37-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-37 .
+}
+
+<ddi:ddi-spl-annotation-material-31-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00897> .
+
+    <http://bio2rdf.org/drugbank:DB00897> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-4-provenance> = {
+    ddi:ddi-spl-annotation-material-4-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-4 .
+}
+
+<ddi:ddi-spl-annotation-material-13-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01076> .
+
+    <http://bio2rdf.org/drugbank:DB01076> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-20-head> = {
+    ddi:ddi-spl-annotation-material-20-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-20-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-20-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-20-pubInfo .
+
+    ddi:ddi-spl-annotation-material-20-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-20-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-20-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-29-head> = {
+    ddi:ddi-spl-annotation-material-29-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-29-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-29-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-29-pubInfo .
+
+    ddi:ddi-spl-annotation-material-29-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-29-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-29-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-76-provenance> = {
+    ddi:ddi-spl-annotation-material-76-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-76 .
+}
+
+<ddi:ddi-spl-annotation-material-27-provenance> = {
+    ddi:ddi-spl-annotation-material-27-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-27 .
+}
+
+<ns2:default> = {}
+
+<ddi:ddi-spl-annotation-material-70-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00683> .
+
+    <http://bio2rdf.org/drugbank:DB00683> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-64-head> = {
+    ddi:ddi-spl-annotation-material-64-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-64-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-64-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-64-pubInfo .
+
+    ddi:ddi-spl-annotation-material-64-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-64-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-64-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-30-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00897> .
+
+    <http://bio2rdf.org/drugbank:DB00897> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-32-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00715> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01267> .
+
+    <http://bio2rdf.org/drugbank:DB01267> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-46-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01076> .
+
+    <http://bio2rdf.org/drugbank:DB01076> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-35-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00343> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00641> .
+
+    <http://bio2rdf.org/drugbank:DB00641> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-50-provenance> = {
+    ddi:ddi-spl-annotation-material-50-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-50 .
+}
+
+<ddi:ddi-spl-annotation-material-54-provenance> = {
+    ddi:ddi-spl-annotation-material-54-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-54 .
+}
+
+<ddi:ddi-spl-annotation-material-56-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00404> .
+
+    <http://bio2rdf.org/drugbank:DB00404> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-49-head> = {
+    ddi:ddi-spl-annotation-material-49-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-49-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-49-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-49-pubInfo .
+
+    ddi:ddi-spl-annotation-material-49-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-49-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-49-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-63-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00199> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01224> .
+
+    <http://bio2rdf.org/drugbank:DB01224> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-53-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00404> .
+
+    <http://bio2rdf.org/drugbank:DB00404> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-28-provenance> = {
+    ddi:ddi-spl-annotation-material-28-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-28 .
+}
+
+<ddi:ddi-spl-annotation-material-50-head> = {
+    ddi:ddi-spl-annotation-material-50-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-50-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-50-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-50-pubInfo .
+
+    ddi:ddi-spl-annotation-material-50-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-50-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-50-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-58-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00472> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00334> .
+
+    <http://bio2rdf.org/drugbank:DB00334> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-59-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00897> .
+
+    <http://bio2rdf.org/drugbank:DB00897> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-26-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00246> .
+
+    <http://bio2rdf.org/drugbank:DB00246> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-73-provenance> = {
+    ddi:ddi-spl-annotation-material-73-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-73 .
+}
+
+<ddi:ddi-spl-annotation-material-17-head> = {
+    ddi:ddi-spl-annotation-material-17-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-17-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-17-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-17-pubInfo .
+
+    ddi:ddi-spl-annotation-material-17-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-17-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-17-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-38-provenance> = {
+    ddi:ddi-spl-annotation-material-38-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-38 .
+}
+
+<ddi:ddi-spl-annotation-material-14-provenance> = {
+    ddi:ddi-spl-annotation-material-14-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-14 .
+}
+
+<ddi:ddi-spl-annotation-material-1-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00343> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00897> .
+
+    <http://bio2rdf.org/drugbank:DB00897> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-45-head> = {
+    ddi:ddi-spl-annotation-material-45-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-45-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-45-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-45-pubInfo .
+
+    ddi:ddi-spl-annotation-material-45-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-45-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-45-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-7-head> = {
+    ddi:ddi-spl-annotation-material-7-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-7-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-7-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-7-pubInfo .
+
+    ddi:ddi-spl-annotation-material-7-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-7-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-7-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-15-provenance> = {
+    ddi:ddi-spl-annotation-material-15-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-15 .
+}
+
+<ddi:ddi-spl-annotation-material-36-provenance> = {
+    ddi:ddi-spl-annotation-material-36-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-36 .
+}
+
+<ddi:ddi-spl-annotation-material-9-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00683> .
+
+    <http://bio2rdf.org/drugbank:DB00683> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-17-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00196> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00683> .
+
+    <http://bio2rdf.org/drugbank:DB00683> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-32-provenance> = {
+    ddi:ddi-spl-annotation-material-32-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-32 .
+}
+
+<ddi:ddi-spl-annotation-material-25-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00715> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00370> .
+
+    <http://bio2rdf.org/drugbank:DB00370> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-55-provenance> = {
+    ddi:ddi-spl-annotation-material-55-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-55 .
+}
+
+<ddi:ddi-spl-annotation-material-22-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00472> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01182> .
+
+    <http://bio2rdf.org/drugbank:DB01182> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-45-provenance> = {
+    ddi:ddi-spl-annotation-material-45-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-45 .
+}
+
+<ddi:ddi-spl-annotation-material-37-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00476> .
+
+    <http://bio2rdf.org/drugbank:DB00476> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-74-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01211> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00656> .
+
+    <http://bio2rdf.org/drugbank:DB00656> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-36-head> = {
+    ddi:ddi-spl-annotation-material-36-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-36-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-36-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-36-pubInfo .
+
+    ddi:ddi-spl-annotation-material-36-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-36-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-36-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-16-provenance> = {
+    ddi:ddi-spl-annotation-material-16-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-16 .
+}
+
+<ddi:ddi-spl-annotation-material-12-head> = {
+    ddi:ddi-spl-annotation-material-12-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-12-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-12-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-12-pubInfo .
+
+    ddi:ddi-spl-annotation-material-12-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-12-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-12-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-14-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01149> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00897> .
+
+    <http://bio2rdf.org/drugbank:DB00897> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-59-head> = {
+    ddi:ddi-spl-annotation-material-59-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-59-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-59-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-59-pubInfo .
+
+    ddi:ddi-spl-annotation-material-59-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-59-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-59-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-61-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00277> .
+
+    <http://bio2rdf.org/drugbank:DB00277> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-72-head> = {
+    ddi:ddi-spl-annotation-material-72-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-72-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-72-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-72-pubInfo .
+
+    ddi:ddi-spl-annotation-material-72-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-72-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-72-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-40-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01104> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01151> .
+
+    <http://bio2rdf.org/drugbank:DB01151> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-42-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01104> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01151> .
+
+    <http://bio2rdf.org/drugbank:DB01151> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-43-head> = {
+    ddi:ddi-spl-annotation-material-43-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-43-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-43-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-43-pubInfo .
+
+    ddi:ddi-spl-annotation-material-43-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-43-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-43-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-69-head> = {
+    ddi:ddi-spl-annotation-material-69-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-69-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-69-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-69-pubInfo .
+
+    ddi:ddi-spl-annotation-material-69-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-69-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-69-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-9-provenance> = {
+    ddi:ddi-spl-annotation-material-9-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-9 .
+}
+
+<ddi:ddi-spl-annotation-material-67-provenance> = {
+    ddi:ddi-spl-annotation-material-67-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-67 .
+}
+
+<ddi:ddi-spl-annotation-material-33-head> = {
+    ddi:ddi-spl-annotation-material-33-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-33-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-33-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-33-pubInfo .
+
+    ddi:ddi-spl-annotation-material-33-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-33-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-33-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-7-provenance> = {
+    ddi:ddi-spl-annotation-material-7-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-7 .
+}
+
+<ddi:ddi-spl-annotation-material-56-head> = {
+    ddi:ddi-spl-annotation-material-56-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-56-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-56-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-56-pubInfo .
+
+    ddi:ddi-spl-annotation-material-56-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-56-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-56-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-30-provenance> = {
+    ddi:ddi-spl-annotation-material-30-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-30 .
+}
+
+<ddi:ddi-spl-annotation-material-32-head> = {
+    ddi:ddi-spl-annotation-material-32-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-32-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-32-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-32-pubInfo .
+
+    ddi:ddi-spl-annotation-material-32-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-32-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-32-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-24-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00196> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01095> .
+
+    <http://bio2rdf.org/drugbank:DB01095> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-4-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00176> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01124> .
+
+    <http://bio2rdf.org/drugbank:DB01124> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-49-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00404> .
+
+    <http://bio2rdf.org/drugbank:DB00404> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-23-head> = {
+    ddi:ddi-spl-annotation-material-23-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-23-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-23-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-23-pubInfo .
+
+    ddi:ddi-spl-annotation-material-23-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-23-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-23-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-68-provenance> = {
+    ddi:ddi-spl-annotation-material-68-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-68 .
+}
+
+<ddi:ddi-spl-annotation-material-25-provenance> = {
+    ddi:ddi-spl-annotation-material-25-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-25 .
+}
+
+<ddi:ddi-spl-annotation-material-42-head> = {
+    ddi:ddi-spl-annotation-material-42-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-42-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-42-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-42-pubInfo .
+
+    ddi:ddi-spl-annotation-material-42-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-42-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-42-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-16-head> = {
+    ddi:ddi-spl-annotation-material-16-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-16-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-16-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-16-pubInfo .
+
+    ddi:ddi-spl-annotation-material-16-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-16-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-16-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-53-provenance> = {
+    ddi:ddi-spl-annotation-material-53-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-53 .
+}
+
+<ddi:ddi-spl-annotation-material-60-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01167> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00897> .
+
+    <http://bio2rdf.org/drugbank:DB00897> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-35-head> = {
+    ddi:ddi-spl-annotation-material-35-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-35-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-35-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-35-pubInfo .
+
+    ddi:ddi-spl-annotation-material-35-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-35-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-35-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-18-head> = {
+    ddi:ddi-spl-annotation-material-18-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-18-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-18-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-18-pubInfo .
+
+    ddi:ddi-spl-annotation-material-18-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-18-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-18-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-21-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00425> .
+
+    <http://bio2rdf.org/drugbank:DB00425> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-67-head> = {
+    ddi:ddi-spl-annotation-material-67-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-67-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-67-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-67-pubInfo .
+
+    ddi:ddi-spl-annotation-material-67-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-67-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-67-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-57-head> = {
+    ddi:ddi-spl-annotation-material-57-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-57-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-57-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-57-pubInfo .
+
+    ddi:ddi-spl-annotation-material-57-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-57-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-57-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-54-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01026> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00404> .
+
+    <http://bio2rdf.org/drugbank:DB00404> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-66-head> = {
+    ddi:ddi-spl-annotation-material-66-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-66-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-66-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-66-pubInfo .
+
+    ddi:ddi-spl-annotation-material-66-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-66-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-66-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-16-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00277> .
+
+    <http://bio2rdf.org/drugbank:DB00277> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-34-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00501> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01224> .
+
+    <http://bio2rdf.org/drugbank:DB01224> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-39-head> = {
+    ddi:ddi-spl-annotation-material-39-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-39-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-39-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-39-pubInfo .
+
+    ddi:ddi-spl-annotation-material-39-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-39-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-39-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-76-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00661> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00734> .
+
+    <http://bio2rdf.org/drugbank:DB00734> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-2-head> = {
+    ddi:ddi-spl-annotation-material-2-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-2-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-2-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-2-pubInfo .
+
+    ddi:ddi-spl-annotation-material-2-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-2-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-2-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-71-head> = {
+    ddi:ddi-spl-annotation-material-71-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-71-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-71-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-71-pubInfo .
+
+    ddi:ddi-spl-annotation-material-71-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-71-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-71-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-39-provenance> = {
+    ddi:ddi-spl-annotation-material-39-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-39 .
+}
+
+<ddi:ddi-spl-annotation-material-12-provenance> = {
+    ddi:ddi-spl-annotation-material-12-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-12 .
+}
+
+<ddi:ddi-spl-annotation-material-72-provenance> = {
+    ddi:ddi-spl-annotation-material-72-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-72 .
+}
+
+<ddi:ddi-spl-annotation-material-19-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00476> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00277> .
+
+    <http://bio2rdf.org/drugbank:DB00277> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-51-assertion> = {
+    <http://bio2rdf.org/drugbank:DB01238> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB01175> .
+
+    <http://bio2rdf.org/drugbank:DB01175> a <http://semanticscience.org/resource/SIO_010038> .
+}
+
+<ddi:ddi-spl-annotation-material-8-assertion> = {
+    <http://bio2rdf.org/drugbank:DB00448> a <http://semanticscience.org/resource/SIO_010038> ;
+        ns1:interactsWith <http://bio2rdf.org/drugbank:DB00448> .
+}
+
+<ddi:ddi-spl-annotation-material-48-provenance> = {
+    ddi:ddi-spl-annotation-material-48-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-48 .
+}
+
+<ddi:ddi-spl-annotation-material-60-head> = {
+    ddi:ddi-spl-annotation-material-60-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-60-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-60-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-60-pubInfo .
+
+    ddi:ddi-spl-annotation-material-60-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-60-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-60-pubInfo a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-material-18-provenance> = {
+    ddi:ddi-spl-annotation-material-18-assertion prov:wasDerivedFrom ddi:ddi-spl-annotation-material-18 .
+}
+
+<ddi:ddi-spl-annotation-material-58-head> = {
+    ddi:ddi-spl-annotation-material-58-nanopub a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-material-58-assertion ;
+        np:hasProvenance ddi:ddi-spl-annotation-material-58-provenance ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-material-58-pubInfo .
+
+    ddi:ddi-spl-annotation-material-58-assertion a np:Assertion .
+
+    ddi:ddi-spl-annotation-material-58-provenance a np:Provenance .
+
+    ddi:ddi-spl-annotation-material-58-pubInfo a np:PublicationInfo .
 }
 
 

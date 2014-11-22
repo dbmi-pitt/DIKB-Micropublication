@@ -1,0 +1,55 @@
+# SPARQL version: 
+# DIKB MP/NP version:
+#
+
+# CONTEXT
+PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
+PREFIX cnt: <http://www.w3.org/2011/content#>
+PREFIX dailymed: <http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/vocab/resource/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dctypes: <http://purl.org/dc/dcmitype/>
+PREFIX dikbD2R: <http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/resource/>
+PREFIX dikbEvidence: <http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#>
+PREFIX gcds: <http://www.genomic-cds.org/ont/genomic-cds.owl#>
+PREFIX linkedspls: <file:///home/rdb20/Downloads/d2rq-0.8.1/linkedSPLs-dump.nt#structuredProductLabelMetadata/>
+PREFIX mp: <http://purl.org/mp/> # namespace for micropublication
+PREFIX ncbit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX pav: <http://purl.org/pav>
+PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX siocns: <http://rdfs.org/sioc/ns#>
+PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
+
+
+#### 1 Finding assertions and evidence
+# 1.a List all assertions that are not supported by evidence
+select *
+where {
+  ?c a mp:Claim.
+  FILTER NOT EXISTS {?s mp:supports ?c} 
+} 
+
+# 1.b Which assertions are supported (or refuted) by just one type of evidence?
+# NOTE: first attempt - correction needed - should probably use a sub-query
+select ?c count(distinct ?type)
+where {
+  ?c a mp:Claim.
+  ?d mp:supports ?c.
+  ?m mp:supports ?d.
+  ?m rdf:type ?type.
+}
+ORDER BY ?c
+
+# 1.c Which assertions have evidence from source X (e.g., product labeling)
+## example with drug product labeling
+select *
+where {
+  ?a a dikbEvidence:Non_traceable_Drug_Label_Statement;
+     mp:supports ?c.
+  ?c rdfs:label ?label.
+}
+# TODO: other evidence types
+
+# 1.d Which assertions have both evidence for and evidence against from a single source X?
+# TODO: 

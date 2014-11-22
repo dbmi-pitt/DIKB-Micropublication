@@ -383,7 +383,7 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
         #print str("Abstract:"+section_text)
 
         # match exact in abstract to get prefix and postfix
-        index_exact = section_text.find(exact)
+        index_exact = section_text.lower().find(exact.lower())
 
             
 ## parse to get prefix and postfix based on exact and index_exact

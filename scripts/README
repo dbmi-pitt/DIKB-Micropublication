@@ -1,5 +1,8 @@
+At the present time, these scripts are solely intended to prototype a
+DIKB evidence base that uses MP and NP. 
+
 ---------------------------------------------------------------------------
-pre-requisition
+pre-requisites
 ---------------------------------------------------------------------------
 
 python libraries:
@@ -7,22 +10,42 @@ python libraries:
 (1) Bio 
 from "http://biopython.org/wiki/Download"
 
-(2) rdflib 
-
-(3) SPARQLWrapper 
-from "https://github.com/RDFLib/sparqlwrapper/releases"
+(2) rdflib >=4.2 with SPARQLWrapper 
 
 (4) rdflib-jsonld
 from "https://github.com/RDFLib/rdflib-jsonld"
 
 ---------------------------------------------------------------------------
-how this program works
+The program currently works by attempting to translate data in the
+current DIKB evidence base to an RDF graph with NP and MP according to
+the model diagrammed in the design folder.
 ---------------------------------------------------------------------------
 
 (1) run python script to send sparql query against virtuoso endpoint.
 output is a tsv file contains DDI assertions associated with evidences in DIKB.
-
+ 
 $ python query-DIKB-DDIs.py
 
-(2) run script to create XML/RDF graph representes drug drug interactions in OA and Micropublication standard
+(2) run script to create XML/RDF graph represents drug drug
+interactions in OA and Micropublication standard. This tries to fill
+in some parts of the model using simple string matching. 
 
+$ python dikbv1.2-to-MP-plus-OA.py
+
+(3) add in the nanopublication assertion, provenance, and supporting
+graphs
+
+$ python  ../data/initial-dikb-mp-oa-Aug2014.xml > ../data/initial-dikb-nanopub-Nov2014.trig
+
+(4) Loading the data into an RDF endpoint. For example, see the
+documentation
+http://docs.openlinksw.com/virtuoso/fn_ttlp_mt_local_file.html. NOTE:
+this is not quite worked out as of 11/21/2014. Once it is, the
+following test query should work:
+
+select *
+where {
+ ?nanopub <http://www.nanopub.org/nschema#hasAssertion> ?asrt.
+  graph ?asrt
+  { ?s <http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/interactsWith> ?o.}
+} LIMIT 10
