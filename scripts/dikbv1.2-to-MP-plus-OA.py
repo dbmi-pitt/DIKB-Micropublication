@@ -6,7 +6,7 @@
 ## Richard Boyce
 
 ## Original Authors:
-##   Richard Boyce, Yifan Ning, Jodi Schneider, Tim Clark, Paolo Ciccarese
+##   Richard Boyce, Yifan Ning, Jodi Schneider, Tim Clark, Paolo Ciccarese, Paul Groth
 
 ## This code is licensed under Apache License Version 2.0, January
 ## 2004. Please see the license in the root folder of this project
@@ -464,9 +464,9 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
 
         graph.add((poc[currentAnnotationMaterial], RDFS.label, Literal("%s (object) - %s (precipitant)" % (item["object"], item["precip"]))))
     
-        graph.add((poc[currentAnnotationMaterial], dikbD2R['ObjectDrugOfInteraction'], URIRef(item["objectURI"])))
+        graph.add((poc[currentAnnotationMaterial], dikbD2R['ObjectDrugOfInteraction'], URIRef(item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:"))))
     
-        graph.add((poc[currentAnnotationMaterial], dikbD2R['PrecipitantDrugOfInteraction'], URIRef(item["precipURI"])))
+        graph.add((poc[currentAnnotationMaterial], dikbD2R['PrecipitantDrugOfInteraction'], URIRef(item["precipURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:"))))
 
         graph.add((poc[currentAnnotationMaterial], dikbD2R['objectDose'], Literal(item["objectDose"])))
 

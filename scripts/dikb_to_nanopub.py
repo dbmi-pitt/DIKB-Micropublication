@@ -1,3 +1,23 @@
+## dikb_to_nanopub.py
+#
+# Convert MP DIKB data to add nanopubs 
+#
+## The Drug Interaction Knowledge Base (DIKB) is (C) Copyright 2005 - 2015 by
+## Richard Boyce
+
+## Original Authors:
+##   Paul Groth, Richard Boyce, Yifan Ning, Jodi Schneider, Tim Clark, Paolo Ciccarese
+
+## This code is licensed under Apache License Version 2.0, January
+## 2004. Please see the license in the root folder of this project
+
+#
+# NOTE: Requires Python RDFLib >=4.2
+#
+# Example usage and conversion to data that can be loaded into Virtuoso 6.0
+# $ python dikb_to_nanopub.py  ../data/initial-dikb-mp-oa-Aug2014.xml > ../data/initial-dikb-nanopub-Nov2014.trig
+# $ rapper -i trig -o turtle ../data/initial-dikb-nanopub-Nov2014.trig > /tmp/initial-dikb-nanopub-Nov2014.turtle
+
 import sys
 
 import argparse
@@ -7,7 +27,6 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 ## import RDF related
 from rdflib import Graph, BNode, Literal, Namespace, URIRef, RDF, RDFS, XSD, Dataset
-
 
 from pprint import pprint
 
