@@ -27,4 +27,5 @@ SELECT ?r1 ?a1
 WHERE {
             ?r1 mp:Representation ;
                   mp:supports ?a1 .
-            FILTER (COUNT(?r1) AS ?count) = 1) }
+            FILTER (COUNT(?r1) AS ?count) = 1
+      }
