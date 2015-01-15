@@ -151,7 +151,7 @@ poc = Namespace('http://purl.org/net/nlprepository/spl-ddi-annotation-poc#')
 ncbit = Namespace('http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#')
 dikbEvidence = Namespace('http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#')
 mp = Namespace('http://purl.org/mp/') # namespace for micropublication
-
+rdf = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 
 
 graph = Graph()
@@ -176,6 +176,8 @@ graph.namespace_manager.bind('poc','http://purl.org/net/nlprepository/spl-ddi-an
 graph.namespace_manager.bind('ncbit','http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#')
 graph.namespace_manager.bind('dikbEvidence','http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#')
 graph.namespace_manager.bind('mp','http://purl.org/mp/')
+graph.namespace_manager.bind('rdf','http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+
 
 ### open annotation ontology properties and classes
 graph.add((dctypes["Collection"], RDFS.label, Literal("Collection"))) # Used in lieau of the AnnotationSet https://code.google.com/p/annotation-ontology/wiki/AnnotationSet
@@ -550,6 +552,17 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
             if item['researchStatement']:
                 graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], URIRef(item["researchStatement"])))
                 graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
+
+                graph.add((poc[currentAnnotationClaim], rdf["subject"], URIRef(item["objectURI"])))
+                graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
+
+                graph.add((poc[currentAnnotationClaim], rdf["object"], URIRef(item["precipURI"])))
+                graph.add((URIRef(item["precipURI"]), RDF.type, mp["SemanticQualifier"]))
+
+                graph.add((poc[currentAnnotationClaim], rdf["predicate"], URIRef(item["ddiPkEffect"])))
+                graph.add((URIRef(item["ddiPkEffect"]), RDF.type, mp["SemanticQualifier"]))
+
+
             else:
                 graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], Literal("stubbed out")))  
 

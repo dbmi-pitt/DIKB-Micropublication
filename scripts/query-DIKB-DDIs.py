@@ -172,7 +172,10 @@ SELECT DISTINCT * WHERE {
     ## write dict to tsv file
 
     with open('../data/dikb-observed-ddis.tsv', 'wb') as tsvfile:
-        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["drug1","drug2","objectUri","ddiPkMechanism","contraindication","severity","source","dateAnnotated","precipUri","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel","objectDose", "precipDose", "numOfSubjects"])
+        #writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["drug1","drug2","objectUri","ddiPkMechanism","contraindication","severity","source","dateAnnotated","precipUri","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel","objectDose", "precipDose", "numOfSubjects"])
+
+        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["ddiPkMechanism","contraindication","severity","source","dateAnnotated","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel","objectDose", "precipDose", "numOfSubjects"])
+
         writer.writeheader()
         for line in pddiDictL:
             writer.writerow(line)
