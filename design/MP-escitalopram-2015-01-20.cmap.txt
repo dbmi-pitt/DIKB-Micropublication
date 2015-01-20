@@ -1,0 +1,393 @@
+A Model of http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/escitalopram_inhibits_cyp2d6.html (http://dbmi-icode-01.dbmi.pitt.edu/dikb/page/Assertions/835)
+MAT1
+    dikb:numberOfParticipants
+        unknown
+    dikb:object
+        <PURL for escitalopram>
+    dikb:objectDose
+        50mg Single Dose
+    dikb:precipitant
+        <PURL for desipramine>
+    dikb:precipitantDose
+        20 mg/day for 21 days
+    rdf:type
+        dikb:EV_CT_DDI_Material
+            rdf:type
+                mp:Material
+    used in
+        M1
+            mp:represents
+                A2
+                    oa:hasBody
+                    oa:hasBody
+                        LEXAPRO (escitalopram oxalate) tablet. Forest Labs. 12/2012
+                            mp:supports
+                            rdf:type
+                                mp:Reference
+                    oa:hasBody
+                        D1
+                            dikb:AUC_increase
+                                1 fold
+                            dikb:Cmax_increase
+                                40%
+                            mp:represents
+                            mp:supports
+                                escitalopram inhibits CYP2D6
+                                    mp:challenges
+                                        escitalopram does not inhibit CYP2D6
+                                            mp:challenges
+                                            mp:logicalClaim
+                                                PURL for escitalopram_does_not_inhibit_cyp2d6
+                                                    rdf:object
+                                                        CHEBI:47781
+                                                            rdf:type
+                                                                mp:SemanticQualifier
+                                                    rdf:predicate
+                                                        dikb:inhibits
+                                                            rdf:type
+                                                                mp:SemanticQualifier
+                                                    rdf:subject
+                                                        DRON:0001858
+                                                            rdf:type
+                                                                mp:SemanticQualifier
+                                                    rdf:type
+                                                        dikbClaim:does_not_inhibit
+                                                        rdf:Statement
+                                            mp:qualifiedBy
+                                                CHEBI:47781
+                                                    rdf:type
+                                                        mp:SemanticQualifier
+                                                dikb:inhibits
+                                                    rdf:type
+                                                        mp:SemanticQualifier
+                                                DRON:0001858
+                                                    rdf:type
+                                                        mp:SemanticQualifier
+                                            rdf:type
+                                                mp:Claim
+                                    mp:qualifiedBy
+                                        PURL for escitalopram_inhibits_cyp2d6
+                                            rdf:type
+                                                mp:SemanticQualifier
+                                    rdf:type
+                                        mp:Claim
+                            rdf:type
+                                dikb:EV_CT_DDI_Data
+                                    rdf:type
+                                        mp:Data
+                    oa:hasTarget
+                        T2
+                            dikb:SPLSection
+                                dikb:dailymed:drugInteractions
+                            oa:hasSelector
+                                Sel 2
+                                    oa:exact
+                                        exact text
+                                    oa:postfix
+                                        postfix text
+                                    oa:prefix
+                                        prefix text
+                            oa:hasSource
+                                <URL to product label in DailyMed>
+                            rdf:type
+                                oa:SpecificResource
+                    rdft:type
+                        oa:Annotation
+            mp:supports
+                D1
+                    dikb:AUC_increase
+                        1 fold
+                    dikb:Cmax_increase
+                        40%
+                    mp:represents
+                        A2
+                            oa:hasBody
+                            oa:hasBody
+                                LEXAPRO (escitalopram oxalate) tablet. Forest Labs. 12/2012
+                                    mp:supports
+                                    rdf:type
+                                        mp:Reference
+                            oa:hasBody
+                            oa:hasTarget
+                                T2
+                                    dikb:SPLSection
+                                        dikb:dailymed:drugInteractions
+                                    oa:hasSelector
+                                        Sel 2
+                                            oa:exact
+                                                exact text
+                                            oa:postfix
+                                                postfix text
+                                            oa:prefix
+                                                prefix text
+                                    oa:hasSource
+                                        <URL to product label in DailyMed>
+                                    rdf:type
+                                        oa:SpecificResource
+                            rdft:type
+                                oa:Annotation
+                    mp:supports
+                        escitalopram inhibits CYP2D6
+                            mp:challenges
+                                escitalopram does not inhibit CYP2D6
+                                    mp:challenges
+                                    mp:logicalClaim
+                                        PURL for escitalopram_does_not_inhibit_cyp2d6
+                                            rdf:object
+                                                CHEBI:47781
+                                                    rdf:type
+                                                        mp:SemanticQualifier
+                                            rdf:predicate
+                                                dikb:inhibits
+                                                    rdf:type
+                                                        mp:SemanticQualifier
+                                            rdf:subject
+                                                DRON:0001858
+                                                    rdf:type
+                                                        mp:SemanticQualifier
+                                            rdf:type
+                                                dikbClaim:does_not_inhibit
+                                                rdf:Statement
+                                    mp:qualifiedBy
+                                        CHEBI:47781
+                                            rdf:type
+                                                mp:SemanticQualifier
+                                        dikb:inhibits
+                                            rdf:type
+                                                mp:SemanticQualifier
+                                        DRON:0001858
+                                            rdf:type
+                                                mp:SemanticQualifier
+                                    rdf:type
+                                        mp:Claim
+                            mp:qualifiedBy
+                                PURL for escitalopram_inhibits_cyp2d6
+                                    rdf:type
+                                        mp:SemanticQualifier
+                            rdf:type
+                                mp:Claim
+                    rdf:type
+                        dikb:EV_CT_DDI_Data
+                            rdf:type
+                                mp:Data
+            rdf:type
+                dikbEvidence:EV_CT_DDI
+                    rdf:type
+                        mp:Method
+MP1
+    mp:argues
+        escitalopram does not inhibit CYP2D6
+            mp:challenges
+                escitalopram inhibits CYP2D6
+                    mp:challenges
+                    mp:qualifiedBy
+                        PURL for escitalopram_inhibits_cyp2d6
+                            rdf:type
+                                mp:SemanticQualifier
+                    rdf:type
+                        mp:Claim
+            mp:logicalClaim
+                PURL for escitalopram_does_not_inhibit_cyp2d6
+                    rdf:object
+                        CHEBI:47781
+                            rdf:type
+                                mp:SemanticQualifier
+                    rdf:predicate
+                        dikb:inhibits
+                            rdf:type
+                                mp:SemanticQualifier
+                    rdf:subject
+                        DRON:0001858
+                            rdf:type
+                                mp:SemanticQualifier
+                    rdf:type
+                        dikbClaim:does_not_inhibit
+                        rdf:Statement
+            mp:qualifiedBy
+                CHEBI:47781
+                    rdf:type
+                        mp:SemanticQualifier
+                dikb:inhibits
+                    rdf:type
+                        mp:SemanticQualifier
+                DRON:0001858
+                    rdf:type
+                        mp:SemanticQualifier
+            rdf:type
+                mp:Claim
+    mp:hasAttribution
+        RDB May14
+    rdf:type
+        mp:Micropublication
+MP2
+    dikb:assumesAsValid
+        desipramine primary total clearance enzyme CYP2D6
+            mp:qualifiedBy
+                PURL for desipramine_primary_total_clearance_enzyme_cyp2d6
+                    rdf:type
+                        mp:SemanticQualifier
+            rdf:type
+                mp:Claim
+    mp:argues
+        escitalopram inhibits CYP2D6
+            mp:challenges
+                escitalopram does not inhibit CYP2D6
+                    mp:challenges
+                    mp:logicalClaim
+                        PURL for escitalopram_does_not_inhibit_cyp2d6
+                            rdf:object
+                                CHEBI:47781
+                                    rdf:type
+                                        mp:SemanticQualifier
+                            rdf:predicate
+                                dikb:inhibits
+                                    rdf:type
+                                        mp:SemanticQualifier
+                            rdf:subject
+                                DRON:0001858
+                                    rdf:type
+                                        mp:SemanticQualifier
+                            rdf:type
+                                dikbClaim:does_not_inhibit
+                                rdf:Statement
+                    mp:qualifiedBy
+                        CHEBI:47781
+                            rdf:type
+                                mp:SemanticQualifier
+                        dikb:inhibits
+                            rdf:type
+                                mp:SemanticQualifier
+                        DRON:0001858
+                            rdf:type
+                                mp:SemanticQualifier
+                    rdf:type
+                        mp:Claim
+            mp:qualifiedBy
+                PURL for escitalopram_inhibits_cyp2d6
+                    rdf:type
+                        mp:SemanticQualifier
+            rdf:type
+                mp:Claim
+    mp:hasAttribution
+        JS May14
+    rdf:type
+        mp:Micropublication
+mp:Reference
+<URL to product label in DailyMed>
+A1
+    oa:hasBody
+        LEXAPRO (escitalopram oxalate) tablet. Forest Labs. 12/2012
+            mp:supports
+                S1
+                    mp:represents
+                    mp:supports
+                        escitalopram does not inhibit CYP2D6
+                            mp:challenges
+                                escitalopram inhibits CYP2D6
+                                    mp:challenges
+                                    mp:qualifiedBy
+                                        PURL for escitalopram_inhibits_cyp2d6
+                                            rdf:type
+                                                mp:SemanticQualifier
+                                    rdf:type
+                                        mp:Claim
+                            mp:logicalClaim
+                                PURL for escitalopram_does_not_inhibit_cyp2d6
+                                    rdf:object
+                                        CHEBI:47781
+                                            rdf:type
+                                                mp:SemanticQualifier
+                                    rdf:predicate
+                                        dikb:inhibits
+                                            rdf:type
+                                                mp:SemanticQualifier
+                                    rdf:subject
+                                        DRON:0001858
+                                            rdf:type
+                                                mp:SemanticQualifier
+                                    rdf:type
+                                        dikbClaim:does_not_inhibit
+                                        rdf:Statement
+                            mp:qualifiedBy
+                                CHEBI:47781
+                                    rdf:type
+                                        mp:SemanticQualifier
+                                dikb:inhibits
+                                    rdf:type
+                                        mp:SemanticQualifier
+                                DRON:0001858
+                                    rdf:type
+                                        mp:SemanticQualifier
+                            rdf:type
+                                mp:Claim
+                    rdf:type
+                        dikb:Non_traceable_Drug_Label_Statement
+                            rdf:type
+                                mp:Statement
+            rdf:type
+                mp:Reference
+    oa:hasBody
+        S1
+            mp:represents
+            mp:supports
+                escitalopram does not inhibit CYP2D6
+                    mp:challenges
+                        escitalopram inhibits CYP2D6
+                            mp:challenges
+                            mp:qualifiedBy
+                                PURL for escitalopram_inhibits_cyp2d6
+                                    rdf:type
+                                        mp:SemanticQualifier
+                            rdf:type
+                                mp:Claim
+                    mp:logicalClaim
+                        PURL for escitalopram_does_not_inhibit_cyp2d6
+                            rdf:object
+                                CHEBI:47781
+                                    rdf:type
+                                        mp:SemanticQualifier
+                            rdf:predicate
+                                dikb:inhibits
+                                    rdf:type
+                                        mp:SemanticQualifier
+                            rdf:subject
+                                DRON:0001858
+                                    rdf:type
+                                        mp:SemanticQualifier
+                            rdf:type
+                                dikbClaim:does_not_inhibit
+                                rdf:Statement
+                    mp:qualifiedBy
+                        CHEBI:47781
+                            rdf:type
+                                mp:SemanticQualifier
+                        dikb:inhibits
+                            rdf:type
+                                mp:SemanticQualifier
+                        DRON:0001858
+                            rdf:type
+                                mp:SemanticQualifier
+                    rdf:type
+                        mp:Claim
+            rdf:type
+                dikb:Non_traceable_Drug_Label_Statement
+                    rdf:type
+                        mp:Statement
+    oa:hasTarget
+        T1
+            dikb:SPLSection
+                dikb:dailymed:drugInteractions
+            oa:hasSelector
+                Sel 1
+                    oa:exact
+                        exact text
+                    oa:postfix
+                        postfix text
+                    oa:prefix
+                        prefix text
+            oa:hasSource
+                <URL to product label in DailyMed>
+            rdf:type
+                oa:SpecificResource
+    rdft:type
+        oa:Annotation
