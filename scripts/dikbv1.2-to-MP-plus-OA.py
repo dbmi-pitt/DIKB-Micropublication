@@ -40,7 +40,7 @@ from Bio import Entrez
 # Globals
 ################################################################################
 PRE_POST_CHARS=50
-OUT_FILE="../data/initial-dikb-mp-oa-Aug2014.xml"
+OUT_FILE="../data/initial-dikb-mp-oa.xml"
 #OUT_FILE="../data/initial-dikb-mp-oa-Aug2014-test.xml"
 
 
@@ -553,11 +553,11 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
                 graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], URIRef(item["researchStatement"])))
                 graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
 
-                graph.add((poc[currentAnnotationClaim], rdf["subject"], URIRef(item["objectURI"])))
-                graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
+                graph.add((poc[currentAnnotationClaim], rdf["subject"], URIRef(item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:"))))
+                graph.add((URIRef(item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:")), RDF.type, mp["SemanticQualifier"]))
 
-                graph.add((poc[currentAnnotationClaim], rdf["object"], URIRef(item["precipURI"])))
-                graph.add((URIRef(item["precipURI"]), RDF.type, mp["SemanticQualifier"]))
+                graph.add((poc[currentAnnotationClaim], rdf["object"], URIRef(item["precipURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:"))))
+                graph.add((URIRef(item["precipURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:")), RDF.type, mp["SemanticQualifier"]))
 
                 graph.add((poc[currentAnnotationClaim], rdf["predicate"], URIRef(item["ddiPkEffect"])))
                 graph.add((URIRef(item["ddiPkEffect"]), RDF.type, mp["SemanticQualifier"]))
