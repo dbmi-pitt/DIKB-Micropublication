@@ -22,12 +22,7 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 SELECT ?r1 ?a1
 WHERE
 {
-     ?type1 rdfs:subClassOf mp:Representation.
-     ?type2 rdfs:subClassOf ?type.
-
-     {?a1 rdf:type ?type2.}
-     UNION
-     {?a1 rdf:type ?type1.}
+     ?a1 rdfs:subClassOf mp:Representation.
 
      ?r1 mp:supports ?a1.  
           
