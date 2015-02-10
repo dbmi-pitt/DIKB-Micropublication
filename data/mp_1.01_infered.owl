@@ -1,0 +1,915 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY mp "http://purl.org/mp/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY dcmi-terms "http://dublincore.org/documents/dcmi-terms/" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/yin2/ontologies/2015/1/untitled-ontology-11#"
+     xml:base="http://www.semanticweb.org/yin2/ontologies/2015/1/untitled-ontology-11"
+     xmlns:dcmi-terms="http://dublincore.org/documents/dcmi-terms/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mp="http://purl.org/mp/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/yin2/ontologies/2015/1/untitled-ontology-11">
+        <dcmi-terms:create rdf:datatype="&xsd;dateTime">2013-08-26T00:00:00</dcmi-terms:create>
+        <owl:priorVersion>1.00</owl:priorVersion>
+        <rdfs:comment>An ontology of micropublications;
+Version 1.01 by Tim Clark  and Paolo Ciccarese</rdfs:comment>
+        <dcmi-terms:contributor>Paolo Ciccarese</dcmi-terms:contributor>
+        <owl:versionInfo>1.01</owl:versionInfo>
+        <dcmi-terms:editor>Tim Clark</dcmi-terms:editor>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/mp/arguedBy -->
+
+    <owl:ObjectProperty rdf:about="&mp;arguedBy">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&mp;Claim"/>
+        <rdfs:range rdf:resource="&mp;Micropublication"/>
+        <owl:inverseOf rdf:resource="&mp;argues"/>
+        <owl:equivalentProperty rdf:resource="&mp;claimFor"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;supports"/>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;argues"/>
+                <owl:equivalentProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="&mp;hasClaim"/>
+                    </rdf:Description>
+                </owl:equivalentProperty>
+            </rdf:Description>
+        </owl:equivalentProperty>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;supportedBy"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;hasClaim"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/argues -->
+
+    <owl:ObjectProperty rdf:about="&mp;argues">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&mp;Claim"/>
+        <rdfs:domain rdf:resource="&mp;Micropublication"/>
+        <owl:equivalentProperty rdf:resource="&mp;hasClaim"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;supportedBy"/>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;claimFor"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;supports"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;arguedBy"/>
+                <owl:equivalentProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="&mp;claimFor"/>
+                    </rdf:Description>
+                </owl:equivalentProperty>
+            </rdf:Description>
+        </owl:equivalentProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/assertedBy -->
+
+    <owl:ObjectProperty rdf:about="&mp;assertedBy">
+        <owl:inverseOf rdf:resource="&mp;asserts"/>
+        <owl:propertyDisjointWith rdf:resource="&mp;quotedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/asserts -->
+
+    <owl:ObjectProperty rdf:about="&mp;asserts">
+        <owl:propertyDisjointWith rdf:resource="&mp;quotes"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/challengedBy -->
+
+    <owl:ObjectProperty rdf:about="&mp;challengedBy">
+        <owl:inverseOf rdf:resource="&mp;challenges"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/challenges -->
+
+    <owl:ObjectProperty rdf:about="&mp;challenges">
+        <rdfs:comment>While &apos;supports&apos; is transitive, &apos;challenges&apos; is not.  The analogue to support transitivity is &quot;challengesSupportFor&apos;, which is the superproperty of a property chain on challenges and supports. 
+
+If C1 supportedBy S1, S1 supportedBy D1, D1 supportedBy M1, M1 challengedBy C2; then C1 supportedBy M1 through support transitivity; and C2 challengesSupportFor C1 through its property chain. 
+
+This corresponds to &quot;challenging the basis of an argument&quot;, or &quot;undercutting an argument&quot;.  
+
+If I challenge the method by which you obtained some data, which support an interpretation on which you base your claim...then ultimately I am challenging your claim.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mp;Representation"/>
+        <rdfs:range rdf:resource="&mp;Representation"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/challengesSupportFor -->
+
+    <owl:ObjectProperty rdf:about="&mp;challengesSupportFor">
+        <owl:inverseOf rdf:resource="&mp;supportChallengedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&mp;challenges"/>
+            <rdf:Description rdf:about="&mp;supports"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/claimFor -->
+
+    <owl:ObjectProperty rdf:about="&mp;claimFor">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <owl:inverseOf rdf:resource="&mp;argues"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;supports"/>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;argues"/>
+                <owl:equivalentProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="&mp;hasClaim"/>
+                    </rdf:Description>
+                </owl:equivalentProperty>
+            </rdf:Description>
+        </owl:equivalentProperty>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;hasClaim"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;supportedBy"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/derivedFrom -->
+
+    <owl:ObjectProperty rdf:about="&mp;derivedFrom">
+        <rdfs:domain rdf:resource="&mp;Artifact"/>
+        <rdfs:range rdf:resource="&mp;Artifact"/>
+        <owl:inverseOf rdf:resource="&mp;hasDerivation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/hasClaim -->
+
+    <owl:ObjectProperty rdf:about="&mp;hasClaim">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <owl:inverseOf rdf:resource="&mp;arguedBy"/>
+        <owl:inverseOf rdf:resource="&mp;claimFor"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;supportedBy"/>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;arguedBy"/>
+                <owl:equivalentProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="&mp;claimFor"/>
+                    </rdf:Description>
+                </owl:equivalentProperty>
+            </rdf:Description>
+        </owl:equivalentProperty>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;claimFor"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;supports"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/hasDerivation -->
+
+    <owl:ObjectProperty rdf:about="&mp;hasDerivation"/>
+    
+
+
+    <!-- http://purl.org/mp/hasHolotype -->
+
+    <owl:ObjectProperty rdf:about="&mp;hasHolotype">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&mp;Statement"/>
+        <rdfs:domain rdf:resource="&mp;Statement"/>
+        <owl:inverseOf rdf:resource="&mp;holotypeFor"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;homologousTo"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;homologousTo"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/hasProvenance -->
+
+    <owl:ObjectProperty rdf:about="&mp;hasProvenance">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&mp;Artifact"/>
+        <rdfs:range rdf:resource="&mp;Provenance"/>
+        <owl:inverseOf rdf:resource="&mp;provenanceFor"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;supportedBy"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;supports"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/hasSupportGraph -->
+
+    <owl:ObjectProperty rdf:about="&mp;hasSupportGraph">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&mp;Micropublication"/>
+        <rdfs:range rdf:resource="&mp;SupportGraph"/>
+        <owl:inverseOf rdf:resource="&mp;supportGraphFor"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;supportedBy"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;supports"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/holotypeFor -->
+
+    <owl:ObjectProperty rdf:about="&mp;holotypeFor">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&mp;Statement"/>
+        <rdfs:range rdf:resource="&mp;Statement"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;homologousTo"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;homologousTo"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/homologousTo -->
+
+    <owl:ObjectProperty rdf:about="&mp;homologousTo">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&mp;Statement"/>
+        <rdfs:range rdf:resource="&mp;Statement"/>
+        <owl:inverseOf rdf:resource="&mp;homologousTo"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&mp;holotypeFor"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/provenanceFor -->
+
+    <owl:ObjectProperty rdf:about="&mp;provenanceFor">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="&mp;Artifact"/>
+        <rdfs:domain rdf:resource="&mp;Provenance"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;supports"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;supportedBy"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/qualifiedBy -->
+
+    <owl:ObjectProperty rdf:about="&mp;qualifiedBy">
+        <rdfs:range rdf:resource="&mp;Qualifier"/>
+        <rdfs:domain rdf:resource="&mp;Statement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/qualifies -->
+
+    <owl:ObjectProperty rdf:about="&mp;qualifies">
+        <rdfs:domain rdf:resource="&mp;Qualifier"/>
+        <rdfs:range rdf:resource="&mp;Statement"/>
+        <owl:inverseOf rdf:resource="&mp;qualifiedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/quotedBy -->
+
+    <owl:ObjectProperty rdf:about="&mp;quotedBy">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/quotes -->
+
+    <owl:ObjectProperty rdf:about="&mp;quotes">
+        <owl:inverseOf rdf:resource="&mp;quotedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/representedBy -->
+
+    <owl:ObjectProperty rdf:about="&mp;representedBy">
+        <rdfs:domain rdf:resource="&mp;Artifact"/>
+        <rdfs:range rdf:resource="&mp;Representation"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;hasDerivation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hasDerivation"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;derivedFrom"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/represents -->
+
+    <owl:ObjectProperty rdf:about="&mp;represents">
+        <rdfs:range rdf:resource="&mp;Artifact"/>
+        <rdfs:domain rdf:resource="&mp;Representation"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;derivedFrom"/>
+        <owl:inverseOf rdf:resource="&mp;representedBy"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#hasDerivation"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;hasDerivation"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/supportChallengedBy -->
+
+    <owl:ObjectProperty rdf:about="&mp;supportChallengedBy">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/supportGraphFor -->
+
+    <owl:ObjectProperty rdf:about="&mp;supportGraphFor">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&mp;supports"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&mp;supportedBy"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/supportedBy -->
+
+    <owl:ObjectProperty rdf:about="&mp;supportedBy">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="&mp;Representation"/>
+        <rdfs:range rdf:resource="&mp;Representation"/>
+        <owl:inverseOf rdf:resource="&mp;supports"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mp/supports -->
+
+    <owl:ObjectProperty rdf:about="&mp;supports">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="&mp;Representation"/>
+        <rdfs:domain rdf:resource="&mp;Representation"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="&owl;topObjectProperty">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="&owl;topObjectProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#hasDerivation -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#hasDerivation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/mp/Artifact -->
+
+    <owl:Class rdf:about="&mp;Artifact">
+        <owl:equivalentClass rdf:resource="&mp;HomologyGroup"/>
+        <rdfs:comment>Artifact ::= a constructed or acquired material object, process or energy flow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Claim -->
+
+    <owl:Class rdf:about="&mp;Claim">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&mp;Statement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&mp;arguedBy"/>
+                        <owl:someValuesFrom rdf:resource="&mp;Micropublication"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&mp;Artifact"/>
+        <rdfs:subClassOf rdf:resource="&mp;HomologyGroup"/>
+        <rdfs:subClassOf rdf:resource="&mp;Representation"/>
+        <rdfs:subClassOf rdf:resource="&mp;Sentence"/>
+        <rdfs:subClassOf rdf:resource="&mp;Statement"/>
+        <rdfs:comment>Claim ::= the principal Statement argued for by a Micropublication</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Data -->
+
+    <owl:Class rdf:about="&mp;Data">
+        <rdfs:subClassOf rdf:resource="&mp;ScientificEvidence"/>
+        <rdfs:comment>Data ::= a series of Representations of the results of observation and/or experiment;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Holotype -->
+
+    <owl:Class rdf:about="&mp;Holotype">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&mp;Statement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&mp;holotypeFor"/>
+                        <owl:someValuesFrom rdf:resource="&mp;Statement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&mp;Artifact"/>
+        <rdfs:subClassOf rdf:resource="&mp;HomologyGroup"/>
+        <rdfs:subClassOf rdf:resource="&mp;Representation"/>
+        <rdfs:subClassOf rdf:resource="&mp;Sentence"/>
+        <rdfs:subClassOf rdf:resource="&mp;Statement"/>
+        <rdfs:comment>A Holotype is a member of a set of homologous Statements (a HomologyGroup), chosen as its representative for convenience.  If S is an HomologyGroup and si ∈ S is related to S by the holotypeFor relation, then si is the Holotype for S.  There may be only one Holotype per HomologyGroup.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/HomologyGroup -->
+
+    <owl:Class rdf:about="&mp;HomologyGroup">
+        <owl:equivalentClass rdf:resource="&mp;Representation"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&mp;Statement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&mp;homologousTo"/>
+                        <owl:someValuesFrom rdf:resource="&mp;Statement"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&mp;Statement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Material -->
+
+    <owl:Class rdf:about="&mp;Material">
+        <rdfs:subClassOf rdf:resource="&mp;Method"/>
+        <rdfs:comment>Material ::= part of a Method, describing physical reagents, tools, instruments, subjects, software, etc., used by the Actors in obtaining Data;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Method -->
+
+    <owl:Class rdf:about="&mp;Method">
+        <rdfs:subClassOf rdf:resource="&mp;ScientificEvidence"/>
+        <rdfs:comment>Method := an account of a procedure for employing Artifacts to obtain a set of Data, including instructions for reproducibly making or obtaining the necessary Artiacts;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Micropublication -->
+
+    <owl:Class rdf:about="&mp;Micropublication">
+        <rdfs:subClassOf rdf:resource="&mp;Artifact"/>
+        <rdfs:subClassOf rdf:resource="&mp;HomologyGroup"/>
+        <rdfs:subClassOf rdf:resource="&mp;Representation"/>
+        <rdfs:subClassOf rdf:resource="&mp;Sentence"/>
+        <rdfs:subClassOf rdf:resource="&mp;Statement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Procedure -->
+
+    <owl:Class rdf:about="&mp;Procedure">
+        <rdfs:subClassOf rdf:resource="&mp;Method"/>
+        <rdfs:comment>Procedure ::= a type of Method, describing a series of actions, taken to obtain Data;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Provenance -->
+
+    <owl:Class rdf:about="&mp;Provenance">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/03/trix/rdfg-1/Graph"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/QualifiedStatement -->
+
+    <owl:Class rdf:about="&mp;QualifiedStatement">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&mp;Statement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&mp;qualifiedBy"/>
+                        <owl:someValuesFrom rdf:resource="&mp;Qualifier"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&mp;Artifact"/>
+        <rdfs:subClassOf rdf:resource="&mp;HomologyGroup"/>
+        <rdfs:subClassOf rdf:resource="&mp;Representation"/>
+        <rdfs:subClassOf rdf:resource="&mp;Sentence"/>
+        <rdfs:subClassOf rdf:resource="&mp;Statement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Qualifier -->
+
+    <owl:Class rdf:about="&mp;Qualifier">
+        <rdfs:subClassOf rdf:resource="&mp;Artifact"/>
+        <rdfs:subClassOf rdf:resource="&mp;HomologyGroup"/>
+        <rdfs:subClassOf rdf:resource="&mp;Representation"/>
+        <rdfs:subClassOf rdf:resource="&mp;Sentence"/>
+        <rdfs:subClassOf rdf:resource="&mp;Statement"/>
+        <rdfs:comment>Qualifier ::= a Sentence which modifies the epistemic strength, scope, or applicability of a Statement; may be a phrase or  even a single word.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Reference -->
+
+    <owl:Class rdf:about="&mp;Reference">
+        <rdfs:subClassOf rdf:resource="&mp;Qualifier"/>
+        <rdfs:comment>Reference ::= a Sentence purporting to indicate a certain document; deployed as to characterize a Statement, indicating that support for the Statement may be found in the referenced document.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Representation -->
+
+    <owl:Class rdf:about="&mp;Representation">
+        <owl:equivalentClass rdf:resource="&mp;Sentence"/>
+        <rdfs:subClassOf rdf:resource="&mp;Artifact"/>
+        <rdfs:comment>Representation := a finite non-null sequence of digital Artifacts representing material objects, events, processes, states of affairs, and/or symbols; </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/ScientificEvidence -->
+
+    <owl:Class rdf:about="&mp;ScientificEvidence">
+        <rdfs:subClassOf rdf:resource="&mp;Artifact"/>
+        <rdfs:subClassOf rdf:resource="&mp;HomologyGroup"/>
+        <rdfs:subClassOf rdf:resource="&mp;Representation"/>
+        <rdfs:subClassOf rdf:resource="&mp;Sentence"/>
+        <rdfs:subClassOf rdf:resource="&mp;Statement"/>
+        <rdfs:comment>ScientificEvidence ::= one or more sets of Data supported by re-usable Methods showing how the Data were obtained;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/SemanticQualifier -->
+
+    <owl:Class rdf:about="&mp;SemanticQualifier">
+        <rdfs:subClassOf rdf:resource="&mp;Qualifier"/>
+        <rdfs:comment>SemanticQualifier ::= a Qualifier which is a member of a defined formal Vocabulary.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Sentence -->
+
+    <owl:Class rdf:about="&mp;Sentence">
+        <owl:equivalentClass rdf:resource="&mp;Statement"/>
+        <rdfs:subClassOf rdf:resource="&mp;Representation"/>
+        <rdfs:comment>Sentence ::= meaningful symbolic Representation, well-formed in its domain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/Statement -->
+
+    <owl:Class rdf:about="&mp;Statement">
+        <owl:equivalentClass rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf rdf:resource="&mp;Sentence"/>
+        <rdfs:comment>Statement ::= a declarative Sentence; </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/mp/SupportGraph -->
+
+    <owl:Class rdf:about="&mp;SupportGraph">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&mp;Representation"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&mp;asserts"/>
+                                        <owl:someValuesFrom rdf:resource="&mp;Representation"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&mp;quotes"/>
+                                        <owl:someValuesFrom rdf:resource="&mp;Representation"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&mp;supportedBy"/>
+                                <owl:someValuesFrom rdf:resource="&mp;Representation"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&mp;Representation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/03/trix/rdfg-1/Graph"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- http://www.w3.org/2004/03/trix/rdfg-1/Graph -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/03/trix/rdfg-1/Graph">
+        <rdfs:subClassOf rdf:resource="&mp;Artifact"/>
+        <rdfs:subClassOf rdf:resource="&mp;HomologyGroup"/>
+        <rdfs:subClassOf rdf:resource="&mp;Representation"/>
+        <rdfs:subClassOf rdf:resource="&mp;Sentence"/>
+        <rdfs:subClassOf rdf:resource="&mp;Statement"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/mp/arguedBy -->
+
+    <owl:NamedIndividual rdf:about="&mp;arguedBy">
+        <rdf:type rdf:resource="&mp;Artifact"/>
+        <rdf:type rdf:resource="&mp;HomologyGroup"/>
+        <rdf:type rdf:resource="&mp;Representation"/>
+        <rdf:type rdf:resource="&mp;Sentence"/>
+        <rdf:type rdf:resource="&mp;Statement"/>
+        <mp:homologousTo rdf:resource="&mp;arguedBy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/mp/argues -->
+
+    <owl:NamedIndividual rdf:about="&mp;argues">
+        <rdf:type rdf:resource="&mp;Artifact"/>
+        <rdf:type rdf:resource="&mp;HomologyGroup"/>
+        <rdf:type rdf:resource="&mp;Representation"/>
+        <rdf:type rdf:resource="&mp;Sentence"/>
+        <rdf:type rdf:resource="&mp;Statement"/>
+        <mp:homologousTo rdf:resource="&mp;argues"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/mp/assertedBy -->
+
+    <owl:NamedIndividual rdf:about="&mp;assertedBy">
+        <rdf:type rdf:resource="&mp;Artifact"/>
+        <rdf:type rdf:resource="&mp;HomologyGroup"/>
+        <rdf:type rdf:resource="&mp;Representation"/>
+        <rdf:type rdf:resource="&mp;Sentence"/>
+        <rdf:type rdf:resource="&mp;Statement"/>
+        <mp:homologousTo rdf:resource="&mp;assertedBy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/mp/hasProvenance -->
+
+    <owl:NamedIndividual rdf:about="&mp;hasProvenance">
+        <rdf:type rdf:resource="&mp;Artifact"/>
+        <rdf:type rdf:resource="&mp;HomologyGroup"/>
+        <rdf:type rdf:resource="&mp;Representation"/>
+        <rdf:type rdf:resource="&mp;Sentence"/>
+        <rdf:type rdf:resource="&mp;Statement"/>
+        <mp:homologousTo rdf:resource="&mp;hasProvenance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/mp/provenanceFor -->
+
+    <owl:NamedIndividual rdf:about="&mp;provenanceFor">
+        <rdf:type rdf:resource="&mp;Artifact"/>
+        <rdf:type rdf:resource="&mp;HomologyGroup"/>
+        <rdf:type rdf:resource="&mp;Representation"/>
+        <rdf:type rdf:resource="&mp;Sentence"/>
+        <rdf:type rdf:resource="&mp;Statement"/>
+        <mp:homologousTo rdf:resource="&mp;provenanceFor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/mp/quotedBy -->
+
+    <owl:NamedIndividual rdf:about="&mp;quotedBy">
+        <rdf:type rdf:resource="&mp;Artifact"/>
+        <rdf:type rdf:resource="&mp;HomologyGroup"/>
+        <rdf:type rdf:resource="&mp;Representation"/>
+        <rdf:type rdf:resource="&mp;Sentence"/>
+        <rdf:type rdf:resource="&mp;Statement"/>
+        <mp:homologousTo rdf:resource="&mp;quotedBy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/mp/supportedBy -->
+
+    <owl:NamedIndividual rdf:about="&mp;supportedBy">
+        <rdf:type rdf:resource="&mp;Artifact"/>
+        <rdf:type rdf:resource="&mp;HomologyGroup"/>
+        <rdf:type rdf:resource="&mp;Representation"/>
+        <rdf:type rdf:resource="&mp;Sentence"/>
+        <rdf:type rdf:resource="&mp;Statement"/>
+        <mp:homologousTo rdf:resource="&mp;supportedBy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/mp/supports -->
+
+    <owl:NamedIndividual rdf:about="&mp;supports">
+        <rdf:type rdf:resource="&mp;Artifact"/>
+        <rdf:type rdf:resource="&mp;HomologyGroup"/>
+        <rdf:type rdf:resource="&mp;Representation"/>
+        <rdf:type rdf:resource="&mp;Sentence"/>
+        <rdf:type rdf:resource="&mp;Statement"/>
+        <mp:homologousTo rdf:resource="&mp;supports"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/03/trix/swp-2/assertedBy -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/03/trix/swp-2/assertedBy">
+        <rdf:type rdf:resource="&mp;Artifact"/>
+        <rdf:type rdf:resource="&mp;HomologyGroup"/>
+        <rdf:type rdf:resource="&mp;Representation"/>
+        <rdf:type rdf:resource="&mp;Sentence"/>
+        <rdf:type rdf:resource="&mp;Statement"/>
+        <mp:homologousTo rdf:resource="http://www.w3.org/2004/03/trix/swp-2/assertedBy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2004/03/trix/swp-2/quotedBy -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/03/trix/swp-2/quotedBy">
+        <rdf:type rdf:resource="&mp;Artifact"/>
+        <rdf:type rdf:resource="&mp;HomologyGroup"/>
+        <rdf:type rdf:resource="&mp;Representation"/>
+        <rdf:type rdf:resource="&mp;Sentence"/>
+        <rdf:type rdf:resource="&mp;Statement"/>
+        <mp:homologousTo rdf:resource="http://www.w3.org/2004/03/trix/swp-2/quotedBy"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
