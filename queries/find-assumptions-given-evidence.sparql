@@ -23,10 +23,10 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
 #### List all the assertions that are not supported by evidence
-SELECT ?a
+SELECT ?a ?x
 WHERE
 {
-    X mp:hasSupportGraphElement ?a .
+    ?x mp:hasSupportGraphElement ?a .
     ?a rdf:type mp:Statement .
     FILTER NOT EXISTS {?r rdf:type mp:Representation ;
                           mp:supports ?a . }
