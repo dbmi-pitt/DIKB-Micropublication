@@ -25,5 +25,5 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 SELECT ?X ?a
 WHERE
 {
-    ?X dikb:assumesAsValid ?a .
+    ?X dikbD2R:assumesAsValid ?a .
 }

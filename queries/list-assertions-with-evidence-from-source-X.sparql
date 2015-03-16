@@ -22,34 +22,12 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
-#### 1 Finding assertions and evidence
-# 1.a List all assertions that are not supported by evidence
-select *
-where {
-  ?c a mp:Claim.
-  FILTER NOT EXISTS {?s mp:supports ?c} 
-} 
-
-# 1.b Which assertions are supported (or refuted) by just one type of evidence?
-# NOTE: first attempt - correction needed - should probably use a sub-query
-select ?c count(distinct ?type)
-where {
-  ?c a mp:Claim.
-  ?d mp:supports ?c.
-  ?m mp:supports ?d.
-  ?m rdf:type ?type.
-}
-ORDER BY ?c
-
-# 1.c Which assertions have evidence from source X (e.g., product labeling)
+# Which assertions have evidence from source X (e.g., product labeling)
 ## example with drug product labeling
-select *
-where {
-  ?a a dikbEvidence:Non_traceable_Drug_Label_Statement;
-     mp:supports ?c.
-  ?c rdfs:label ?label.
-}
-# TODO: other evidence types
 
-# 1.d Which assertions have both evidence for and evidence against from a single source X?
-# TODO: 
+SELECT ?druglabelstatement ?assertion ?assertionlabel
+WHERE {
+  ?druglabelstatement a dikbEvidence:Non_traceable_Drug_Label_Statement;
+     mp:supports ?assertion.
+  ?assertion rdfs:label ?assertionlabel.
+}
