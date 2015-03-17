@@ -22,26 +22,14 @@ def readCSVfromDir(inputdir):
 ################################################################################
 
 queriesD = readCSVfromDir(QUERIES_PATH)
-#sparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu/sparql")
-
-
 sparql = SPARQLWrapper("https://dbmi-icode-01.dbmi.pitt.edu/sparql")
-sparql.method = 'POST'
 
 for name,qry in queriesD.items():
     
- #   print "[INFO] testing query (%s): \n %s" % (name, qry)
-
-    try:
-
-        sparql.setQuery(qry)    
-        sparql.setReturnFormat(JSON)
-        results = sparql.query().convert()
+    print "[INFO] testing query (%s): \n %s" % (name, qry)
+    sparql.setQuery(qry)    
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
     
-        if len(results["results"]["bindings"]) == 0:
-            print "[WARN] Query : %s is not getting any results back" % (name) 
-        else:
-            print "[INFO] Query : %s is validated (results: %s)" % (name, len(results["results"]["bindings"])) 
-
-    except:
-        print "[DEBUG] Query %s is not a correct query or not getting any results back" % (name)
+    if len(results["results"]["bindings"]) == 0:
+        print "[DEBUG] query : %s is not getting any results back" % (name) 

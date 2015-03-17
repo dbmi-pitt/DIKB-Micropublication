@@ -11,7 +11,6 @@ PREFIX dctypes: <http://purl.org/dc/dcmitype/>
 PREFIX dikbD2R: <http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/resource/>
 PREFIX dikbEvidence: <http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#>
 PREFIX gcds: <http://www.genomic-cds.org/ont/genomic-cds.owl#>
-PREFIX linkedspls: <file:///home/rdb20/Downloads/d2rq-0.8.1/linkedSPLs-dump.nt#structuredProductLabelMetadata/>
 PREFIX mp: <http://purl.org/mp/> # namespace for micropublication
 PREFIX ncbit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX oa: <http://www.w3.org/ns/oa#>
