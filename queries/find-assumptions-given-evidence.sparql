@@ -27,6 +27,6 @@ WHERE
 {
     ?assertion mp:hasSupportGraphElement ?evidence .
     ?assertion rdf:type mp:Statement .
-    FILTER NOT EXISTS {?evidence rdf:type mp:Representation ;
+    FILTER NOT EXISTS {?evidence rdfs:subClass mp:Representation ;
                           mp:supports ?assertion . }
 }
