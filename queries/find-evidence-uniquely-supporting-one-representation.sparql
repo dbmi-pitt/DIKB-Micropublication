@@ -19,10 +19,11 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 #### List all the evidence items that support exactly one representation which it is the only piece of evidence
 
 SELECT ?r1 ?a1
+FROM <http://purl.org/mp/initial-graph-oa-mp>
 WHERE
 {
-     ?a1 rdfs:subClassOf mp:Representation.
+     ?representation rdfs:subClassOf mp:Representation.
 
-     ?r1 mp:supports ?a1.  
+     ?evidence mp:supports ?representation.  
           
-} HAVING (COUNT(?r1) = 1) && (COUNT(?a1) = 1)
+} HAVING (COUNT(?evidence) = 1) && (COUNT(?representation) = 1)
