@@ -1,0 +1,1140 @@
+@prefix : <http://purl.org/mp/> .
+@prefix dct: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/mp/> .
+
+<http://purl.org/mp/> rdf:type owl:Ontology ;
+                      
+                      owl:versionInfo "1.16" ;
+                      
+                      owl:priorVersion "1.15" ;
+                      
+                      rdfs:comment """Micropublications: a Semantic Model for Claims, Evidence, Arguments and Annotations in Biomedical Communications.
+
+Author:         	Tim Clark (1,2,3)
+Contributors:   	Paolo Ciccarese (1,2), Carole Goble (3)
+
+Version 1.16, September 12, 2013.
+
+(1) Massachusetts General Hospital, Dept. of Neurology
+(2) Harvard Medical School
+(3) University of Manchester, School of Computer Science 
+
+""" .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://purl.org/mp/arguedBy
+
+:arguedBy rdf:type owl:ObjectProperty ;
+          
+          rdfs:subPropertyOf :supports .
+
+
+
+###  http://purl.org/mp/argues
+
+:argues rdf:type owl:FunctionalProperty ,
+                 owl:ObjectProperty ;
+        
+        rdfs:range :Claim ;
+        
+        rdfs:domain :Micropublication ;
+        
+        owl:inverseOf :arguedBy ;
+        
+        rdfs:subPropertyOf :supportedBy .
+
+
+
+###  http://purl.org/mp/assertedBy
+
+:assertedBy rdf:type owl:FunctionalProperty ,
+                     owl:ObjectProperty ;
+            
+            rdfs:range :Micropublication ;
+            
+            rdfs:domain :Representation ;
+            
+            owl:inverseOf :asserts ;
+            
+            rdfs:subPropertyOf :elementOf ;
+            
+            owl:propertyDisjointWith :quotedBy .
+
+
+
+###  http://purl.org/mp/asserts
+
+:asserts rdf:type owl:InverseFunctionalProperty ,
+                  owl:ObjectProperty ;
+         
+         rdfs:domain :Micropublication ;
+         
+         rdfs:range :Representation ;
+         
+         rdfs:subPropertyOf :hasElement ;
+         
+         owl:propertyDisjointWith :quotes .
+
+
+
+###  http://purl.org/mp/attributedTo
+
+:attributedTo rdf:type owl:ObjectProperty ;
+              
+              rdfs:domain :Artifact ;
+              
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              
+              rdfs:range prov:Agent ;
+              
+              rdfs:subPropertyOf prov:wasAttributedTo .
+
+
+
+###  http://purl.org/mp/attributionAsAuthor
+
+:attributionAsAuthor rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:subPropertyOf prov:hasAttribution .
+
+
+
+###  http://purl.org/mp/attributionAsCurator
+
+:attributionAsCurator rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:subPropertyOf prov:hasAttribution .
+
+
+
+###  http://purl.org/mp/attributionAsEditor
+
+:attributionAsEditor rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:subPropertyOf prov:hasAttribution .
+
+
+
+###  http://purl.org/mp/attributionAsPublisher
+
+:attributionAsPublisher rdf:type owl:ObjectProperty ;
+                        
+                        rdfs:subPropertyOf prov:hasAttribution .
+
+
+
+###  http://purl.org/mp/attributionOfAgent
+
+:attributionOfAgent rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:domain :Attribution ;
+                    
+                    rdfs:range prov:Agent ;
+                    
+                    rdfs:subPropertyOf prov:agent .
+
+
+
+###  http://purl.org/mp/authoredBy
+
+:authoredBy rdf:type owl:ObjectProperty ;
+            
+            rdfs:subPropertyOf :attributedTo ;
+            
+            owl:propertyChainAxiom ( :attributionAsAuthor
+                                     :attributionOfAgent
+                                   ) .
+
+
+
+###  http://purl.org/mp/challengeGraphElementOf
+
+:challengeGraphElementOf rdf:type owl:ObjectProperty ;
+                         
+                         rdfs:domain :Micropublication ;
+                         
+                         rdfs:range :Representation ;
+                         
+                         owl:inverseOf :hasChallengeGraphElement .
+
+
+
+###  http://purl.org/mp/challengedBy
+
+:challengedBy rdf:type owl:ObjectProperty ;
+              
+              rdfs:range :Representation ;
+              
+              rdfs:domain :Representation ;
+              
+              owl:inverseOf :challenges .
+
+
+
+###  http://purl.org/mp/challenges
+
+:challenges rdf:type owl:ObjectProperty .
+
+
+
+###  http://purl.org/mp/curatedBy
+
+:curatedBy rdf:type owl:ObjectProperty ;
+           
+           rdfs:subPropertyOf :attributedTo ;
+           
+           owl:propertyChainAxiom ( :attributionAsCurator
+                                    :attributionOfAgent
+                                  ) .
+
+
+
+###  http://purl.org/mp/dataSupports
+
+:dataSupports rdf:type owl:ObjectProperty ;
+              
+              rdfs:domain :Data ;
+              
+              rdfs:range :Representation ;
+              
+              rdfs:subPropertyOf :evidenceSupports ;
+              
+              owl:inverseOf :supportedByData .
+
+
+
+###  http://purl.org/mp/directlyChallengedBy
+
+:directlyChallengedBy rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:subPropertyOf :challengedBy ;
+                      
+                      owl:inverseOf :directlyChallenges .
+
+
+
+###  http://purl.org/mp/directlyChallenges
+
+:directlyChallenges rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:subPropertyOf :challenges .
+
+
+
+###  http://purl.org/mp/editedBy
+
+:editedBy rdf:type owl:ObjectProperty ;
+          
+          rdfs:subPropertyOf :attributedTo ;
+          
+          owl:propertyChainAxiom ( :attributionAsEditor
+                                   :attributionOfAgent
+                                 ) .
+
+
+
+###  http://purl.org/mp/elementOf
+
+:elementOf rdf:type owl:ObjectProperty ;
+           
+           rdfs:range :Micropublication ;
+           
+           rdfs:domain :Representation ;
+           
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://purl.org/mp/evidenceSupports
+
+:evidenceSupports rdf:type owl:ObjectProperty ;
+                  
+                  owl:inverseOf :supportedByEvidence ;
+                  
+                  rdfs:subPropertyOf :supports .
+
+
+
+###  http://purl.org/mp/hasAttribution
+
+:hasAttribution rdf:type owl:ObjectProperty ;
+                
+                rdfs:domain :Artifact ;
+                
+                rdfs:range :Attribution ;
+                
+                rdfs:subPropertyOf :supportedBy ,
+                                   prov:qualifiedAttribution .
+
+
+
+###  http://purl.org/mp/hasChallengeGraphElement
+
+:hasChallengeGraphElement rdf:type owl:ObjectProperty ;
+                          
+                          rdfs:domain :Micropublication ;
+                          
+                          rdfs:range :Representation .
+
+
+
+###  http://purl.org/mp/hasElement
+
+:hasElement rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :Micropublication ;
+            
+            rdfs:range :Representation .
+
+
+
+###  http://purl.org/mp/hasHolotype
+
+:hasHolotype rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :Statement ;
+             
+             rdfs:range :Statement ;
+             
+             owl:inverseOf :holotypeFor ;
+             
+             rdfs:subPropertyOf :representedBy .
+
+
+
+###  http://purl.org/mp/hasSupportGraphElement
+
+:hasSupportGraphElement rdf:type owl:ObjectProperty ;
+                        
+                        rdfs:domain :Micropublication ;
+                        
+                        rdfs:range :Representation ;
+                        
+                        owl:inverseOf :supportGraphElementOf .
+
+
+
+###  http://purl.org/mp/holotypeFor
+
+:holotypeFor rdf:type owl:ObjectProperty ;
+             
+             rdfs:subPropertyOf :represents .
+
+
+
+###  http://purl.org/mp/indirectlyChallengedBy
+
+:indirectlyChallengedBy rdf:type owl:ObjectProperty ;
+                        
+                        rdfs:subPropertyOf :challengedBy ;
+                        
+                        owl:inverseOf :indirectlyChallenges .
+
+
+
+###  http://purl.org/mp/indirectlyChallenges
+
+:indirectlyChallenges rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:subPropertyOf :challenges ;
+                      
+                      owl:propertyChainAxiom ( :directlyChallenges
+                                               :supports
+                                             ) .
+
+
+
+###  http://purl.org/mp/methodSupports
+
+:methodSupports rdf:type owl:ObjectProperty ;
+                
+                rdfs:domain :Method ;
+                
+                rdfs:range :Representation ;
+                
+                rdfs:subPropertyOf :evidenceSupports ;
+                
+                owl:inverseOf :supportedByMethod .
+
+
+
+###  http://purl.org/mp/publishedBy
+
+:publishedBy rdf:type owl:ObjectProperty ;
+             
+             rdfs:subPropertyOf :attributedTo ;
+             
+             owl:propertyChainAxiom ( :attributionAsPublisher
+                                      :attributionOfAgent
+                                    ) .
+
+
+
+###  http://purl.org/mp/qualifiedBy
+
+:qualifiedBy rdf:type owl:ObjectProperty ;
+             
+             rdfs:range :Sentence ;
+             
+             owl:inverseOf :qualifies ;
+             
+             rdfs:domain prov:Entity .
+
+
+
+###  http://purl.org/mp/qualifies
+
+:qualifies rdf:type owl:ObjectProperty ;
+           
+           rdfs:range prov:Entity .
+
+
+
+###  http://purl.org/mp/quotedBy
+
+:quotedBy rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Claim ;
+          
+          rdfs:range :Representation ;
+          
+          rdfs:subPropertyOf :elementOf ;
+          
+          owl:inverseOf :quotes .
+
+
+
+###  http://purl.org/mp/quotes
+
+:quotes rdf:type owl:ObjectProperty ;
+        
+        rdfs:subPropertyOf :hasElement .
+
+
+
+###  http://purl.org/mp/referencedBy
+
+:referencedBy rdf:type owl:ObjectProperty ;
+              
+              rdfs:range :Reference ;
+              
+              rdfs:subPropertyOf :qualifiedBy .
+
+
+
+###  http://purl.org/mp/references
+
+:references rdf:type owl:ObjectProperty ;
+            
+            rdfs:subPropertyOf :qualifies ;
+            
+            owl:inverseOf :referencedBy .
+
+
+
+###  http://purl.org/mp/representedBy
+
+:representedBy rdf:type owl:ObjectProperty ;
+               
+               owl:inverseOf :represents .
+
+
+
+###  http://purl.org/mp/represents
+
+:represents rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :Representation ;
+            
+            rdfs:range prov:Entity .
+
+
+
+###  http://purl.org/mp/semtaggedBy
+
+:semtaggedBy rdf:type owl:ObjectProperty ;
+             
+             rdfs:range :SemanticQualifier ;
+             
+             rdfs:subPropertyOf :qualifiedBy .
+
+
+
+###  http://purl.org/mp/semtags
+
+:semtags rdf:type owl:ObjectProperty ;
+         
+         rdfs:subPropertyOf :qualifies ;
+         
+         owl:inverseOf :semtaggedBy .
+
+
+
+###  http://purl.org/mp/supportGraphElementOf
+
+:supportGraphElementOf rdf:type owl:ObjectProperty ;
+                       
+                       rdfs:range :Micropublication ;
+                       
+                       rdfs:domain :Representation .
+
+
+
+###  http://purl.org/mp/supportedBy
+
+:supportedBy rdf:type owl:ObjectProperty ,
+                      owl:TransitiveProperty ;
+             
+             rdfs:range :Representation ;
+             
+             rdfs:domain :Representation ;
+             
+             owl:inverseOf :supports .
+
+
+
+###  http://purl.org/mp/supportedByData
+
+:supportedByData rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:subPropertyOf :supportedByEvidence .
+
+
+
+###  http://purl.org/mp/supportedByEvidence
+
+:supportedByEvidence rdf:type owl:ObjectProperty ,
+                              owl:TransitiveProperty ;
+                     
+                     rdfs:subPropertyOf :supportedBy .
+
+
+
+###  http://purl.org/mp/supportedByMethod
+
+:supportedByMethod rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:subPropertyOf :supportedByEvidence .
+
+
+
+###  http://purl.org/mp/supports
+
+:supports rdf:type owl:ObjectProperty ,
+                   owl:TransitiveProperty .
+
+
+
+###  http://www.w3.org/ns/prov#agent
+
+prov:agent rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.w3.org/ns/prov#hasAttribution
+
+prov:hasAttribution rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.w3.org/ns/prov#qualifiedAttribution
+
+prov:qualifiedAttribution rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.w3.org/ns/prov#wasAttributedTo
+
+prov:wasAttributedTo rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://dublincore.org/documents/2012/06/14/dcmi-terms/bibliographicCitation
+
+dct:bibliographicCitation rdf:type owl:DatatypeProperty .
+
+
+
+###  http://purl.org/mp/atTime
+
+:atTime rdf:type owl:DatatypeProperty ;
+        
+        rdfs:domain :Attribution ;
+        
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://purl.org/mp/authoredOn
+
+:authoredOn rdf:type owl:DatatypeProperty ;
+            
+            rdfs:domain :Artifact ;
+            
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+
+###  http://purl.org/mp/citation
+
+:citation rdf:type owl:DatatypeProperty ;
+          
+          rdfs:subPropertyOf dct:bibliographicCitation ;
+          
+          rdfs:domain :Reference ;
+          
+          rdfs:subPropertyOf :value ;
+          
+          rdfs:range xsd:string .
+
+
+
+###  http://purl.org/mp/curatedOn
+
+:curatedOn rdf:type owl:DatatypeProperty .
+
+
+
+###  http://purl.org/mp/editedOn
+
+:editedOn rdf:type owl:DatatypeProperty .
+
+
+
+###  http://purl.org/mp/publishedOn
+
+:publishedOn rdf:type owl:DatatypeProperty ;
+             
+             rdfs:domain :Attribution .
+
+
+
+###  http://purl.org/mp/statement
+
+:statement rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           
+           rdfs:domain :Sentence ;
+           
+           rdfs:subPropertyOf :value ;
+           
+           rdfs:range xsd:string .
+
+
+
+###  http://purl.org/mp/value
+
+:value rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://purl.org/mp/ArticleText
+
+:ArticleText rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Representation .
+
+
+
+###  http://purl.org/mp/Artifact
+
+:Artifact rdf:type owl:Class ;
+          
+          rdfs:subClassOf prov:Entity .
+
+
+
+###  http://purl.org/mp/Attribution
+
+:Attribution rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Representation .
+
+
+
+###  http://purl.org/mp/Claim
+
+:Claim rdf:type owl:Class ;
+       
+       owl:equivalentClass [ rdf:type owl:Class ;
+                             owl:intersectionOf ( :Statement
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :arguedBy ;
+                                                    owl:someValuesFrom :Micropublication
+                                                  ]
+                                                )
+                           ] ;
+       
+       rdfs:subClassOf :Statement .
+
+
+
+###  http://purl.org/mp/Data
+
+:Data rdf:type owl:Class ;
+      
+      owl:equivalentClass [ rdf:type owl:Class ;
+                            owl:intersectionOf ( :Representation
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :dataSupports ;
+                                                   owl:someValuesFrom :Representation
+                                                 ]
+                                               )
+                          ] ;
+      
+      rdfs:subClassOf :Representation .
+
+
+
+###  http://purl.org/mp/Holotype
+
+:Holotype rdf:type owl:Class ;
+          
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:intersectionOf ( :Statement
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :holotypeFor ;
+                                                       owl:someValuesFrom :Statement
+                                                     ]
+                                                   )
+                              ] ;
+          
+          rdfs:subClassOf :Statement .
+
+
+
+###  http://purl.org/mp/Material
+
+:Material rdf:type owl:Class ;
+          
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:intersectionOf ( :Method
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :represents ;
+                                                       owl:someValuesFrom :Artifact
+                                                     ]
+                                                   )
+                              ] ;
+          
+          rdfs:subClassOf :Method .
+
+
+
+###  http://purl.org/mp/Method
+
+:Method rdf:type owl:Class ;
+        
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:intersectionOf ( :Representation
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :methodSupports ;
+                                                     owl:someValuesFrom :Representation
+                                                   ]
+                                                 )
+                            ] ;
+        
+        rdfs:subClassOf :Representation .
+
+
+
+###  http://purl.org/mp/Micropublication
+
+:Micropublication rdf:type owl:Class ;
+                  
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:intersectionOf ( :Representation
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :argues ;
+                                                               owl:someValuesFrom :Statement
+                                                             ]
+                                                           )
+                                      ] ;
+                  
+                  rdfs:subClassOf :Representation .
+
+
+
+###  http://purl.org/mp/Procedure
+
+:Procedure rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Method .
+
+
+
+###  http://purl.org/mp/QualifiedStatement
+
+:QualifiedStatement rdf:type owl:Class ;
+                    
+                    owl:equivalentClass [ rdf:type owl:Class ;
+                                          owl:intersectionOf ( :Statement
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :qualifiedBy ;
+                                                                 owl:someValuesFrom :Sentence
+                                                               ]
+                                                             )
+                                        ] ;
+                    
+                    rdfs:subClassOf :Statement .
+
+
+
+###  http://purl.org/mp/Qualifier
+
+:Qualifier rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Sentence .
+
+
+
+###  http://purl.org/mp/Reference
+
+:Reference rdf:type owl:Class ;
+           
+           owl:equivalentClass [ rdf:type owl:Class ;
+                                 owl:intersectionOf ( :Sentence
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :citation ;
+                                                        owl:someValuesFrom xsd:string
+                                                      ]
+                                                    )
+                               ] ;
+           
+           rdfs:subClassOf :Qualifier .
+
+
+
+###  http://purl.org/mp/ReferencedStatement
+
+:ReferencedStatement rdf:type owl:Class ;
+                     
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:intersectionOf ( :QualifiedStatement
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :referencedBy ;
+                                                                  owl:someValuesFrom :Reference
+                                                                ]
+                                                              )
+                                         ] ;
+                     
+                     rdfs:subClassOf :QualifiedStatement .
+
+
+
+###  http://purl.org/mp/Representation
+
+:Representation rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Artifact .
+
+
+
+###  http://purl.org/mp/SemanticQualifier
+
+:SemanticQualifier rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Qualifier .
+
+
+
+###  http://purl.org/mp/Sentence
+
+:Sentence rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Representation .
+
+
+
+###  http://purl.org/mp/Statement
+
+:Statement rdf:type owl:Class ;
+           
+           owl:equivalentClass [ rdf:type owl:Class ;
+                                 owl:intersectionOf ( :Sentence
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :statement ;
+                                                        owl:someValuesFrom xsd:string
+                                                      ]
+                                                    )
+                               ] ;
+           
+           rdfs:subClassOf :Sentence .
+
+
+
+###  http://purl.org/mp/TaggedStatement
+
+:TaggedStatement rdf:type owl:Class ;
+                 
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:intersectionOf ( :QualifiedStatement
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :semtaggedBy ;
+                                                              owl:someValuesFrom :SemanticQualifier
+                                                            ]
+                                                          )
+                                     ] ;
+                 
+                 rdfs:subClassOf :QualifiedStatement .
+
+
+
+###  http://www.w3.org/ns/prov#Agent
+
+prov:Agent rdf:type owl:Class ;
+           
+           rdfs:subClassOf prov:Entity .
+
+
+
+###  http://www.w3.org/ns/prov#Entity
+
+prov:Entity rdf:type owl:Class .
+
+
+
+###  http://www.w3.org/ns/prov#Organization
+
+prov:Organization rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf prov:Entity .
+
+
+
+###  http://www.w3.org/ns/prov#Person
+
+prov:Person rdf:type owl:Class ;
+            
+            rdfs:subClassOf prov:Entity .
+
+
+
+
+
+#################################################################
+#
+#    Rules
+#
+#################################################################
+
+
+<urn:swrl#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl#m> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl#a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl#b> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl#t> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+  <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :attributionAsPublisher ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#a> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#b>
+                                                    ] ;
+                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> :attributionOfAgent ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#b> ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#c>
+                                                               ] ;
+                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                rdf:rest rdf:nil ;
+                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                            <http://www.w3.org/2003/11/swrl#propertyPredicate> :atTime ;
+                                                                            <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#b> ;
+                                                                            <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#t>
+                                                                          ]
+                                                              ]
+                                                   ]
+                                        ] ;
+  <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:rest rdf:nil ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :publishedOn ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#a> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#t>
+                                                    ]
+                                        ]
+] .
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+  <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :attributionAsCurator ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#a> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#b>
+                                                    ] ;
+                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> :attributionOfAgent ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#b> ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#c>
+                                                               ] ;
+                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                rdf:rest rdf:nil ;
+                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                            <http://www.w3.org/2003/11/swrl#propertyPredicate> :atTime ;
+                                                                            <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#b> ;
+                                                                            <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#t>
+                                                                          ]
+                                                              ]
+                                                   ]
+                                        ] ;
+  <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:rest rdf:nil ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :curatedOn ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#a> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#t>
+                                                    ]
+                                        ]
+] .
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+  <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:rest rdf:nil ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :editedOn ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#a> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#t>
+                                                    ]
+                                        ] ;
+  <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :attributionAsEditor ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#a> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#b>
+                                                    ] ;
+                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                rdf:rest rdf:nil ;
+                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                            <http://www.w3.org/2003/11/swrl#propertyPredicate> :atTime ;
+                                                                            <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#b> ;
+                                                                            <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#t>
+                                                                          ]
+                                                              ] ;
+                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> :attributionOfAgent ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#b> ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#c>
+                                                               ]
+                                                   ]
+                                        ]
+] .
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+  <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:rest rdf:nil ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasChallengeGraphElement ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#m> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r>
+                                                    ]
+                                        ] ;
+  <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                     rdf:rest rdf:nil ;
+                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> :elementOf ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#m> ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#r>
+                                                               ]
+                                                   ] ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :challenges ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#m> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#r>
+                                                    ]
+                                        ]
+] .
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+  <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :attributionAsAuthor ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#a> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#b>
+                                                    ] ;
+                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> :attributionOfAgent ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#b> ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#c>
+                                                               ] ;
+                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                rdf:rest rdf:nil ;
+                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                            <http://www.w3.org/2003/11/swrl#propertyPredicate> :atTime ;
+                                                                            <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#b> ;
+                                                                            <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#t>
+                                                                          ]
+                                                              ]
+                                                   ]
+                                        ] ;
+  <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:rest rdf:nil ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :authoredOn ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#a> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#t>
+                                                    ]
+                                        ]
+] .
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+  <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                     rdf:rest rdf:nil ;
+                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> :supports ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#m> ;
+                                                                 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#r>
+                                                               ]
+                                                   ] ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :elementOf ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#m> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#r>
+                                                    ]
+                                        ] ;
+  <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                          rdf:rest rdf:nil ;
+                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasSupportGraphElement ;
+                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#m> ;
+                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#r>
+                                                    ]
+                                        ]
+] .
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
+
