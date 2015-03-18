@@ -23,11 +23,11 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 #### List all the evidence items that support multiple assertions, for which it is the only piece of evidence
 
-SELECT ?r1 ?a1
+SELECT ?representation ?assertion
 WHERE
 {
-     ?a1 rdfs:subClassOf mp:Representation.
+     ?assertion rdfs:subClassOf mp:Claim.
 
-     ?r1 mp:supports ?a1.  
+     ?representation mp:supports ?assertion.  
           
-} HAVING (COUNT(?r1) = 1) && (COUNT(?a1) > 1)
+} HAVING (COUNT(?representation) = 1) && (COUNT(?assertion) > 1)
