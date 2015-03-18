@@ -18,7 +18,7 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 #### List all the evidence items that support exactly one representation which it is the only piece of evidence
 
-SELECT ?r1 ?a1
+SELECT ?representation ?evidence
 FROM <http://purl.org/mp/initial-graph-oa-mp>
 WHERE
 {
