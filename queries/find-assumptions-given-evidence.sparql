@@ -23,6 +23,7 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 #### List all the assertions that are not supported by evidence
 SELECT ?evidence ?assertion
+FROM <http://purl.org/mp/initial-graph-oa-mp>
 WHERE
 {
     ?assertion mp:hasSupportGraphElement ?evidence .
