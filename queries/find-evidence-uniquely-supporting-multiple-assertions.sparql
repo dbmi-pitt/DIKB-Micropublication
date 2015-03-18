@@ -26,7 +26,7 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 SELECT ?representation ?assertion
 WHERE
 {
-     ?assertion rdfs:subClassOf mp:Claim.
+     ?assertion rdf:type mp:Claim.
 
      ?representation mp:supports ?assertion.  
           
