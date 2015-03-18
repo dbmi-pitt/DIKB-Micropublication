@@ -26,7 +26,7 @@ SELECT ?evidence ?assertion
 WHERE
 {
     ?assertion mp:hasSupportGraphElement ?evidence .
-    ?evidence rdf:type mp:Statement .
+    ?assertion rdf:type mp:Statement .
     FILTER NOT EXISTS {?r rdf:type mp:Representation ;
                           mp:supports ?assertion . }
 }
