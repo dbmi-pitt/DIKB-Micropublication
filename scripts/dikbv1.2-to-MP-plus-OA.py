@@ -264,6 +264,8 @@ graph.add((poc['excretion-decrease'], dcterms["description"], Literal("The pharm
 graph.add((poc['not-important'], RDFS.label, Literal("not-important")))
 graph.add((poc['not-important'], dcterms["description"], Literal("The pharmacogenomic biomarker is not associated any clinically relevant pharmacokinetic with respect to the drug. ")))
 
+
+
 ################################################################################
 
 # OBSERVED DDIs
@@ -280,23 +282,22 @@ annotationClaimCntr = 1
 annotationMaterialCntr = 1
 annotationMethodCntr = 1
 
-annotationEvidenceCntr = 1
-annotationReStatementCntr = 1
+#annotationEvidenceCntr = 1
+#annotationReStatementCntr = 1
 annotationStatementCntr = 1
 
 
 splSetIdCache = {} 
 source = ""
-#graph = Graph()
 mp_list = []
 
-## TODO: the code needs to be modified so that the same targets have multiple bodies if that is necessary
-
-#for row in data_set:
-#    yield dict([(key, unicode(value, 'utf-8')) for key, value in row.iteritems()])
+#testIdx = 1
 
 for item in data_set:     ## <-------- Use the list of PDDI dictionary instances from the pickle
 
+    #if testIdx > 5:
+    #    break
+    #testIdx = testIdx + 1
     
     ## parse oa:selector in OA, extract the 'exact' drug interaction statement
     index_quoted = item["evidenceStatement"].find('Quote') ## TODO: use a regular expression because the quote syntax is sometimes slightly different
@@ -406,9 +407,9 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
 		      	  
     #print u"EXACT: %s" % exact
 	
-    print u"PRE: %s" % prefix
+    #print u"PRE: %s" % prefix
 	
-    print u"POST: %s" % postfix
+    #print u"POST: %s" % postfix
 
 
 ##### create RDF graph begins, based on OA and MicroPublications Standards        
@@ -501,6 +502,7 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
 
         # Claim : is a research statement label qualified by assertion URI
 
+        #annotationClaimCntr = item["researchStatement"].strip("http://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/")
 	currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % annotationClaimCntr
         annotationClaimCntr += 1
 
@@ -541,6 +543,7 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
         # Claim : is a research statement label qualified by assertion URI
 
         if item['researchStatementLabel']:
+            #annotationClaimCntr = item["researchStatement"].strip("http://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/")
             currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % annotationClaimCntr
             annotationClaimCntr += 1
 
@@ -583,6 +586,56 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
 
     mp_list.append(item)
 
+############################# CREATE FAKE DATA ###############################
+
+## create fake relationships to have cases that (1) one claim supported by multiple evidences (2) same evidence supports varies claims
+
+# create case that data (evidence) supports multiple claims
+
+fakeNumOfData = 0
+fakeNumOfClaim = 0
+
+if annotationClaimCntr > 2 and annotationDataCntr > 2:
+    claimIdx = annotationClaimCntr
+    fakeData = "ddi-spl-annotation-data-%s" % str(annotationDataCntr + 1)
+
+    graph.add((poc[fakeData], RDF.type, URIRef("http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT"+"_Data")))
+    graph.add((URIRef("http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT"+"_Data"), RDFS.subClassOf, mp["Data"]))
+    graph.add((poc[fakeData], dikbD2R["ddiPkEffect"], URIRef("http://dbmi-icode-01.dbmi.pitt.edu:2020/vocab/resource/increases_auc")))
+    graph.add((poc[fakeData], dikbD2R["increases_auc"], Literal("2.835")))
+
+    while claimIdx > 1:
+        currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % claimIdx
+        graph.add((poc[fakeData], mp["supports"], poc[currentAnnotationClaim]))
+        fakeNumOfClaim = fakeNumOfClaim + 1
+        claimIdx = claimIdx/2
+
+# create case that claim supports by multiple data (evidence)
+
+if annotationClaimCntr > 2 and annotationDataCntr > 2:
+    dataIdx = annotationDataCntr
+    fakeClaim = "ddi-spl-annotation-claim-%s" % str(annotationClaimCntr + 1)
+
+    graph.add((poc[fakeClaim],RDF.type, mp["Claim"]))
+    graph.add((poc[fakeClaim], RDFS.label, Literal("diltiazem_increases_auc_triazolam")))
+    graph.add((poc[fakeClaim], mp["qualifiedBy"], URIRef("http://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/30")))
+    graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
+
+    while dataIdx > 1:
+        currentAnnotationData = "ddi-spl-annotation-data-%s" % dataIdx
+        graph.add((poc[currentAnnotationData], mp["supports"], poc[fakeClaim]))
+        fakeNumOfData = fakeNumOfData + 1
+        dataIdx = dataIdx/2
+
+############################# QUYERY VALIDATION ###############################
+
+print "\n#########TOTAL ITEMS#########\n"
+print "Claim: %s | Data: %s | Method: %s | Material: %s \n" % (str(annotationClaimCntr), str(annotationDataCntr), str(annotationMethodCntr - 1), str(annotationMaterialCntr - 1))
+
+print "[validate] Claim %s supported by multiple evidences (mp:Data) - %s \n" % ("ddi-spl-annotation-claim-" + str(annotationClaimCntr + 1), fakeNumOfData)
+print "[validate] Evidence (mp:Data) %s supports multiple claims - %s \n" % ("ddi-spl-annotation-data-" + str(annotationDataCntr + 1), fakeNumOfClaim)
+
+############################# WRITE OUT GRAPH ###############################
 
 # display the graph
 f = codecs.open(OUT_FILE,"w","utf8")
