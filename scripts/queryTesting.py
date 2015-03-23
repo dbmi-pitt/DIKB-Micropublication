@@ -41,7 +41,7 @@ for name,qry in queriesD.items():
         if len(results["results"]["bindings"]) == 0:
             print "[WARN] Query : %s is not getting any results back" % (name) 
         else:
-            print "[INFO] Query : %s is validated (results: %s)" % (name, len(results["results"]["bindings"])) 
+            print "[INFO] Query : %s returns %s results" % (name, len(results["results"]["bindings"])) 
 
     except:
         print "[DEBUG] Query %s is not a correct query or not getting any results back" % (name)
