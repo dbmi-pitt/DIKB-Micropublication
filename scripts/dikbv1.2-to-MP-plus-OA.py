@@ -291,13 +291,14 @@ splSetIdCache = {}
 source = ""
 mp_list = []
 
-#testIdx = 1
+testIdx = 1
 
-for item in data_set:     ## <-------- Use the list of PDDI dictionary instances from the pickle
+for item in data_set:  
 
-    #if testIdx > 5:
+##TESTING MARK
+    # if testIdx > 5:
     #    break
-    #testIdx = testIdx + 1
+    # testIdx = testIdx + 1
     
     ## parse oa:selector in OA, extract the 'exact' drug interaction statement
     index_quoted = item["evidenceStatement"].find('Quote') ## TODO: use a regular expression because the quote syntax is sometimes slightly different
@@ -588,16 +589,19 @@ for item in data_set:     ## <-------- Use the list of PDDI dictionary instances
 
 ############################# CREATE FAKE DATA ###############################
 
-## create fake relationships to have cases that (1) one claim supported by multiple evidences (2) same evidence supports varies claims
+## create fake relationships to have cases that (1) one claim supported by multiple evidences (2) same evidence supports varies claims (3) evidence items that support multiple assertions, for which it is the only piece of evidence (4) assertion that doesn't have supporting evidence
 
-# create case that data (evidence) supports multiple claims
+# (1) create case: data (evidence) supports multiple claims
 
 fakeNumOfData = 0
 fakeNumOfClaim = 0
 
+claimIdx = annotationClaimCntr
+fakeData = "ddi-spl-annotation-data-%s" % str(annotationDataCntr)
+fakeDataId1 = annotationClaimCntr
+annotationDataCntr = annotationDataCntr + 1
+
 if annotationClaimCntr > 2 and annotationDataCntr > 2:
-    claimIdx = annotationClaimCntr
-    fakeData = "ddi-spl-annotation-data-%s" % str(annotationDataCntr + 1)
 
     graph.add((poc[fakeData], RDF.type, URIRef("http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT"+"_Data")))
     graph.add((URIRef("http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT"+"_Data"), RDFS.subClassOf, mp["Data"]))
@@ -610,11 +614,14 @@ if annotationClaimCntr > 2 and annotationDataCntr > 2:
         fakeNumOfClaim = fakeNumOfClaim + 1
         claimIdx = claimIdx/2
 
-# create case that claim supports by multiple data (evidence)
+# (2) create case: claim supports by multiple data (evidence)
+
+dataIdx = annotationDataCntr
+fakeClaim = "ddi-spl-annotation-claim-%s" % str(annotationClaimCntr)
+fakeClaimId1 = annotationClaimCntr
+annotationClaimCntr = annotationClaimCntr + 1
 
 if annotationClaimCntr > 2 and annotationDataCntr > 2:
-    dataIdx = annotationDataCntr
-    fakeClaim = "ddi-spl-annotation-claim-%s" % str(annotationClaimCntr + 1)
 
     graph.add((poc[fakeClaim],RDF.type, mp["Claim"]))
     graph.add((poc[fakeClaim], RDFS.label, Literal("diltiazem_increases_auc_triazolam")))
@@ -627,13 +634,63 @@ if annotationClaimCntr > 2 and annotationDataCntr > 2:
         fakeNumOfData = fakeNumOfData + 1
         dataIdx = dataIdx/2
 
+# (3) create case: evidence items that support multiple assertions, for which it is the only piece of evidence
+
+fakeClaim2 = "ddi-spl-annotation-claim-%s" % str(annotationClaimCntr)
+fakeClaimId2 = annotationClaimCntr
+annotationClaimCntr = annotationClaimCntr + 1    
+
+graph.add((poc[fakeClaim2],RDF.type, mp["Claim"]))
+graph.add((poc[fakeClaim2], RDFS.label, Literal("ketoconazole increases the AUC of simvastatin")))
+graph.add((poc[fakeClaim2], mp["qualifiedBy"], URIRef("http://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/33")))
+graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
+
+fakeClaim3 = "ddi-spl-annotation-claim-%s" % str(annotationClaimCntr)
+fakeClaimId3 = annotationClaimCntr
+annotationClaimCntr = annotationClaimCntr + 1    
+
+graph.add((poc[fakeClaim3],RDF.type, mp["Claim"]))
+graph.add((poc[fakeClaim3], RDFS.label, Literal("ketoconazole increases the AUC of midazolam")))
+graph.add((poc[fakeClaim3], mp["qualifiedBy"], URIRef("http://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/70")))
+graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
+
+graph.add((poc[fakeData], mp["supports"], poc[fakeClaim2]))
+graph.add((poc[fakeData], mp["supports"], poc[fakeClaim3]))
+
+
+# (4) create case: assertion that doesn't have supporting evidence
+fakeClaim4 = "ddi-spl-annotation-claim-%s" % str(annotationClaimCntr)
+fakeClaimId4 = annotationClaimCntr
+annotationClaimCntr = annotationClaimCntr + 1    
+
+graph.add((poc[fakeClaim4],RDF.type, mp["Claim"]))
+graph.add((poc[fakeClaim4], RDFS.label, Literal("fluvoxamine increases the AUC of tolbutamide")))
+graph.add((poc[fakeClaim4], mp["qualifiedBy"], URIRef("http://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/91")))
+graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
+
+
+
 ############################# QUYERY VALIDATION ###############################
 
-print "\n#########TOTAL ITEMS#########\n"
-print "Claim: %s | Data: %s | Method: %s | Material: %s \n" % (str(annotationClaimCntr), str(annotationDataCntr), str(annotationMethodCntr - 1), str(annotationMaterialCntr - 1))
+print "\n#####################TOTAL ITEMS#####################\n"
+print "Claim: %s | Data: %s | Method: %s | Material: %s \n" % (str(annotationClaimCntr - 1), str(annotationDataCntr - 1), str(annotationMethodCntr - 1), str(annotationMaterialCntr - 1))
 
-print "[validate] Claim %s supported by multiple evidences (mp:Data) - %s \n" % ("ddi-spl-annotation-claim-" + str(annotationClaimCntr + 1), fakeNumOfData)
-print "[validate] Evidence (mp:Data) %s supports multiple claims - %s \n" % ("ddi-spl-annotation-data-" + str(annotationDataCntr + 1), fakeNumOfClaim)
+print "[validate] evidence supports multiple claims \r" 
+print "results: evidence %s, number of claims %s" % (fakeData, fakeNumOfClaim)
+print "---------------------------------------\n"
+
+print "[validate] list-assertions-supported-by-more-than-one-piece-of-evidence.sparql \r"
+print "results: claim %s, the number of evidences: %s \n" % (fakeClaim, fakeNumOfData)
+print "---------------------------------------\n"
+
+print "[validate] find-evidence-uniquely-supporting-multiple-assertions.sparql \r"
+print "results: %s <supports> %s, %s <supports> %s \n" % (fakeData, fakeClaim2, fakeData, fakeClaim3)
+print "---------------------------------------\n"
+
+print "[validate] list-assertions-not-supported-by-evidence.sparql\r" 
+print "results claim: %s" % (fakeClaim4)
+
+
 
 ############################# WRITE OUT GRAPH ###############################
 

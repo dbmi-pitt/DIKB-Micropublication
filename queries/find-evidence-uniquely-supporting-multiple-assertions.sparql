@@ -23,12 +23,25 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 #### List all the evidence items that support multiple assertions, for which it is the only piece of evidence
 
-SELECT ?representation ?assertion
+SELECT ?assertion COUNT(?evidence)
+
+WHERE {
+     ?evidence mp:supports ?assertion
+
+{
+SELECT ?evidence COUNT(?assertion)
 FROM <http://purl.org/mp/initial-graph-oa-mp>
 WHERE
 {
      ?assertion rdf:type mp:Claim.
 
-     ?representation mp:supports ?assertion.  
+     ?evidence mp:supports ?assertion.  
           
-} HAVING (COUNT(?representation) = 1) && (COUNT(?assertion) > 1)
+} GROUP BY ?evidence
+HAVING (COUNT(?assertion) > 1)
+}
+
+}
+GROUP BY ?assertion
+HAVING COUNT(?evidence) = 1
+

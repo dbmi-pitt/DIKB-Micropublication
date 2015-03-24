@@ -21,11 +21,16 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
-## List all the assertions that are not supported by evidence
-SELECT ?claim
+#### List all the evidence items that support multiple assertions, for which it is the only piece of evidence
+
+
+SELECT ?assertion
 FROM <http://purl.org/mp/initial-graph-oa-mp>
 WHERE
 {
-    ?claim a mp:Claim .
-    FILTER NOT EXISTS { ?evidence mp:supports ?claim }
-}
+     ?assertion rdf:type mp:Claim.
+
+     OPTIONAL{?evidence mp:supports ?assertion}.
+          
+} GROUP BY ?assertion
+HAVING (COUNT(?evidence) = 0)

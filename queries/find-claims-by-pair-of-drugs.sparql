@@ -1,4 +1,4 @@
-## Search all claims from interactions of venlafaxine and haloperidol
+## Search all claims from interactions of cimetidine and venlafaxine 
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -18,16 +18,18 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 PREFIX drugbank: <http://bio2rdf.org/drugbank:>
 
-SELECT ?claim  ?claimLabel ?PURL ?predicate
+SELECT *
 FROM <http://purl.org/mp/initial-graph-oa-mp>
 WHERE
 {
+
        ?claim rdf:type mp:Claim;
-              rdfs:label ?claimLabel;
-              mp:logicalClaim ?PURL;
-              rdf:subject drugbank:DB00502;
-              rdf:predicate ?predicate;
-              rdf:object drugbank:DB00285.
+              rdfs:label ?claimLabel.
+
+       ?mat rdf:type mp:Material;
+            dikbD2R:ObjectDrugOfInteraction drugbank:DB00285;
+	    dikbD2R:PrecipitantDrugOfInteraction drugbank:DB00501;
+            mp:usedIn ?method.
+       ?method mp:supports ?data.
+       ?data mp:supports ?claim.
 }
-
-

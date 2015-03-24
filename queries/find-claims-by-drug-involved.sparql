@@ -1,4 +1,3 @@
-
 ## Search all mp:claims that have drug Midazolam getting invloved
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
@@ -19,14 +18,19 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 PREFIX drugbank: <http://bio2rdf.org/drugbank:>
 
-SELECT ?claim  ?claimLabel ?PURL
+SELECT ?claim
 FROM <http://purl.org/mp/initial-graph-oa-mp>
 WHERE
 {
        ?claim rdf:type mp:Claim;
-              rdfs:label ?claimLabel;
-              mp:logicalClaim ?PURL;
-              rdf:subject drugbank:DB00683.
+              rdfs:label ?claimLabel.
+
+       ?mat rdf:type mp:Material;
+            dikbD2R:ObjectDrugOfInteraction drugbank:DB00683;
+            mp:usedIn ?method.
+       ?method mp:supports ?data.
+       ?data mp:supports ?claim.
+
 }
 
 
