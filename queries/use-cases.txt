@@ -1,20 +1,20 @@
 4.1 Finding assertions and evidence
 
 1. Finding assertions:
-(a) List all assertions that are not supported by evidence
-(b) Which assertions are supported (or refuted) by just one type of evidence?
-(c) Which assertions have evidence from source X (e.g., product labeling)
+(a) List all assertions that are not supported by evidence  **done**
+(b) Which assertions are supported (or refuted) by just one type of evidence?  **done**
+(c) Which assertions have evidence from source X (e.g., product labeling)  **done**
 (d) Which assertions have both evidence for and evidence against from a
 single source X?
 
 2. Finding evidence:
 (a) List all evidence for or against assertion X (by evidence type, drug, drug
-pair, transporter, metabolic enzyme, etc.)
+pair, transporter, metabolic enzyme, etc.)     **done**
 (b) What is the in vitro evidence for assertion X? the in vivo evidence?
 (c) List all evidence that has been tagged as rejected from entry into the
 the knowledge base
 (d) Which single evidence items act as support or rebuttal for multiple as-
-sertions of type X (e.g., substrate of assertions)?
+sertions of type X (e.g., substrate of assertions)?    **done**
 
 4.2 Assessing the evidence:
 1. Understanding evidence coming from a given study:
