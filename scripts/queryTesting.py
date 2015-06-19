@@ -22,10 +22,11 @@ def readCSVfromDir(inputdir):
 ################################################################################
 
 queriesD = readCSVfromDir(QUERIES_PATH)
+
 #sparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu/sparql")
-
-
 sparql = SPARQLWrapper("https://dbmi-icode-01.dbmi.pitt.edu/sparql")
+#sparql = SPARQLWrapper("http://localhost:8890/sparql")
+
 sparql.method = 'POST'
 
 for name,qry in queriesD.items():

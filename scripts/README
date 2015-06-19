@@ -49,3 +49,20 @@ where {
   graph ?asrt
   { ?s <http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/interactsWith> ?o.}
 } LIMIT 10
+
+
+
+---------------------------------------------------------------------------
+deployment
+---------------------------------------------------------------------------
+load mp graph "data/inferred-initial-graph-oa-mp.xml" to RDF endpoint as named graph
+"http://purl.org/mp/initial-graph-oa-mp"
+
+load mp owl, inferred by protege "mp_1.17_inferred.owl" to RDF endpoint as named graph "http://purl.org/mp/inferred_1_17_owl"
+
+
+---------------------------------------------------------------------------
+testing
+---------------------------------------------------------------------------
+specify query portal in script queryTesting.py
+$ python queryTesting.py
