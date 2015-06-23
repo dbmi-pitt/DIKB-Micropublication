@@ -35,6 +35,8 @@ from Bio import Entrez
 #reload(sys);
 #sys.setdefaultencoding("utf8")
 
+DRUGBANK_CHEBI = "../data/drugbank-to-chebi-06232015.txt"
+
 
 ################################################################################
 # Globals
@@ -57,6 +59,17 @@ def retrieveByEUtils(pmid, limit=None):
     data = rec_abs.read()
 
     return data
+
+
+def getDrugbankIdChEBIMappingD(fileInput):
+    drugbankChEBID = {}
+    with open(fileInput, "r") as inputMapping:
+        lines = inputMapping.readlines()
+        for line in lines:
+            array = line.split("\t")
+            drugbankId = array[2].replace("http://www.drugbank.ca/drugs/","")
+            drugbankChEBID[drugbankId] = array[0]
+    return drugbankChEBID
 
 
 def getSPLSectionsSparql(spl, sparql):
@@ -272,7 +285,7 @@ graph.add((poc['not-important'], dcterms["description"], Literal("The pharmacoge
 #data_set = pickle.load( open( "../data/dikb-observed-ddis-test.pickle", "rb" ) )
 #data_set = pickle.load( open( "../data/dikb-observed-ddis.pickle", "rb" ) )
 data_set = csv.DictReader(open("../data/dikb-observed-ddis.tsv","rb"), delimiter='\t')
-
+drugbankIdChEBID = getDrugbankIdChEBIMappingD(DRUGBANK_CHEBI)
 
 annotationSetCntr = 1
 annotationItemCntr = 1
@@ -313,7 +326,22 @@ for item in data_set:
         rgx = re.compile(u"quote ?:", re.I)
         exact = rgx.sub(u"",exact)
 
-    
+    objectDBId = item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
+    precipDBId = item["precipURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
+
+
+    if drugbankIdChEBID.has_key(objectDBId):
+        item["objectURI"] = drugbankIdChEBID[objectDBId]
+    else:
+        continue
+        item["objectURI"] = item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:")
+
+    if drugbankIdChEBID.has_key(precipDBId):
+        item["precipURI"] = drugbankIdChEBID[precipDBId]
+    else:
+        continue
+        item["precipURI"] = item["precipURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:")
+
 ## when evidence froms from dailymed
     if item["evidenceType"] == u'http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement':
 
@@ -467,10 +495,10 @@ for item in data_set:
         graph.add((URIRef(item["evidenceType"]+"_Material"), RDFS.subClassOf, mp["Material"])) 
 
         graph.add((poc[currentAnnotationMaterial], RDFS.label, Literal("%s (object) - %s (precipitant)" % (item["object"], item["precip"]))))
+
+        graph.add((poc[currentAnnotationMaterial], dikbD2R['ObjectDrugOfInteraction'], URIRef(item["objectURI"])))
     
-        graph.add((poc[currentAnnotationMaterial], dikbD2R['ObjectDrugOfInteraction'], URIRef(item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:"))))
-    
-        graph.add((poc[currentAnnotationMaterial], dikbD2R['PrecipitantDrugOfInteraction'], URIRef(item["precipURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:"))))
+        graph.add((poc[currentAnnotationMaterial], dikbD2R['PrecipitantDrugOfInteraction'], URIRef(item["precipURI"])))
 
         graph.add((poc[currentAnnotationMaterial], dikbD2R['objectDose'], Literal(item["objectDose"])))
 
@@ -557,15 +585,14 @@ for item in data_set:
                 graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], URIRef(item["researchStatement"])))
                 graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
 
-                graph.add((poc[currentAnnotationClaim], rdf["subject"], URIRef(item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:"))))
-                graph.add((URIRef(item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:")), RDF.type, mp["SemanticQualifier"]))
+                graph.add((poc[currentAnnotationClaim], rdf["subject"], URIRef(item["objectURI"])))
+                graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
 
-                graph.add((poc[currentAnnotationClaim], rdf["object"], URIRef(item["precipURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:"))))
-                graph.add((URIRef(item["precipURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","http://bio2rdf.org/drugbank:")), RDF.type, mp["SemanticQualifier"]))
+                graph.add((poc[currentAnnotationClaim], rdf["object"], URIRef(item["precipURI"])))
+                graph.add((URIRef(item["precipURI"]), RDF.type, mp["SemanticQualifier"]))
 
                 graph.add((poc[currentAnnotationClaim], rdf["predicate"], URIRef(item["ddiPkEffect"])))
                 graph.add((URIRef(item["ddiPkEffect"]), RDF.type, mp["SemanticQualifier"]))
-
 
             else:
                 graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], Literal("stubbed out")))  
