@@ -17,6 +17,7 @@ PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 PREFIX drugbank: <http://bio2rdf.org/drugbank:>
+PREFIX ChEBI: <http://purl.obolibrary.org/obo/>
 
 SELECT ?claim
 FROM <http://purl.org/mp/initial-graph-oa-mp>
@@ -26,7 +27,7 @@ WHERE
               rdfs:label ?claimLabel.
 
        ?mat rdf:type mp:Material;
-            dikbD2R:ObjectDrugOfInteraction drugbank:DB00683;
+            dikbD2R:ObjectDrugOfInteraction ChEBI:CHEBI_9674;
             mp:usedIn ?method.
        ?method mp:supports ?data.
        ?data mp:supports ?claim.
