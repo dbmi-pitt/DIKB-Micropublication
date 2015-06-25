@@ -10,7 +10,7 @@
 ## 2004. Please see the license in the root folder of this project
 
 
-def getPDDIDict():
+def getIncreaseAUCDict():
     return {"source":"DIKB",
             "uri":None,
             "object":None,
@@ -37,3 +37,5 @@ def getPDDIDict():
             "precaution":None,
             "contraindication":None
             }
+
+def getInhib

@@ -44,13 +44,9 @@ def query(q,epr,f='application/sparql-results+json'):
         traceback.print_exc(file=sys.stdout)
         raise e
 
-if __name__ == "__main__":
+def dikbPrefixQry:
 
-    # load all observed DDIs
-    pddiDictL = []
-    sparql_service = "http://dbmi-icode-01.dbmi.pitt.edu/dikb/sparql"
-    
-    query_string = """ 
+    prefix_string = """
 PREFIX swanpav: <http://purl.org/swan/1.2/pav/>
 PREFIX meta: <http://www4.wiwiss.fu-berlin.de/bizer/d2r-server/metadata#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -77,44 +73,65 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX swanci: <http://purl.org/swan/1.2/citations/>
 
-SELECT DISTINCT * WHERE {
-  ?s a dikbD2R:DDIObservation;
-     dikbD2R:PharmacokineticDDIAssertion ?asrt;
-     dikbD2R:ObjectDrugOfInteraction  ?object;
-     dikbD2R:PrecipitantDrugOfInteraction ?precip;
-     rdfs:label ?label.
+"""
+    return prefix_string
 
-  ?object a ncbit:Pharmacologic_Substance;
-     owl:sameAs ?objectURI.
 
-  ?precip a ncbit:Pharmacologic_Substance;
-     owl:sameAs ?precipURI.
+
+def increaseAucQry(mode):
+
+    evidenceMode = None
+    if mode is "support":
+        evidenceMode = "swanco:citesAsSupportingEvidence"
+    elif mode is "refute":
+        evidenceMode = "swanco:citesAsRefutingEvidence"
+
+    if not evidenceMode:
+        return None
+    else:
+        query_string = """
+
+  ## assertion - increase auc
+  SELECT DISTINCT * WHERE {
 
   ?asrt a swande:ResearchStatement;
     foaf:homepage ?homepage;
-    dikbD2R:Assertions_numeric_val ?numericVal;
-    dikbD2R:Assertions_cont_val ?contVal;
-    dikbD2R:slot  ?ddiPkEffect;
-    swanco:citesAsSupportingEvidence ?evidence;
-    rdfs:label ?researchStatementLabel.
-    
-  ?evidence a ncbit:Evidence;
-   dikbEvidence:Evidence_type ?evType;
-   rdfs:seeAlso ?evSource;
-   siocns:content ?content;
-   dc:date ?dateAnnotated;
-   dc:creator ?whoAnnotated. 
+    dikbD2R:slot dikbD2R:increases_auc;
+    dikbD2R:value ?valueURI;
+    rdfs:label ?researchStatementLabel;
+    dikbD2R:object ?object;
+    dikbD2R:value ?precip;
+    dikbD2R:Assertions_cont_val ?cntVal;
+    dikbD2R:Assertions_numeric_val ?numVal.
 
-   
-   ?evidence dikbD2R:Evidence_object_dose ?objectDose. 
+    ## evidenceSupports
+    optional {
+    ?asrt %s ?evidence.
+    ?evidence dikbEvidence:Evidence_type ?evidenceType;
+              dc:creator ?creator;
+              dc:date ?date;
+              dikbD2R:Evidence_value ?evidenceVal;
+              dikbD2R:Evidence_numb_subjects ?numOfEvidence;
+              dikbD2R:Evidence_object_dose ?objectDose;
+              dikbD2R:Evidence_precip_dose ?precipDose;
+              rdfs:seeAlso ?exSource.
+    }
+  
+} LIMIT 50
 
-   ?evidence dikbD2R:Evidence_precip_dose ?precipDose.
-  
-   ?evidence dikbD2R:Evidence_numb_subjects ?numOfSubjects.
-  
-}
-     
-"""
+""" % (evidenceMode)
+
+    return dikbPrefixQry() + query_string
+
+
+def queryIncreaseAuc:
+
+    # load all observed DDIs
+    pddiDictL = []
+    sparql_service = "https://dbmi-icode-01.dbmi.pitt.edu/dikb/sparql"
+
+    query_string = increaseAucQry()
+
     print "OBSERVED DDIs query_string: %s" % query_string
     json_string = query(query_string, sparql_service)
     
@@ -148,6 +165,7 @@ SELECT DISTINCT * WHERE {
              newPDDI["numericVal"] = resultset["results"]["bindings"][i]["numericVal"]["value"].encode("utf8")
              newPDDI["contVal"] = resultset["results"]["bindings"][i]["contVal"]["value"].encode("utf8")
              newPDDI["ddiPkEffect"] = resultset["results"]["bindings"][i]["ddiPkEffect"]["value"].encode("utf8")
+             newPDDI["proURI"] = resultset["results"]["bindings"][i]["proURI"]["value"].encode("utf8")
              newPDDI["evidenceSource"] = resultset["results"]["bindings"][i]["evSource"]["value"].encode("utf8")
              newPDDI["evidenceType"] = resultset["results"]["bindings"][i]["evType"]["value"].encode("utf8")
              newPDDI["evidenceStatement"] = resultset["results"]["bindings"][i]["content"]["value"].encode("utf8")
@@ -160,9 +178,13 @@ SELECT DISTINCT * WHERE {
              #if resultset["results"]["bindings"][i]["precipDose"]:
              newPDDI["precipDose"] = resultset["results"]["bindings"][i]["precipDose"]["value"].encode("utf8")
              newPDDI["numOfSubjects"] = resultset["results"]["bindings"][i]["numOfSubjects"]["value"].encode("utf8")
-             
 
              pddiDictL.append(newPDDI)
+
+
+
+if __name__ == "__main__":
+
 #    print str(pddiDictL)
 
 #    f = open("../data/dikb-observed-ddis-test.pickle","w")
@@ -174,7 +196,7 @@ SELECT DISTINCT * WHERE {
     with open('../data/dikb-observed-ddis.tsv', 'wb') as tsvfile:
         #writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["drug1","drug2","objectUri","ddiPkMechanism","contraindication","severity","source","dateAnnotated","precipUri","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel","objectDose", "precipDose", "numOfSubjects"])
 
-        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["ddiPkMechanism","contraindication","severity","source","dateAnnotated","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel","objectDose", "precipDose", "numOfSubjects"])
+        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["ddiPkMechanism","contraindication","severity","source","dateAnnotated","precaution","evidence","researchStatement",'uri',"object","precip","objectURI","precipURI","label","homepage","numericVal","contVal","ddiPkEffect","proURI","evidenceSource","evidenceType","evidenceStatement","dataAnnotated","whoAnnotated","researchStatementLabel","objectDose", "precipDose", "numOfSubjects"])
 
         writer.writeheader()
         for line in pddiDictL:
