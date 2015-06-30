@@ -305,7 +305,15 @@ def addAssertion(graph, item, currentAnnotationClaim):
     # Relationships
     graph.add((poc[currentAnnotationMaterial], mp["usedIn"], poc[currentAnnotationMethod]))
     graph.add((poc[currentAnnotationMethod], mp["supports"], poc[currentAnnotationData]))
-    graph.add((poc[currentAnnotationData], mp["supports"], poc[currentAnnotationClaim]))
+
+
+    if "support" in item["evidenceRole"]:
+        graph.add((poc[currentAnnotationData], mp["supports"], poc[currentAnnotationClaim]))
+    elif "refute" in item["evidenceRole"]:
+        graph.add((poc[currentAnnotationData], mp["challenges"], poc[currentAnnotationClaim]))
+    else:
+        print "[WARNING] evidence typed neither supports nor refutes"
+
     graph.add((poc[oaItem], oa["hasBody"], poc[currentAnnotationData]))
 
     graph.add((poc[oaItem], oa["hasBody"], poc[currentAnnotationMethod]))
@@ -466,8 +474,6 @@ def printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV):
         writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatement","researchStatementLabel", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
         writer.writeheader()
         writer.writerows(mp_list)
-
-
 
 
 ############################# MAIN ###############################
