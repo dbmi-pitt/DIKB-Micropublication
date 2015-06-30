@@ -287,7 +287,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
 
     ## increase AUC have PKDDI material info
 
-    if item["assertType"] is "increase_auc":
+    if "increase_auc" in item["assertType"]:
  
         graph.add((poc[currentAnnotationMaterial], RDFS.label, Literal("%s (object) - %s (precipitant)" % (item["object"], item["precip"]))))
 
