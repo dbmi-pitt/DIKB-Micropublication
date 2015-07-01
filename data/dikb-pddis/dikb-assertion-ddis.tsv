@@ -1,0 +1,1043 @@
+researchStatement	researchStatementLabel	assertType	objectURI	valueURI	label	homepage	source	dateAnnotated	whoAnnotated	evidence	evidenceRole	evidenceSource	evidenceType	evidenceStatement
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/16/2007 15:02:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/45	support	http://www.ncbi.nlm.nih.gov/pubmed/9542477	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+Route of administration: oral
+
+polymorphic enzyme: NO
+
+study duration: 4 days
+
+population: 7 male, 3 female
+
+ages:19-29
+
+description:
+Two randomized, double-blind, two-phase crossover studies were performed with use of an identical design, one with simvastatin (study I) and one with pravastatin (study II). In both studies, 10 healthy volunteers received either 200 mg itraconazole or placebo orally once a day for 4 days. On day 4, each subject ingested a single 40 mg dose of simvastatin (study I) or pravastatin (study II). Serum concentrations of simvastatin, simvastatin acid, pravastatin, HMG-CoA reductase inhibitors, itraconazole, and hydroxyitraconazole were determined. RESULTS: In study I, itraconazole increased the peak serum concentrations (Cmax) and the areas under the serum concentration-time curve [AUC(0-infinity)] of simvastatin and simvastatin acid at least tenfold (p < 0.001)."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/29/2007 14:58:01
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/46	support	http://www.ncbi.nlm.nih.gov/pubmed/9321523	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human enzymes in Supersomes
+
+NADPH added: yes
+
+inhibitor used: no
+
+This study showed the formation of 3',5'-dihydrodiol, 3'-hydroxy, and 6'-exomethylene metabolites using a recombinant CYP3A4 system
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/29/2007 15:23:02
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/47	support	http://www.ncbi.nlm.nih.gov/pubmed/15518608	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_Par_Grps	"Route of administration: oral
+
+polymorphic enzyme: NO
+
+study duration: 7 days simvastatin only, 8 days simva and clarithromycin
+
+dose: .040g simvastatin 1xday
+      .5g clarithromycin 2xday
+
+population: 45 men and women (15 received simvastatin)
+
+ages:18-60 
+
+(mean AUC_i)/(mean AUC) = 219/22 
+
+description: Clarithromycin significantly (p <0.001) increased the AUC (and C(max)) of all 3 statins, most markedly simvastatin ( approximately 10-fold increase in AUC)
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/16/2007 15:02:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/45	support	http://www.ncbi.nlm.nih.gov/pubmed/9542477	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+Route of administration: oral
+
+polymorphic enzyme: NO
+
+study duration: 4 days
+
+population: 7 male, 3 female
+
+ages:19-29
+
+description:
+Two randomized, double-blind, two-phase crossover studies were performed with use of an identical design, one with simvastatin (study I) and one with pravastatin (study II). In both studies, 10 healthy volunteers received either 200 mg itraconazole or placebo orally once a day for 4 days. On day 4, each subject ingested a single 40 mg dose of simvastatin (study I) or pravastatin (study II). Serum concentrations of simvastatin, simvastatin acid, pravastatin, HMG-CoA reductase inhibitors, itraconazole, and hydroxyitraconazole were determined. RESULTS: In study I, itraconazole increased the peak serum concentrations (Cmax) and the areas under the serum concentration-time curve [AUC(0-infinity)] of simvastatin and simvastatin acid at least tenfold (p < 0.001)."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/29/2007 14:58:01
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/46	support	http://www.ncbi.nlm.nih.gov/pubmed/9321523	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human enzymes in Supersomes
+
+NADPH added: yes
+
+inhibitor used: no
+
+This study showed the formation of 3',5'-dihydrodiol, 3'-hydroxy, and 6'-exomethylene metabolites using a recombinant CYP3A4 system
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/29/2007 15:23:02
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/47	support	http://www.ncbi.nlm.nih.gov/pubmed/15518608	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_Par_Grps	"Route of administration: oral
+
+polymorphic enzyme: NO
+
+study duration: 7 days simvastatin only, 8 days simva and clarithromycin
+
+dose: .040g simvastatin 1xday
+      .5g clarithromycin 2xday
+
+population: 45 men and women (15 received simvastatin)
+
+ages:18-60 
+
+(mean AUC_i)/(mean AUC) = 219/22 
+
+description: Clarithromycin significantly (p <0.001) increased the AUC (and C(max)) of all 3 statins, most markedly simvastatin ( approximately 10-fold increase in AUC)
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/16/2007 15:02:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/45	support	http://www.ncbi.nlm.nih.gov/pubmed/9542477	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+Route of administration: oral
+
+polymorphic enzyme: NO
+
+study duration: 4 days
+
+population: 7 male, 3 female
+
+ages:19-29
+
+description:
+Two randomized, double-blind, two-phase crossover studies were performed with use of an identical design, one with simvastatin (study I) and one with pravastatin (study II). In both studies, 10 healthy volunteers received either 200 mg itraconazole or placebo orally once a day for 4 days. On day 4, each subject ingested a single 40 mg dose of simvastatin (study I) or pravastatin (study II). Serum concentrations of simvastatin, simvastatin acid, pravastatin, HMG-CoA reductase inhibitors, itraconazole, and hydroxyitraconazole were determined. RESULTS: In study I, itraconazole increased the peak serum concentrations (Cmax) and the areas under the serum concentration-time curve [AUC(0-infinity)] of simvastatin and simvastatin acid at least tenfold (p < 0.001)."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/29/2007 14:58:01
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/46	support	http://www.ncbi.nlm.nih.gov/pubmed/9321523	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human enzymes in Supersomes
+
+NADPH added: yes
+
+inhibitor used: no
+
+This study showed the formation of 3',5'-dihydrodiol, 3'-hydroxy, and 6'-exomethylene metabolites using a recombinant CYP3A4 system
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/29/2007 15:23:02
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/47	support	http://www.ncbi.nlm.nih.gov/pubmed/15518608	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_Par_Grps	"Route of administration: oral
+
+polymorphic enzyme: NO
+
+study duration: 7 days simvastatin only, 8 days simva and clarithromycin
+
+dose: .040g simvastatin 1xday
+      .5g clarithromycin 2xday
+
+population: 45 men and women (15 received simvastatin)
+
+ages:18-60 
+
+(mean AUC_i)/(mean AUC) = 219/22 
+
+description: Clarithromycin significantly (p <0.001) increased the AUC (and C(max)) of all 3 statins, most markedly simvastatin ( approximately 10-fold increase in AUC)
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/16/2007 15:02:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/45	support	http://www.ncbi.nlm.nih.gov/pubmed/9542477	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+Route of administration: oral
+
+polymorphic enzyme: NO
+
+study duration: 4 days
+
+population: 7 male, 3 female
+
+ages:19-29
+
+description:
+Two randomized, double-blind, two-phase crossover studies were performed with use of an identical design, one with simvastatin (study I) and one with pravastatin (study II). In both studies, 10 healthy volunteers received either 200 mg itraconazole or placebo orally once a day for 4 days. On day 4, each subject ingested a single 40 mg dose of simvastatin (study I) or pravastatin (study II). Serum concentrations of simvastatin, simvastatin acid, pravastatin, HMG-CoA reductase inhibitors, itraconazole, and hydroxyitraconazole were determined. RESULTS: In study I, itraconazole increased the peak serum concentrations (Cmax) and the areas under the serum concentration-time curve [AUC(0-infinity)] of simvastatin and simvastatin acid at least tenfold (p < 0.001)."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/29/2007 14:58:01
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/46	support	http://www.ncbi.nlm.nih.gov/pubmed/9321523	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human enzymes in Supersomes
+
+NADPH added: yes
+
+inhibitor used: no
+
+This study showed the formation of 3',5'-dihydrodiol, 3'-hydroxy, and 6'-exomethylene metabolites using a recombinant CYP3A4 system
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/29/2007 15:23:02
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/47	support	http://www.ncbi.nlm.nih.gov/pubmed/15518608	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_Par_Grps	"Route of administration: oral
+
+polymorphic enzyme: NO
+
+study duration: 7 days simvastatin only, 8 days simva and clarithromycin
+
+dose: .040g simvastatin 1xday
+      .5g clarithromycin 2xday
+
+population: 45 men and women (15 received simvastatin)
+
+ages:18-60 
+
+(mean AUC_i)/(mean AUC) = 219/22 
+
+description: Clarithromycin significantly (p <0.001) increased the AUC (and C(max)) of all 3 statins, most markedly simvastatin ( approximately 10-fold increase in AUC)
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/16/2007 15:02:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/45	support	http://www.ncbi.nlm.nih.gov/pubmed/9542477	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+Route of administration: oral
+
+polymorphic enzyme: NO
+
+study duration: 4 days
+
+population: 7 male, 3 female
+
+ages:19-29
+
+description:
+Two randomized, double-blind, two-phase crossover studies were performed with use of an identical design, one with simvastatin (study I) and one with pravastatin (study II). In both studies, 10 healthy volunteers received either 200 mg itraconazole or placebo orally once a day for 4 days. On day 4, each subject ingested a single 40 mg dose of simvastatin (study I) or pravastatin (study II). Serum concentrations of simvastatin, simvastatin acid, pravastatin, HMG-CoA reductase inhibitors, itraconazole, and hydroxyitraconazole were determined. RESULTS: In study I, itraconazole increased the peak serum concentrations (Cmax) and the areas under the serum concentration-time curve [AUC(0-infinity)] of simvastatin and simvastatin acid at least tenfold (p < 0.001)."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/29/2007 14:58:01
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/46	support	http://www.ncbi.nlm.nih.gov/pubmed/9321523	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human enzymes in Supersomes
+
+NADPH added: yes
+
+inhibitor used: no
+
+This study showed the formation of 3',5'-dihydrodiol, 3'-hydroxy, and 6'-exomethylene metabolites using a recombinant CYP3A4 system
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB	"05/29/2007 15:23:02
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/47	support	http://www.ncbi.nlm.nih.gov/pubmed/15518608	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_Par_Grps	"Route of administration: oral
+
+polymorphic enzyme: NO
+
+study duration: 7 days simvastatin only, 8 days simva and clarithromycin
+
+dose: .040g simvastatin 1xday
+      .5g clarithromycin 2xday
+
+population: 45 men and women (15 received simvastatin)
+
+ages:18-60 
+
+(mean AUC_i)/(mean AUC) = 219/22 
+
+description: Clarithromycin significantly (p <0.001) increased the AUC (and C(max)) of all 3 statins, most markedly simvastatin ( approximately 10-fold increase in AUC)
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	N-demethyldesacetyl-diltiazem	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	R-demethylcitalopram	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	S-demethylcitalopram	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	desacetyldiltiazem	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/25/2007 07:52:24
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/66	support	http://www.ncbi.nlm.nih.gov/pubmed/11038166	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"Enzyme system: human liver microsomes
+
+NADPH added: yes
+inhibitor used: itraconazole
+
+reaction:
+atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+atorvastatin lactone--&gt;ortho-hydroxy-atorvastatin
+atorvastatin acid--&gt;para-hydroxy-atorvastatin
+atorvastatin lactone--&gt;para-hydroxy-atorvastatin
+
+description:
+itraconazole effected a dramatic decrease in the formation of both metabolites from both lactone and acid forms of atorvastatin"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/25/2007 08:33:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/67	support	http://www.ncbi.nlm.nih.gov/pubmed/11038166	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human CYP3A4 enzymes in insect microsomes
+
+NADPH added: yes
+substrate used: atorvastatin acid and lactone
+
+reaction:
+atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+atorvastatin lactone--&gt;ortho-hydroxy-atorvastatin
+atorvastatin acid--&gt;para-hydroxy-atorvastatin
+atorvastatin lactone--&gt;para-hydroxy-atorvastatin
+
+description:
+This enzyme system catalyzed the above reactions with Km values ranging from 1.4micM/L for atorvastatin lactone--&gt;para-hydroxy-atorvastatin to 29.7micM/L for the atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/27/2007 10:18:37
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/68	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/8a201c80-a51d-4c1c-963b-488c071908c0	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	&quot;In vitro studies suggest the importance of atorvastatin metabolism by cytochrome P450 3A4, consistent with increased plasma concentrations of atorvastatin in humans following coadministration with erythromycin, a known inhibitor of this isozyme&quot;
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/25/2007 07:52:24
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/66	support	http://www.ncbi.nlm.nih.gov/pubmed/11038166	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"Enzyme system: human liver microsomes
+
+NADPH added: yes
+inhibitor used: itraconazole
+
+reaction:
+atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+atorvastatin lactone--&gt;ortho-hydroxy-atorvastatin
+atorvastatin acid--&gt;para-hydroxy-atorvastatin
+atorvastatin lactone--&gt;para-hydroxy-atorvastatin
+
+description:
+itraconazole effected a dramatic decrease in the formation of both metabolites from both lactone and acid forms of atorvastatin"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/25/2007 08:33:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/67	support	http://www.ncbi.nlm.nih.gov/pubmed/11038166	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human CYP3A4 enzymes in insect microsomes
+
+NADPH added: yes
+substrate used: atorvastatin acid and lactone
+
+reaction:
+atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+atorvastatin lactone--&gt;ortho-hydroxy-atorvastatin
+atorvastatin acid--&gt;para-hydroxy-atorvastatin
+atorvastatin lactone--&gt;para-hydroxy-atorvastatin
+
+description:
+This enzyme system catalyzed the above reactions with Km values ranging from 1.4micM/L for atorvastatin lactone--&gt;para-hydroxy-atorvastatin to 29.7micM/L for the atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/27/2007 10:18:37
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/68	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/8a201c80-a51d-4c1c-963b-488c071908c0	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	&quot;In vitro studies suggest the importance of atorvastatin metabolism by cytochrome P450 3A4, consistent with increased plasma concentrations of atorvastatin in humans following coadministration with erythromycin, a known inhibitor of this isozyme&quot;
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/25/2007 07:52:24
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/66	support	http://www.ncbi.nlm.nih.gov/pubmed/11038166	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"Enzyme system: human liver microsomes
+
+NADPH added: yes
+inhibitor used: itraconazole
+
+reaction:
+atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+atorvastatin lactone--&gt;ortho-hydroxy-atorvastatin
+atorvastatin acid--&gt;para-hydroxy-atorvastatin
+atorvastatin lactone--&gt;para-hydroxy-atorvastatin
+
+description:
+itraconazole effected a dramatic decrease in the formation of both metabolites from both lactone and acid forms of atorvastatin"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/25/2007 08:33:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/67	support	http://www.ncbi.nlm.nih.gov/pubmed/11038166	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human CYP3A4 enzymes in insect microsomes
+
+NADPH added: yes
+substrate used: atorvastatin acid and lactone
+
+reaction:
+atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+atorvastatin lactone--&gt;ortho-hydroxy-atorvastatin
+atorvastatin acid--&gt;para-hydroxy-atorvastatin
+atorvastatin lactone--&gt;para-hydroxy-atorvastatin
+
+description:
+This enzyme system catalyzed the above reactions with Km values ranging from 1.4micM/L for atorvastatin lactone--&gt;para-hydroxy-atorvastatin to 29.7micM/L for the atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/27/2007 10:18:37
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/68	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/8a201c80-a51d-4c1c-963b-488c071908c0	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	&quot;In vitro studies suggest the importance of atorvastatin metabolism by cytochrome P450 3A4, consistent with increased plasma concentrations of atorvastatin in humans following coadministration with erythromycin, a known inhibitor of this isozyme&quot;
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/25/2007 07:52:24
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/66	support	http://www.ncbi.nlm.nih.gov/pubmed/11038166	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"Enzyme system: human liver microsomes
+
+NADPH added: yes
+inhibitor used: itraconazole
+
+reaction:
+atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+atorvastatin lactone--&gt;ortho-hydroxy-atorvastatin
+atorvastatin acid--&gt;para-hydroxy-atorvastatin
+atorvastatin lactone--&gt;para-hydroxy-atorvastatin
+
+description:
+itraconazole effected a dramatic decrease in the formation of both metabolites from both lactone and acid forms of atorvastatin"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/25/2007 08:33:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/67	support	http://www.ncbi.nlm.nih.gov/pubmed/11038166	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human CYP3A4 enzymes in insect microsomes
+
+NADPH added: yes
+substrate used: atorvastatin acid and lactone
+
+reaction:
+atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+atorvastatin lactone--&gt;ortho-hydroxy-atorvastatin
+atorvastatin acid--&gt;para-hydroxy-atorvastatin
+atorvastatin lactone--&gt;para-hydroxy-atorvastatin
+
+description:
+This enzyme system catalyzed the above reactions with Km values ranging from 1.4micM/L for atorvastatin lactone--&gt;para-hydroxy-atorvastatin to 29.7micM/L for the atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/27/2007 10:18:37
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/68	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/8a201c80-a51d-4c1c-963b-488c071908c0	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	&quot;In vitro studies suggest the importance of atorvastatin metabolism by cytochrome P450 3A4, consistent with increased plasma concentrations of atorvastatin in humans following coadministration with erythromycin, a known inhibitor of this isozyme&quot;
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/25/2007 07:52:24
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/66	support	http://www.ncbi.nlm.nih.gov/pubmed/11038166	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"Enzyme system: human liver microsomes
+
+NADPH added: yes
+inhibitor used: itraconazole
+
+reaction:
+atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+atorvastatin lactone--&gt;ortho-hydroxy-atorvastatin
+atorvastatin acid--&gt;para-hydroxy-atorvastatin
+atorvastatin lactone--&gt;para-hydroxy-atorvastatin
+
+description:
+itraconazole effected a dramatic decrease in the formation of both metabolites from both lactone and acid forms of atorvastatin"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/25/2007 08:33:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/67	support	http://www.ncbi.nlm.nih.gov/pubmed/11038166	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human CYP3A4 enzymes in insect microsomes
+
+NADPH added: yes
+substrate used: atorvastatin acid and lactone
+
+reaction:
+atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+atorvastatin lactone--&gt;ortho-hydroxy-atorvastatin
+atorvastatin acid--&gt;para-hydroxy-atorvastatin
+atorvastatin lactone--&gt;para-hydroxy-atorvastatin
+
+description:
+This enzyme system catalyzed the above reactions with Km values ranging from 1.4micM/L for atorvastatin lactone--&gt;para-hydroxy-atorvastatin to 29.7micM/L for the atorvastatin acid--&gt;ortho-hydroxy-atorvastatin
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB	"09/27/2007 10:18:37
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/68	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/8a201c80-a51d-4c1c-963b-488c071908c0	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	&quot;In vitro studies suggest the importance of atorvastatin metabolism by cytochrome P450 3A4, consistent with increased plasma concentrations of atorvastatin in humans following coadministration with erythromycin, a known inhibitor of this isozyme&quot;
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"06/26/2007 07:11:48
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/122	support	http://www.ncbi.nlm.nih.gov/pubmed/12124305	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human enzymes in Supersomes
+
+NADPH added: yes
+
+inhibitor used: no
+
+This study showed the formation of both 1'-OH-triazolam and  4-OH-triazolam in a recombinant cyp3a4 Supersome system"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"06/26/2007 07:39:29
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/123	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/b5e516a0-d0f4-4613-ab56-b1bb440fcb78	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"
+&quot;Alprazolam is extensively metabolized in humans, primarily by cytochrome P450 3A4 (CYP3A4), to two major metabolites in the plasma: 4-hydroxyalprazolam and alpha-hydroxyalprazolam.&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"07/02/2007 10:51:34
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/124	support	http://www.ncbi.nlm.nih.gov/pubmed/10548453	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"
+Enzyme system: human liver microsomes
+
+NADPH added: yes (p. 394 `chemical inhibition`
+
+inhibitor used: 
+
+reaction: alprazolam --&gt; 4-OH-alprazolam
+          alprazolam --&gt; 1'-OH-alprazolam
+
+Quote: 
+
+&quot;Co-incubation of human liver microsomes with the prototypic 3A4 inhibitor, troleandomycin, ( &gt; 50microM) resulted in no detectable formation of 1'-OH-alprazolam and 4-OH-alprazolam&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"06/26/2007 07:11:48
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/122	support	http://www.ncbi.nlm.nih.gov/pubmed/12124305	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human enzymes in Supersomes
+
+NADPH added: yes
+
+inhibitor used: no
+
+This study showed the formation of both 1'-OH-triazolam and  4-OH-triazolam in a recombinant cyp3a4 Supersome system"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"06/26/2007 07:39:29
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/123	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/b5e516a0-d0f4-4613-ab56-b1bb440fcb78	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"
+&quot;Alprazolam is extensively metabolized in humans, primarily by cytochrome P450 3A4 (CYP3A4), to two major metabolites in the plasma: 4-hydroxyalprazolam and alpha-hydroxyalprazolam.&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"07/02/2007 10:51:34
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/124	support	http://www.ncbi.nlm.nih.gov/pubmed/10548453	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"
+Enzyme system: human liver microsomes
+
+NADPH added: yes (p. 394 `chemical inhibition`
+
+inhibitor used: 
+
+reaction: alprazolam --&gt; 4-OH-alprazolam
+          alprazolam --&gt; 1'-OH-alprazolam
+
+Quote: 
+
+&quot;Co-incubation of human liver microsomes with the prototypic 3A4 inhibitor, troleandomycin, ( &gt; 50microM) resulted in no detectable formation of 1'-OH-alprazolam and 4-OH-alprazolam&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"06/26/2007 07:11:48
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/122	support	http://www.ncbi.nlm.nih.gov/pubmed/12124305	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human enzymes in Supersomes
+
+NADPH added: yes
+
+inhibitor used: no
+
+This study showed the formation of both 1'-OH-triazolam and  4-OH-triazolam in a recombinant cyp3a4 Supersome system"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"06/26/2007 07:39:29
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/123	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/b5e516a0-d0f4-4613-ab56-b1bb440fcb78	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"
+&quot;Alprazolam is extensively metabolized in humans, primarily by cytochrome P450 3A4 (CYP3A4), to two major metabolites in the plasma: 4-hydroxyalprazolam and alpha-hydroxyalprazolam.&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"07/02/2007 10:51:34
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/124	support	http://www.ncbi.nlm.nih.gov/pubmed/10548453	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"
+Enzyme system: human liver microsomes
+
+NADPH added: yes (p. 394 `chemical inhibition`
+
+inhibitor used: 
+
+reaction: alprazolam --&gt; 4-OH-alprazolam
+          alprazolam --&gt; 1'-OH-alprazolam
+
+Quote: 
+
+&quot;Co-incubation of human liver microsomes with the prototypic 3A4 inhibitor, troleandomycin, ( &gt; 50microM) resulted in no detectable formation of 1'-OH-alprazolam and 4-OH-alprazolam&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"06/26/2007 07:11:48
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/122	support	http://www.ncbi.nlm.nih.gov/pubmed/12124305	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human enzymes in Supersomes
+
+NADPH added: yes
+
+inhibitor used: no
+
+This study showed the formation of both 1'-OH-triazolam and  4-OH-triazolam in a recombinant cyp3a4 Supersome system"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"06/26/2007 07:39:29
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/123	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/b5e516a0-d0f4-4613-ab56-b1bb440fcb78	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"
+&quot;Alprazolam is extensively metabolized in humans, primarily by cytochrome P450 3A4 (CYP3A4), to two major metabolites in the plasma: 4-hydroxyalprazolam and alpha-hydroxyalprazolam.&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"07/02/2007 10:51:34
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/124	support	http://www.ncbi.nlm.nih.gov/pubmed/10548453	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"
+Enzyme system: human liver microsomes
+
+NADPH added: yes (p. 394 `chemical inhibition`
+
+inhibitor used: 
+
+reaction: alprazolam --&gt; 4-OH-alprazolam
+          alprazolam --&gt; 1'-OH-alprazolam
+
+Quote: 
+
+&quot;Co-incubation of human liver microsomes with the prototypic 3A4 inhibitor, troleandomycin, ( &gt; 50microM) resulted in no detectable formation of 1'-OH-alprazolam and 4-OH-alprazolam&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"06/26/2007 07:11:48
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/122	support	http://www.ncbi.nlm.nih.gov/pubmed/12124305	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"
+Enzyme system: recombinant human enzymes in Supersomes
+
+NADPH added: yes
+
+inhibitor used: no
+
+This study showed the formation of both 1'-OH-triazolam and  4-OH-triazolam in a recombinant cyp3a4 Supersome system"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"06/26/2007 07:39:29
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/123	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/b5e516a0-d0f4-4613-ab56-b1bb440fcb78	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"
+&quot;Alprazolam is extensively metabolized in humans, primarily by cytochrome P450 3A4 (CYP3A4), to two major metabolites in the plasma: 4-hydroxyalprazolam and alpha-hydroxyalprazolam.&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB	"07/02/2007 10:51:34
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/124	support	http://www.ncbi.nlm.nih.gov/pubmed/10548453	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"
+Enzyme system: human liver microsomes
+
+NADPH added: yes (p. 394 `chemical inhibition`
+
+inhibitor used: 
+
+reaction: alprazolam --&gt; 4-OH-alprazolam
+          alprazolam --&gt; 1'-OH-alprazolam
+
+Quote: 
+
+&quot;Co-incubation of human liver microsomes with the prototypic 3A4 inhibitor, troleandomycin, ( &gt; 50microM) resulted in no detectable formation of 1'-OH-alprazolam and 4-OH-alprazolam&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/127	duloxetine_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006121	N-demethyldesacetyl-diltiazem	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_substrate_of_cyp2d6.html	DIKB	"05/05/2009 17:43:52
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/159	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/2f7d4d67-10c1-4bf4-a7f2-c185fbad64ba	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"7.2 Inhibitors of CYP2D6
+
+Concomitant use of duloxetine (40 mg once daily) with paroxetine (20 mg once daily) increased the concentration of duloxetine AUC by about 60%, and greater degrees of inhibition are expected with higher doses of paroxetine. Similar effects would be expected with other potent CYP2D6 inhibitors (e.g., fluoxetine, quinidine) [see Warnings and Precautions (5.10)]."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/36	simvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00641	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/simvastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	N-demethyldesacetyl-diltiazem	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB	02/12/2010	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/50	refute	http://www.ncbi.nlm.nih.gov/pubmed/11872324	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"Enzyme system: recombinant human enzymes in human lymphoblastoid for CYP1A2 and CYP2D6; recombinant human enzymes in baculovirus-infected insect cells for CYP2C8, CYP2C9, and CYP2C19
+NADPH added:yes
+
+inhibitor used: no
+
+When NEF or OH-NEF was incubated with microsomes from cells transfected with human cDNA for one of CYP1A1, CYP1A2, CYP2A6, CYP2D6, CYP3A4, CYP2C8, CYP2C9 arg, CYP2C9 cys, or CYP2C19, metabolite formation was seen with the CYP3A4 incubations only (Table 4)."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	N-demethyldesacetyl-diltiazem	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB	"02/12/2010 13:56:37
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/51	refute	http://www.ncbi.nlm.nih.gov/pubmed/11872324	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"
+Enzyme system: human liver microsomes:
+
+NADPH added: yes
+
+inhibitor used: quinidine
+
+reaction: nefazodone --&gt; OH-NEF ; nefazodone --&gt; mCPP
+
+Quote: 
+Incubations of human liver microsomes with NEF and the CYP3A4 inhibitor ketoconazole resulted in a concentration-dependent inhibition of the formation of mCPP and OH-NEF (Fig. 3). Incubations of human liver microsomes with NEF and the CYP2D6 inhibitor quinidine did not affect the production of OH-NEF and mCPP. Incubations of OH-NEF with the CYP3A4 inhibitor ketoconazole resulted in the inhibition of metabolite formation, and incubations with the CYP2D6 inhibitor quinidine did not, similar to what was found with NEF metabolism (data not presented).
+
+
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	R-demethylcitalopram	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB	02/12/2010	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/50	refute	http://www.ncbi.nlm.nih.gov/pubmed/11872324	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"Enzyme system: recombinant human enzymes in human lymphoblastoid for CYP1A2 and CYP2D6; recombinant human enzymes in baculovirus-infected insect cells for CYP2C8, CYP2C9, and CYP2C19
+NADPH added:yes
+
+inhibitor used: no
+
+When NEF or OH-NEF was incubated with microsomes from cells transfected with human cDNA for one of CYP1A1, CYP1A2, CYP2A6, CYP2D6, CYP3A4, CYP2C8, CYP2C9 arg, CYP2C9 cys, or CYP2C19, metabolite formation was seen with the CYP3A4 incubations only (Table 4)."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	R-demethylcitalopram	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB	"02/12/2010 13:56:37
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/51	refute	http://www.ncbi.nlm.nih.gov/pubmed/11872324	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"
+Enzyme system: human liver microsomes:
+
+NADPH added: yes
+
+inhibitor used: quinidine
+
+reaction: nefazodone --&gt; OH-NEF ; nefazodone --&gt; mCPP
+
+Quote: 
+Incubations of human liver microsomes with NEF and the CYP3A4 inhibitor ketoconazole resulted in a concentration-dependent inhibition of the formation of mCPP and OH-NEF (Fig. 3). Incubations of human liver microsomes with NEF and the CYP2D6 inhibitor quinidine did not affect the production of OH-NEF and mCPP. Incubations of OH-NEF with the CYP3A4 inhibitor ketoconazole resulted in the inhibition of metabolite formation, and incubations with the CYP2D6 inhibitor quinidine did not, similar to what was found with NEF metabolism (data not presented).
+
+
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	S-demethylcitalopram	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB	02/12/2010	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/50	refute	http://www.ncbi.nlm.nih.gov/pubmed/11872324	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"Enzyme system: recombinant human enzymes in human lymphoblastoid for CYP1A2 and CYP2D6; recombinant human enzymes in baculovirus-infected insect cells for CYP2C8, CYP2C9, and CYP2C19
+NADPH added:yes
+
+inhibitor used: no
+
+When NEF or OH-NEF was incubated with microsomes from cells transfected with human cDNA for one of CYP1A1, CYP1A2, CYP2A6, CYP2D6, CYP3A4, CYP2C8, CYP2C9 arg, CYP2C9 cys, or CYP2C19, metabolite formation was seen with the CYP3A4 incubations only (Table 4)."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	S-demethylcitalopram	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB	"02/12/2010 13:56:37
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/51	refute	http://www.ncbi.nlm.nih.gov/pubmed/11872324	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"
+Enzyme system: human liver microsomes:
+
+NADPH added: yes
+
+inhibitor used: quinidine
+
+reaction: nefazodone --&gt; OH-NEF ; nefazodone --&gt; mCPP
+
+Quote: 
+Incubations of human liver microsomes with NEF and the CYP3A4 inhibitor ketoconazole resulted in a concentration-dependent inhibition of the formation of mCPP and OH-NEF (Fig. 3). Incubations of human liver microsomes with NEF and the CYP2D6 inhibitor quinidine did not affect the production of OH-NEF and mCPP. Incubations of OH-NEF with the CYP3A4 inhibitor ketoconazole resulted in the inhibition of metabolite formation, and incubations with the CYP2D6 inhibitor quinidine did not, similar to what was found with NEF metabolism (data not presented).
+
+
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	desacetyldiltiazem	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB	02/12/2010	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/50	refute	http://www.ncbi.nlm.nih.gov/pubmed/11872324	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Recom	"Enzyme system: recombinant human enzymes in human lymphoblastoid for CYP1A2 and CYP2D6; recombinant human enzymes in baculovirus-infected insect cells for CYP2C8, CYP2C9, and CYP2C19
+NADPH added:yes
+
+inhibitor used: no
+
+When NEF or OH-NEF was incubated with microsomes from cells transfected with human cDNA for one of CYP1A1, CYP1A2, CYP2A6, CYP2D6, CYP3A4, CYP2C8, CYP2C9 arg, CYP2C9 cys, or CYP2C19, metabolite formation was seen with the CYP3A4 incubations only (Table 4)."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/39	nefazodone_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006121	desacetyldiltiazem	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp2d6.html	DIKB	"02/12/2010 13:56:37
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/51	refute	http://www.ncbi.nlm.nih.gov/pubmed/11872324	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_ID_Cyp450_Hum_Microsome_Chem	"
+Enzyme system: human liver microsomes:
+
+NADPH added: yes
+
+inhibitor used: quinidine
+
+reaction: nefazodone --&gt; OH-NEF ; nefazodone --&gt; mCPP
+
+Quote: 
+Incubations of human liver microsomes with NEF and the CYP3A4 inhibitor ketoconazole resulted in a concentration-dependent inhibition of the formation of mCPP and OH-NEF (Fig. 3). Incubations of human liver microsomes with NEF and the CYP2D6 inhibitor quinidine did not affect the production of OH-NEF and mCPP. Incubations of OH-NEF with the CYP3A4 inhibitor ketoconazole resulted in the inhibition of metabolite formation, and incubations with the CYP2D6 inhibitor quinidine did not, similar to what was found with NEF metabolism (data not presented).
+
+
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/48	atorvastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01076	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atorvastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/97	alprazolam_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/alprazolam_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/127	duloxetine_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006121	N-demethyldesacetyl-diltiazem	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_substrate_of_cyp2d6.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/127	duloxetine_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006121	R-demethylcitalopram	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_substrate_of_cyp2d6.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/127	duloxetine_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006121	S-demethylcitalopram	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_substrate_of_cyp2d6.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/127	duloxetine_substrate_of_cyp2d6	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006121	desacetyldiltiazem	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_substrate_of_cyp2d6.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/139	nefazodone_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/139	nefazodone_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/139	nefazodone_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/139	nefazodone_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/139	nefazodone_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/152	modafinil_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00745	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/modafinil_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/152	modafinil_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00745	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/modafinil_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/152	modafinil_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00745	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/modafinil_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/152	modafinil_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00745	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/modafinil_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/152	modafinil_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00745	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/modafinil_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/155	lovastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00227	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/lovastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/155	lovastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00227	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/lovastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/155	lovastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00227	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/lovastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/155	lovastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00227	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/lovastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/155	lovastatin_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00227	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/lovastatin_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/181	eszopiclone_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00402	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/eszopiclone_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/181	eszopiclone_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00402	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/eszopiclone_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/181	eszopiclone_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00402	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/eszopiclone_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/181	eszopiclone_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00402	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-lovastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/eszopiclone_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/181	eszopiclone_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00402	http://purl.obolibrary.org/obo/PR_000006130	dehydro-aripiprazole	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/eszopiclone_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/187	escitalopram_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175	http://purl.obolibrary.org/obo/PR_000006130	reduced-haloperidol	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/escitalopram_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/187	escitalopram_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175	http://purl.obolibrary.org/obo/PR_000006130	beta-hydroxy-simvastatin	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/escitalopram_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/187	escitalopram_substrate_of_cyp3a4	substrate_of	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175	http://purl.obolibrary.org/obo/PR_000006130	N-desalkylquetiapine	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/escitalopram_substrate_of_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/22	mirtazapine_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00370	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/mirtazapine_inhibits_cyp2c9.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/22	mirtazapine_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00370	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/mirtazapine_inhibits_cyp2c9.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/29	fluconazole_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluconazole_inhibits_cyp2c9.html	DIKB	"09/27/2007 11:44:51
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/37	support	http://www.ncbi.nlm.nih.gov/pubmed/8801057	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_NR	"
+Route of administration: fluconazole oral; warfarin - IV
+
+study duration: phase 1 - 8 days of .75mg/kg warfarin alone; phase 2 (21 days later) 14 days of .75mg/kg q.d. AND 400mg q.d. of fluconazole
+
+population: 6 male
+
+ages: 23-29
+
+description: 
+formation of 6- and 7-OH-(s)-warfarin decreased by 70%; this reaction is considered primarily catalyzed by CYP2C9. There was also a notable increase in AUC of (S)-warfarin (mean AUC_i/AUC=7.633)"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/29	fluconazole_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluconazole_inhibits_cyp2c9.html	DIKB	"06/30/2009 13:32:26
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/38	support	http://dl.dropbox.com/u/4516186/FDA-Guidance-Drug-Interaction-Studies%E2%80%93Study%20Design-Data-Analysis-and-Implications-2006.pdf	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_Tracable_Statement	'The FDA recommends this as a CYP2C9 inhibitor for in vivo studies in it most recent guidance document. See Table 2, p. 19'
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/29	fluconazole_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluconazole_inhibits_cyp2c9.html	DIKB	"09/27/2007 11:44:51
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/37	support	http://www.ncbi.nlm.nih.gov/pubmed/8801057	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_NR	"
+Route of administration: fluconazole oral; warfarin - IV
+
+study duration: phase 1 - 8 days of .75mg/kg warfarin alone; phase 2 (21 days later) 14 days of .75mg/kg q.d. AND 400mg q.d. of fluconazole
+
+population: 6 male
+
+ages: 23-29
+
+description: 
+formation of 6- and 7-OH-(s)-warfarin decreased by 70%; this reaction is considered primarily catalyzed by CYP2C9. There was also a notable increase in AUC of (S)-warfarin (mean AUC_i/AUC=7.633)"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/29	fluconazole_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluconazole_inhibits_cyp2c9.html	DIKB	"06/30/2009 13:32:26
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/38	support	http://dl.dropbox.com/u/4516186/FDA-Guidance-Drug-Interaction-Studies%E2%80%93Study%20Design-Data-Analysis-and-Implications-2006.pdf	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_Tracable_Statement	'The FDA recommends this as a CYP2C9 inhibitor for in vivo studies in it most recent guidance document. See Table 2, p. 19'
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/54	quetiapine_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01224	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/quetiapine_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/63	zafirlukast_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00549	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/zafirlukast_inhibits_cyp3a4.html	DIKB	09/24/2009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/85	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/5550433b-8c9c-4378-058f-6bb724c4f18c	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Metabolism
+
+Zafirlukast is extensively metabolized. The most common metabolic products are hydroxylated metabolites which are excreted in the feces. The metabolites of zafirlukast identified in plasma are at least 90 times less potent as LTD4 receptor antagonists than zafirlukast in a standard in vitro test of activity. In vitro studies using human liver microsomes showed that the hydroxylated metabolites of zafirlukast excreted in the feces are formed through the cytochrome P450 2C9 (CYP2C9) pathway. Additional in vitro studies utilizing human liver microsomes show that zafirlukast inhibits the cytochrome P450 CYP3A4 and CYP2C9 isoenzymes at concentrations close to the clinically achieved total plasma concentrations"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/65	ritonavir_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00503	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/ritonavir_inhibits_cyp3a4.html	DIKB	"06/30/2009 14:06:14
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/87	support	http://dl.dropbox.com/u/4516186/FDA-Guidance-Drug-Interaction-Studies%E2%80%93Study%20Design-Data-Analysis-and-Implications-2006.pdf	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_Tracable_Statement	'The FDA recommends this as a CYP3A4/5 inhibitor for in vivo studies in it most recent guidance document. See Table 2, p. 19'
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/65	ritonavir_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00503	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/ritonavir_inhibits_cyp3a4.html	DIKB	"01/11/2010 17:43:46
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/88	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/2849298e-de6e-47bb-8194-56e075b33fc3	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Drug Interactions
+
+Ritonavir is an inhibitor of cytochrome P450 3A (CYP3A) both in vitro and in vivo. Ritonavir also inhibits CYP2D6 in vitro, but to a lesser extent than CYP3A. Co-administration of ritonavir and drugs primarily metabolized by CYP3A or CYP2D6 may result in increased plasma concentrations of other drugs that could increase or prolong its therapeutic and adverse effects "
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/65	ritonavir_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00503	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/ritonavir_inhibits_cyp3a4.html	DIKB	"01/11/2010 17:52:19
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/89	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/2849298e-de6e-47bb-8194-56e075b33fc3	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	Table 3 shows that the AUC of sildenafil increased 11-fold in the presence of ritonavir
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/83	duloxetine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/83	duloxetine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/86	paliperidone_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01267	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paliperidone_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/90	verapamil_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00661	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/verapamil_inhibits_cyp3a4.html	DIKB	"06/30/2009 14:26:54
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/113	support	http://dl.dropbox.com/u/4516186/FDA-Guidance-Drug-Interaction-Studies%E2%80%93Study%20Design-Data-Analysis-and-Implications-2006.pdf	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_Tracable_Statement	The FDA notes that this is a &quot;moderate&quot; CYP3A inhibitor in vivo in it most recent guidance document. See Table 5, p22
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/111	erythromycin_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00199	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/erythromycin_inhibits_cyp3a4.html	DIKB	"06/25/2007 13:47:05
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/140	support	http://www.ncbi.nlm.nih.gov/pubmed/9757151	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+Route of administration: oral
+
+study duration: 1 day pre-treatment with erythromycin 500mg 2x/day
+
+population: 12 healthy adults 
+male: 6
+female: 6
+ages: 21-39 years
+
+AUC_i/AUC: 20.9/5.5
+
+Quote:
+In a randomized, double-blind, 5-trial clinical pharmacokinetic-pharmacodynamic study, 12 volunteers received 0.125 mg triazolam orally, together with placebo, azithromycin, erythromycin, or clarithromycin. In a fifth trial they received placebo plus placebo...Apparent oral clearance was significantly reduced (P < .05) during erythromycin and clarithromycin trials (146 and 95 mL/min). Peak plasma concentration was correspondingly increased, and elimination half-life was prolonged. The effects of triazolam on dynamic measures were nearly identical when triazolam was given with placebo or azithromycin, but benzodiazepine agonist effects were enhanced during erythromycin and clarithromycin trials."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/111	erythromycin_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00199	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/erythromycin_inhibits_cyp3a4.html	DIKB	"10/16/2007 09:38:08
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/141	support	http://www.ncbi.nlm.nih.gov/pubmed/8720318	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+Route of administration: oral
+
+study duration: 4 days pre-treatment with erythromycin 500mg 3x/day; 5th day patients in the treatment arm received a single 15mg oral dose of MDZ
+
+population: 12 healthy adults
+male: 4
+female: 8
+ages: 24-53 years
+
+AUC_i/AUC: 662.71/173.77 ng*hr/ml = 3.814
+
+NOTE: AUC values  appear to be 0-24 hour 
+
+Quote:
+&quot;The pharmacokinetic and pharmacodynamic interaction between azithromycin (CAS 83905-01-5), an azalide antibiotic, and midazolam (CAS 59467-70-8), a short-acting hypnotic agent, was investigated in an open, three-way cross-over study, including erythromycin (CAS 114-07-8) as a positive control. Twelve healthy male and female subjects had standard doses of azithromycin (500 mg o.d. over 3 days), or erythromycin (500 mg t.i.d. over 5 days), or no pretreatment. On the day of the last dose, they ingested 15 mg midazolam. Blood samples were collected and psychometric tests performed. Erythromycin pretreatment (E) significantly changed the pharmacokinetics of midazolam compared to control (C), whereas azithromycin (A) had no such effect. The parameters are summarized as follows: area under the concentration-time curve, AUC (C) 173.8 h.ng.ml-1 vs. (E) 662.7 h.ng.ml-1*+ and (A) 220.0 h.ng.ml-1; concentration maxima (C) 67.2 ng.ml-1 vs. (E) 182.3 ng.ml-1*+ and (A) 86.7 ng.ml-1; elimination half-life (C) 2.21 h vs. (E) 4.85 h* and (A) 2.41 h (* p &lt; 0.05 vs. (C), +p &lt; 0.05 vs. (A)). Pharmacodynamic tests (digit symbol substitution test; critical flicker fusion test; subjective analog scale for rating of alertness; duration of sleep) consistently showed significant differences after erythromycin pretreatment compared to control, but not after azithromycin. Erythromycin, but not azithromycin, causes clinically significant changes in the pharmacokinetics and pharmacodynamics of midazolam.&quot;"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/112	montelukast_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00471	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/montelukast_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/112	montelukast_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00471	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/montelukast_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/156	cinacalcet_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01012	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cinacalcet_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/156	cinacalcet_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01012	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cinacalcet_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/162	escitalopram_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/escitalopram_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/162	escitalopram_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/escitalopram_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/171	citalopram_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00215	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/citalopram_inhibits_cyp2c9.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/171	citalopram_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00215	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/citalopram_inhibits_cyp2c9.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/178	celecoxib_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00482	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/celecoxib_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/189	duloxetine_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/201	fluconazole_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluconazole_inhibits_cyp3a4.html	DIKB	"10/22/2007 13:08:14
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/251	support	http://www.ncbi.nlm.nih.gov/pubmed/8904618	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+Route of administration: oral
+
+study duration: four phase crossover study; each phase consisted of four days pre-treatment with placebo or fluconazole (50,100, or 200mg), on day four 0.25mg of triazolam was administered
+
+population: 8 healthy adults 
+male:3
+female:5
+
+ages: 20-32
+
+AUC_i/AUC (0-inf): 
+50mg fluconazole = 1.63
+100mg fluconazole = 2.05
+200mg fluconazole = 4.42
+
+description: 
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/201	fluconazole_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluconazole_inhibits_cyp3a4.html	DIKB	"12/10/2007 15:42:25
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/252	support	http://www.ncbi.nlm.nih.gov/pubmed/16172184	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+Route of administration: oral
+
+study duration: 4-way crossover; subjects received oral fluconazole (100, 200, or 400mg) or placebo;  2 hours later a single dose of MDZ (1mg IV or oral depending on the study arm) was given followed 30 minutes later by 4mg IV of ondansetron, followed by 15ug/kg of IV alfentanil (one arm) or 40mcg oral alfentanil.
+
+population: 6 male, 6 female
+
+ages: 19-36
+
+AUC_i/AUC (0-inf; oral dosing; 100mg fluconazole): 46.1/21.3 
+
+AUC_i/AUC (0-inf; oral dosing; 200mg fluconazole): 70.7/21.3 
+
+AUC_i/AUC (0-inf; oral dosing; 400mg fluconazole): 105/21.3 
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/201	fluconazole_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluconazole_inhibits_cyp3a4.html	DIKB	"06/30/2009 13:33:58
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/253	support	http://dl.dropbox.com/u/4516186/FDA-Guidance-Drug-Interaction-Studies%E2%80%93Study%20Design-Data-Analysis-and-Implications-2006.pdf	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_Tracable_Statement	The FDA notes that this is a &quot;moderate&quot; CYP3A inhibitor in vivo in it most recent guidance document. See Table 5, p22
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/211	zafirlukast_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00549	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/zafirlukast_inhibits_cyp2c9.html	DIKB	09/24/2009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/263	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/5550433b-8c9c-4378-058f-6bb724c4f18c	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Metabolism
+
+Zafirlukast is extensively metabolized. The most common metabolic products are hydroxylated metabolites which are excreted in the feces. The metabolites of zafirlukast identified in plasma are at least 90 times less potent as LTD4 receptor antagonists than zafirlukast in a standard in vitro test of activity. In vitro studies using human liver microsomes showed that the hydroxylated metabolites of zafirlukast excreted in the feces are formed through the cytochrome P450 2C9 (CYP2C9) pathway. Additional in vitro studies utilizing human liver microsomes show that zafirlukast inhibits the cytochrome P450 CYP3A4 and CYP2C9 isoenzymes at concentrations close to the clinically achieved total plasma concentrations"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/211	zafirlukast_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00549	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/zafirlukast_inhibits_cyp2c9.html	DIKB	"09/24/2009 15:41:53
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/264	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/5550433b-8c9c-4378-058f-6bb724c4f18c	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"
+Drug-Drug Interactions:
+...
+Coadministration of multiple doses of zafirlukast (160 mg/day) to steady-state with a single 25 mg dose of warfarin (a substrate of CYP2C9) resulted in a significant increase in the mean AUC (+63%) and half-life (+36%) of S-warfarin. The mean prothrombin time increased by approximately 35%. The pharmacokinetics of zafirlukast were unaffected by coadministration with warfarin."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/211	zafirlukast_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00549	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/zafirlukast_inhibits_cyp2c9.html	DIKB	09/24/2009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/263	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/5550433b-8c9c-4378-058f-6bb724c4f18c	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Metabolism
+
+Zafirlukast is extensively metabolized. The most common metabolic products are hydroxylated metabolites which are excreted in the feces. The metabolites of zafirlukast identified in plasma are at least 90 times less potent as LTD4 receptor antagonists than zafirlukast in a standard in vitro test of activity. In vitro studies using human liver microsomes showed that the hydroxylated metabolites of zafirlukast excreted in the feces are formed through the cytochrome P450 2C9 (CYP2C9) pathway. Additional in vitro studies utilizing human liver microsomes show that zafirlukast inhibits the cytochrome P450 CYP3A4 and CYP2C9 isoenzymes at concentrations close to the clinically achieved total plasma concentrations"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/211	zafirlukast_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00549	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/zafirlukast_inhibits_cyp2c9.html	DIKB	"09/24/2009 15:41:53
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/264	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/5550433b-8c9c-4378-058f-6bb724c4f18c	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"
+Drug-Drug Interactions:
+...
+Coadministration of multiple doses of zafirlukast (160 mg/day) to steady-state with a single 25 mg dose of warfarin (a substrate of CYP2C9) resulted in a significant increase in the mean AUC (+63%) and half-life (+36%) of S-warfarin. The mean prothrombin time increased by approximately 35%. The pharmacokinetics of zafirlukast were unaffected by coadministration with warfarin."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/221	fluvoxamine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluvoxamine_inhibits_cyp2c19.html	DIKB	"05/05/2009 17:27:55
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/273	support	http://dl.dropbox.com/u/4516186/FDA-Guidance-Drug-Interaction-Studies%E2%80%93Study%20Design-Data-Analysis-and-Implications-2006.pdf	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_Tracable_Statement	Fluvoxamine is listed as a recommended inhibitor of CYP2C19 for in vivo studies in Table 2 (p. 19). Typically, this would qualify it as a in vivo selective inhibitor however, Table 2 also shows fluvoxamine as a recommended inhibitor of CYP1A2.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/221	fluvoxamine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluvoxamine_inhibits_cyp2c19.html	DIKB	"05/15/2009 08:52:34
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/274	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/53664f8d-3a93-9f2b-daee-380707e4062c	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"(table from section &quot;Drug Interactions&quot;)
+
+Based on a finding of substantial interactions of fluvoxamine with certain of these drugs (see later parts of this section and also  WARNINGS for details) and limited in vitro data for the IIIA4 isozyme, it appears that fluvoxamine inhibits the following isozymes that are known to be involved in the metabolism of the listed drugs:
+IA2             IIC9	        IIIA4         IIC19
+Warfarin	Warfarin	Alprazolam   Omeprazole
+Theophylline			
+Propranolol			
+Tizanidine			"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/221	fluvoxamine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluvoxamine_inhibits_cyp2c19.html	DIKB	"05/05/2009 17:27:55
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/273	support	http://dl.dropbox.com/u/4516186/FDA-Guidance-Drug-Interaction-Studies%E2%80%93Study%20Design-Data-Analysis-and-Implications-2006.pdf	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_Tracable_Statement	Fluvoxamine is listed as a recommended inhibitor of CYP2C19 for in vivo studies in Table 2 (p. 19). Typically, this would qualify it as a in vivo selective inhibitor however, Table 2 also shows fluvoxamine as a recommended inhibitor of CYP1A2.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/221	fluvoxamine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluvoxamine_inhibits_cyp2c19.html	DIKB	"05/15/2009 08:52:34
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/274	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/53664f8d-3a93-9f2b-daee-380707e4062c	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"(table from section &quot;Drug Interactions&quot;)
+
+Based on a finding of substantial interactions of fluvoxamine with certain of these drugs (see later parts of this section and also  WARNINGS for details) and limited in vitro data for the IIIA4 isozyme, it appears that fluvoxamine inhibits the following isozymes that are known to be involved in the metabolism of the listed drugs:
+IA2             IIC9	        IIIA4         IIC19
+Warfarin	Warfarin	Alprazolam   Omeprazole
+Theophylline			
+Propranolol			
+Tizanidine			"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/235	paliperidone_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01267	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paliperidone_inhibits_cyp2c9.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/235	paliperidone_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01267	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paliperidone_inhibits_cyp2c9.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/242	atazanavir_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01072	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atazanavir_inhibits_cyp3a4.html	DIKB	"06/30/2009 12:47:19
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/298	support	http://dl.dropbox.com/u/4516186/FDA-Guidance-Drug-Interaction-Studies%E2%80%93Study%20Design-Data-Analysis-and-Implications-2006.pdf	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_Tracable_Statement	The FDA recommends this as a CYP3A4/5 inhibitor for in vivo studies in it most recent guidance document. See Table 2, p. 19
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/242	atazanavir_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01072	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atazanavir_inhibits_cyp3a4.html	DIKB	"01/11/2010 15:38:56
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/299	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/165cff62-b284-4a27-a65d-9ec8a5bfcdd8	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"7.1 Potential for REYATAZ to Affect Other Drugs
+
+Atazanavir is an inhibitor of CYP3A and UGT1A1. Coadministration of REYATAZ and drugs primarily metabolized by CYP3A or UGT1A1 may result in increased plasma concentrations of the other drug that could increase or prolong its therapeutic and adverse effects."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/246	risperidone_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00734	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/risperidone_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/246	risperidone_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00734	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/risperidone_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/247	perphenazine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00850	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/perphenazine_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/247	perphenazine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00850	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/perphenazine_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/249	eszopiclone_inhibits_CYP3A4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00402	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/eszopiclone_inhibits_CYP3A4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/271	cinacalcet_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01012	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cinacalcet_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/287	modafinil_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00745	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/modafinil_inhibits_cyp2c19.html	DIKB	"09/24/2009 12:37:09
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/349	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/e16c26ad-7bc2-d155-3a5d-da83ad6492c8.pdf	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Drug Interactions
+...
+In vitro studies using human liver microsomes showed that modafinil reversibly inhibited CYP2C19 at pharmacologically relevant concentrations of modafinil. CYP2C19 is also reversibly inhibited, with similar potency, by a circulating metabolite, modafinil sulfone. Although the maximum plasma concentrations of modafinil sulfone are much lower than those of parent modafinil, the combined effect of both compounds could produce sustained partial inhibition of the enzyme. Drugs that are largely eliminated via CYP2C19 metabolism, such as diazepam, propranolol, phenytoin (also via CYP2C9) or S-mephenytoin may have prolonged elimination upon coadministration with PROVIGIL and may require dosage reduction and monitoring for toxicity."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/287	modafinil_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00745	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/modafinil_inhibits_cyp2c19.html	DIKB	"09/24/2009 12:37:09
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/349	support	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/e16c26ad-7bc2-d155-3a5d-da83ad6492c8.pdf	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Drug Interactions
+...
+In vitro studies using human liver microsomes showed that modafinil reversibly inhibited CYP2C19 at pharmacologically relevant concentrations of modafinil. CYP2C19 is also reversibly inhibited, with similar potency, by a circulating metabolite, modafinil sulfone. Although the maximum plasma concentrations of modafinil sulfone are much lower than those of parent modafinil, the combined effect of both compounds could produce sustained partial inhibition of the enzyme. Drugs that are largely eliminated via CYP2C19 metabolism, such as diazepam, propranolol, phenytoin (also via CYP2C9) or S-mephenytoin may have prolonged elimination upon coadministration with PROVIGIL and may require dosage reduction and monitoring for toxicity."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/22	mirtazapine_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00370	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/mirtazapine_inhibits_cyp2c9.html	DIKB	"02/12/2010 17:32:18
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/29	refute	http://www.ncbi.nlm.nih.gov/pubmed/10997935	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_Inhibit_Cyp450_Hum_Microsome	"
+Enzyme system: human liver microsomes:
+
+NADPH added: yes
+
+substrate used: tolbutamide
+
+reaction: tolbutamide hydroxylation 
+
+Quote: 
+Mirtazapine reduced the rate of the reaction by much less than 50% even at concentrations of 250micM (see Table 3).
+
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/22	mirtazapine_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00370	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/mirtazapine_inhibits_cyp2c9.html	DIKB	"02/12/2010 17:32:18
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/29	refute	http://www.ncbi.nlm.nih.gov/pubmed/10997935	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_Inhibit_Cyp450_Hum_Microsome	"
+Enzyme system: human liver microsomes:
+
+NADPH added: yes
+
+substrate used: tolbutamide
+
+reaction: tolbutamide hydroxylation 
+
+Quote: 
+Mirtazapine reduced the rate of the reaction by much less than 50% even at concentrations of 250micM (see Table 3).
+
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/29	fluconazole_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluconazole_inhibits_cyp2c9.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/29	fluconazole_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluconazole_inhibits_cyp2c9.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/54	quetiapine_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01224	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/quetiapine_inhibits_cyp3a4.html	DIKB	05142009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/76	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/473a3ac4-67f4-4782-baa9-7f9bdd8761f4	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	In vitro enzyme inhibition data suggest that quetiapine and 9 of its metabolites would have little inhibitory effect on in vivo metabolism mediated by cytochromes P450 1A2, 2C9, 2C19, 2D6 and 3A4.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/63	zafirlukast_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00549	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/zafirlukast_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/65	ritonavir_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00503	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/ritonavir_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/83	duloxetine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_inhibits_cyp2c19.html	DIKB	"05/05/2009 17:40:26
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/106	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/2f7d4d67-10c1-4bf4-a7f2-c185fbad64ba	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"7.12 Drugs Metabolized by CYP2C19
+
+Results of in vitro studies demonstrate that duloxetine does not inhibit CYP2C19 activity at therapeutic concentrations. Inhibition of the metabolism of CYP2C19 substrates is therefore not anticipated, although clinical studies have not been performed."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/83	duloxetine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_inhibits_cyp2c19.html	DIKB	"05/05/2009 17:40:26
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/106	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/2f7d4d67-10c1-4bf4-a7f2-c185fbad64ba	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"7.12 Drugs Metabolized by CYP2C19
+
+Results of in vitro studies demonstrate that duloxetine does not inhibit CYP2C19 activity at therapeutic concentrations. Inhibition of the metabolism of CYP2C19 substrates is therefore not anticipated, although clinical studies have not been performed."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/86	paliperidone_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01267	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paliperidone_inhibits_cyp3a4.html	DIKB	06102009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/109	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/7b8e5b26-b9e4-4704-921b-3c3c0d159916	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	Paliperidone is not expected to cause clinically important pharmacokinetic interactions with drugs that are metabolized by cytochrome P450 isozymes. In vitro studies in human liver microsomes showed that paliperidone does not substantially inhibit the metabolism of drugs metabolized by cytochrome P450 isozymes, including CYP1A2, CYP2A6, CYP2C8/9/10, CYP2D6, CYP2E1, CYP3A4, and CYP3A5. Therefore, paliperidone is not expected to inhibit clearance of drugs that are metabolized by these metabolic pathways in a clinically relevant manner. Paliperidone is also not expected to have enzyme inducing properties.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/90	verapamil_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00661	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/verapamil_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/111	erythromycin_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00199	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/erythromycin_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/112	montelukast_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00471	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/montelukast_inhibits_cyp2c19.html	DIKB	01/11/2010	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/142	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/a99f55de-39d1-483a-ba88-dbda5613c6a7	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	Based on further in vitro results in human liver microsomes, therapeutic plasma concentrations of montelukast do not inhibit cytochromes P450 3A4, 2C9, 1A2, 2A6, 2C19, or 2D6 (see Drug Interactions). In vitro studies have shown that montelukast is a potent inhibitor of cytochrome P450 2C8; however, data from a clinical drug-drug interaction study involving montelukast and rosiglitazone (a probe substrate representative of drugs primarily metabolized by CYP2C8) demonstrated that montelukast does not inhibit CYP2C8 in vivo, and therefore is not anticipated to alter the metabolism of drugs metabolized by this enzyme (see Drug Interactions).
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/112	montelukast_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00471	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/montelukast_inhibits_cyp2c19.html	DIKB	01/11/2010	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/142	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/a99f55de-39d1-483a-ba88-dbda5613c6a7	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	Based on further in vitro results in human liver microsomes, therapeutic plasma concentrations of montelukast do not inhibit cytochromes P450 3A4, 2C9, 1A2, 2A6, 2C19, or 2D6 (see Drug Interactions). In vitro studies have shown that montelukast is a potent inhibitor of cytochrome P450 2C8; however, data from a clinical drug-drug interaction study involving montelukast and rosiglitazone (a probe substrate representative of drugs primarily metabolized by CYP2C8) demonstrated that montelukast does not inhibit CYP2C8 in vivo, and therefore is not anticipated to alter the metabolism of drugs metabolized by this enzyme (see Drug Interactions).
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/156	cinacalcet_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01012	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cinacalcet_inhibits_cyp2c19.html	DIKB	09212009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/194	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/45028573-13c4-4c8b-ae62-6c75bba97c81	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Drug Interactions
+...
+An in vitro study indicates that cinacalcet is a strong inhibitor of CYP2D6, but not of CYP1A2, CYP2C9, CYP2C19, and CYP3A4."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/156	cinacalcet_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01012	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cinacalcet_inhibits_cyp2c19.html	DIKB	09212009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/194	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/45028573-13c4-4c8b-ae62-6c75bba97c81	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Drug Interactions
+...
+An in vitro study indicates that cinacalcet is a strong inhibitor of CYP2D6, but not of CYP1A2, CYP2C9, CYP2C19, and CYP3A4."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/162	escitalopram_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/escitalopram_inhibits_cyp2c19.html	DIKB	05142009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/199	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/13bb8267-1cab-43e5-acae-55a4d957630a	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	in vitro enzyme inhibition data did not reveal an inhibitory effect of escitalopram on CYP3A4, -1A2, -2C9, -2C19, and -2E1. Based on in vitro data, escitalopram would be expected to have little inhibitory effect on in vivo metabolism mediated by these cytochromes.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/162	escitalopram_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/escitalopram_inhibits_cyp2c19.html	DIKB	"06/11/2009 16:10:21
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/200	refute	http://www.ncbi.nlm.nih.gov/pubmed/11454728	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_Inhibit_Cyp450_Hum_Microsome	"
+Enzyme system: human liver microsomes
+
+NADPH added: yes (a dehydrogenase generating system)
+
+probe reaction: S-mepheytoin 4'hydroxylation
+
+Quote: 
+
+CYP2C19. R- and S-CT were very weak inhibitors, with less than 50% inhibition of S-mephenytoin hydroxylation even at 100micM. R- and S-DCT also were weak inhibitors. R- and S-DDCT were moderate inhibitors, with mean IC50 values of 18.7 and 12.1micM, respectively. Omeprazole was a strong inhibitor of CYP2C19, as was the SSRI
+fluvoxamine (see Table 2).
+
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/162	escitalopram_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/escitalopram_inhibits_cyp2c19.html	DIKB	05142009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/199	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/13bb8267-1cab-43e5-acae-55a4d957630a	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	in vitro enzyme inhibition data did not reveal an inhibitory effect of escitalopram on CYP3A4, -1A2, -2C9, -2C19, and -2E1. Based on in vitro data, escitalopram would be expected to have little inhibitory effect on in vivo metabolism mediated by these cytochromes.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/162	escitalopram_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01175	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/escitalopram_inhibits_cyp2c19.html	DIKB	"06/11/2009 16:10:21
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/200	refute	http://www.ncbi.nlm.nih.gov/pubmed/11454728	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_Inhibit_Cyp450_Hum_Microsome	"
+Enzyme system: human liver microsomes
+
+NADPH added: yes (a dehydrogenase generating system)
+
+probe reaction: S-mepheytoin 4'hydroxylation
+
+Quote: 
+
+CYP2C19. R- and S-CT were very weak inhibitors, with less than 50% inhibition of S-mephenytoin hydroxylation even at 100micM. R- and S-DCT also were weak inhibitors. R- and S-DDCT were moderate inhibitors, with mean IC50 values of 18.7 and 12.1micM, respectively. Omeprazole was a strong inhibitor of CYP2C19, as was the SSRI
+fluvoxamine (see Table 2).
+
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/171	citalopram_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00215	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/citalopram_inhibits_cyp2c9.html	DIKB	05142009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/212	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/62f9e5da-6215-4d6d-8601-ea01ec2655ab	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	In vitro enzyme inhibition data did not reveal an inhibitory effect of citalopram on CYP3A4, -2C9, or -2E1, but did suggest that it is a weak inhibitor of CYP1A2, -2D6, and -2C19. Citalopram would be expected to have little inhibitory effect on in vivo metabolism mediated by these cytochromes. However, in vivo data to address this question are limited.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/171	citalopram_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00215	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/citalopram_inhibits_cyp2c9.html	DIKB	"02/12/2010 14:53:49
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/213	refute	http://www.ncbi.nlm.nih.gov/pubmed/9278211	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+
+route of administration: oral
+
+study duration: a single 25 mg dose of racemic warfarin either alone or on Day 15 of a 21-day oral dosing regimen of 40 mg citalopram daily. Blood samples for pharmacokinetic analysis were obtained over a 168 h period after warfarin dosing.
+
+population: 12 healthy males 
+
+tested for known CYP450 polymorphisms? no
+
+ages: 21 - 32
+
+description:
+Citalopram produced no change in the pharmacokinetics of (R)- and (S)-warfarin, indicating that citalopram does not alter the metabolism of warfarin mediated via CYP1A2, CYP3A4 and CYP2C9.
+
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/171	citalopram_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00215	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/citalopram_inhibits_cyp2c9.html	DIKB	05142009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/212	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/62f9e5da-6215-4d6d-8601-ea01ec2655ab	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	In vitro enzyme inhibition data did not reveal an inhibitory effect of citalopram on CYP3A4, -2C9, or -2E1, but did suggest that it is a weak inhibitor of CYP1A2, -2D6, and -2C19. Citalopram would be expected to have little inhibitory effect on in vivo metabolism mediated by these cytochromes. However, in vivo data to address this question are limited.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/171	citalopram_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00215	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/citalopram_inhibits_cyp2c9.html	DIKB	"02/12/2010 14:53:49
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/213	refute	http://www.ncbi.nlm.nih.gov/pubmed/9278211	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
+
+route of administration: oral
+
+study duration: a single 25 mg dose of racemic warfarin either alone or on Day 15 of a 21-day oral dosing regimen of 40 mg citalopram daily. Blood samples for pharmacokinetic analysis were obtained over a 168 h period after warfarin dosing.
+
+population: 12 healthy males 
+
+tested for known CYP450 polymorphisms? no
+
+ages: 21 - 32
+
+description:
+Citalopram produced no change in the pharmacokinetics of (R)- and (S)-warfarin, indicating that citalopram does not alter the metabolism of warfarin mediated via CYP1A2, CYP3A4 and CYP2C9.
+
+
+"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/178	celecoxib_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00482	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/celecoxib_inhibits_cyp3a4.html	DIKB	09212009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/222	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/8d52185d-421f-4e34-8db7-f7676db2a226	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Drug interactions:
+
+In vitro studies indicate that celecoxib is not an inhibitor of cytochrome P450 2C9, 2C19 or 3A4."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/189	duloxetine_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/duloxetine_inhibits_cyp3a4.html	DIKB	"05/05/2009 17:38:52
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/235	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/2f7d4d67-10c1-4bf4-a7f2-c185fbad64ba	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"7.11 Drugs Metabolized by CYP3A
+
+Results of in vitro studies demonstrate that duloxetine does not inhibit or induce CYP3A activity. Therefore, an increase or decrease in the metabolism of CYP3A substrates (e.g., oral contraceptives and other steroidal agents) resulting from induction or inhibition is not anticipated, although clinical studies have not been performed. "
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/201	fluconazole_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00196	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluconazole_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/211	zafirlukast_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00549	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/zafirlukast_inhibits_cyp2c9.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/211	zafirlukast_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00549	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/zafirlukast_inhibits_cyp2c9.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/221	fluvoxamine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluvoxamine_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/221	fluvoxamine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluvoxamine_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/235	paliperidone_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01267	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paliperidone_inhibits_cyp2c9.html	DIKB	06102009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/288	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/7b8e5b26-b9e4-4704-921b-3c3c0d159916	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	Paliperidone is not expected to cause clinically important pharmacokinetic interactions with drugs that are metabolized by cytochrome P450 isozymes. In vitro studies in human liver microsomes showed that paliperidone does not substantially inhibit the metabolism of drugs metabolized by cytochrome P450 isozymes, including CYP1A2, CYP2A6, CYP2C8/9/10, CYP2D6, CYP2E1, CYP3A4, and CYP3A5. Therefore, paliperidone is not expected to inhibit clearance of drugs that are metabolized by these metabolic pathways in a clinically relevant manner. Paliperidone is also not expected to have enzyme inducing properties.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/235	paliperidone_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01267	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paliperidone_inhibits_cyp2c9.html	DIKB	06102009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/289	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/7b8e5b26-b9e4-4704-921b-3c3c0d159916	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	Paliperidone is not a substrate of CYP1A2, CYP2A6, CYP2C9, and CYP2C19, so that an interaction with inhibitors or inducers of these isozymes is unlikely. While in vitro studies indicate that CYP2D6 and CYP3A4 may be minimally involved in paliperidone metabolism, in vivo studies do not show decreased elimination by these isozymes and they contribute to only a small fraction of total body clearance. In vitro studies have shown that paliperidone is a P-gp substrate.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/235	paliperidone_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01267	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paliperidone_inhibits_cyp2c9.html	DIKB	06102009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/288	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/7b8e5b26-b9e4-4704-921b-3c3c0d159916	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	Paliperidone is not expected to cause clinically important pharmacokinetic interactions with drugs that are metabolized by cytochrome P450 isozymes. In vitro studies in human liver microsomes showed that paliperidone does not substantially inhibit the metabolism of drugs metabolized by cytochrome P450 isozymes, including CYP1A2, CYP2A6, CYP2C8/9/10, CYP2D6, CYP2E1, CYP3A4, and CYP3A5. Therefore, paliperidone is not expected to inhibit clearance of drugs that are metabolized by these metabolic pathways in a clinically relevant manner. Paliperidone is also not expected to have enzyme inducing properties.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/235	paliperidone_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01267	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paliperidone_inhibits_cyp2c9.html	DIKB	06102009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/289	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/7b8e5b26-b9e4-4704-921b-3c3c0d159916	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	Paliperidone is not a substrate of CYP1A2, CYP2A6, CYP2C9, and CYP2C19, so that an interaction with inhibitors or inducers of these isozymes is unlikely. While in vitro studies indicate that CYP2D6 and CYP3A4 may be minimally involved in paliperidone metabolism, in vivo studies do not show decreased elimination by these isozymes and they contribute to only a small fraction of total body clearance. In vitro studies have shown that paliperidone is a P-gp substrate.
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/242	atazanavir_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01072	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/atazanavir_inhibits_cyp3a4.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/246	risperidone_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00734	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/risperidone_inhibits_cyp2c19.html	DIKB	"04/25/2009 09:58:43
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/303	refute	http://www.ncbi.nlm.nih.gov/pubmed/10460810	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_Inhibit_Cyp450_Hum_Microsome	"Enzyme system: human liver microsomes
+
+NADPH added: yes
+
+reaction: omeprazole-5-hydroxylation
+
+No k_i observed"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/246	risperidone_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00734	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/risperidone_inhibits_cyp2c19.html	DIKB	"04/25/2009 09:58:43
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/303	refute	http://www.ncbi.nlm.nih.gov/pubmed/10460810	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_Inhibit_Cyp450_Hum_Microsome	"Enzyme system: human liver microsomes
+
+NADPH added: yes
+
+reaction: omeprazole-5-hydroxylation
+
+No k_i observed"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/247	perphenazine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00850	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/perphenazine_inhibits_cyp2c19.html	DIKB	"04/25/2009 10:18:23
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/304	refute	http://www.ncbi.nlm.nih.gov/pubmed/10460810	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_Inhibit_Cyp450_Hum_Microsome	"Enzyme system: human liver microsomes
+
+NADPH added: yes
+
+reaction: omeprazole-5-hydroxylation
+
+No k_i observed"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/247	perphenazine_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00850	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/perphenazine_inhibits_cyp2c19.html	DIKB	"04/25/2009 10:18:23
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/304	refute	http://www.ncbi.nlm.nih.gov/pubmed/10460810	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_Inhibit_Cyp450_Hum_Microsome	"Enzyme system: human liver microsomes
+
+NADPH added: yes
+
+reaction: omeprazole-5-hydroxylation
+
+No k_i observed"
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/249	eszopiclone_inhibits_CYP3A4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00402	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/eszopiclone_inhibits_CYP3A4.html	DIKB	11/09/2009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/306	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/fd047b2b-05a6-4d99-95cb-955f14bf329f	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Metabolism
+
+Following oral administration, eszopiclone is extensively metabolized by oxidation and demethylation. The primary plasma metabolites are (S)-zopiclone-N-oxide and (S)-N-desmethyl zopiclone; the latter compound binds to GABA receptors with substantially lower potency than eszopiclone, and the former compound shows no significant binding to this receptor. In vitro studies have shown that CYP3A4 and CYP2E1 enzymes are involved in the metabolism of eszopiclone. Eszopiclone did not show any inhibitory potential on CYP450 1A2, 2A6, 2C9, 2C19, 2D6, 2E1, and 3A4 in cryopreserved human hepatocytes."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/271	cinacalcet_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01012	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cinacalcet_inhibits_cyp3a4.html	DIKB	"09/21/2009 15:20:18
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/330	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/45028573-13c4-4c8b-ae62-6c75bba97c81	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Drug Interactions
+....
+
+Midazolam: There were no significant differences in the pharmacokinetics of midazolam, a CYP3A4 and CYP3A5 substrate, in subjects receiving 90 mg cinacalcet once daily for 5 days and a single dose of 2 mg midazolam on day 5 as compared to those of subjects receiving 2 mg midazolam alone.  This suggests that cinacalcet would not affect the pharmacokinetics of drugs predominantly metabolized by CYP3A4 and CYP3A5."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/271	cinacalcet_inhibits_cyp3a4	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01012	http://purl.obolibrary.org/obo/PR_000006130	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cinacalcet_inhibits_cyp3a4.html	DIKB	09212009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/331	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/45028573-13c4-4c8b-ae62-6c75bba97c81	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Drug Interactions
+...
+An in vitro study indicates that cinacalcet is a strong inhibitor of CYP2D6, but not of CYP1A2, CYP2C9, CYP2C19, and CYP3A4."
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/287	modafinil_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00745	http://purl.obolibrary.org/obo/PR_000006118	modafinil-sulfone	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/modafinil_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/287	modafinil_inhibits_cyp2c19	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00745	http://purl.obolibrary.org/obo/PR_000006118	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/modafinil_inhibits_cyp2c19.html	DIKB							
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/306	venlafaxine_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/venlafaxine_inhibits_cyp2c9.html	DIKB	"05/14/2009 13:49:46
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/371	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/cf2d9bee-f8e3-477a-e4b4-f0e82657b7d2	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	CYP2C9: Venlafaxine did not inhibit CYP2C9 in vitro. In vivo, venlafaxine 75 mg by mouth every 12 hours did not alter the pharmacokinetics of a single 500 mg dose of tolbutamide or the CYP2C9 mediated formation of 4-hydroxy-tolbutamide. 
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/306	venlafaxine_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/venlafaxine_inhibits_cyp2c9.html	DIKB	"02/12/2010 14:23:14
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/372	refute	http://www.ncbi.nlm.nih.gov/pubmed/9205822	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_Inhibit_Cyp450_Hum_Microsome	"
+Enzyme system: human liver microsomes:
+
+NADPH added: yes
+
+reaction: tolbutamide-4-hydroxylation
+
+Quote: 
+The IC50 for venlafaxine's inhibition of the reaction was &gt; 1000micM "
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/306	venlafaxine_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/venlafaxine_inhibits_cyp2c9.html	DIKB	"05/14/2009 13:49:46
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/371	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/cf2d9bee-f8e3-477a-e4b4-f0e82657b7d2	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	CYP2C9: Venlafaxine did not inhibit CYP2C9 in vitro. In vivo, venlafaxine 75 mg by mouth every 12 hours did not alter the pharmacokinetics of a single 500 mg dose of tolbutamide or the CYP2C9 mediated formation of 4-hydroxy-tolbutamide. 
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/306	venlafaxine_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	http://purl.obolibrary.org/obo/PR_000006120	teriflunomide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/venlafaxine_inhibits_cyp2c9.html	DIKB	"02/12/2010 14:23:14
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/372	refute	http://www.ncbi.nlm.nih.gov/pubmed/9205822	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz_Inhibit_Cyp450_Hum_Microsome	"
+Enzyme system: human liver microsomes:
+
+NADPH added: yes
+
+reaction: tolbutamide-4-hydroxylation
+
+Quote: 
+The IC50 for venlafaxine's inhibition of the reaction was &gt; 1000micM "
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Assertions/324	celecoxib_inhibits_cyp2c9	inhibits	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00482	http://purl.obolibrary.org/obo/PR_000006120	voriconazole-N-oxide	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/celecoxib_inhibits_cyp2c9.html	DIKB	09212009	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/391	refute	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/8d52185d-421f-4e34-8db7-f7676db2a226	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"Drug interactions:
+
+In vitro studies indicate that celecoxib is not an inhibitor of cytochrome P450 2C9, 2C19 or 3A4."
