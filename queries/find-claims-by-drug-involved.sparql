@@ -20,14 +20,14 @@ PREFIX drugbank: <http://bio2rdf.org/drugbank:>
 PREFIX ChEBI: <http://purl.obolibrary.org/obo/>
 
 SELECT ?claim
-FROM <http://purl.org/mp/initial-graph-oa-mp>
+FROM <http://purl.org/mp/infered-graph-oa-mp>
 WHERE
 {
        ?claim rdf:type mp:Claim;
               rdfs:label ?claimLabel.
 
        ?mat rdf:type mp:Material;
-            dikbD2R:ObjectDrugOfInteraction ChEBI:CHEBI_9674;
+            dikbD2R:ObjectDrugOfInteraction ChEBI:CHEBI_7936;
             mp:usedIn ?method.
        ?method mp:supports ?data.
        ?data mp:supports ?claim.

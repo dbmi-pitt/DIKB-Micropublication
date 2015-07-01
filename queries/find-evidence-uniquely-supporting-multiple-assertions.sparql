@@ -30,7 +30,7 @@ WHERE {
 
 {
 SELECT ?evidence COUNT(?assertion)
-FROM <http://purl.org/mp/initial-graph-oa-mp>
+FROM <http://purl.org/mp/infered-graph-oa-mp>
 WHERE
 {
      ?assertion rdf:type mp:Claim.
