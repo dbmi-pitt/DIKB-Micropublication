@@ -43,6 +43,7 @@ DRUGBANK_CHEBI = "../data/drugbank-to-chebi-06232015.txt"
 ################################################################################
 PRE_POST_CHARS=50
 mp_list = []
+assert_claimD = {}
 
 annotationSetCntr = 1
 annotationItemCntr = 1
@@ -287,7 +288,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
 
     ## increase AUC have PKDDI material info
 
-    if "increase_auc" in item["assertType"]:
+    if "increase_auc" == item["assertType"].strip():
  
         graph.add((poc[currentAnnotationMaterial], RDFS.label, Literal("%s (object) - %s (precipitant)" % (item["object"], item["precip"]))))
 
@@ -406,30 +407,33 @@ def createGraph(graph, dataset):
         ###################################################################
 
         # Claim : is a research statement label qualified by assertion URI
-        if item['researchStatementLabel']:
+        if item['researchStatementLabel'] and item['researchStatement']:
 
-            global annotationClaimCntr 
-            currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % (annotationClaimCntr)
-            annotationClaimCntr += 1
+            # one claim may supported by or refuted by multiple evidences (data/statement)
+            if item['researchStatement'] not in assert_claimD.keys():
+
+                global annotationClaimCntr 
+                currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % (annotationClaimCntr)
+                annotationClaimCntr += 1
+                assert_claimD[item['researchStatement']] = currentAnnotationClaim
+            else:
+                currentAnnotationClaim = assert_claimD[item['researchStatement']]
 
             graph.add((poc[currentAnnotationClaim],RDF.type, mp["Claim"]))
             graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
 
-            if item['researchStatement']:
-                graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], URIRef(item["researchStatement"])))
-                graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
+            graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], URIRef(item["researchStatement"])))
+            graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
+            graph.add((poc[currentAnnotationClaim], rdf["subject"], URIRef(item["objectURI"])))
+            graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
 
-                graph.add((poc[currentAnnotationClaim], rdf["subject"], URIRef(item["objectURI"])))
-                graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
+            graph.add((poc[currentAnnotationClaim], rdf["object"], URIRef(item["valueURI"])))
+            graph.add((URIRef(item["valueURI"]), RDF.type, mp["SemanticQualifier"]))
 
-                graph.add((poc[currentAnnotationClaim], rdf["object"], URIRef(item["valueURI"])))
-                graph.add((URIRef(item["valueURI"]), RDF.type, mp["SemanticQualifier"]))
-
-                graph.add((poc[currentAnnotationClaim], rdf["predicate"], URIRef(item["assertType"])))
-                graph.add((URIRef(item["assertType"]), RDF.type, mp["SemanticQualifier"]))
-
-            else:
-                graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], Literal("stubbed out")))
+            graph.add((poc[currentAnnotationClaim], rdf["predicate"], URIRef(item["assertType"])))
+            graph.add((URIRef(item["assertType"]), RDF.type, mp["SemanticQualifier"]))
+        else:
+            graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], Literal("stubbed out")))
 
         ###################################################################
         # MP - Evidence (Non traceable, Other evidences)
