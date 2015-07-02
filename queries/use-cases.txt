@@ -9,12 +9,12 @@ single source X?
 
 2. Finding evidence:
 (a) List all evidence for or against assertion X (by evidence type, drug, drug
-pair, transporter, metabolic enzyme, etc.)     **done**
+pair, transporter, metabolic enzyme, etc.)     **to check**
 (b) What is the in vitro evidence for assertion X? the in vivo evidence?
 (c) List all evidence that has been tagged as rejected from entry into the
 the knowledge base
 (d) Which single evidence items act as support or rebuttal for multiple as-
-sertions of type X (e.g., substrate of assertions)?    **done**
+sertions of type X (e.g., substrate of assertions)?    **to check**
 
 4.2 Assessing the evidence:
 1. Understanding evidence coming from a given study:
