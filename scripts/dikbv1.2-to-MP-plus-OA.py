@@ -257,11 +257,11 @@ def addAssertion(graph, item, currentAnnotationClaim):
     if item['researchStatementLabel']:
         graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
 
-    if item['researchStatement']:
-        graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["researchStatement"])))
-        graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
-    else:
-        graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], Literal("stubbed out"))) 
+    # if item['researchStatement']:
+    #     graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["researchStatement"])))
+    #     graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
+    # else:
+    #     graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], Literal("stubbed out"))) 
 
 
     # Method : used in data to supports statement
@@ -422,7 +422,7 @@ def createGraph(graph, dataset):
             graph.add((poc[currentAnnotationClaim],RDF.type, mp["Claim"]))
             graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
 
-            graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], URIRef(item["researchStatement"])))
+            #graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], URIRef(item["researchStatement"])))
             graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
             graph.add((poc[currentAnnotationClaim], rdf["subject"], URIRef(item["objectURI"])))
             graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
@@ -432,9 +432,7 @@ def createGraph(graph, dataset):
 
             graph.add((poc[currentAnnotationClaim], rdf["predicate"], URIRef(item["assertType"])))
             graph.add((URIRef(item["assertType"]), RDF.type, mp["SemanticQualifier"]))
-        else:
-            graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], Literal("stubbed out")))
-
+ 
         ###################################################################
         # MP - Evidence (Non traceable, Other evidences)
         ###################################################################
@@ -451,6 +449,9 @@ def createGraph(graph, dataset):
         ## statement typed as 'Non_traceable_Drug_Label_Statement' don't have evidence
             else:
                 addNonTraceable(graph, item, currentAnnotationClaim)
+
+        item["claim"] = currentAnnotationClaim
+
         mp_list.append(item)
 
 
@@ -475,7 +476,7 @@ def printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV):
     ## write in tsv file
     #try:
     with open(OUT_CSV, 'wb') as tsvfile:
-        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatement","researchStatementLabel", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
+        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatement","researchStatementLabel", "claim", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
         writer.writeheader()
         writer.writerows(mp_list)
 
