@@ -66,3 +66,4 @@ version. **done in a way, specialized version of 4.1.1.c**
 (b) Number of evidence items for and against each assertion type
 (c) Show the distribution of the levels of evidence for various assertion types
 (e.g., pharmacokinetic assertions) **NOT DOING YET**
+(d) Show the distribution of the evidence types for the various assertion types
