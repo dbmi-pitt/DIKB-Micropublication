@@ -66,3 +66,18 @@ testing
 ---------------------------------------------------------------------------
 specify query portal in script queryTesting.py
 $ python queryTesting.py
+
+
+---------------------------------------------------------------------------
+Benchmark query performance
+---------------------------------------------------------------------------
+
+(1) create graph with number of folds
+
+$ dikbv1.2-to-MP-plus-OA.py <number of folds> <output graph> <output csv>
+
+ex. $ python dikbv1.2-to-MP-plus-OA.py 3 "../data/dikb-mp-fold-3.xml" "../data/processed-dikb-ddis-fold-3.tsv"
+
+ex. $ python dikbv1.2-to-MP-plus-OA.py 1 "../data/initial-dikb-mp-oa.xml" "../data/processed-dikb-ddis.tsv"
+
+(2) load output graph into Virtuso via isql-vt then run query testing program

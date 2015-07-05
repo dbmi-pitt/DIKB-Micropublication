@@ -43,7 +43,6 @@ DRUGBANK_CHEBI = "../data/drugbank-to-chebi-06232015.txt"
 ################################################################################
 PRE_POST_CHARS=50
 mp_list = []
-assert_claimD = {}
 
 annotationSetCntr = 1
 annotationItemCntr = 1
@@ -82,6 +81,7 @@ rdf = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 ################################################################################
 # Functions
 ################################################################################
+
 
 ## correctly retrieve PubMed abstracts using PMIDs
 def retrieveByEUtils(pmid, limit=None):
@@ -381,8 +381,11 @@ def initialGraph(graph):
 
 
 
+## create MP graph
 
 def createGraph(graph, dataset):
+
+    assert_claimD = {}
 
     for item in dataset:   
 
@@ -406,15 +409,19 @@ def createGraph(graph, dataset):
         # MP - Claim (label, subject, predicate, object)
         ###################################################################
 
+        global annotationClaimCntr 
+
         # Claim : is a research statement label qualified by assertion URI
         if item['researchStatementLabel'] and item['researchStatement']:
 
             # one claim may supported by or refuted by multiple evidences (data/statement)
             if item['researchStatement'] not in assert_claimD.keys():
 
-                global annotationClaimCntr 
+                #print "[DEBUG] current Claim Cntr:" + str(annotationClaimCntr)
+
                 currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % (annotationClaimCntr)
                 annotationClaimCntr += 1
+
                 assert_claimD[item['researchStatement']] = currentAnnotationClaim
             else:
                 currentAnnotationClaim = assert_claimD[item['researchStatement']]
@@ -481,27 +488,63 @@ def printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV):
         writer.writerows(mp_list)
 
 
+def createGraphFromDIKB(graph, inputCSV):
+
+    # PDDIs from DIKB
+    dataset = csv.DictReader(open(inputCSV,"rb"), delimiter='\t')
+    createGraph(graph, dataset)
+
+def createGraphAucSubsInhib(graph):
+
+    increaseAUCFile = "../data/dikb-pddis/dikb-increaseAUC-ddis.tsv"
+    assertionFile = "../data/dikb-pddis/dikb-assertion-ddis.tsv"
+
+    createGraphFromDIKB(graph, increaseAUCFile)
+    createGraphFromDIKB(graph, assertionFile)
+    
+
+def createGraphByFold(graph, numFolds, outGraphFile, outCSVFile):
+
+    print "[INFO] create graph by fold : %s" % str(numFolds)    
+    numCount = 1
+    for i in range(0, numFolds):
+        numCount *= 2
+    print "[INFO] create graph size times as : %s" % str(numCount)
+
+    for i in range(1, numCount):
+        createGraphAucSubsInhib(graph)
+
+
 ############################# MAIN ###############################
 
 if __name__ == "__main__":
 
+    ## default settings
+
     OUT_GRAPH = "../data/initial-dikb-mp-oa.xml"
     OUT_CSV = "../data/processed-dikb-ddis.tsv"
 
-    # PDDIs from DIKB
-    dataset_increaseAUC = csv.DictReader(open("../data/dikb-pddis/dikb-increaseAUC-ddis.tsv","rb"), delimiter='\t')
-    dataset_assertion = csv.DictReader(open("../data/dikb-pddis/dikb-assertion-ddis.tsv","rb"), delimiter='\t')
+    ## benchmark f( number of folds ) = query time
+
+    if len(sys.argv) > 3:
+        numFolds = str(sys.argv[1])
+        OUT_GRAPH = str(sys.argv[2])
+        OUT_CSV = str(sys.argv[3])
+    else:
+        print "Usage: dikbv1.2-to-MP-plus-OA.py <number of folds> <output graph> <output csv>"
+        sys.exit(1)
 
     drugbankIdChEBID = getDrugbankIdChEBIMappingD(DRUGBANK_CHEBI)
 
     graph = Graph()
     initialGraph(graph)
 
-    createGraph(graph, dataset_increaseAUC)
-    createGraph(graph, dataset_assertion)
+    #createGraphAucSubsInhib(graph)
+    createGraphByFold(graph, int(numFolds), OUT_GRAPH, OUT_CSV)
+
+    print "[INFO] create MP graph with %s triples" % str(len(graph))
 
     printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV)
-
 
 
 ################################# trash #################################3
