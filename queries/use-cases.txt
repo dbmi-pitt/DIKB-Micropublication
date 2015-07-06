@@ -1,70 +1,74 @@
-==Find assertion==
-# List all assertions that are not supported by evidence  **done**
-# Which assertions are supportedBy just one type of evidence?
-# Which assertions are challengedBy just one type of evidence?
-# Which assertions have evidence from source X (e.g., product labeling)  **done**
-# Which assertions have both evidence for and evidence against from a single source X?
+==Find assertions==
+1. List all assertions that are not supported by evidence  **done**
+2. Which assertions are supportedBy just one type of evidence?
+3. Which assertions are challengedBy just one type of evidence?
+4. Which assertions have evidence from product labeling? **done**
+5. Which assertions have both evidence for and evidence against from a single source X?
 
 ==Find evidence==
-# List all evidence for or against assertion X (by evidence type, drug, drug
-pair, transporter, metabolic enzyme, etc.)     **to check**
-# What is the in vitro evidence for assertion X? the in vivo evidence?
-# List all evidence that has been tagged as rejected from entry into the
+1. List all evidence for or against assertion X by evidence type  **to check**
+2. List all evidence for or against assertion X by drug **to check**
+3. List all evidence for or against assertion X by drug pair **to check**
+4. List all evidence for or against assertion X by transporter **to check**
+5. List all evidence for or against assertion X by metabolic enzyme **to check**
+6. What is the in vitro evidence for assertion X? 
+7.  What is the in vivo evidence for assertion X?
+8. List all evidence that has been tagged as rejected from entry into the
 the knowledge base
-# Which single evidence items act as support or rebuttal for multiple assertions of type X (e.g., substrate of assertions)?    **to check**
+9. Which single evidence items act as support or rebuttal for multiple assertions of type X (e.g., substrate of assertions)?    **to check**
 
 ==Assess evidence==
-# What data, methods, materials, are reported in evidence item X?
-# Which evidence items are related to and follow-up on evidence item X?
-# Which research group conducted the study used for evidence item X?
-# Are the evidence use assumptions for evidence item X concordant? unique?
+1. What data, methods, materials, are reported in evidence item X?
+2. Which evidence items cite an existing evidence item (or something from the evidence item)?
+3. Which evidence items update a regulatory item (e.g. FDA guidance document, change to product label, etc...)?
+4. Which research group conducted the study used for evidence item X?
+6. Are the evidence use assumptions for evidence item X concordant? unique?
 non-ambiguous?
 
 ===Verify plausibility of an evidence item===
-# Has evidence item X been rejected for assertion Y? If so, why and by
+1. Has evidence item X been rejected for assertion Y? If so, why and by
 whom?
-# Which other assertions are being supported/challenged by this evidence
+2. Which other assertions are being supported/challenged by this evidence
 item?
-# What are the assumptions required for use of this evidence item to sup-
+3. What are the assumptions required for use of this evidence item to sup-
 port/challenge assertion X?
 
 ===Checking assertions about pharmacokinetic parameters (i.e., area
 under the concentration time curve (AUC))===
-# How many pharmacokinetic studies used for evidence items in the DIKB
+1. How many pharmacokinetic studies used for evidence items in the DIKB
 could be used to support or challenge an assertion about pharmacokinetic
 parameter X (e.g., `X increases AUC')? **done** (note, mostly encompassed in 4.1.1c)
-# How many pharmacokinetic studies in the DIKB used for evidence items
+2. How many pharmacokinetic studies in the DIKB used for evidence items
 for assertion X are based on data from the product label? **talking to rich, skip for now**
-# What is the result of averaging (or applying some other statistical oper-
+3. What is the result of averaging (or applying some other statistical oper-
 ation) to the values for pharmacokinetic parameter X across all relevant
 studies used for evidence items?
 
 ===Check for differences in the product labeling===
-# Are there differences in the evidence items that were identified across
+1. Are there differences in the evidence items that were identified across
 different versions of product labeling for the same drug?
-# What version of product labeling was used for evidence item X? Original
+2. What version of product labeling was used for evidence item X? Original
 manufacturer or repackager? Most current label or outdated? Is the drug
 on market in country X or not? American or country X?
 
 
 ==Summarize statistical information about the evidence base==
-# Number of assertions in the system **done**
-# Number of evidence items for and against each assertion type
-# Show the distribution of the evidence types for the various assertion types
+1. Number of assertions in the system **done**
+2. Number of evidence items for and against each assertion type
+3. Show the distribution of the evidence types for the various assertion types
 
 
 ==Deferred queries==
-
-==Summarize evidence base==
-# Show the distribution of the levels of evidence for various assertion types
+1. Which assertions have evidence from source X? (extend product labeling query to iterate over source types)
+2. Which evidence items are related to evidence item X, using PubMed "related to"?
+3. Show the distribution of the levels of evidence for various assertion types
 (e.g., pharmacokinetic assertions) **NOT DOING YET**
 
-==Support updates to evidence and assertions==
+==Deferred: Support updates to evidence and assertions==
 ===Change status of redundant and rejected evidence===
-# Remove a older version of a redundant evidence item **NOT DOING YET**
-# Change the modality of a supporting evidence item to be a refuting
-evidence item **NOT DOING YET**
+1. Remove a older version of a redundant evidence item **NOT DOING YET**
+2. Change the modality of a supporting evidence item to be a refuting evidence item **NOT DOING YET**
 ==Update when key sources change==
-# Get all assertions that are supported by evidence items identified from
+1. Get all assertions that are supported by evidence items identified from
 an FDA guidance or other source document just released as an updated
 version. **done in a way, specialized version of 4.1.1.c**
