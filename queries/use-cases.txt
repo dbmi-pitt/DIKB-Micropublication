@@ -7,6 +7,7 @@
 6. Which assertions have evidence from product labeling? **done**
 7. Which assertions have both evidence for and evidence against from a single source X?
 
+
 ==FE: Find evidence==
 1. List all evidence for or against assertion X by evidence type  **to check**
 2. List all evidence for or against assertion X by drug **to check**
@@ -21,29 +22,29 @@ the knowledge base
 10. Which single evidence items act as support or rebuttal for multiple assertions of type "inhibits"?
 11. Which single evidence items act as support or rebuttal for multiple assertions of type "increases AUC"?
 
+
 ==AE: Assess evidence==
 1. What data, methods, materials, are reported in evidence item X?
 2. Which evidence items cite an existing evidence item (or something from the evidence item)?
 3. Which evidence items update a regulatory item (e.g. FDA guidance document, change to product label, etc...)?
 4. Which research group conducted the study used for evidence item X?
 
-===VPE: Verify plausibility of an evidence item===
-1. Has evidence item X been rejected for assertion Y? If so, why and by
-whom?
-2. Which other assertions are being supported/challenged by this evidence
-item?
-3. What are the assumptions required for use of this evidence item to sup-
-port/challenge assertion X?
 
-===PK: Checking assertions about pharmacokinetic parameters (i.e., area
-under the concentration time curve (AUC))===
+===VPE: Verify plausibility of an evidence item===
+1. Has evidence item X been rejected for assertion Y?
+2. Why was evidence item X rejected for assertion Y? 
+3. Who rejected evidence item X for assertion Y? 
+4. Which other assertions are supportedBy this evidence item?
+5. Which other assertions are challengedBy this evidence item?
+6. What are the assumptions required for use of this evidence item to support assertion X?
+7. What are the assumptions required for use of this evidence item to challenge assertion X?
+
+
+===PK: Check assertions about pharmacokinetic parameters (i.e., area under the concentration time curve (AUC))===
 1. How many pharmacokinetic studies used for evidence items in the DIKB
 could be used to support or challenge an assertion about pharmacokinetic
 parameter X (e.g., `X increases AUC')? **done** (note, mostly encompassed in 4.1.1c)
-2. How many pharmacokinetic studies in the DIKB used for evidence items
-for assertion X are based on data from the product label? **talking to rich, skip for now**
-3. What is the result of averaging (or applying some other statistical oper-
-ation) to the values for pharmacokinetic parameter X across all relevant
+2. What is the result of averaging the values for pharmacokinetic parameter X across all relevant
 studies used for evidence items?
 
 ===PROD: Check for differences in product labeling===
