@@ -1,69 +1,70 @@
-4.1 Finding assertions and evidence
+==Find assertion==
+# List all assertions that are not supported by evidence  **done**
+# Which assertions are supportedBy just one type of evidence?
+# Which assertions are challengedBy just one type of evidence?
+# Which assertions have evidence from source X (e.g., product labeling)  **done**
+# Which assertions have both evidence for and evidence against from a single source X?
 
-1. Finding assertions:
-(a) List all assertions that are not supported by evidence  **done**
-(b) Which assertions are supported (or challenged) by just one type of evidence?
-(c) Which assertions have evidence from source X (e.g., product labeling)  **done**
-(d) Which assertions have both evidence for and evidence against from a
-single source X?
-
-2. Finding evidence:
-(a) List all evidence for or against assertion X (by evidence type, drug, drug
+==Find evidence==
+# List all evidence for or against assertion X (by evidence type, drug, drug
 pair, transporter, metabolic enzyme, etc.)     **to check**
-(b) What is the in vitro evidence for assertion X? the in vivo evidence?
-(c) List all evidence that has been tagged as rejected from entry into the
+# What is the in vitro evidence for assertion X? the in vivo evidence?
+# List all evidence that has been tagged as rejected from entry into the
 the knowledge base
-(d) Which single evidence items act as support or rebuttal for multiple as-
-sertions of type X (e.g., substrate of assertions)?    **to check**
+# Which single evidence items act as support or rebuttal for multiple assertions of type X (e.g., substrate of assertions)?    **to check**
 
-4.2 Assessing the evidence:
-1. Understanding evidence coming from a given study:
-(a) What data, methods, materials, are reported in evidence item X?
-(b) Which evidence items are related to and follow-up on evidence item X?
-(c) Which research group conducted the study used for evidence item X?
-(d) Are the evidence use assumptions for evidence item X concordant? unique?
+==Assess evidence==
+# What data, methods, materials, are reported in evidence item X?
+# Which evidence items are related to and follow-up on evidence item X?
+# Which research group conducted the study used for evidence item X?
+# Are the evidence use assumptions for evidence item X concordant? unique?
 non-ambiguous?
 
-2. Verifying plausibility of an evidence item:
-(a) Has evidence item X been rejected for assertion Y? If so, why and by
+===Verify plausibility of an evidence item===
+# Has evidence item X been rejected for assertion Y? If so, why and by
 whom?
-(b) Which other assertions are being supported/challenged by this evidence
+# Which other assertions are being supported/challenged by this evidence
 item?
-(c) What are the assumptions required for use of this evidence item to sup-
+# What are the assumptions required for use of this evidence item to sup-
 port/challenge assertion X?
 
-3. Checking assertions about pharmacokinetic parameters (i.e., area
-under the concentration time curve (AUC))
-(a) How many pharmacokinetic studies used for evidence items in the DIKB
+===Checking assertions about pharmacokinetic parameters (i.e., area
+under the concentration time curve (AUC))===
+# How many pharmacokinetic studies used for evidence items in the DIKB
 could be used to support or challenge an assertion about pharmacokinetic
 parameter X (e.g., `X increases AUC')? **done** (note, mostly encompassed in 4.1.1c)
-(b) How many pharmacokinetic studies in the DIKB used for evidence items
+# How many pharmacokinetic studies in the DIKB used for evidence items
 for assertion X are based on data from the product label? **talking to rich, skip for now**
-(c) What is the result of averaging (or applying some other statistical oper-
+# What is the result of averaging (or applying some other statistical oper-
 ation) to the values for pharmacokinetic parameter X across all relevant
 studies used for evidence items?
 
-4. Checking for differences in the product labeling:
-(a) Are there differences in the evidence items that were identified across
+===Check for differences in the product labeling===
+# Are there differences in the evidence items that were identified across
 different versions of product labeling for the same drug?
-(b) What version of product labeling was used for evidence item X? Original
+# What version of product labeling was used for evidence item X? Original
 manufacturer or repackager? Most current label or outdated? Is the drug
 on market in country X or not? American or country X?
 
-4.3 Supporting updates to evidence and assertions
-1. Changing status of redundant and rejected evidence:
-(a) Remove a older version of a redundant evidence item **NOT DOING YET**
-(b) Change the modality of a supporting evidence item to be a refuting
+
+==Summarize statistical information about the evidence base==
+# Number of assertions in the system **done**
+# Number of evidence items for and against each assertion type
+# Show the distribution of the evidence types for the various assertion types
+
+
+==Deferred queries==
+
+==Summarize evidence base==
+# Show the distribution of the levels of evidence for various assertion types
+(e.g., pharmacokinetic assertions) **NOT DOING YET**
+
+==Support updates to evidence and assertions==
+===Change status of redundant and rejected evidence===
+# Remove a older version of a redundant evidence item **NOT DOING YET**
+# Change the modality of a supporting evidence item to be a refuting
 evidence item **NOT DOING YET**
-2. Updating when key sources change:
-(a) Get all assertions that are supported by evidence items identified from
+==Update when key sources change==
+# Get all assertions that are supported by evidence items identified from
 an FDA guidance or other source document just released as an updated
 version. **done in a way, specialized version of 4.1.1.c**
-
-4.4 Understanding the evidence base
-1. Statistical information about the evidence base:
-(a) Number of assertions in the system **done**
-(b) Number of evidence items for and against each assertion type
-(c) Show the distribution of the levels of evidence for various assertion types
-(e.g., pharmacokinetic assertions) **NOT DOING YET**
-(d) Show the distribution of the evidence types for the various assertion types
