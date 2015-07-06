@@ -6,6 +6,8 @@
 4. Are the evidence use assumptions for evidence item X concordant?
 5. Are the evidence use assumptions for evidence item X unique? 
 6. Are the evidence use assumptions for evidence item X non-ambiguous?
+7. How many pharmacokinetic studies in the DIKB used for evidence items
+for assertion X are based on data from the product label? **talking to rich, skip for now**
 
 ==Deferred: Support updates to evidence and assertions==
 ===Change status of redundant and rejected evidence===
