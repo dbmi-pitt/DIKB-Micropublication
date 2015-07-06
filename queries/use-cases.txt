@@ -12,10 +12,12 @@
 4. List all evidence for or against assertion X by transporter **to check**
 5. List all evidence for or against assertion X by metabolic enzyme **to check**
 6. What is the in vitro evidence for assertion X? 
-7.  What is the in vivo evidence for assertion X?
+7. What is the in vivo evidence for assertion X?
 8. List all evidence that has been tagged as rejected from entry into the
 the knowledge base
-9. Which single evidence items act as support or rebuttal for multiple assertions of type X (e.g., substrate of assertions)?    **to check**
+9. Which single evidence items act as support or rebuttal for multiple assertions of type "substrate of"?    **to check**
+10. Which single evidence items act as support or rebuttal for multiple assertions of type "inhibits"?
+11. Which single evidence items act as support or rebuttal for multiple assertions of type "increases AUC"?
 
 ==Assess evidence==
 1. What data, methods, materials, are reported in evidence item X?
