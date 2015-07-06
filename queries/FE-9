@@ -24,7 +24,7 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 #### List all the evidence items that support multiple assertions, for which it is the only piece of evidence
 
 SELECT ?assertion COUNT(?evidence)
-
+FROM <http://purl.org/mp/infered-graph-oa-mp>
 WHERE {
      ?evidence mp:supports ?assertion
 
