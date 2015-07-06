@@ -26,8 +26,6 @@ the knowledge base
 2. Which evidence items cite an existing evidence item (or something from the evidence item)?
 3. Which evidence items update a regulatory item (e.g. FDA guidance document, change to product label, etc...)?
 4. Which research group conducted the study used for evidence item X?
-6. Are the evidence use assumptions for evidence item X concordant? unique?
-non-ambiguous?
 
 ===VPE: Verify plausibility of an evidence item===
 1. Has evidence item X been rejected for assertion Y? If so, why and by
