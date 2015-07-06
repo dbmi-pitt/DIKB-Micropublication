@@ -30,3 +30,6 @@ WHERE
        ?claim mp:qualifiedBy ChEBI:CHEBI_7936;
        ?claim mp:qualifiedBy ChEBI:CHEBI_6950.
 }
+
+
+
