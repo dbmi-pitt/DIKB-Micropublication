@@ -3,6 +3,9 @@
 2. Which evidence items are related to evidence item X, using PubMed "related to"?
 3. Show the distribution of the levels of evidence for various assertion types
 (e.g., pharmacokinetic assertions) **NOT DOING YET**
+4. Are the evidence use assumptions for evidence item X concordant?
+5. Are the evidence use assumptions for evidence item X unique? 
+6. Are the evidence use assumptions for evidence item X non-ambiguous?
 
 ==Deferred: Support updates to evidence and assertions==
 ===Change status of redundant and rejected evidence===
