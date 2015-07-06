@@ -9,6 +9,11 @@
 7. How many pharmacokinetic studies in the DIKB used for evidence items
 for assertion X are based on data from the product label? **talking to rich, skip for now**
 8. What is the result of applying some statistical operation to the values for pharmacokinetic parameter X across all relevant studies used for evidence items? (averaging is PK2)
+9. For the product labeling used for evidence item X: Original
+manufacturer or repackager? 
+10. For the product labeling used for evidence item X: Most current label or outdated? 
+11. For the product labeling used for evidence item X: Is the drug on market in country X or not? 
+12. For the product labeling used for evidence item X: American or country X?
 
 ==Deferred: Support updates to evidence and assertions==
 ===Change status of redundant and rejected evidence===
