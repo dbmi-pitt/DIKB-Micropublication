@@ -1,0 +1,14 @@
+==Deferred==
+1. Which assertions have evidence from source X? (extend product labeling query to iterate over source types)
+2. Which evidence items are related to evidence item X, using PubMed "related to"?
+3. Show the distribution of the levels of evidence for various assertion types
+(e.g., pharmacokinetic assertions) **NOT DOING YET**
+
+==Deferred: Support updates to evidence and assertions==
+===Change status of redundant and rejected evidence===
+1. Remove a older version of a redundant evidence item **NOT DOING YET**
+2. Change the modality of a supporting evidence item to be a refuting evidence item **NOT DOING YET**
+==Update when key sources change==
+1. Get all assertions that are supported by evidence items identified from
+an FDA guidance or other source document just released as an updated
+version. **done in a way, specialized version of 4.1.1.c**
