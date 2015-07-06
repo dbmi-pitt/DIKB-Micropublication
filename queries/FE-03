@@ -20,7 +20,7 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 PREFIX drugbank: <http://bio2rdf.org/drugbank:>
 PREFIX ChEBI: <http://purl.obolibrary.org/obo/>
 
-##### List all assertions involving 'paroxetine' and 'mirtazapine'
+##### List all assertions involving 'paroxetine' and 'mirtazapine' (replaceable)
 
 SELECT ?claim
 FROM <http://purl.org/mp/infered-graph-oa-mp>
