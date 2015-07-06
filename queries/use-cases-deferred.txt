@@ -8,6 +8,7 @@
 6. Are the evidence use assumptions for evidence item X non-ambiguous?
 7. How many pharmacokinetic studies in the DIKB used for evidence items
 for assertion X are based on data from the product label? **talking to rich, skip for now**
+8. What is the result of applying some statistical operation to the values for pharmacokinetic parameter X across all relevant studies used for evidence items? (averaging is PK2)
 
 ==Deferred: Support updates to evidence and assertions==
 ===Change status of redundant and rejected evidence===
