@@ -1,4 +1,5 @@
-## Search all claims from interactions of cimetidine and venlafaxine 
+# SPAQRL Version - 1.1
+# MP/OA Version - 2015-07-06
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -19,18 +20,13 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 PREFIX drugbank: <http://bio2rdf.org/drugbank:>
 PREFIX ChEBI: <http://purl.obolibrary.org/obo/>
 
-SELECT *
+##### List all assertions involving 'paroxetine' and 'mirtazapine'
+
+SELECT ?claim
 FROM <http://purl.org/mp/infered-graph-oa-mp>
 WHERE
 {
-
        ?claim rdf:type mp:Claim;
-              rdfs:label ?claimLabel.
-
-       ?mat rdf:type mp:Material;
-            dikbD2R:ObjectDrugOfInteraction ChEBI:CHEBI_3699;
-	    dikbD2R:PrecipitantDrugOfInteraction ChEBI:CHEBI_6950;
-            mp:usedIn ?method.
-       ?method mp:supports ?data.
-       ?data mp:supports ?claim.
+       ?claim mp:qualifiedBy ChEBI:CHEBI_7936;
+       ?claim mp:qualifiedBy ChEBI:CHEBI_6950.
 }
