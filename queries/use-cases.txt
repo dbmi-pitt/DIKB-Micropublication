@@ -56,5 +56,6 @@ different versions of product labeling for the same drug?
 
 ==STAT: Summarize statistical information about the evidence base==
 1. Number of assertions in the system **done**
-2. Number of evidence items for and against each assertion type
-3. Show the distribution of the evidence types for the various assertion types
+2. Number of evidence items for each assertion type
+3. Number of evidence items against each assertion type
+4. Show the distribution of the evidence types for the various assertion types
