@@ -1,9 +1,11 @@
 ==Find assertions==
 1. List all assertions that are not supported by evidence  **done**
-2. Which assertions are supportedBy just one type of evidence?
-3. Which assertions are challengedBy just one type of evidence?
-4. Which assertions have evidence from product labeling? **done**
-5. Which assertions have both evidence for and evidence against from a single source X?
+2. Which assertions are supportedBy just one evidence item?
+3. Which assertions are challengedBy just one evidence item?
+4. Which assertions are supportedBy just one type of evidence?
+5. Which assertions are challengedBy just one type of evidence?
+6. Which assertions have evidence from product labeling? **done**
+7. Which assertions have both evidence for and evidence against from a single source X?
 
 ==Find evidence==
 1. List all evidence for or against assertion X by evidence type  **to check**
