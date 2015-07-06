@@ -47,12 +47,11 @@ parameter X (e.g., `X increases AUC')? **done** (note, mostly encompassed in 4.1
 2. What is the result of averaging the values for pharmacokinetic parameter X across all relevant
 studies used for evidence items?
 
+
 ===PROD: Check for differences in product labeling===
 1. Are there differences in the evidence items that were identified across
 different versions of product labeling for the same drug?
-2. What version of product labeling was used for evidence item X? Original
-manufacturer or repackager? Most current label or outdated? Is the drug
-on market in country X or not? American or country X?
+2. What version of product labeling was used for evidence item X?
 
 
 ==STAT: Summarize statistical information about the evidence base==
