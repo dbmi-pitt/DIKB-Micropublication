@@ -1,5 +1,5 @@
 # SPAQRL Version - 1.1
-# MP/OA Version - 2015-07-02
+# MP/OA Version - 2015-07-06
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
