@@ -18,9 +18,11 @@
 7. What is the in vivo evidence for assertion X?
 8. List all evidence that has been tagged as rejected from entry into the
 the knowledge base
-9. Which single evidence items act as support or rebuttal for multiple assertions of type "substrate of"?    **to check**
-10. Which single evidence items act as support or rebuttal for multiple assertions of type "inhibits"?
-11. Which single evidence items act as support or rebuttal for multiple assertions of type "increases AUC"?
+9. Which single evidence items are unique support for multiple assertions (i.e. it is the only piece of evidence)?
+10. Which single evidence items are unique challenge multiple assertions (i.e. it is the only piece of evidence)?
+11. Which single evidence items act as support or rebuttal for multiple assertions of type "substrate of"?    **to check**
+12. Which single evidence items act as support or rebuttal for multiple assertions of type "inhibits"?
+13. Which single evidence items act as support or rebuttal for multiple assertions of type "increases AUC"?
 
 
 ==AE: Assess evidence==
