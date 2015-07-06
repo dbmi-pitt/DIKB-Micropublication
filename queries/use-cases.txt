@@ -32,7 +32,7 @@ the knowledge base
 4. Which research group conducted the study used for evidence item X?
 
 
-===VPE: Verify plausibility of an evidence item===
+===EP: Verify plausibility of an evidence item===
 1. Has evidence item X been rejected for assertion Y?
 2. Why was evidence item X rejected for assertion Y? 
 3. Who rejected evidence item X for assertion Y? 
