@@ -1,4 +1,4 @@
-==Find assertions==
+==FA: Find assertions==
 1. List all assertions that are not supported by evidence  **done**
 2. Which assertions are supportedBy just one evidence item?
 3. Which assertions are challengedBy just one evidence item?
@@ -7,7 +7,7 @@
 6. Which assertions have evidence from product labeling? **done**
 7. Which assertions have both evidence for and evidence against from a single source X?
 
-==Find evidence==
+==FE: Find evidence==
 1. List all evidence for or against assertion X by evidence type  **to check**
 2. List all evidence for or against assertion X by drug **to check**
 3. List all evidence for or against assertion X by drug pair **to check**
@@ -21,7 +21,7 @@ the knowledge base
 10. Which single evidence items act as support or rebuttal for multiple assertions of type "inhibits"?
 11. Which single evidence items act as support or rebuttal for multiple assertions of type "increases AUC"?
 
-==Assess evidence==
+==AE: Assess evidence==
 1. What data, methods, materials, are reported in evidence item X?
 2. Which evidence items cite an existing evidence item (or something from the evidence item)?
 3. Which evidence items update a regulatory item (e.g. FDA guidance document, change to product label, etc...)?
@@ -29,7 +29,7 @@ the knowledge base
 6. Are the evidence use assumptions for evidence item X concordant? unique?
 non-ambiguous?
 
-===Verify plausibility of an evidence item===
+===VPE: Verify plausibility of an evidence item===
 1. Has evidence item X been rejected for assertion Y? If so, why and by
 whom?
 2. Which other assertions are being supported/challenged by this evidence
@@ -37,7 +37,7 @@ item?
 3. What are the assumptions required for use of this evidence item to sup-
 port/challenge assertion X?
 
-===Checking assertions about pharmacokinetic parameters (i.e., area
+===PK: Checking assertions about pharmacokinetic parameters (i.e., area
 under the concentration time curve (AUC))===
 1. How many pharmacokinetic studies used for evidence items in the DIKB
 could be used to support or challenge an assertion about pharmacokinetic
@@ -48,7 +48,7 @@ for assertion X are based on data from the product label? **talking to rich, ski
 ation) to the values for pharmacokinetic parameter X across all relevant
 studies used for evidence items?
 
-===Check for differences in the product labeling===
+===PROD: Check for differences in product labeling===
 1. Are there differences in the evidence items that were identified across
 different versions of product labeling for the same drug?
 2. What version of product labeling was used for evidence item X? Original
@@ -56,23 +56,7 @@ manufacturer or repackager? Most current label or outdated? Is the drug
 on market in country X or not? American or country X?
 
 
-==Summarize statistical information about the evidence base==
+==STAT: Summarize statistical information about the evidence base==
 1. Number of assertions in the system **done**
 2. Number of evidence items for and against each assertion type
 3. Show the distribution of the evidence types for the various assertion types
-
-
-==Deferred queries==
-1. Which assertions have evidence from source X? (extend product labeling query to iterate over source types)
-2. Which evidence items are related to evidence item X, using PubMed "related to"?
-3. Show the distribution of the levels of evidence for various assertion types
-(e.g., pharmacokinetic assertions) **NOT DOING YET**
-
-==Deferred: Support updates to evidence and assertions==
-===Change status of redundant and rejected evidence===
-1. Remove a older version of a redundant evidence item **NOT DOING YET**
-2. Change the modality of a supporting evidence item to be a refuting evidence item **NOT DOING YET**
-==Update when key sources change==
-1. Get all assertions that are supported by evidence items identified from
-an FDA guidance or other source document just released as an updated
-version. **done in a way, specialized version of 4.1.1.c**
