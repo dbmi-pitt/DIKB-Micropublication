@@ -42,8 +42,8 @@
 
 
 ===PK: Check assertions about pharmacokinetic parameters (i.e., area under the concentration time curve (AUC))===
-1. How many pharmacokinetic studies used for evidence items in the DIKB could be used to support or challenge an assertion about pharmacokinetic parameter X (e.g., `X increases AUC')?
-2. What is the result of averaging the values for pharmacokinetic parameter X across all relevant studies used for evidence items?
+1. How many pharmacokinetic studies used for evidence items in the DIKB could be used to support or challenge an assertion about pharmacokinetic parameter X (e.g., `X increases AUC')? **working on**
+2. What is the result of averaging the values for pharmacokinetic parameter X across all relevant studies used for evidence items? **done**
 
 
 ===PROD: Check for differences in product labeling===
