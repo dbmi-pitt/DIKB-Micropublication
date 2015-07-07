@@ -6,14 +6,13 @@
 5. Which assertions are challengedBy just one type of evidence? **done**
 6. Which assertions have evidence from product labeling? **done**
 7. Which assertions have both evidence for and evidence against from a single source X? **done**
-
-
-==FE: Find evidence==
-1. List all evidence for or against assertion X by evidence type  **done**
 2. List all evidence for or against assertion X by drug **QUESTION**
 3. List all evidence for or against assertion X by drug pair **QUESTION**
 4. List all evidence for or against assertion X by transporter **QUESTION**
 5. List all evidence for or against assertion X by metabolic enzyme **QUESTION**
+
+==FE: Find evidence==
+1. List all evidence for or against assertion X by evidence type  **done**
 6. What is the in vitro evidence for assertion X? **done**
 7. What is the in vivo evidence for assertion X? **done** 
 8. List all evidence that has been tagged as rejected from entry into the the knowledge base? **NOT YET**
@@ -42,7 +41,8 @@
 
 
 ===PK: Check assertions about pharmacokinetic parameters (i.e., area under the concentration time curve (AUC))===
-1. How many pharmacokinetic studies used for evidence items in the DIKB could be used to support or challenge an assertion about pharmacokinetic parameter X (e.g., `X increases AUC')? **working on**
+1. How many pharmacokinetic studies provide data on the changes of a PK parameter in the case of a drug interaction? 
+2. How many pharmacokinetic studies established a PK parameter about a drug (single drug case)?
 2. What is the result of averaging the values for pharmacokinetic parameter X across all relevant studies used for evidence items? **done**
 
 
