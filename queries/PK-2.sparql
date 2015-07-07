@@ -20,8 +20,10 @@ PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
-SELECT (avg(?c) as ?Average_Value)
+SELECT avg(?v) as ?average_value
 FROM <inferred-graph-oa-mp.xml>
-WHERE {
-  ?c a mp:Claim.
+WHERE 
+{
+    ?e mp:supports poc:ddi-spl-annotation-claim-30.
+    ?e dikbD2R:increases_auc ?v
 }
