@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-06
+# DIKB MP/NP version: 2015-07-07
 #
 
 # CONTEXT
@@ -20,8 +20,8 @@ PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
-SELECT COUNT(?c)
-FROM <http://purl.org/mp/infered-graph-oa-mp>
+SELECT (COUNT(?c) as ?Number_of_Assertions)
+FROM <inferred-graph-oa-mp.xml>
 WHERE {
   ?c a mp:Claim.
 }

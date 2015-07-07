@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-06
+# DIKB MP/NP version: 2015-07-07
 #
 
 # CONTEXT
@@ -19,14 +19,15 @@ PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 
-# Returns the count of evidence items challenging a given assertion type, such as increase_auc (inhibit or substrate_of can be substituted in)
+# For a given pharmacokinetic property, ie ketoconazole_increases_auc_triazolam (claim-30)
+# What is the average of the pharmacokinetic value?
 
-SELECT COUNT(?e)
-FROM <http://purl.org/mp/infered-graph-oa-mp>
+SELECT avg(xsd:decimal(?v)) as ?average_value
+FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-  ?c a mp:Claim.
-  ?c mp:qualifiedBy 'increase_auc'.
-  ?e mp:challenges ?c.
+    ?e mp:supports poc:ddi-spl-annotation-claim-30.
+    ?e dikbD2R:increases_auc ?v
 }

@@ -20,11 +20,13 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
 #### List all the assertions having both evidence for and evidence against from a single source X
-SELECT ?assertion
-FROM <http://purl.org/mp/infered-graph-oa-mp>
+
+SELECT DISTINCT ?assertion
+FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
       ?assertion rdf:type mp:Claim .
-      ?evidence mp:supports ?assertion ;
-                mp:challenges ?assertion .
+      ?evidence1 mp:supports ?assertion .
+      ?evidence2 mp:challenges ?assertion .
+            FILTER(sameTerm(?evidence1,?evidence2))
 }

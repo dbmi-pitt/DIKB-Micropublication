@@ -1,5 +1,5 @@
 # SPAQRL Version - 1.1
-# MP/OA Version - 2015-07-06
+# MP/OA Version - 2015-07-07
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -20,16 +20,13 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 PREFIX drugbank: <http://bio2rdf.org/drugbank:>
 PREFIX ChEBI: <http://purl.obolibrary.org/obo/>
 
-##### List all assertions involving 'paroxetine' and 'mirtazapine' (replaceable)
+##### List all assertions involving X - 'paroxetine' and Y - 'mirtazapine' (ChEBI codes are replaceable)
 
 SELECT ?claim
-FROM <http://purl.org/mp/infered-graph-oa-mp>
+FROM <inferred-graph-oa-mp.xml>
 WHERE
 {
-       ?claim rdf:type mp:Claim;
-       ?claim mp:qualifiedBy ChEBI:CHEBI_7936;
+       ?claim rdf:type mp:Claim.
+       ?claim mp:qualifiedBy ChEBI:CHEBI_7936.
        ?claim mp:qualifiedBy ChEBI:CHEBI_6950.
 }
-
-
-
