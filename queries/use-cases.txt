@@ -9,18 +9,17 @@
 
 
 ==FE: Find evidence==
-1. List all evidence for or against assertion X by evidence type  **to check**
-2. List all evidence for or against assertion X by drug **done**
-3. List all evidence for or against assertion X by drug pair **done**
-4. List all evidence for or against assertion X by transporter **to check**
-5. List all evidence for or against assertion X by metabolic enzyme **to check**
-6. What is the in vitro evidence for assertion X? 
-7. What is the in vivo evidence for assertion X?
-8. List all evidence that has been tagged as rejected from entry into the
-the knowledge base
+1. List all evidence for or against assertion X by evidence type  **done**
+2. List all evidence for or against assertion X by drug **QUESTION**
+3. List all evidence for or against assertion X by drug pair **QUESTION**
+4. List all evidence for or against assertion X by transporter **QUESTION**
+5. List all evidence for or against assertion X by metabolic enzyme **QUESTION**
+6. What is the in vitro evidence for assertion X? **done**
+7. What is the in vivo evidence for assertion X? **done** 
+8. List all evidence that has been tagged as rejected from entry into the the knowledge base? **NOT YET**
 9. Which single evidence items are unique support for multiple assertions (i.e. it is the only piece of evidence)?
 10. Which single evidence items are unique challenge for multiple assertions (i.e. it is the only piece of evidence)?
-11. Which single evidence items support or challenge multiple assertions of type "substrate of"?    **to check**
+11. Which single evidence items support or challenge multiple assertions of type "substrate of"? 
 12. Which single evidence items support or challenge multiple assertions of type "inhibits"?
 13. Which single evidence items support or challenge multiple assertions of type "increases AUC"?
 
@@ -33,9 +32,9 @@ the knowledge base
 
 
 ===EP: Verify plausibility of an evidence item===
-1. Has evidence item X been rejected for assertion Y?
-2. Why was evidence item X rejected for assertion Y? 
-3. Who rejected evidence item X for assertion Y? 
+1. Has evidence item X been rejected for assertion Y? **NOT YET**
+2. Why was evidence item X rejected for assertion Y? **NOT YET**
+3. Who rejected evidence item X for assertion Y? **NOT YET**
 4. Which other assertions are supportedBy this evidence item?
 5. Which other assertions are challengedBy this evidence item?
 6. What are the assumptions required for use of this evidence item to support assertion X?
@@ -43,11 +42,8 @@ the knowledge base
 
 
 ===PK: Check assertions about pharmacokinetic parameters (i.e., area under the concentration time curve (AUC))===
-1. How many pharmacokinetic studies used for evidence items in the DIKB
-could be used to support or challenge an assertion about pharmacokinetic
-parameter X (e.g., `X increases AUC')? **done** (note, mostly encompassed in 4.1.1c)
-2. What is the result of averaging the values for pharmacokinetic parameter X across all relevant
-studies used for evidence items?
+1. How many pharmacokinetic studies used for evidence items in the DIKB could be used to support or challenge an assertion about pharmacokinetic parameter X (e.g., `X increases AUC')?
+2. What is the result of averaging the values for pharmacokinetic parameter X across all relevant studies used for evidence items?
 
 
 ===PROD: Check for differences in product labeling===
