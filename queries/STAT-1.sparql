@@ -20,7 +20,7 @@ PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
-SELECT COUNT(?c)
+SELECT (COUNT(?c) as ?Number_of_Assertions)
 FROM <inferred-graph-oa-mp.xml>
 WHERE {
   ?c a mp:Claim.
