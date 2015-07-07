@@ -29,6 +29,6 @@ WHERE
       ?assertion rdf:type mp:Claim.
       ?evidence mp:challenges ?assertion;
           rdf:type ?type.
-          FILTER regex(?type, "http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#")
+          FILTER regex(?type, dikbEvidence:)
 } 
 HAVING(count(DISTINCT ?type) = 1)
