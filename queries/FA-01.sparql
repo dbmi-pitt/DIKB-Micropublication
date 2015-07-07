@@ -24,7 +24,7 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 #### List all the assertions with no evidence supporting them
 
 SELECT ?assertion
-#FROM <http://purl.org/mp/infered-graph-oa-mp>
+FROM <inferred-graph-oa-mp.xml>
 WHERE
 {
      ?assertion rdf:type mp:Claim.
