@@ -6,8 +6,8 @@
 5. Which assertions are challengedBy just one type of evidence? **done**
 6. Which assertions have evidence from product labeling? **done**
 7. Which assertions have both evidence for and evidence against from a single source X? **done**
-8. List all assertions for drug X? **QUESTION**
-9. List all assertions for drug pair X and Y? **QUESTION**
+8. List all assertions for drug X? **done**
+9. List all assertions for drug pair X and Y? **done**
 10. List all assertions for transporter X? **QUESTION**
 11. List all assertions for metabolic enzyme X?**QUESTION**
 
