@@ -28,10 +28,7 @@ SELECT DISTINCT ?evidence
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      ?assertion a mp:Claim.
-          #rdf:description poc:ddi-spl-annotation-claim-43.
-      ?evidence mp:supports ?assertion;
+      ?evidence mp:supports poc:ddi-spl-annotation-claim-43;
           rdf:type ?type.
-      FILTER (regex(?assertion, "ddi-spl-annotation-claim-43"))
       FILTER (regex(?type, "http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz") || regex(?type, "http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Trans_Prot"))
 }
