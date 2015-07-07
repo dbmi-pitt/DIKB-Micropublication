@@ -21,13 +21,13 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
-# List all the in vivo evidence for assertion X? 
-## In this case, claim-43 is used as assertion X
+# List all the evidence for assertion X by evidence type Y?
+## claim-43 and drug-label statements used
 
 SELECT DISTINCT ?evidence
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      ?evidence mp:supports poc:ddi-spl-annotation-claim-43;
-          rdf:type ?type.
+      ?evidence mp:supports poc:ddi-spl-annotation-claim-43.
+      ?evidence rdf:type dikbEvidence:Non_traceable_Drug_Label_Statement.
 }
