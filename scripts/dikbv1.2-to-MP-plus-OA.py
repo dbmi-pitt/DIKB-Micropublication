@@ -406,7 +406,7 @@ def createGraph(graph, dataset):
 
 
         ###################################################################
-        # MP - Claim (label, subject, predicate, object)
+        # MP - Claim (label, 3 qualifiedBy for subject, predicate, object)
         ###################################################################
 
         global annotationClaimCntr 
@@ -428,16 +428,15 @@ def createGraph(graph, dataset):
 
             graph.add((poc[currentAnnotationClaim],RDF.type, mp["Claim"]))
             graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
-
-            #graph.add((poc[currentAnnotationClaim], mp["logicalClaim"], URIRef(item["researchStatement"])))
+            
             graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
-            graph.add((poc[currentAnnotationClaim], rdf["subject"], URIRef(item["objectURI"])))
+            graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["objectURI"])))
             graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
 
-            graph.add((poc[currentAnnotationClaim], rdf["object"], URIRef(item["valueURI"])))
+            graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["valueURI"])))
             graph.add((URIRef(item["valueURI"]), RDF.type, mp["SemanticQualifier"]))
 
-            graph.add((poc[currentAnnotationClaim], rdf["predicate"], URIRef(item["assertType"])))
+            graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["assertType"])))
             graph.add((URIRef(item["assertType"]), RDF.type, mp["SemanticQualifier"]))
  
         ###################################################################
