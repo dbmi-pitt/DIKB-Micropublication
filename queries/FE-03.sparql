@@ -23,7 +23,7 @@ PREFIX ChEBI: <http://purl.obolibrary.org/obo/>
 ##### List all assertions involving 'paroxetine' and 'mirtazapine' (replaceable)
 
 SELECT ?claim
-#FROM <http://purl.org/mp/infered-graph-oa-mp>
+FROM <inferred-graph-oa-mp.xml>
 WHERE
 {
        ?claim rdf:type mp:Claim.
