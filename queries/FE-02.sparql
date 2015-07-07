@@ -26,6 +26,6 @@ SELECT ?claim
 #FROM <http://purl.org/mp/infered-graph-oa-mp>
 WHERE
 {
-       ?claim rdf:type mp:Claim;
+       ?claim rdf:type mp:Claim.
        ?claim mp:qualifiedBy ChEBI:CHEBI_7936.
 }
