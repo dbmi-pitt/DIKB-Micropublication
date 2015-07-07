@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-06
+# DIKB MP/NP version: 2015-07-07
 #
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
@@ -22,11 +22,12 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 #### List all the assertions that are supported by exactly type of evidence
 SELECT ?assertion ?evidence ?type
-FROM <http://purl.org/mp/infered-graph-oa-mp>
+FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
       ?assertion rdf:type mp:Claim.
       ?evidence mp:supports ?assertion;
           rdf:type ?type.
+          FILTER regex(?type, "http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#")
 } 
 HAVING (count(?evidence) = 1)
