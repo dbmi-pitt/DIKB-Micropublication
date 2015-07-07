@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-06
+# DIKB MP/NP version: 2015-07-07
 #
 
 # CONTEXT
@@ -19,6 +19,7 @@ PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
+PREFIX yifan: <file:/home/yin2/DIKB-Micropublication/data/>
 
 # Returns the count of evidence items supporting a given assertion type, such as increase_auc (inhibit or substrate_of can be substituted in)
 
@@ -27,6 +28,6 @@ FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
   ?c a mp:Claim.
-  ?c mp:qualifiedBy 'increase_auc'.
+  ?c mp:qualifiedBy yifan:increase_auc.
   ?e mp:supports ?c.
 }
