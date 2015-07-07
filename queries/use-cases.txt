@@ -1,17 +1,17 @@
 ==FA: Find assertions==
 1. List all assertions that are not supported by evidence  **done**
-2. Which assertions are supportedBy just one evidence item?
-3. Which assertions are challengedBy just one evidence item?
-4. Which assertions are supportedBy just one type of evidence?
-5. Which assertions are challengedBy just one type of evidence?
+2. Which assertions are supportedBy just one evidence item? **done**
+3. Which assertions are challengedBy just one evidence item? **done**
+4. Which assertions are supportedBy just one type of evidence? **done**
+5. Which assertions are challengedBy just one type of evidence? **done**
 6. Which assertions have evidence from product labeling? **done**
-7. Which assertions have both evidence for and evidence against from a single source X?
+7. Which assertions have both evidence for and evidence against from a single source X? **done**
 
 
 ==FE: Find evidence==
 1. List all evidence for or against assertion X by evidence type  **to check**
-2. List all evidence for or against assertion X by drug **to check**
-3. List all evidence for or against assertion X by drug pair **to check**
+2. List all evidence for or against assertion X by drug **done**
+3. List all evidence for or against assertion X by drug pair **done**
 4. List all evidence for or against assertion X by transporter **to check**
 5. List all evidence for or against assertion X by metabolic enzyme **to check**
 6. What is the in vitro evidence for assertion X? 
@@ -58,6 +58,6 @@ different versions of product labeling for the same drug?
 
 ==STAT: Summarize statistical information about the evidence base==
 1. Number of assertions in the system **done**
-2. Number of evidence items for each assertion type
-3. Number of evidence items against each assertion type
+2. Number of evidence items for each assertion type **done**
+3. Number of evidence items against each assertion type **done**
 4. Show the distribution of the evidence types for the various assertion types
