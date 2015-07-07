@@ -25,7 +25,7 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 ## example with drug product labeling
 
 SELECT ?druglabelstatement ?assertion ?assertionlabel
-FROM <http://purl.org/mp/infered-graph-oa-mp>
+#FROM <http://purl.org/mp/infered-graph-oa-mp>
 WHERE {
   ?druglabelstatement a dikbEvidence:Non_traceable_Drug_Label_Statement;
      mp:supports ?assertion.
