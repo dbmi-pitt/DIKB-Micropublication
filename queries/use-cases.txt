@@ -6,21 +6,28 @@
 5. Which assertions are challengedBy just one type of evidence? **done**
 6. Which assertions have evidence from product labeling? **done**
 7. Which assertions have both evidence for and evidence against from a single source X? **done**
-2. List all evidence for or against assertion X by drug **QUESTION**
-3. List all evidence for or against assertion X by drug pair **QUESTION**
-4. List all evidence for or against assertion X by transporter **QUESTION**
-5. List all evidence for or against assertion X by metabolic enzyme **QUESTION**
+8. List all assertions for drug X? **QUESTION**
+9. List all assertions for drug pair X and Y? **QUESTION**
+10. List all assertions for transporter X? **QUESTION**
+11. List all assertions for metabolic enzyme X?**QUESTION**
 
 ==FE: Find evidence==
 1. List all evidence for or against assertion X by evidence type  **done**
-6. What is the in vitro evidence for assertion X? **done**
-7. What is the in vivo evidence for assertion X? **done** 
-8. List all evidence that has been tagged as rejected from entry into the the knowledge base? **NOT YET**
-9. Which single evidence items are unique support for multiple assertions (i.e. it is the only piece of evidence)?
-10. Which single evidence items are unique challenge for multiple assertions (i.e. it is the only piece of evidence)?
-11. Which single evidence items support or challenge multiple assertions of type "substrate of"? 
-12. Which single evidence items support or challenge multiple assertions of type "inhibits"?
-13. Which single evidence items support or challenge multiple assertions of type "increases AUC"?
+2. What is the in vitro evidence for assertion X? **done**
+3. What is the in vivo evidence for assertion X? **done** 
+4. List all evidence that has been tagged as rejected from entry into the the knowledge base? **NOT YET**
+5. Which single evidence items are unique support for multiple assertions (i.e. it is the only piece of evidence)?
+6. Which single evidence items are unique challenge for multiple assertions (i.e. it is the only piece of evidence)?
+7. Which single evidence items support or challenge multiple assertions of type "substrate of"? 
+8. Which single evidence items support or challenge multiple assertions of type "inhibits"?
+9. Which single evidence items support or challenge multiple assertions of type "increases AUC"?
+
+*/
+8. List all evidence for or against assertion X by drug **QUESTION**
+9. List all evidence for or against assertion X by drug pair **QUESTION**
+10. List all evidence for or against assertion X by transporter **QUESTION**
+11. List all evidence for or against assertion X by metabolic enzyme **QUESTION**
+/*
 
 
 ==AE: Assess evidence==
