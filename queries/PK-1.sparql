@@ -20,14 +20,14 @@ PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
-# How many pharmacokinetic studies used for evidence items in the DIKB could be used to support or challenge an 
-# assertion about pharmacokinetic parameter X ie ketoconazole_increases_auc_triazolam (claim-30)?
+# How many pharmacokinetic studies provide data on the changes of a PK parameter in the case of a drug 
+# interaction? 
 
-SELECT count(?e) as ?num_evidence_items
+SELECT count(?e) as ?num_pk_studies
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-    ?e mp:supports poc:ddi-spl-annotation-claim-30;
+    ?e mp:supports ?c;
         rdf:type ?type.
-        FILTER regex( ?type, "
+        FILTER regex( ?type, dikbEvidence:EV_PK_DDI )
 }
