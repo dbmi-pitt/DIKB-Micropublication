@@ -93,8 +93,21 @@ ex. $ python dikbv1.2-to-MP-plus-OA.py 3 "../data/dikb-mp-fold-3.xml" "../data/p
 
 ex. $ python dikbv1.2-to-MP-plus-OA.py 1 "../data/initial-dikb-mp-oa.xml" "../data/processed-dikb-ddis.tsv"
 
-(2) load output graph into Virtuso via isql-vt or via browser http://<hostname>:8890/conductor
+(2) run protege inference engine for each graph and load exported graph into Virtuso via isql-vt or via browser http://<hostname>:8890/conductor
 
 (3) run query testing program
 
 $ python queryTesting.py
+
+
+----------------------------
+Current testing cases:
+----------------------------
+
+(1) original MP graph: 3414 triples, 552 KB
+
+(2) 3 folds: 22907 triples, 3.5 MB
+
+(3) 5 folds: 100883 triples, 16 MB
+
+(4) 7 folds: 412787 triples, 62 MB
