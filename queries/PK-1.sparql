@@ -1,0 +1,33 @@
+# SPARQL version: 1.1
+# DIKB MP/NP version: 2015-07-07
+#
+
+# CONTEXT
+PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
+PREFIX cnt: <http://www.w3.org/2011/content#>
+PREFIX dailymed: <http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/vocab/resource/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dctypes: <http://purl.org/dc/dcmitype/>
+PREFIX dikbD2R: <http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/resource/>
+PREFIX dikbEvidence: <http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#>
+PREFIX gcds: <http://www.genomic-cds.org/ont/genomic-cds.owl#>
+PREFIX mp: <http://purl.org/mp/> # namespace for micropublication
+PREFIX ncbit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX pav: <http://purl.org/pav>
+PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX siocns: <http://rdfs.org/sioc/ns#>
+PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
+
+# How many pharmacokinetic studies used for evidence items in the DIKB could be used to support or challenge an 
+# assertion about pharmacokinetic parameter X ie ketoconazole_increases_auc_triazolam (claim-30)?
+
+SELECT count(?e) as ?num_evidence_items
+FROM <inferred-graph-oa-mp.xml>
+WHERE 
+{
+    ?e mp:supports poc:ddi-spl-annotation-claim-30;
+        rdf:type ?type.
+        FILTER regex( ?type, "
+}
