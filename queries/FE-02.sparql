@@ -30,5 +30,5 @@ WHERE
 {
       ?evidence mp:supports poc:ddi-spl-annotation-claim-43;
           rdf:type ?type.
-      FILTER (regex(?type, "http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Met_Enz") || regex(?type, "http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_EX_Trans_Prot"))
+      FILTER (regex(?type, dikbEvidence:EV_EX_Met_Enz) || regex(?type, dikbEvidence:EV_EX_Trans_Prot))
 }
