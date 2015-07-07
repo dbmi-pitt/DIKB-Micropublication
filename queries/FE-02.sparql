@@ -23,7 +23,7 @@ PREFIX ChEBI: <http://purl.obolibrary.org/obo/>
 ##### List all assertions involving 'paroxetine' (replace ChEBI for whatever drug you want)
 
 SELECT ?claim
-#FROM <http://purl.org/mp/infered-graph-oa-mp>
+FROM <inferred-graph-oa-mp.xml>
 WHERE
 {
        ?claim rdf:type mp:Claim.
