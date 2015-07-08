@@ -524,8 +524,8 @@ if __name__ == "__main__":
 
     ## default settings
 
-    OUT_GRAPH = "../data/initial-dikb-mp-oa.xml"
-    OUT_CSV = "../data/processed-dikb-ddis.tsv"
+    OUT_GRAPH = "../data/mp-graphs/initial-dikb-mp-oa.xml"
+    OUT_CSV = "../data/mp-graphs/processed-dikb-ddis.tsv"
 
     ## benchmark f( number of folds ) = query time
 
