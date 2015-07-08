@@ -15,8 +15,8 @@ from datetime import datetime
 QUERIES_PATH = "../queries/benchmark-queries/"
 
 #sparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu/sparql")
-#sparql = SPARQLWrapper("https://dbmi-icode-01.dbmi.pitt.edu/sparql")
-sparql = SPARQLWrapper("http://localhost:8890/sparql")
+sparql = SPARQLWrapper("https://dbmi-icode-01.dbmi.pitt.edu/sparql")
+#sparql = SPARQLWrapper("http://localhost:8890/sparql")
 
 
 

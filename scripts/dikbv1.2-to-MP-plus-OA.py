@@ -268,6 +268,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
     global annotationMethodCntr
     currentAnnotationMethod = "ddi-spl-annotation-method-%s" % annotationMethodCntr
     annotationMethodCntr += 1    
+    graph.add((poc[currentAnnotationMethod], RDF.type, mp["Method"]))
     graph.add((poc[currentAnnotationMethod], RDF.type, URIRef(item["evidenceType"])))
     graph.add((URIRef(item["evidenceType"]), RDFS.subClassOf, mp["Method"]))
 
@@ -275,6 +276,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
     global annotationDataCntr
     currentAnnotationData = "ddi-spl-annotation-data-%s" % annotationDataCntr
     annotationDataCntr += 1
+    graph.add((poc[currentAnnotationData], RDF.type, mp["Data"]))
     graph.add((poc[currentAnnotationData], RDF.type, URIRef(item["evidenceType"]+"_Data")))
     graph.add((URIRef(item["evidenceType"]), RDFS.subClassOf, mp["Data"]))
 
@@ -282,6 +284,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
     global annotationMaterialCntr
     currentAnnotationMaterial = "ddi-spl-annotation-material-%s" % annotationMaterialCntr
     annotationMaterialCntr += 1
+    graph.add((poc[currentAnnotationMaterial], RDF.type, mp["Material"])) 
     graph.add((poc[currentAnnotationMaterial], RDF.type, URIRef(item["evidenceType"]+"_Material"))) 
     graph.add((URIRef(item["evidenceType"]+"_Material"), RDFS.subClassOf, mp["Material"])) 
 
@@ -427,6 +430,7 @@ def createGraph(graph, dataset):
                 currentAnnotationClaim = assert_claimD[item['researchStatement']]
 
             graph.add((poc[currentAnnotationClaim],RDF.type, mp["Claim"]))
+            graph.add((poc[currentAnnotationClaim],RDF.type, mp["Representation"]))
             graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
             
             graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))

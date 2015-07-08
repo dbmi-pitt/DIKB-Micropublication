@@ -104,10 +104,12 @@ $ python queryTesting.py
 Current testing cases:
 ----------------------------
 
-(1) original MP graph: 3414 triples, 552 KB
+(1) original MP graph: 3794 triples, 552 KB
 
-(2) 3 folds: 22907 triples, 3.5 MB
+(2) 3 folds: 25574 triples, 3.6 MB
 
-(3) 5 folds: 100883 triples, 16 MB
+(3) 5 folds: 112694 triples, 16 MB
 
-(4) 7 folds: 412787 triples, 62 MB
+(4) 7 folds: 412787 triples, 65 MB
+
+(4) 7 folds: 1855094 triples, 259 MB

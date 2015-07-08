@@ -19,7 +19,7 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 #### List all the evidence items that support exactly one representation which it is the only piece of evidence
 
 SELECT ?evidence
-FROM <graph>
+
 WHERE
 {
      ?evidence rdf:type mp:Data.
