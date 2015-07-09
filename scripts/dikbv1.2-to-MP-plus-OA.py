@@ -52,7 +52,7 @@ annotationMaterialCntr = 1
 annotationMethodCntr = 1
 annotationStatementCntr = 1
 
-
+dideoD = {"inhibits":"RO_0002449", "does_not_inhibit":"RO_0002449", "substrate_of":"DIDEO_00000096", "is_not_substrate_of":"DIDEO_00000096", "increases_auc" : "DIDEO_00000000"}
 
 ## set up RDF graph
 # identify namespaces for other ontologies to be used                                                                                    
@@ -75,7 +75,7 @@ ncbit = Namespace('http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#')
 dikbEvidence = Namespace('http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#')
 mp = Namespace('http://purl.org/mp/') # namespace for micropublication
 rdf = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
-
+obo = Namespace('http://purl.obolibrary.org/obo/')
 
 
 ################################################################################
@@ -257,13 +257,6 @@ def addAssertion(graph, item, currentAnnotationClaim):
     if item['researchStatementLabel']:
         graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
 
-    # if item['researchStatement']:
-    #     graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["researchStatement"])))
-    #     graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
-    # else:
-    #     graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], Literal("stubbed out"))) 
-
-
     # Method : used in data to supports statement
     global annotationMethodCntr
     currentAnnotationMethod = "ddi-spl-annotation-method-%s" % annotationMethodCntr
@@ -291,7 +284,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
 
     ## increase AUC have PKDDI material info
 
-    if "increase_auc" == item["assertType"].strip():
+    if "increases_auc" == item["assertType"].strip():
  
         graph.add((poc[currentAnnotationMaterial], RDFS.label, Literal("%s (object) - %s (precipitant)" % (item["object"], item["precip"]))))
 
@@ -301,10 +294,16 @@ def addAssertion(graph, item, currentAnnotationClaim):
         graph.add((poc[currentAnnotationMaterial], dikbD2R['precipitantDose'], Literal(item["precipDose"])))
         graph.add((poc[currentAnnotationMaterial], dikbD2R['numOfSubjects'], Literal(item["numOfSubjects"])))
 
-        if item["numericVal"]:
-            graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal(item["numericVal"])))
+        # if item["numericVal"]:
+        #     graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal(item["numericVal"])))
+        # else:
+        #     graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal("stubbed out")))
+
+        if item["evidenceVal"]:
+            graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal(item["evidenceVal"])))
         else:
             graph.add((poc[currentAnnotationData], dikbD2R["increases_auc"], Literal("stubbed out")))
+
 
     # Relationships
     graph.add((poc[currentAnnotationMaterial], mp["usedIn"], poc[currentAnnotationMethod]))
@@ -344,6 +343,8 @@ def initialGraph(graph):
     graph.namespace_manager.bind('siocns','http://rdfs.org/sioc/ns#')
     graph.namespace_manager.bind('swande','http://purl.org/swan/1.2/discourse-elements#')
     graph.namespace_manager.bind('dikbD2R','http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/resource/')
+    graph.namespace_manager.bind('obo','http://purl.obolibrary.org/obo/')
+
 
     graph.namespace_manager.bind('linkedspls','file:///home/rdb20/Downloads/d2rq-0.8.1/linkedSPLs-dump.nt#structuredProductLabelMetadata/')
     graph.namespace_manager.bind('poc','http://purl.org/net/nlprepository/spl-ddi-annotation-poc#')
@@ -415,33 +416,37 @@ def createGraph(graph, dataset):
         global annotationClaimCntr 
 
         # Claim : is a research statement label qualified by assertion URI
-        if item['researchStatementLabel'] and item['researchStatement']:
+        if item['researchStatementLabel']:
 
             # one claim may supported by or refuted by multiple evidences (data/statement)
-            if item['researchStatement'] not in assert_claimD.keys():
+            if item['researchStatementLabel'] not in assert_claimD.keys():
 
                 #print "[DEBUG] current Claim Cntr:" + str(annotationClaimCntr)
 
                 currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % (annotationClaimCntr)
                 annotationClaimCntr += 1
 
-                assert_claimD[item['researchStatement']] = currentAnnotationClaim
+                assert_claimD[item['researchStatementLabel']] = currentAnnotationClaim
             else:
-                currentAnnotationClaim = assert_claimD[item['researchStatement']]
+                currentAnnotationClaim = assert_claimD[item['researchStatementLabel']]
 
             graph.add((poc[currentAnnotationClaim],RDF.type, mp["Claim"]))
             graph.add((poc[currentAnnotationClaim],RDF.type, mp["Representation"]))
             graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
-            
-            graph.add((URIRef(item["researchStatement"]), RDF.type, mp["SemanticQualifier"]))
             graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["objectURI"])))
             graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
 
             graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["valueURI"])))
             graph.add((URIRef(item["valueURI"]), RDF.type, mp["SemanticQualifier"]))
 
-            graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["assertType"])))
-            graph.add((URIRef(item["assertType"]), RDF.type, mp["SemanticQualifier"]))
+            ## assert type : using dideo URI for inhibits, substrate_of, increase_auc
+            if dideoD.has_key(item["assertType"].strip()):
+                assertTypeDIDEO = dideoD[item["assertType"].strip()]
+                graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], obo[assertTypeDIDEO]))
+                graph.add((obo[assertTypeDIDEO], RDF.type, mp["SemanticQualifier"]))
+            else:
+                graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["assertType"].strip())))
+                graph.add((URIRef(item["assertType"]), RDF.type, mp["SemanticQualifier"]))
  
         ###################################################################
         # MP - Evidence (Non traceable, Other evidences)
@@ -486,7 +491,7 @@ def printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV):
     ## write in tsv file
     #try:
     with open(OUT_CSV, 'wb') as tsvfile:
-        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatement","researchStatementLabel", "claim", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
+        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatementLabel", "claim", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
         writer.writeheader()
         writer.writerows(mp_list)
 
@@ -510,11 +515,13 @@ def createGraphByFold(graph, numFolds, outGraphFile, outCSVFile):
 
     print "[INFO] create graph by fold : %s" % str(numFolds)    
     numCount = 1
-    for i in range(0, numFolds):
-        numCount *= 2
+
+    if numFolds > 0:
+        for i in range(0, numFolds):
+            numCount *= 2
     print "[INFO] create graph size times as : %s" % str(numCount)
 
-    for i in range(1, numCount):
+    for i in range(0, numCount):
         createGraphAucSubsInhib(graph)
 
 
@@ -550,7 +557,7 @@ if __name__ == "__main__":
     printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV)
 
 
-################################# trash #################################3
+################################# trash #################################
 
 ## parse to get prefix and postfix based on exact and index_exact
     # if index_exact >= 0:

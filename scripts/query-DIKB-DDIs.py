@@ -18,7 +18,7 @@ import urllib
 import traceback
 #import pickle
 import csv
-import sys
+import sys, copy
 reload(sys);
 sys.setdefaultencoding("utf8")
 
@@ -113,6 +113,41 @@ def assertionQry(assertType, evidenceMode, num):
 """ % (assertType, assertType, evidenceMode, num)
         return dikbPrefixQry() + query_string
 
+## return Qry for does_not_inhibit, which don't have dikbD2R:slot
+def  doseNotInhibitQry(evidenceMode, num):
+
+    if not evidenceMode:
+        return None
+    else:
+        query_string = """
+
+  SELECT DISTINCT * WHERE {
+
+  ?asrt a swande:ResearchStatement;
+    foaf:homepage ?homepage;
+    dikbD2R:object ?objectURI;
+    dikbD2R:value ?valueURI;
+    rdfs:label ?researchStatementLabel.
+    FILTER regex(str(?researchStatementLabel), "does_not_inhibit")
+
+  ?s dikbD2R:does_not_inhibit ?valueURI;
+     rdfs:label ?label.
+
+    ## evidenceSupports
+    optional {
+    ?asrt swanco:%s ?evidence.
+    ?evidence dikbEvidence:Evidence_type ?evType;
+              dc:creator ?whoAnnotated;
+              dc:date ?dateAnnotated;
+              rdfs:seeAlso ?evSource;
+              siocns:content ?content.
+    }
+  
+} LIMIT %s
+""" % (evidenceMode, num)
+        return dikbPrefixQry() + query_string
+    
+
 
 # return Qry for assertion with evidence by type increase_auc
 def increaseAucQry(evidenceMode, num):
@@ -177,7 +212,7 @@ def queryIncreaseAuc(evMode, num):
     sparql_service = "https://dbmi-icode-01.dbmi.pitt.edu/dikb/sparql"
     query_string = increaseAucQry(evidenceMode, num)
 
-    print "[INFO] increase AUC query_string: %s" % query_string
+    print "[INFO] increases AUC query_string: %s" % query_string
     json_string = query(query_string, sparql_service)
     
     resultset=json.loads(json_string)
@@ -190,8 +225,8 @@ def queryIncreaseAuc(evMode, num):
         for i in range(0, len(resultset["results"]["bindings"])):
 
              newPDDI = getIncreaseAUCDict()
-             newPDDI["assertType"] = "increase_auc"
-             newPDDI["researchStatement"] = resultset["results"]["bindings"][i]["asrt"]["value"].encode("utf8")
+             newPDDI["assertType"] = "increases_auc"
+             #newPDDI["researchStatement"] = resultset["results"]["bindings"][i]["asrt"]["value"].encode("utf8")
              newPDDI["researchStatementLabel"] = resultset["results"]["bindings"][i]["researchStatementLabel"]["value"].encode("utf8")
              newPDDI["objectURI"] = resultset["results"]["bindings"][i]["objectURI"]["value"].encode("utf8")
              newPDDI["valueURI"] = resultset["results"]["bindings"][i]["precipURI"]["value"].encode("utf8")
@@ -240,7 +275,11 @@ def queryAssertion(assertType, evMode, num):
     pddiDictL = []
 
     sparql_service = "https://dbmi-icode-01.dbmi.pitt.edu/dikb/sparql"
-    query_string = assertionQry(assertType, evidenceMode, num)
+
+    if assertType == "does_not_inhibit":
+        query_string = doseNotInhibitQry(evidenceMode, num)
+    else:
+        query_string = assertionQry(assertType, evidenceMode, num)
 
     print "[INFO] assertion type - %s \n  query_string: %s" % (assertType, query_string)
     json_string = query(query_string, sparql_service)
@@ -255,9 +294,16 @@ def queryAssertion(assertType, evMode, num):
         for i in range(0, len(resultset["results"]["bindings"])):
 
              newPDDI = getAssertionDict()
-             newPDDI["assertType"] = assertType
-             newPDDI["researchStatement"] = resultset["results"]["bindings"][i]["asrt"]["value"].encode("utf8")
+
              newPDDI["researchStatementLabel"] = resultset["results"]["bindings"][i]["researchStatementLabel"]["value"].encode("utf8")
+
+             if assertType in ["substrate_of", "inhibits", "is_not_substrate_of"]:
+                 newPDDI["assertType"] = assertType
+             elif "does_not_inhibit" in newPDDI["researchStatementLabel"]:
+                 newPDDI["assertType"] = "does_not_inhibit"
+             else:
+                 newPDDI["assertType"] = "None"
+             
              newPDDI["valueURI"] = resultset["results"]["bindings"][i]["valueURI"]["value"].encode("utf8")
              newPDDI["objectURI"] = resultset["results"]["bindings"][i]["objectURI"]["value"].encode("utf8")
              newPDDI["homepage"] = resultset["results"]["bindings"][i]["homepage"]["value"].encode("utf8")
@@ -278,7 +324,28 @@ def queryAssertion(assertType, evMode, num):
                      newPDDI["evidenceStatement"] = resultset["results"]["bindings"][i]["content"]["value"].encode("utf8")
              newPDDI["label"] = resultset["results"]["bindings"][i]["label"]["value"].encode("utf8")
 
+
+             ## handle biodirectional relationships for substrate_of and inhibits ##
+
+             if assertType in ["does_not_inhibit", "is_not_substrate_of"]:
+
+                 if assertType == "does_not_inhibit":
+                     newPDDI["assertType"] = "inhibits"
+                     newPDDI["researchStatementLabel"] = newPDDI["researchStatementLabel"].replace("does_not_inhibit","inhibits")
+                     newPDDI["homepage"] = newPDDI["homepage"].replace("does_not_inhibit","inhibits")
+                 else:
+                     newPDDI["assertType"] = "substrate_of"
+                     newPDDI["researchStatementLabel"] = newPDDI["researchStatementLabel"].replace("is_not_substrate_of","substrate_of")
+                     newPDDI["homepage"] = newPDDI["homepage"].replace("is_not_substrate_of","substrate_of")
+                     
+
+             if evMode == "support":
+                 newPDDI["evidenceRole"] = "refute"
+             elif evMode == "refute":
+                 newPDDI["evidenceRole"] = "support"
+
              pddiDictL.append(newPDDI)
+
     return pddiDictL
 
 
@@ -287,7 +354,7 @@ def queryAssertion(assertType, evMode, num):
 def printIncreaseAuc(increaseAUCDictL, filepath, writeType):
 
     with open(filepath, writeType) as tsvfile:
-        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatement","researchStatementLabel", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
+        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatementLabel", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","evidenceVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
         if writeType is "wb":
             writer.writeheader()
 
@@ -297,7 +364,7 @@ def printIncreaseAuc(increaseAUCDictL, filepath, writeType):
 
 def printAssertionByType(assertionDictL, filepath, writeType):
     with open(filepath, writeType) as tsvfile:
-        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatement","researchStatementLabel","assertType", "objectURI","valueURI","label","homepage","source", "dateAnnotated","whoAnnotated", "evidence", "evidenceRole","evidenceSource","evidenceType","evidenceStatement"])
+        writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatementLabel","assertType", "objectURI","valueURI","label","homepage","source", "dateAnnotated","whoAnnotated", "evidence", "evidenceRole","evidenceSource","evidenceType","evidenceStatement"])
         if writeType is "wb":
             writer.writeheader()
 
@@ -307,7 +374,7 @@ def printAssertionByType(assertionDictL, filepath, writeType):
 
 if __name__ == "__main__":
 
-    num = 50
+    num = 100
 
     ###### increase_auc ######
     
@@ -316,7 +383,6 @@ if __name__ == "__main__":
     filepath = "../data/dikb-pddis/dikb-increaseAUC-ddis.tsv"
     printIncreaseAuc(aucSupportL + aucRefuteL, filepath, "wb")
 
-
     # ###### substrate_of ######
 
     filepath1 = "../data/dikb-pddis/dikb-assertion-ddis.tsv"
@@ -324,8 +390,22 @@ if __name__ == "__main__":
     substrateOfRefuteL = queryAssertion("substrate_of", "refute", num)
     printAssertionByType(substrateOfSupportL + substrateOfRefuteL, filepath1, "wb")
 
+    # ###### is_not_substrate_of ######
+
+    isNotSubstrateOfSupportL = queryAssertion("is_not_substrate_of", "support", num)
+    isNotSubstrateOfRefuteL = queryAssertion("is_not_substrate_of", "refute", num)
+    printAssertionByType(isNotSubstrateOfSupportL + isNotSubstrateOfRefuteL, filepath1, "a")
+
     # ###### inhibits ######
 
     inhibitsSupportL = queryAssertion("inhibits", "support", num)
     inhibitsRefuteL = queryAssertion("inhibits", "refute", num)
     printAssertionByType(inhibitsSupportL + inhibitsRefuteL, filepath1, "a")
+
+    # ###### dose_not_inhibit ######
+
+    doesNotInhibitsSupportL = queryAssertion("does_not_inhibit", "support", num)
+    doesNotInhibitsRefuteL = queryAssertion("does_not_inhibit", "refute", num)
+    printAssertionByType(doesNotInhibitsSupportL + doesNotInhibitsRefuteL, filepath1, "a")
+
+

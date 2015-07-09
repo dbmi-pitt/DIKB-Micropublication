@@ -4,7 +4,7 @@
 ## Yifan Ning
 
 import sys, os, datetime
-import time
+import time,csv
 sys.path.append('.')
 from SPARQLWrapper import SPARQLWrapper, JSON
 from datetime import datetime
@@ -25,7 +25,7 @@ sparql = SPARQLWrapper("https://dbmi-icode-01.dbmi.pitt.edu/sparql")
 ################################################################################
 
 def getGraphDict():
-    return {"name":None, "fold":None, "cost":None, "triples":None}
+    return {"graphname":None, "cost":None, "triples":None}
 
 def readCSVfromDir(inputdir):
     queriesD = {}
@@ -45,6 +45,23 @@ def readGraphConfig():
     return graphD
 
 
+def countTriplesFromGraph(graphname):
+
+    qry = """
+    SELECT (count(*) as ?count) 
+    FROM <%s>
+    WHERE {
+   ?s ?p ?o . }
+    """ % (graphname)
+
+    sparql.setQuery(qry)    
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    
+    return results["results"]["bindings"][0]["count"]["value"]
+
+
+
 def runQuery(qry, graphname):
 
     #try:
@@ -52,10 +69,12 @@ def runQuery(qry, graphname):
 
     # print "[INFO] testing query on graph (%s): \n %s" % (graphname, qry)
 
-    st1 = time.time()
+
     
     sparql.setQuery(qry)    
     sparql.setReturnFormat(JSON)
+
+    st1 = time.time()
     results = sparql.query().convert()
 
     st2 = time.time()
@@ -63,6 +82,7 @@ def runQuery(qry, graphname):
 
     if len(results["results"]["bindings"]) == 0:
         print "[DEBUG] Query is not getting any results back"
+        return "No results"
     else:
         print "[INFO] Query return %s results \n time cost: %s" % (len(results["results"]["bindings"]), str(st3))
 
@@ -75,35 +95,49 @@ def runQuery(qry, graphname):
 def runAllQueries(queryFolder):
     
     queriesD = readCSVfromDir(queryFolder)
-
     sparql.method = 'POST'
+    
+    with open ("queryBenchmark.csv","wb") as csvfile:
 
-    for qryName,qry in queriesD.items():
+        spamwriter = csv.writer(csvfile, delimiter='|', quotechar="'", quoting=csv.QUOTE_MINIMAL)
+        ## read all queries
+        for qryName,qry in queriesD.items():
 
-        if qry.strip() == "":
-            #print "[WARN] skip empty query %s" % qryName
-            continue
+            if qry.strip() == "":
+                continue
 
-        print "[QUERY] %s" % qryName
-        
-        analysisD = {}
+            print "[QUERY] %s" % qryName
 
-        ## run query on graphs with different folds
-        graphsD = readGraphConfig()
+            outputLineD = {}
 
-        print graphsD
-        
-        for k,graphName in graphsD.items():
-            
-            analysisD[graphName] = {}
-            
-            cost = runQuery(qry, graphName)
-            
-            analysisD[graphName]["fold"] = k
-            analysisD[graphName]["cost"] = cost
+            ## run query on graphs that have different folds
+            graphsD = readGraphConfig()
 
-        print analysisD
-        print "\n"
+            ## execute query for different folds of graphs
+            for k,graphName in graphsD.items():
+
+                graphD = getGraphDict()
+
+                cost = runQuery(qry, graphName)
+                triples = countTriplesFromGraph(graphName)
+
+                graphD["cost"] = cost
+                graphD["triples"] = triples
+                graphD["graphname"] = graphName
+
+                outputLineD[k] = graphD
+
+            print outputLineD
+
+            ## write header for query
+            spamwriter.writerow([qryName, "Number of folds", "triples" ,"costs"])
+
+            ## write graphname, triples, costs for current query
+            for i in range (0 , len(graphsD)):
+                foldStr = str(i)
+                spamwriter.writerow([outputLineD[foldStr]["graphname"], foldStr, outputLineD[foldStr]["triples"], outputLineD[foldStr]["cost"]])
+
+            print "\n\n"
             
 
 ################################################################################
