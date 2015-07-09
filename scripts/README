@@ -81,9 +81,9 @@ Case 2:
 
 Create 5 MP graphs as case 1 did. Load graph one by one to run benchmark query testing program to see if number of graphs in a single endpoint will significantly affect query performance. 
 
-----------------------------
+-------------------------------
 How to run benchmark testing
-----------------------------
+-------------------------------
 
 (1) create graph with number of folds
 
@@ -100,16 +100,18 @@ ex. $ python dikbv1.2-to-MP-plus-OA.py 1 "../data/mp-graphs/initial-dikb-mp-oa.x
 $ python queryTesting.py
 
 
-----------------------------
-Current testing cases:
-----------------------------
+----------------------------------------------
+Current testing sets:
+----------------------------------------------
 
-(1) original MP graph: 3794 triples, 552 KB
+(1) original MP graph: 11113 triples, 1.8 MB
 
-(2) 3 folds: 25574 triples, 3.6 MB
+(2) 1 fold: 22119 triples, 3.5 MB
 
-(3) 5 folds: 112694 triples, 16 MB
+(3) 2 folds: 44131 triples, 7 MB
 
-(4) 7 folds: 412787 triples, 65 MB
+(4) 3 folds: 88155 triples, 14 MB
 
-(4) 7 folds: 1855094 triples, 259 MB
+(5) 4 folds: 176203 triples, 28 MB
+
+(6) 5 folds: 352299 triples, 56 MB
