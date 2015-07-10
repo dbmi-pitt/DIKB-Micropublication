@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-07
+# DIKB MP/NP version: 2015-07-10
 #
 
 # CONTEXT
@@ -19,15 +19,16 @@ PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
-PREFIX yifan: <file:/home/yin2/DIKB-Micropublication/data/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
 
-# Returns the count of evidence items challenging a given assertion type, such as increase_auc (inhibit or substrate_of can be substituted in)
+# Returns the count of evidence items challenging a given assertion type, such as substrate_of (DIDEO_00000096)
+# inhibits is RO_0002449, increase_auc is DIDEO_00000000
 
-SELECT COUNT(?e)
+SELECT COUNT(?c) as ?Num_PDDI_Evidence
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
   ?c a mp:Claim.
-  ?c mp:qualifiedBy yifan:increase_auc.
+  ?c mp:qualifiedBy obo:DIDEO_00000096.
   ?e mp:challenges ?c.
 }
