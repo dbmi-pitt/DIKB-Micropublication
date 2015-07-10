@@ -1,0 +1,64 @@
+STAT-1.sparql|Number of folds|triples|costs
+inferred-graph-oa-mp.xml|0|13673|0.0163199901581
+inferred-dikb-mp-fold-1.xml|1|27082|0.0540459156036
+inferred-dikb-mp-fold-2.xml|2|53900|0.0192170143127
+inferred-dikb-mp-fold-3.xml|3|107536|0.0244250297546
+inferred-dikb-mp-fold-4.xml|4|214808|0.020977973938
+inferred-dikb-mp-fold-5.xml|5|429352|0.0168681144714
+inferred-dikb-mp-fold-6.xml|6|858440|0.0208690166473
+PK-1.sparql|Number of folds|triples|costs
+inferred-graph-oa-mp.xml|0|13673|0.0478081703186
+inferred-dikb-mp-fold-1.xml|1|27082|0.293447971344
+inferred-dikb-mp-fold-2.xml|2|53900|0.0590469837189
+inferred-dikb-mp-fold-3.xml|3|107536|0.0975739955902
+inferred-dikb-mp-fold-4.xml|4|214808|0.184276103973
+inferred-dikb-mp-fold-5.xml|5|429352|0.569866895676
+inferred-dikb-mp-fold-6.xml|6|858440|0.95680308342
+find-assertion-where-methods-involve-drug-x.sparql|Number of folds|triples|costs
+inferred-graph-oa-mp.xml|0|13673|0.0195100307465
+inferred-dikb-mp-fold-1.xml|1|27082|0.0216679573059
+inferred-dikb-mp-fold-2.xml|2|53900|0.0194580554962
+inferred-dikb-mp-fold-3.xml|3|107536|0.0791659355164
+inferred-dikb-mp-fold-4.xml|4|214808|0.0276079177856
+inferred-dikb-mp-fold-5.xml|5|429352|0.0769140720367
+inferred-dikb-mp-fold-6.xml|6|858440|0.104125022888
+FA-03.sparql|Number of folds|triples|costs
+inferred-graph-oa-mp.xml|0|13673|0.0183029174805
+inferred-dikb-mp-fold-1.xml|1|27082|0.0410838127136
+inferred-dikb-mp-fold-2.xml|2|53900|0.0233609676361
+inferred-dikb-mp-fold-3.xml|3|107536|0.0514829158783
+inferred-dikb-mp-fold-4.xml|4|214808|0.067663192749
+inferred-dikb-mp-fold-5.xml|5|429352|0.11331319809
+inferred-dikb-mp-fold-6.xml|6|858440|0.20036816597
+find-evidence-uniquely-supporting-one-representation.sparql|Number of folds|triples|costs
+inferred-graph-oa-mp.xml|0|13673|No results
+inferred-dikb-mp-fold-1.xml|1|27082|No results
+inferred-dikb-mp-fold-2.xml|2|53900|No results
+inferred-dikb-mp-fold-3.xml|3|107536|No results
+inferred-dikb-mp-fold-4.xml|4|214808|No results
+inferred-dikb-mp-fold-5.xml|5|429352|No results
+inferred-dikb-mp-fold-6.xml|6|858440|No results
+FA-04.sparql|Number of folds|triples|costs
+inferred-graph-oa-mp.xml|0|13673|0.028792142868
+inferred-dikb-mp-fold-1.xml|1|27082|0.0547981262207
+inferred-dikb-mp-fold-2.xml|2|53900|0.316169023514
+inferred-dikb-mp-fold-3.xml|3|107536|0.188642024994
+inferred-dikb-mp-fold-4.xml|4|214808|0.493299007416
+inferred-dikb-mp-fold-5.xml|5|429352|0.517222166061
+inferred-dikb-mp-fold-6.xml|6|858440|1.43548607826
+FA-01.sparql|Number of folds|triples|costs
+inferred-graph-oa-mp.xml|0|13673|0.019623041153
+inferred-dikb-mp-fold-1.xml|1|27082|0.0259239673615
+inferred-dikb-mp-fold-2.xml|2|53900|0.0278642177582
+inferred-dikb-mp-fold-3.xml|3|107536|0.0726110935211
+inferred-dikb-mp-fold-4.xml|4|214808|0.123771905899
+inferred-dikb-mp-fold-5.xml|5|429352|0.130769968033
+inferred-dikb-mp-fold-6.xml|6|858440|0.254589080811
+FA-02.sparql|Number of folds|triples|costs
+inferred-graph-oa-mp.xml|0|13673|0.0201930999756
+inferred-dikb-mp-fold-1.xml|1|27082|0.0270340442657
+inferred-dikb-mp-fold-2.xml|2|53900|0.0470170974731
+inferred-dikb-mp-fold-3.xml|3|107536|0.073410987854
+inferred-dikb-mp-fold-4.xml|4|214808|0.326952934265
+inferred-dikb-mp-fold-5.xml|5|429352|0.240363121033
+inferred-dikb-mp-fold-6.xml|6|858440|0.415380001068
