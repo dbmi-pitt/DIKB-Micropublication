@@ -21,15 +21,14 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
-# List all the in vivo evidence(pick supporting or challenging) for assertion X? 
-## In this case, claim-102 is used as assertion X, and evidence is supporting
+# List all the in vitro (pick supports or challenges) evidence for assertion X? 
+## In this case, claim-61 is used as assertion X and evidence is supporting
 
 SELECT DISTINCT ?evidence
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      ?evidence mp:supports poc:ddi-spl-annotation-claim-102;
+      ?evidence mp:supports poc:ddi-spl-annotation-claim-61;
           rdf:type ?type.
-      FILTER (!regex(?type, dikbEvidence:EV_EX_Met_Enz) && !regex(?type, dikbEvidence:EV_EX_Trans_Prot))
-      FILTER regex(?type, dikbEvidence:)
+      FILTER (regex(?type, dikbEvidence:EV_EX_Met_Enz) || regex(?type, dikbEvidence:EV_EX_Trans_Prot))
 }

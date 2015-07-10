@@ -12,30 +12,31 @@
 11. List all assertions for metabolic enzyme X? **done**
 
 ==FE: Find evidence==
-1. List all evidence for or against assertion X by evidence type  **done**
-2. What is the in vitro evidence for assertion X? **done**
-3. What is the in vivo evidence for assertion X? **done** 
-4. List all evidence that has been tagged as rejected from entry into the the knowledge base? **NOT YET**
-5. Which single evidence items are unique support for multiple assertions 
+1. List all evidence for or against assertion X and show its type? **done**
+2. List all evidence for or against assertion X by evidence type?  **done**
+3. What is the in vitro evidence for assertion X? **done**
+4. What is the in vivo evidence for assertion X? **done** 
+5. List all evidence that has been tagged as rejected from entry into the the knowledge base? **DEFERRED**
+6. Which single evidence items are unique support for multiple assertions 
 (i.e. it is the only piece of evidence)?
-6. Which single evidence items are unique challenge for multiple assertions 
+7. Which single evidence items are unique challenge for multiple assertions 
 (i.e. it is the only piece of evidence)?
-7. Which single evidence items support or challenge multiple assertions of type "substrate of"? 
-8. Which single evidence items support or challenge multiple assertions of type "inhibits"?
-9. Which single evidence items support or challenge multiple assertions of type "increases AUC"?
+8. Which single evidence items support or challenge multiple assertions of type "substrate of"? 
+9. Which single evidence items support or challenge multiple assertions of type "inhibits"?
+10. Which single evidence items support or challenge multiple assertions of type "increases AUC"?
 
 
 ==AE: Assess evidence==
 1. What data, methods, materials, are reported in evidence item X?
 2. Which evidence items cite an existing evidence item (or something from the evidence item)?
 3. Which evidence items update a regulatory item (e.g. FDA guidance document, change to product label, etc...)?
-4. Which research group conducted the study used for evidence item X?
+4. Which research group conducted the study used for evidence item X? **DEFERRED**
 
 
 ===EP: Verify plausibility of an evidence item===
-1. Has evidence item X been rejected for assertion Y? **NOT YET**
-2. Why was evidence item X rejected for assertion Y? **NOT YET**
-3. Who rejected evidence item X for assertion Y? **NOT YET**
+1. Has evidence item X been rejected for assertion Y? **DEFERRED**
+2. Why was evidence item X rejected for assertion Y? **DEFERRED**
+3. Who rejected evidence item X for assertion Y? **DEFERRED**
 4. Which other assertions are supportedBy this evidence item?
 5. Which other assertions are challengedBy this evidence item?
 6. What are the assumptions required for use of this evidence item to support assertion X?
@@ -44,8 +45,8 @@
 
 ===PK: Check assertions about pharmacokinetic parameters (i.e., area under the concentration time curve (AUC))===
 1. How many pharmacokinetic studies provide data on the changes of a PK parameter in the case of a drug 
-interaction? 
-2. How many pharmacokinetic studies established a PK parameter about a drug (single drug case)?
+interaction? **done**
+2. How many pharmacokinetic studies established a PK parameter about a drug (single drug case)? **done**
 3. What is the result of averaging the values for pharmacokinetic parameter X across all relevant studies used for evidence items? **done**
 
 
@@ -59,4 +60,6 @@ different versions of product labeling for the same drug?
 1. Number of assertions in the system **done**
 2. Number of evidence items for each assertion type **done**
 3. Number of evidence items against each assertion type **done**
-4. Show the distribution of the evidence types for the various assertion types
+4. Show the distribution of the evidence types for substrate_of assertions **done**
+5. Show the distribution of the evidence types for inhibits assertions **done**
+6. Show the distribution of the evidence types for increases_auc assertions **done**
