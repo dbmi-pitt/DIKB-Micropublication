@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:ns1="http://purl.obolibrary.org/obo/" xmlns:ns2="http://www.nanopub.org/nschema#" xmlns:ns3="http://purl.org/mp/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX36">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX36">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/RO_0002449"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX77">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX77">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/RO_0002449"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX109">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX109">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX108">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX108">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX103">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX103">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX102">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX102">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX101">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX101">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX100">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX100">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX107">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX107">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX106">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX106">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX105">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX105">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX104">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX104">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX57">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX57">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX68">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX68">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX1">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX1">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX2">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX2">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX155">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX155">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX79">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX79">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX144">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX144">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX87">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX87">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX89">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX89">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX88">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX88">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX13">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX13">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX132">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX132">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX133">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX133">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX130">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX130">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX131">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX131">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX91">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX91">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX92">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX92">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX93">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX93">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX94">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX94">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX95">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX95">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX96">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX96">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX97">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX97">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX99">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX99">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX110">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX110">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX111">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX111">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX112">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX112">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX114">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX114">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX115">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX115">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX116">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX116">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX117">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX117">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX118">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX118">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX119">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX119">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX120">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX120">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX121">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX121">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX122">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX122">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX123">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX123">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX124">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX124">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX125">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX125">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX126">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX126">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX127">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX127">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX129">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX129">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX24">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX24">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX35">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX35">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX134">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX134">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000096"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX138">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX138">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000096"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX143">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX143">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000096"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX149">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX149">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000096"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX152">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX152">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000096"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX154">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX154">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000096"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX168">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX168">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000096"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX169">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX169">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000096"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX3">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX3">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000096"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX6">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DIDEO_XXX6">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000096"/>
+  </rdf:Description>
+</rdf:RDF>

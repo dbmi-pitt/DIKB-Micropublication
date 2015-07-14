@@ -1,0 +1,2956 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ddi: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<obo:DIDEO_XXX33-assertion> = {
+    obo:CHEBI_48390 a obo:CHEBI_24431 ;
+        rdfs:label "cinacalcet" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX40-assertion> = {
+    obo:CHEBI_10100 a obo:CHEBI_24431 ;
+        rdfs:label "zafirlukast" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX11-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_8028 .
+
+    obo:CHEBI_8028 a obo:CHEBI_24431 ;
+        rdfs:label "perphenazine" .
+}
+
+<obo:DIDEO_XXX138-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_36795 .
+
+    obo:CHEBI_36795 a obo:CHEBI_24431 ;
+        rdfs:label "duloxetine" .
+}
+
+<obo:DIDEO_XXX111-assertion> = {
+    obo:DIDEO_XXX111-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluvoxamine - tolbutamide potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5138 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_27999 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX98-assertion> = {
+    obo:DIDEO_XXX98-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "ketoconazole - venlafaxine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_48339 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9943 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX175-assertion> = {
+    obo:PR_000006102 a obo:OBI_0000427 ;
+        rdfs:label "cyp1a2" ;
+        obo:DIDEO_00000096 obo:CHEBI_2611 .
+
+    obo:CHEBI_2611 a obo:CHEBI_24431 ;
+        rdfs:label "alprazolam" .
+}
+
+<obo:DIDEO_XXX2-assertion> = {
+    obo:DIDEO_XXX2-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "itraconazole - lovastatin potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6076 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_40303 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX64-assertion> = {
+    obo:CHEBI_8707 a obo:CHEBI_24431 ;
+        rdfs:label "quetiapine" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX65-assertion> = {
+    obo:CHEBI_31236 a obo:CHEBI_24431 ;
+        rdfs:label "aripiprazole" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX99-assertion> = {
+    obo:DIDEO_XXX99-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluoxetine - desipramine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5118 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_47781 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX139-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_7494 .
+
+    obo:CHEBI_7494 a obo:CHEBI_24431 ;
+        rdfs:label "nefazodone" .
+}
+
+<obo:DIDEO_XXX162-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_9566 .
+
+    obo:CHEBI_9566 a obo:CHEBI_24431 ;
+        rdfs:label "thioridazine" .
+}
+
+<obo:DIDEO_XXX55-assertion> = {
+    obo:CHEBI_3766 a obo:CHEBI_24431 ;
+        rdfs:label "clozapine" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX52-assertion> = {
+    obo:CHEBI_101278 a obo:CHEBI_24431 ;
+        rdfs:label "diltiazem" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX69-assertion> = {
+    obo:CHEBI_36795 a obo:CHEBI_24431 ;
+        rdfs:label "duloxetine" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX12-assertion> = {
+    obo:PR_000006120 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c9" ;
+        obo:DIDEO_00000096 obo:CHEBI_31236 .
+
+    obo:CHEBI_31236 a obo:CHEBI_24431 ;
+        rdfs:label "aripiprazole" .
+}
+
+<obo:DIDEO_XXX155-assertion> = {
+    obo:DIDEO_XXX155-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "lansoprazole - lansoprazole potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6375 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6375 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX24-assertion> = {
+    obo:DIDEO_XXX24-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "venlafaxine - risperidone potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9943 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_8871 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX61-assertion> = {
+    obo:CHEBI_5898 a obo:CHEBI_24431 ;
+        rdfs:label "indinavir" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX79-assertion> = {
+    obo:DIDEO_XXX79-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "cimetidine - theophylline potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3699 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_28177 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX34-assertion> = {
+    obo:CHEBI_36791 a obo:CHEBI_24431 ;
+        rdfs:label "escitalopram" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX122-assertion> = {
+    obo:DIDEO_XXX122-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "clarithromycin - atorvastatin potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3732 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_2910 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX145-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_10023 .
+
+    obo:CHEBI_10023 a obo:CHEBI_24431 ;
+        rdfs:label "voriconazole" .
+}
+
+<obo:DIDEO_XXX125-assertion> = {
+    obo:DIDEO_XXX125-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "itraconazole - triazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6076 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9674 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX96-assertion> = {
+    obo:DIDEO_XXX96-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluvoxamine - lansoprazole potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5138 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6375 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX132-assertion> = {
+    obo:DIDEO_XXX132-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "verapamil - risperidone potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9948 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_8871 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX59-assertion> = {
+    obo:CHEBI_10023 a obo:CHEBI_24431 ;
+        rdfs:label "voriconazole" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX72-assertion> = {
+    obo:CHEBI_3732 a obo:CHEBI_24431 ;
+        rdfs:label "clarithromycin" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX17-assertion> = {
+    obo:PR_000006114 a obo:OBI_0000427 ;
+        rdfs:label "cyp2a6" ;
+        obo:DIDEO_00000096 obo:CHEBI_6950 .
+
+    obo:CHEBI_6950 a obo:CHEBI_24431 ;
+        rdfs:label "mirtazapine" .
+}
+
+<obo:DIDEO_XXX83-assertion> = {
+    obo:CHEBI_127342 a obo:CHEBI_24431 ;
+        rdfs:label "atomoxetine" ;
+        obo:RO_0002449 obo:PR_000006102 .
+}
+
+<obo:DIDEO_XXX62-assertion> = {
+    obo:CHEBI_10119 a obo:CHEBI_24431 ;
+        rdfs:label "ziprasidone" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX50-assertion> = {
+    obo:CHEBI_36791 a obo:CHEBI_24431 ;
+        rdfs:label "escitalopram" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX140-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_40303 .
+
+    obo:CHEBI_40303 a obo:CHEBI_24431 ;
+        rdfs:label "lovastatin" .
+}
+
+<obo:DIDEO_XXX176-assertion> = {
+    obo:PR_000006119 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c8" ;
+        obo:DIDEO_00000096 obo:CHEBI_5136 .
+
+    obo:CHEBI_5136 a obo:CHEBI_24431 ;
+        rdfs:label "fluvastatin" .
+}
+
+<obo:DIDEO_XXX100-assertion> = {
+    obo:DIDEO_XXX100-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "clarithromycin - triazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3732 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9674 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX171-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_3723 .
+
+    obo:CHEBI_3723 a obo:CHEBI_24431 ;
+        rdfs:label "citalopram" .
+}
+
+<ns1:default> = {
+    obo:DIDEO_XXX1-assertion mp:formalizes ddi:ddi-spl-annotation-claim-1 .
+
+    obo:DIDEO_XXX10-assertion a np:assertion ;
+        rdfs:label "mirtazapine substrate of cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-107 .
+
+    obo:DIDEO_XXX100-assertion mp:formalizes ddi:ddi-spl-annotation-claim-3 .
+
+    obo:DIDEO_XXX101-assertion mp:formalizes ddi:ddi-spl-annotation-claim-30 .
+
+    obo:DIDEO_XXX102-assertion mp:formalizes ddi:ddi-spl-annotation-claim-31 .
+
+    obo:DIDEO_XXX103-assertion mp:formalizes ddi:ddi-spl-annotation-claim-32 .
+
+    obo:DIDEO_XXX104-assertion mp:formalizes ddi:ddi-spl-annotation-claim-33 .
+
+    obo:DIDEO_XXX105-assertion mp:formalizes ddi:ddi-spl-annotation-claim-34 .
+
+    obo:DIDEO_XXX106-assertion mp:formalizes ddi:ddi-spl-annotation-claim-35 .
+
+    obo:DIDEO_XXX107-assertion mp:formalizes ddi:ddi-spl-annotation-claim-36 .
+
+    obo:DIDEO_XXX108-assertion mp:formalizes ddi:ddi-spl-annotation-claim-37 .
+
+    obo:DIDEO_XXX109-assertion mp:formalizes ddi:ddi-spl-annotation-claim-38 .
+
+    obo:DIDEO_XXX11-assertion a np:assertion ;
+        rdfs:label "perphenazine substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-108 .
+
+    obo:DIDEO_XXX110-assertion mp:formalizes ddi:ddi-spl-annotation-claim-39 .
+
+    obo:DIDEO_XXX111-assertion mp:formalizes ddi:ddi-spl-annotation-claim-4 .
+
+    obo:DIDEO_XXX112-assertion mp:formalizes ddi:ddi-spl-annotation-claim-40 .
+
+    obo:DIDEO_XXX113-assertion mp:formalizes ddi:ddi-spl-annotation-claim-41 .
+
+    obo:DIDEO_XXX114-assertion mp:formalizes ddi:ddi-spl-annotation-claim-42 .
+
+    obo:DIDEO_XXX115-assertion mp:formalizes ddi:ddi-spl-annotation-claim-43 .
+
+    obo:DIDEO_XXX116-assertion mp:formalizes ddi:ddi-spl-annotation-claim-44 .
+
+    obo:DIDEO_XXX117-assertion mp:formalizes ddi:ddi-spl-annotation-claim-45 .
+
+    obo:DIDEO_XXX118-assertion mp:formalizes ddi:ddi-spl-annotation-claim-46 .
+
+    obo:DIDEO_XXX119-assertion mp:formalizes ddi:ddi-spl-annotation-claim-47 .
+
+    obo:DIDEO_XXX12-assertion a np:assertion ;
+        rdfs:label "aripiprazole substrate of cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-109 .
+
+    obo:DIDEO_XXX120-assertion mp:formalizes ddi:ddi-spl-annotation-claim-48 .
+
+    obo:DIDEO_XXX121-assertion mp:formalizes ddi:ddi-spl-annotation-claim-49 .
+
+    obo:DIDEO_XXX122-assertion mp:formalizes ddi:ddi-spl-annotation-claim-5 .
+
+    obo:DIDEO_XXX123-assertion mp:formalizes ddi:ddi-spl-annotation-claim-50 .
+
+    obo:DIDEO_XXX124-assertion mp:formalizes ddi:ddi-spl-annotation-claim-51 .
+
+    obo:DIDEO_XXX125-assertion mp:formalizes ddi:ddi-spl-annotation-claim-52 .
+
+    obo:DIDEO_XXX126-assertion mp:formalizes ddi:ddi-spl-annotation-claim-53 .
+
+    obo:DIDEO_XXX127-assertion mp:formalizes ddi:ddi-spl-annotation-claim-54 .
+
+    obo:DIDEO_XXX128-assertion mp:formalizes ddi:ddi-spl-annotation-claim-55 .
+
+    obo:DIDEO_XXX129-assertion mp:formalizes ddi:ddi-spl-annotation-claim-56 .
+
+    obo:DIDEO_XXX13-assertion mp:formalizes ddi:ddi-spl-annotation-claim-11 .
+
+    obo:DIDEO_XXX130-assertion mp:formalizes ddi:ddi-spl-annotation-claim-57 .
+
+    obo:DIDEO_XXX131-assertion mp:formalizes ddi:ddi-spl-annotation-claim-58 .
+
+    obo:DIDEO_XXX132-assertion mp:formalizes ddi:ddi-spl-annotation-claim-59 .
+
+    obo:DIDEO_XXX133-assertion mp:formalizes ddi:ddi-spl-annotation-claim-6 .
+
+    obo:DIDEO_XXX134-assertion a np:assertion ;
+        rdfs:label "simvastatin substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-60 .
+
+    obo:DIDEO_XXX135-assertion a np:assertion ;
+        rdfs:label "nefazodone substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-61 .
+
+    obo:DIDEO_XXX136-assertion a np:assertion ;
+        rdfs:label "atorvastatin substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-62 .
+
+    obo:DIDEO_XXX137-assertion a np:assertion ;
+        rdfs:label "alprazolam substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-63 .
+
+    obo:DIDEO_XXX138-assertion a np:assertion ;
+        rdfs:label "duloxetine substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-64 .
+
+    obo:DIDEO_XXX139-assertion a np:assertion ;
+        rdfs:label "nefazodone substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-65 .
+
+    obo:DIDEO_XXX14-assertion a np:assertion ;
+        rdfs:label "fluvastatin substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-110 .
+
+    obo:DIDEO_XXX140-assertion a np:assertion ;
+        rdfs:label "lovastatin substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-66 .
+
+    obo:DIDEO_XXX141-assertion a np:assertion ;
+        rdfs:label "eszopiclone substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-67 .
+
+    obo:DIDEO_XXX142-assertion a np:assertion ;
+        rdfs:label "escitalopram substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-68 .
+
+    obo:DIDEO_XXX143-assertion a np:assertion ;
+        rdfs:label "clozapine substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-69 .
+
+    obo:DIDEO_XXX144-assertion mp:formalizes ddi:ddi-spl-annotation-claim-7 .
+
+    obo:DIDEO_XXX145-assertion a np:assertion ;
+        rdfs:label "voriconazole substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-70 .
+
+    obo:DIDEO_XXX146-assertion a np:assertion ;
+        rdfs:label "clozapine substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-71 .
+
+    obo:DIDEO_XXX147-assertion a np:assertion ;
+        rdfs:label "escitalopram substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-72 .
+
+    obo:DIDEO_XXX148-assertion a np:assertion ;
+        rdfs:label "rabeprazole substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-73 .
+
+    obo:DIDEO_XXX149-assertion a np:assertion ;
+        rdfs:label "risperidone substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-74 .
+
+    obo:DIDEO_XXX15-assertion a np:assertion ;
+        rdfs:label "zafirlukast substrate of cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-111 .
+
+    obo:DIDEO_XXX150-assertion a np:assertion ;
+        rdfs:label "pantoprazole substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-75 .
+
+    obo:DIDEO_XXX151-assertion a np:assertion ;
+        rdfs:label "venlafaxine substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-76 .
+
+    obo:DIDEO_XXX152-assertion a np:assertion ;
+        rdfs:label "aripiprazole substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-77 .
+
+    obo:DIDEO_XXX153-assertion a np:assertion ;
+        rdfs:label "clarithromycin substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-78 .
+
+    obo:DIDEO_XXX154-assertion a np:assertion ;
+        rdfs:label "perphenazine substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-79 .
+
+    obo:DIDEO_XXX155-assertion mp:formalizes ddi:ddi-spl-annotation-claim-8 .
+
+    obo:DIDEO_XXX156-assertion a np:assertion ;
+        rdfs:label "tamoxifen substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-80 .
+
+    obo:DIDEO_XXX157-assertion a np:assertion ;
+        rdfs:label "aripiprazole substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-81 .
+
+    obo:DIDEO_XXX158-assertion a np:assertion ;
+        rdfs:label "ziprasidone substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-82 .
+
+    obo:DIDEO_XXX159-assertion a np:assertion ;
+        rdfs:label "atorvastatin substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-83 .
+
+    obo:DIDEO_XXX16-assertion a np:assertion ;
+        rdfs:label "atorvastatin substrate of cyp1a1" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-112 .
+
+    obo:DIDEO_XXX160-assertion a np:assertion ;
+        rdfs:label "clarithromycin substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-84 .
+
+    obo:DIDEO_XXX161-assertion a np:assertion ;
+        rdfs:label "paroxetine substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-85 .
+
+    obo:DIDEO_XXX162-assertion a np:assertion ;
+        rdfs:label "thioridazine substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-86 .
+
+    obo:DIDEO_XXX163-assertion a np:assertion ;
+        rdfs:label "zaleplon substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-87 .
+
+    obo:DIDEO_XXX164-assertion a np:assertion ;
+        rdfs:label "olanzapine substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-88 .
+
+    obo:DIDEO_XXX165-assertion a np:assertion ;
+        rdfs:label "mirtazapine substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-89 .
+
+    obo:DIDEO_XXX166-assertion mp:formalizes ddi:ddi-spl-annotation-claim-9 .
+
+    obo:DIDEO_XXX167-assertion a np:assertion ;
+        rdfs:label "cinacalcet substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-90 .
+
+    obo:DIDEO_XXX168-assertion a np:assertion ;
+        rdfs:label "fluvoxamine substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-91 .
+
+    obo:DIDEO_XXX169-assertion a np:assertion ;
+        rdfs:label "fluoxetine substrate of cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-92 .
+
+    obo:DIDEO_XXX17-assertion a np:assertion ;
+        rdfs:label "mirtazapine substrate of cyp2a6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-113 .
+
+    obo:DIDEO_XXX170-assertion a np:assertion ;
+        rdfs:label "aripiprazole substrate of cyp2b6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-93 .
+
+    obo:DIDEO_XXX171-assertion a np:assertion ;
+        rdfs:label "citalopram substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-94 .
+
+    obo:DIDEO_XXX172-assertion a np:assertion ;
+        rdfs:label "celecoxib substrate of cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-95 .
+
+    obo:DIDEO_XXX173-assertion a np:assertion ;
+        rdfs:label "voriconazole substrate of cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-96 .
+
+    obo:DIDEO_XXX174-assertion a np:assertion ;
+        rdfs:label "quetiapine substrate of cyp1a2" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-97 .
+
+    obo:DIDEO_XXX175-assertion a np:assertion ;
+        rdfs:label "alprazolam substrate of cyp1a2" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-98 .
+
+    obo:DIDEO_XXX176-assertion a np:assertion ;
+        rdfs:label "fluvastatin substrate of cyp2c8" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-99 .
+
+    obo:DIDEO_XXX18-assertion a np:assertion ;
+        rdfs:label "diltiazem substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-114 .
+
+    obo:DIDEO_XXX19-assertion a np:assertion ;
+        rdfs:label "quetiapine substrate of cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-115 .
+
+    obo:DIDEO_XXX2-assertion mp:formalizes ddi:ddi-spl-annotation-claim-10 .
+
+    obo:DIDEO_XXX20-assertion a np:assertion ;
+        rdfs:label "rosuvastatin substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-116 .
+
+    obo:DIDEO_XXX21-assertion a np:assertion ;
+        rdfs:label "zolpidem substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-117 .
+
+    obo:DIDEO_XXX22-assertion a np:assertion ;
+        rdfs:label "ziprasidone substrate of cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-118 .
+
+    obo:DIDEO_XXX23-assertion a np:assertion ;
+        rdfs:label "mirtazapine substrate of cyp2e1" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-119 .
+
+    obo:DIDEO_XXX24-assertion mp:formalizes ddi:ddi-spl-annotation-claim-12 .
+
+    obo:DIDEO_XXX25-assertion a np:assertion ;
+        rdfs:label "mirtazapine inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-120 .
+
+    obo:DIDEO_XXX26-assertion a np:assertion ;
+        rdfs:label "fluconazole inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-121 .
+
+    obo:DIDEO_XXX27-assertion a np:assertion ;
+        rdfs:label "quetiapine inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-122 .
+
+    obo:DIDEO_XXX28-assertion a np:assertion ;
+        rdfs:label "zafirlukast inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-123 .
+
+    obo:DIDEO_XXX29-assertion a np:assertion ;
+        rdfs:label "duloxetine inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-124 .
+
+    obo:DIDEO_XXX3-assertion a np:assertion ;
+        rdfs:label "ziprasidone substrate of cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-100 .
+
+    obo:DIDEO_XXX30-assertion a np:assertion ;
+        rdfs:label "verapamil inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-125 .
+
+    obo:DIDEO_XXX31-assertion a np:assertion ;
+        rdfs:label "erythromycin inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-126 .
+
+    obo:DIDEO_XXX32-assertion a np:assertion ;
+        rdfs:label "montelukast inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-127 .
+
+    obo:DIDEO_XXX33-assertion a np:assertion ;
+        rdfs:label "cinacalcet inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-128 .
+
+    obo:DIDEO_XXX34-assertion a np:assertion ;
+        rdfs:label "escitalopram inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-129 .
+
+    obo:DIDEO_XXX35-assertion mp:formalizes ddi:ddi-spl-annotation-claim-13 .
+
+    obo:DIDEO_XXX36-assertion a np:assertion ;
+        rdfs:label "citalopram inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-130 .
+
+    obo:DIDEO_XXX37-assertion a np:assertion ;
+        rdfs:label "celecoxib inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-131 .
+
+    obo:DIDEO_XXX38-assertion a np:assertion ;
+        rdfs:label "duloxetine inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-132 .
+
+    obo:DIDEO_XXX39-assertion a np:assertion ;
+        rdfs:label "fluconazole inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-133 .
+
+    obo:DIDEO_XXX4-assertion a np:assertion ;
+        rdfs:label "rabeprazole substrate of cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-101 .
+
+    obo:DIDEO_XXX40-assertion a np:assertion ;
+        rdfs:label "zafirlukast inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-134 .
+
+    obo:DIDEO_XXX41-assertion a np:assertion ;
+        rdfs:label "fluvoxamine inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-135 .
+
+    obo:DIDEO_XXX42-assertion a np:assertion ;
+        rdfs:label "atazanavir inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-136 .
+
+    obo:DIDEO_XXX43-assertion a np:assertion ;
+        rdfs:label "risperidone inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-137 .
+
+    obo:DIDEO_XXX44-assertion a np:assertion ;
+        rdfs:label "perphenazine inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-138 .
+
+    obo:DIDEO_XXX45-assertion a np:assertion ;
+        rdfs:label "eszopiclone inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-139 .
+
+    obo:DIDEO_XXX46-assertion mp:formalizes ddi:ddi-spl-annotation-claim-14 .
+
+    obo:DIDEO_XXX47-assertion a np:assertion ;
+        rdfs:label "cinacalcet inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-140 .
+
+    obo:DIDEO_XXX48-assertion a np:assertion ;
+        rdfs:label "venlafaxine inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-141 .
+
+    obo:DIDEO_XXX49-assertion a np:assertion ;
+        rdfs:label "celecoxib inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-142 .
+
+    obo:DIDEO_XXX5-assertion a np:assertion ;
+        rdfs:label "escitalopram substrate of cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-102 .
+
+    obo:DIDEO_XXX50-assertion a np:assertion ;
+        rdfs:label "escitalopram inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-143 .
+
+    obo:DIDEO_XXX51-assertion a np:assertion ;
+        rdfs:label "topiramate inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-144 .
+
+    obo:DIDEO_XXX52-assertion a np:assertion ;
+        rdfs:label "diltiazem inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-145 .
+
+    obo:DIDEO_XXX53-assertion a np:assertion ;
+        rdfs:label "citalopram inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-146 .
+
+    obo:DIDEO_XXX54-assertion a np:assertion ;
+        rdfs:label "montelukast inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-147 .
+
+    obo:DIDEO_XXX55-assertion a np:assertion ;
+        rdfs:label "clozapine inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-148 .
+
+    obo:DIDEO_XXX56-assertion a np:assertion ;
+        rdfs:label "amiodarone inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-149 .
+
+    obo:DIDEO_XXX57-assertion mp:formalizes ddi:ddi-spl-annotation-claim-15 .
+
+    obo:DIDEO_XXX58-assertion a np:assertion ;
+        rdfs:label "celecoxib inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-150 .
+
+    obo:DIDEO_XXX59-assertion a np:assertion ;
+        rdfs:label "voriconazole inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-151 .
+
+    obo:DIDEO_XXX6-assertion a np:assertion ;
+        rdfs:label "sertraline substrate of cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-103 .
+
+    obo:DIDEO_XXX60-assertion a np:assertion ;
+        rdfs:label "rosiglitazone inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-152 .
+
+    obo:DIDEO_XXX61-assertion a np:assertion ;
+        rdfs:label "indinavir inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-153 .
+
+    obo:DIDEO_XXX62-assertion a np:assertion ;
+        rdfs:label "ziprasidone inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-154 .
+
+    obo:DIDEO_XXX63-assertion a np:assertion ;
+        rdfs:label "atazanavir inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-155 .
+
+    obo:DIDEO_XXX64-assertion a np:assertion ;
+        rdfs:label "quetiapine inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-156 .
+
+    obo:DIDEO_XXX65-assertion a np:assertion ;
+        rdfs:label "aripiprazole inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-157 .
+
+    obo:DIDEO_XXX66-assertion a np:assertion ;
+        rdfs:label "haloperidol inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-158 .
+
+    obo:DIDEO_XXX67-assertion a np:assertion ;
+        rdfs:label "voriconazole inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-159 .
+
+    obo:DIDEO_XXX68-assertion mp:formalizes ddi:ddi-spl-annotation-claim-16 .
+
+    obo:DIDEO_XXX69-assertion a np:assertion ;
+        rdfs:label "duloxetine inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-160 .
+
+    obo:DIDEO_XXX7-assertion a np:assertion ;
+        rdfs:label "citalopram substrate of cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-104 .
+
+    obo:DIDEO_XXX70-assertion a np:assertion ;
+        rdfs:label "ketoconazole inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-161 .
+
+    obo:DIDEO_XXX71-assertion a np:assertion ;
+        rdfs:label "amiodarone inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-162 .
+
+    obo:DIDEO_XXX72-assertion a np:assertion ;
+        rdfs:label "clarithromycin inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-163 .
+
+    obo:DIDEO_XXX73-assertion a np:assertion ;
+        rdfs:label "ziprasidone inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-164 .
+
+    obo:DIDEO_XXX74-assertion a np:assertion ;
+        rdfs:label "atazanavir inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-165 .
+
+    obo:DIDEO_XXX75-assertion a np:assertion ;
+        rdfs:label "venlafaxine inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-166 .
+
+    obo:DIDEO_XXX76-assertion a np:assertion ;
+        rdfs:label "quetiapine inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-167 .
+
+    obo:DIDEO_XXX77-assertion a np:assertion ;
+        rdfs:label "atorvastatin inhibits cyp3a4" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-168 .
+
+    obo:DIDEO_XXX78-assertion a np:assertion ;
+        rdfs:label "eszopiclone inhibits cyp1a2" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-169 .
+
+    obo:DIDEO_XXX79-assertion mp:formalizes ddi:ddi-spl-annotation-claim-17 .
+
+    obo:DIDEO_XXX8-assertion a np:assertion ;
+        rdfs:label "atorvastatin substrate of cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-105 .
+
+    obo:DIDEO_XXX80-assertion a np:assertion ;
+        rdfs:label "thioridazine inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-170 .
+
+    obo:DIDEO_XXX81-assertion a np:assertion ;
+        rdfs:label "chlorpromazine inhibits cyp2c19" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-171 .
+
+    obo:DIDEO_XXX82-assertion a np:assertion ;
+        rdfs:label "lansoprazole inhibits cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-172 .
+
+    obo:DIDEO_XXX83-assertion a np:assertion ;
+        rdfs:label "atomoxetine inhibits cyp1a2" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-173 .
+
+    obo:DIDEO_XXX84-assertion a np:assertion ;
+        rdfs:label "rosiglitazone inhibits cyp2c9" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-174 .
+
+    obo:DIDEO_XXX85-assertion a np:assertion ;
+        rdfs:label "verapamil inhibits cyp1a2" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-175 .
+
+    obo:DIDEO_XXX86-assertion a np:assertion ;
+        rdfs:label "pantoprazole inhibits cyp2d6" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-176 .
+
+    obo:DIDEO_XXX87-assertion mp:formalizes ddi:ddi-spl-annotation-claim-18 .
+
+    obo:DIDEO_XXX88-assertion mp:formalizes ddi:ddi-spl-annotation-claim-19 .
+
+    obo:DIDEO_XXX89-assertion mp:formalizes ddi:ddi-spl-annotation-claim-2 .
+
+    obo:DIDEO_XXX9-assertion a np:assertion ;
+        rdfs:label "quetiapine substrate of cyp2e1" ;
+        mp:formalizes ddi:ddi-spl-annotation-claim-106 .
+
+    obo:DIDEO_XXX90-assertion mp:formalizes ddi:ddi-spl-annotation-claim-20 .
+
+    obo:DIDEO_XXX91-assertion mp:formalizes ddi:ddi-spl-annotation-claim-21 .
+
+    obo:DIDEO_XXX92-assertion mp:formalizes ddi:ddi-spl-annotation-claim-22 .
+
+    obo:DIDEO_XXX93-assertion mp:formalizes ddi:ddi-spl-annotation-claim-23 .
+
+    obo:DIDEO_XXX94-assertion mp:formalizes ddi:ddi-spl-annotation-claim-24 .
+
+    obo:DIDEO_XXX95-assertion mp:formalizes ddi:ddi-spl-annotation-claim-25 .
+
+    obo:DIDEO_XXX96-assertion mp:formalizes ddi:ddi-spl-annotation-claim-26 .
+
+    obo:DIDEO_XXX97-assertion mp:formalizes ddi:ddi-spl-annotation-claim-27 .
+
+    obo:DIDEO_XXX98-assertion mp:formalizes ddi:ddi-spl-annotation-claim-28 .
+
+    obo:DIDEO_XXX99-assertion mp:formalizes ddi:ddi-spl-annotation-claim-29 .
+
+    ddi:ddi-spl-annotation-claim-1 mp:formalizedAs obo:DIDEO_XXX1-assertion .
+
+    ddi:ddi-spl-annotation-claim-10 mp:formalizedAs obo:DIDEO_XXX2-assertion .
+
+    ddi:ddi-spl-annotation-claim-100 mp:formalizedAs obo:DIDEO_XXX3-assertion .
+
+    ddi:ddi-spl-annotation-claim-101 mp:formalizedAs obo:DIDEO_XXX4-assertion .
+
+    ddi:ddi-spl-annotation-claim-102 mp:formalizedAs obo:DIDEO_XXX5-assertion .
+
+    ddi:ddi-spl-annotation-claim-103 mp:formalizedAs obo:DIDEO_XXX6-assertion .
+
+    ddi:ddi-spl-annotation-claim-104 mp:formalizedAs obo:DIDEO_XXX7-assertion .
+
+    ddi:ddi-spl-annotation-claim-105 mp:formalizedAs obo:DIDEO_XXX8-assertion .
+
+    ddi:ddi-spl-annotation-claim-106 mp:formalizedAs obo:DIDEO_XXX9-assertion .
+
+    ddi:ddi-spl-annotation-claim-107 mp:formalizedAs obo:DIDEO_XXX10-assertion .
+
+    ddi:ddi-spl-annotation-claim-108 mp:formalizedAs obo:DIDEO_XXX11-assertion .
+
+    ddi:ddi-spl-annotation-claim-109 mp:formalizedAs obo:DIDEO_XXX12-assertion .
+
+    ddi:ddi-spl-annotation-claim-11 mp:formalizedAs obo:DIDEO_XXX13-assertion .
+
+    ddi:ddi-spl-annotation-claim-110 mp:formalizedAs obo:DIDEO_XXX14-assertion .
+
+    ddi:ddi-spl-annotation-claim-111 mp:formalizedAs obo:DIDEO_XXX15-assertion .
+
+    ddi:ddi-spl-annotation-claim-112 mp:formalizedAs obo:DIDEO_XXX16-assertion .
+
+    ddi:ddi-spl-annotation-claim-113 mp:formalizedAs obo:DIDEO_XXX17-assertion .
+
+    ddi:ddi-spl-annotation-claim-114 mp:formalizedAs obo:DIDEO_XXX18-assertion .
+
+    ddi:ddi-spl-annotation-claim-115 mp:formalizedAs obo:DIDEO_XXX19-assertion .
+
+    ddi:ddi-spl-annotation-claim-116 mp:formalizedAs obo:DIDEO_XXX20-assertion .
+
+    ddi:ddi-spl-annotation-claim-117 mp:formalizedAs obo:DIDEO_XXX21-assertion .
+
+    ddi:ddi-spl-annotation-claim-118 mp:formalizedAs obo:DIDEO_XXX22-assertion .
+
+    ddi:ddi-spl-annotation-claim-119 mp:formalizedAs obo:DIDEO_XXX23-assertion .
+
+    ddi:ddi-spl-annotation-claim-12 mp:formalizedAs obo:DIDEO_XXX24-assertion .
+
+    ddi:ddi-spl-annotation-claim-120 mp:formalizedAs obo:DIDEO_XXX25-assertion .
+
+    ddi:ddi-spl-annotation-claim-121 mp:formalizedAs obo:DIDEO_XXX26-assertion .
+
+    ddi:ddi-spl-annotation-claim-122 mp:formalizedAs obo:DIDEO_XXX27-assertion .
+
+    ddi:ddi-spl-annotation-claim-123 mp:formalizedAs obo:DIDEO_XXX28-assertion .
+
+    ddi:ddi-spl-annotation-claim-124 mp:formalizedAs obo:DIDEO_XXX29-assertion .
+
+    ddi:ddi-spl-annotation-claim-125 mp:formalizedAs obo:DIDEO_XXX30-assertion .
+
+    ddi:ddi-spl-annotation-claim-126 mp:formalizedAs obo:DIDEO_XXX31-assertion .
+
+    ddi:ddi-spl-annotation-claim-127 mp:formalizedAs obo:DIDEO_XXX32-assertion .
+
+    ddi:ddi-spl-annotation-claim-128 mp:formalizedAs obo:DIDEO_XXX33-assertion .
+
+    ddi:ddi-spl-annotation-claim-129 mp:formalizedAs obo:DIDEO_XXX34-assertion .
+
+    ddi:ddi-spl-annotation-claim-13 mp:formalizedAs obo:DIDEO_XXX35-assertion .
+
+    ddi:ddi-spl-annotation-claim-130 mp:formalizedAs obo:DIDEO_XXX36-assertion .
+
+    ddi:ddi-spl-annotation-claim-131 mp:formalizedAs obo:DIDEO_XXX37-assertion .
+
+    ddi:ddi-spl-annotation-claim-132 mp:formalizedAs obo:DIDEO_XXX38-assertion .
+
+    ddi:ddi-spl-annotation-claim-133 mp:formalizedAs obo:DIDEO_XXX39-assertion .
+
+    ddi:ddi-spl-annotation-claim-134 mp:formalizedAs obo:DIDEO_XXX40-assertion .
+
+    ddi:ddi-spl-annotation-claim-135 mp:formalizedAs obo:DIDEO_XXX41-assertion .
+
+    ddi:ddi-spl-annotation-claim-136 mp:formalizedAs obo:DIDEO_XXX42-assertion .
+
+    ddi:ddi-spl-annotation-claim-137 mp:formalizedAs obo:DIDEO_XXX43-assertion .
+
+    ddi:ddi-spl-annotation-claim-138 mp:formalizedAs obo:DIDEO_XXX44-assertion .
+
+    ddi:ddi-spl-annotation-claim-139 mp:formalizedAs obo:DIDEO_XXX45-assertion .
+
+    ddi:ddi-spl-annotation-claim-14 mp:formalizedAs obo:DIDEO_XXX46-assertion .
+
+    ddi:ddi-spl-annotation-claim-140 mp:formalizedAs obo:DIDEO_XXX47-assertion .
+
+    ddi:ddi-spl-annotation-claim-141 mp:formalizedAs obo:DIDEO_XXX48-assertion .
+
+    ddi:ddi-spl-annotation-claim-142 mp:formalizedAs obo:DIDEO_XXX49-assertion .
+
+    ddi:ddi-spl-annotation-claim-143 mp:formalizedAs obo:DIDEO_XXX50-assertion .
+
+    ddi:ddi-spl-annotation-claim-144 mp:formalizedAs obo:DIDEO_XXX51-assertion .
+
+    ddi:ddi-spl-annotation-claim-145 mp:formalizedAs obo:DIDEO_XXX52-assertion .
+
+    ddi:ddi-spl-annotation-claim-146 mp:formalizedAs obo:DIDEO_XXX53-assertion .
+
+    ddi:ddi-spl-annotation-claim-147 mp:formalizedAs obo:DIDEO_XXX54-assertion .
+
+    ddi:ddi-spl-annotation-claim-148 mp:formalizedAs obo:DIDEO_XXX55-assertion .
+
+    ddi:ddi-spl-annotation-claim-149 mp:formalizedAs obo:DIDEO_XXX56-assertion .
+
+    ddi:ddi-spl-annotation-claim-15 mp:formalizedAs obo:DIDEO_XXX57-assertion .
+
+    ddi:ddi-spl-annotation-claim-150 mp:formalizedAs obo:DIDEO_XXX58-assertion .
+
+    ddi:ddi-spl-annotation-claim-151 mp:formalizedAs obo:DIDEO_XXX59-assertion .
+
+    ddi:ddi-spl-annotation-claim-152 mp:formalizedAs obo:DIDEO_XXX60-assertion .
+
+    ddi:ddi-spl-annotation-claim-153 mp:formalizedAs obo:DIDEO_XXX61-assertion .
+
+    ddi:ddi-spl-annotation-claim-154 mp:formalizedAs obo:DIDEO_XXX62-assertion .
+
+    ddi:ddi-spl-annotation-claim-155 mp:formalizedAs obo:DIDEO_XXX63-assertion .
+
+    ddi:ddi-spl-annotation-claim-156 mp:formalizedAs obo:DIDEO_XXX64-assertion .
+
+    ddi:ddi-spl-annotation-claim-157 mp:formalizedAs obo:DIDEO_XXX65-assertion .
+
+    ddi:ddi-spl-annotation-claim-158 mp:formalizedAs obo:DIDEO_XXX66-assertion .
+
+    ddi:ddi-spl-annotation-claim-159 mp:formalizedAs obo:DIDEO_XXX67-assertion .
+
+    ddi:ddi-spl-annotation-claim-16 mp:formalizedAs obo:DIDEO_XXX68-assertion .
+
+    ddi:ddi-spl-annotation-claim-160 mp:formalizedAs obo:DIDEO_XXX69-assertion .
+
+    ddi:ddi-spl-annotation-claim-161 mp:formalizedAs obo:DIDEO_XXX70-assertion .
+
+    ddi:ddi-spl-annotation-claim-162 mp:formalizedAs obo:DIDEO_XXX71-assertion .
+
+    ddi:ddi-spl-annotation-claim-163 mp:formalizedAs obo:DIDEO_XXX72-assertion .
+
+    ddi:ddi-spl-annotation-claim-164 mp:formalizedAs obo:DIDEO_XXX73-assertion .
+
+    ddi:ddi-spl-annotation-claim-165 mp:formalizedAs obo:DIDEO_XXX74-assertion .
+
+    ddi:ddi-spl-annotation-claim-166 mp:formalizedAs obo:DIDEO_XXX75-assertion .
+
+    ddi:ddi-spl-annotation-claim-167 mp:formalizedAs obo:DIDEO_XXX76-assertion .
+
+    ddi:ddi-spl-annotation-claim-168 mp:formalizedAs obo:DIDEO_XXX77-assertion .
+
+    ddi:ddi-spl-annotation-claim-169 mp:formalizedAs obo:DIDEO_XXX78-assertion .
+
+    ddi:ddi-spl-annotation-claim-17 mp:formalizedAs obo:DIDEO_XXX79-assertion .
+
+    ddi:ddi-spl-annotation-claim-170 mp:formalizedAs obo:DIDEO_XXX80-assertion .
+
+    ddi:ddi-spl-annotation-claim-171 mp:formalizedAs obo:DIDEO_XXX81-assertion .
+
+    ddi:ddi-spl-annotation-claim-172 mp:formalizedAs obo:DIDEO_XXX82-assertion .
+
+    ddi:ddi-spl-annotation-claim-173 mp:formalizedAs obo:DIDEO_XXX83-assertion .
+
+    ddi:ddi-spl-annotation-claim-174 mp:formalizedAs obo:DIDEO_XXX84-assertion .
+
+    ddi:ddi-spl-annotation-claim-175 mp:formalizedAs obo:DIDEO_XXX85-assertion .
+
+    ddi:ddi-spl-annotation-claim-176 mp:formalizedAs obo:DIDEO_XXX86-assertion .
+
+    ddi:ddi-spl-annotation-claim-18 mp:formalizedAs obo:DIDEO_XXX87-assertion .
+
+    ddi:ddi-spl-annotation-claim-19 mp:formalizedAs obo:DIDEO_XXX88-assertion .
+
+    ddi:ddi-spl-annotation-claim-2 mp:formalizedAs obo:DIDEO_XXX89-assertion .
+
+    ddi:ddi-spl-annotation-claim-20 mp:formalizedAs obo:DIDEO_XXX90-assertion .
+
+    ddi:ddi-spl-annotation-claim-21 mp:formalizedAs obo:DIDEO_XXX91-assertion .
+
+    ddi:ddi-spl-annotation-claim-22 mp:formalizedAs obo:DIDEO_XXX92-assertion .
+
+    ddi:ddi-spl-annotation-claim-23 mp:formalizedAs obo:DIDEO_XXX93-assertion .
+
+    ddi:ddi-spl-annotation-claim-24 mp:formalizedAs obo:DIDEO_XXX94-assertion .
+
+    ddi:ddi-spl-annotation-claim-25 mp:formalizedAs obo:DIDEO_XXX95-assertion .
+
+    ddi:ddi-spl-annotation-claim-26 mp:formalizedAs obo:DIDEO_XXX96-assertion .
+
+    ddi:ddi-spl-annotation-claim-27 mp:formalizedAs obo:DIDEO_XXX97-assertion .
+
+    ddi:ddi-spl-annotation-claim-28 mp:formalizedAs obo:DIDEO_XXX98-assertion .
+
+    ddi:ddi-spl-annotation-claim-29 mp:formalizedAs obo:DIDEO_XXX99-assertion .
+
+    ddi:ddi-spl-annotation-claim-3 mp:formalizedAs obo:DIDEO_XXX100-assertion .
+
+    ddi:ddi-spl-annotation-claim-30 mp:formalizedAs obo:DIDEO_XXX101-assertion .
+
+    ddi:ddi-spl-annotation-claim-31 mp:formalizedAs obo:DIDEO_XXX102-assertion .
+
+    ddi:ddi-spl-annotation-claim-32 mp:formalizedAs obo:DIDEO_XXX103-assertion .
+
+    ddi:ddi-spl-annotation-claim-33 mp:formalizedAs obo:DIDEO_XXX104-assertion .
+
+    ddi:ddi-spl-annotation-claim-34 mp:formalizedAs obo:DIDEO_XXX105-assertion .
+
+    ddi:ddi-spl-annotation-claim-35 mp:formalizedAs obo:DIDEO_XXX106-assertion .
+
+    ddi:ddi-spl-annotation-claim-36 mp:formalizedAs obo:DIDEO_XXX107-assertion .
+
+    ddi:ddi-spl-annotation-claim-37 mp:formalizedAs obo:DIDEO_XXX108-assertion .
+
+    ddi:ddi-spl-annotation-claim-38 mp:formalizedAs obo:DIDEO_XXX109-assertion .
+
+    ddi:ddi-spl-annotation-claim-39 mp:formalizedAs obo:DIDEO_XXX110-assertion .
+
+    ddi:ddi-spl-annotation-claim-4 mp:formalizedAs obo:DIDEO_XXX111-assertion .
+
+    ddi:ddi-spl-annotation-claim-40 mp:formalizedAs obo:DIDEO_XXX112-assertion .
+
+    ddi:ddi-spl-annotation-claim-41 mp:formalizedAs obo:DIDEO_XXX113-assertion .
+
+    ddi:ddi-spl-annotation-claim-42 mp:formalizedAs obo:DIDEO_XXX114-assertion .
+
+    ddi:ddi-spl-annotation-claim-43 mp:formalizedAs obo:DIDEO_XXX115-assertion .
+
+    ddi:ddi-spl-annotation-claim-44 mp:formalizedAs obo:DIDEO_XXX116-assertion .
+
+    ddi:ddi-spl-annotation-claim-45 mp:formalizedAs obo:DIDEO_XXX117-assertion .
+
+    ddi:ddi-spl-annotation-claim-46 mp:formalizedAs obo:DIDEO_XXX118-assertion .
+
+    ddi:ddi-spl-annotation-claim-47 mp:formalizedAs obo:DIDEO_XXX119-assertion .
+
+    ddi:ddi-spl-annotation-claim-48 mp:formalizedAs obo:DIDEO_XXX120-assertion .
+
+    ddi:ddi-spl-annotation-claim-49 mp:formalizedAs obo:DIDEO_XXX121-assertion .
+
+    ddi:ddi-spl-annotation-claim-5 mp:formalizedAs obo:DIDEO_XXX122-assertion .
+
+    ddi:ddi-spl-annotation-claim-50 mp:formalizedAs obo:DIDEO_XXX123-assertion .
+
+    ddi:ddi-spl-annotation-claim-51 mp:formalizedAs obo:DIDEO_XXX124-assertion .
+
+    ddi:ddi-spl-annotation-claim-52 mp:formalizedAs obo:DIDEO_XXX125-assertion .
+
+    ddi:ddi-spl-annotation-claim-53 mp:formalizedAs obo:DIDEO_XXX126-assertion .
+
+    ddi:ddi-spl-annotation-claim-54 mp:formalizedAs obo:DIDEO_XXX127-assertion .
+
+    ddi:ddi-spl-annotation-claim-55 mp:formalizedAs obo:DIDEO_XXX128-assertion .
+
+    ddi:ddi-spl-annotation-claim-56 mp:formalizedAs obo:DIDEO_XXX129-assertion .
+
+    ddi:ddi-spl-annotation-claim-57 mp:formalizedAs obo:DIDEO_XXX130-assertion .
+
+    ddi:ddi-spl-annotation-claim-58 mp:formalizedAs obo:DIDEO_XXX131-assertion .
+
+    ddi:ddi-spl-annotation-claim-59 mp:formalizedAs obo:DIDEO_XXX132-assertion .
+
+    ddi:ddi-spl-annotation-claim-6 mp:formalizedAs obo:DIDEO_XXX133-assertion .
+
+    ddi:ddi-spl-annotation-claim-60 mp:formalizedAs obo:DIDEO_XXX134-assertion .
+
+    ddi:ddi-spl-annotation-claim-61 mp:formalizedAs obo:DIDEO_XXX135-assertion .
+
+    ddi:ddi-spl-annotation-claim-62 mp:formalizedAs obo:DIDEO_XXX136-assertion .
+
+    ddi:ddi-spl-annotation-claim-63 mp:formalizedAs obo:DIDEO_XXX137-assertion .
+
+    ddi:ddi-spl-annotation-claim-64 mp:formalizedAs obo:DIDEO_XXX138-assertion .
+
+    ddi:ddi-spl-annotation-claim-65 mp:formalizedAs obo:DIDEO_XXX139-assertion .
+
+    ddi:ddi-spl-annotation-claim-66 mp:formalizedAs obo:DIDEO_XXX140-assertion .
+
+    ddi:ddi-spl-annotation-claim-67 mp:formalizedAs obo:DIDEO_XXX141-assertion .
+
+    ddi:ddi-spl-annotation-claim-68 mp:formalizedAs obo:DIDEO_XXX142-assertion .
+
+    ddi:ddi-spl-annotation-claim-69 mp:formalizedAs obo:DIDEO_XXX143-assertion .
+
+    ddi:ddi-spl-annotation-claim-7 mp:formalizedAs obo:DIDEO_XXX144-assertion .
+
+    ddi:ddi-spl-annotation-claim-70 mp:formalizedAs obo:DIDEO_XXX145-assertion .
+
+    ddi:ddi-spl-annotation-claim-71 mp:formalizedAs obo:DIDEO_XXX146-assertion .
+
+    ddi:ddi-spl-annotation-claim-72 mp:formalizedAs obo:DIDEO_XXX147-assertion .
+
+    ddi:ddi-spl-annotation-claim-73 mp:formalizedAs obo:DIDEO_XXX148-assertion .
+
+    ddi:ddi-spl-annotation-claim-74 mp:formalizedAs obo:DIDEO_XXX149-assertion .
+
+    ddi:ddi-spl-annotation-claim-75 mp:formalizedAs obo:DIDEO_XXX150-assertion .
+
+    ddi:ddi-spl-annotation-claim-76 mp:formalizedAs obo:DIDEO_XXX151-assertion .
+
+    ddi:ddi-spl-annotation-claim-77 mp:formalizedAs obo:DIDEO_XXX152-assertion .
+
+    ddi:ddi-spl-annotation-claim-78 mp:formalizedAs obo:DIDEO_XXX153-assertion .
+
+    ddi:ddi-spl-annotation-claim-79 mp:formalizedAs obo:DIDEO_XXX154-assertion .
+
+    ddi:ddi-spl-annotation-claim-8 mp:formalizedAs obo:DIDEO_XXX155-assertion .
+
+    ddi:ddi-spl-annotation-claim-80 mp:formalizedAs obo:DIDEO_XXX156-assertion .
+
+    ddi:ddi-spl-annotation-claim-81 mp:formalizedAs obo:DIDEO_XXX157-assertion .
+
+    ddi:ddi-spl-annotation-claim-82 mp:formalizedAs obo:DIDEO_XXX158-assertion .
+
+    ddi:ddi-spl-annotation-claim-83 mp:formalizedAs obo:DIDEO_XXX159-assertion .
+
+    ddi:ddi-spl-annotation-claim-84 mp:formalizedAs obo:DIDEO_XXX160-assertion .
+
+    ddi:ddi-spl-annotation-claim-85 mp:formalizedAs obo:DIDEO_XXX161-assertion .
+
+    ddi:ddi-spl-annotation-claim-86 mp:formalizedAs obo:DIDEO_XXX162-assertion .
+
+    ddi:ddi-spl-annotation-claim-87 mp:formalizedAs obo:DIDEO_XXX163-assertion .
+
+    ddi:ddi-spl-annotation-claim-88 mp:formalizedAs obo:DIDEO_XXX164-assertion .
+
+    ddi:ddi-spl-annotation-claim-89 mp:formalizedAs obo:DIDEO_XXX165-assertion .
+
+    ddi:ddi-spl-annotation-claim-9 mp:formalizedAs obo:DIDEO_XXX166-assertion .
+
+    ddi:ddi-spl-annotation-claim-90 mp:formalizedAs obo:DIDEO_XXX167-assertion .
+
+    ddi:ddi-spl-annotation-claim-91 mp:formalizedAs obo:DIDEO_XXX168-assertion .
+
+    ddi:ddi-spl-annotation-claim-92 mp:formalizedAs obo:DIDEO_XXX169-assertion .
+
+    ddi:ddi-spl-annotation-claim-93 mp:formalizedAs obo:DIDEO_XXX170-assertion .
+
+    ddi:ddi-spl-annotation-claim-94 mp:formalizedAs obo:DIDEO_XXX171-assertion .
+
+    ddi:ddi-spl-annotation-claim-95 mp:formalizedAs obo:DIDEO_XXX172-assertion .
+
+    ddi:ddi-spl-annotation-claim-96 mp:formalizedAs obo:DIDEO_XXX173-assertion .
+
+    ddi:ddi-spl-annotation-claim-97 mp:formalizedAs obo:DIDEO_XXX174-assertion .
+
+    ddi:ddi-spl-annotation-claim-98 mp:formalizedAs obo:DIDEO_XXX175-assertion .
+
+    ddi:ddi-spl-annotation-claim-99 mp:formalizedAs obo:DIDEO_XXX176-assertion .
+}
+
+<obo:DIDEO_XXX134-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_9150 .
+
+    obo:CHEBI_9150 a obo:CHEBI_24431 ;
+        rdfs:label "simvastatin" .
+}
+
+<obo:DIDEO_XXX10-assertion> = {
+    obo:PR_000006118 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c19" ;
+        obo:DIDEO_00000096 obo:CHEBI_6950 .
+
+    obo:CHEBI_6950 a obo:CHEBI_24431 ;
+        rdfs:label "mirtazapine" .
+}
+
+<obo:DIDEO_XXX152-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_31236 .
+
+    obo:CHEBI_31236 a obo:CHEBI_24431 ;
+        rdfs:label "aripiprazole" .
+}
+
+<obo:DIDEO_XXX160-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_3732 .
+
+    obo:CHEBI_3732 a obo:CHEBI_24431 ;
+        rdfs:label "clarithromycin" .
+}
+
+<obo:DIDEO_XXX104-assertion> = {
+    obo:DIDEO_XXX104-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "cimetidine - mirtazapine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3699 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6950 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX18-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_101278 .
+
+    obo:CHEBI_101278 a obo:CHEBI_24431 ;
+        rdfs:label "diltiazem" .
+}
+
+<obo:DIDEO_XXX95-assertion> = {
+    obo:DIDEO_XXX95-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "cimetidine - ziprasidone potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3699 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_10119 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX66-assertion> = {
+    obo:CHEBI_5613 a obo:CHEBI_24431 ;
+        rdfs:label "haloperidol" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX116-assertion> = {
+    obo:DIDEO_XXX116-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "itraconazole - alprazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6076 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_2611 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX149-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_8871 .
+
+    obo:CHEBI_8871 a obo:CHEBI_24431 ;
+        rdfs:label "risperidone" .
+}
+
+<obo:DIDEO_XXX136-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_2910 .
+
+    obo:CHEBI_2910 a obo:CHEBI_24431 ;
+        rdfs:label "atorvastatin" .
+}
+
+<obo:DIDEO_XXX35-assertion> = {
+    obo:DIDEO_XXX35-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "itraconazole - atorvastatin potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6076 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_2910 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX153-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_3732 .
+
+    obo:CHEBI_3732 a obo:CHEBI_24431 ;
+        rdfs:label "clarithromycin" .
+}
+
+<obo:DIDEO_XXX147-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_36791 .
+
+    obo:CHEBI_36791 a obo:CHEBI_24431 ;
+        rdfs:label "escitalopram" .
+}
+
+<obo:DIDEO_XXX57-assertion> = {
+    obo:DIDEO_XXX57-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "nefazodone - triazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_7494 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9674 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX84-assertion> = {
+    obo:CHEBI_50122 a obo:CHEBI_24431 ;
+        rdfs:label "rosiglitazone" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX115-assertion> = {
+    obo:DIDEO_XXX115-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "itraconazole - rosuvastatin potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6076 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_38545 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX3-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_10119 .
+
+    obo:CHEBI_10119 a obo:CHEBI_24431 ;
+        rdfs:label "ziprasidone" .
+}
+
+<obo:DIDEO_XXX117-assertion> = {
+    obo:DIDEO_XXX117-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "cimetidine - venlafaxine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3699 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9943 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX31-assertion> = {
+    obo:CHEBI_48923 a obo:CHEBI_24431 ;
+        rdfs:label "erythromycin" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX8-assertion> = {
+    obo:PR_000006120 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c9" ;
+        obo:DIDEO_00000096 obo:CHEBI_2910 .
+
+    obo:CHEBI_2910 a obo:CHEBI_24431 ;
+        rdfs:label "atorvastatin" .
+}
+
+<obo:DIDEO_XXX46-assertion> = {
+    obo:DIDEO_XXX46-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "cimetidine - citalopram potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3699 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3723 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX78-assertion> = {
+    obo:CHEBI_53760 a obo:CHEBI_24431 ;
+        rdfs:label "eszopiclone" ;
+        obo:RO_0002449 obo:PR_000006102 .
+}
+
+<obo:DIDEO_XXX167-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_48390 .
+
+    obo:CHEBI_48390 a obo:CHEBI_24431 ;
+        rdfs:label "cinacalcet" .
+}
+
+<obo:DIDEO_XXX172-assertion> = {
+    obo:PR_000006120 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c9" ;
+        obo:DIDEO_00000096 obo:CHEBI_3520 .
+
+    obo:CHEBI_3520 a obo:CHEBI_24431 ;
+        rdfs:label "celecoxib" .
+}
+
+<obo:DIDEO_XXX170-assertion> = {
+    obo:PR_000006116 a obo:OBI_0000427 ;
+        rdfs:label "cyp2b6" ;
+        obo:DIDEO_00000096 obo:CHEBI_31236 .
+
+    obo:CHEBI_31236 a obo:CHEBI_24431 ;
+        rdfs:label "aripiprazole" .
+}
+
+<obo:DIDEO_XXX93-assertion> = {
+    obo:DIDEO_XXX93-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluconazole - fluvastatin potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_46081 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5136 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX68-assertion> = {
+    obo:DIDEO_XXX68-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "cimetidine - escitalopram potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3699 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_36791 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX107-assertion> = {
+    obo:DIDEO_XXX107-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluvoxamine - mexiletine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5138 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6916 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX112-assertion> = {
+    obo:DIDEO_XXX112-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluvoxamine - clozapine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5138 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3766 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX108-assertion> = {
+    obo:DIDEO_XXX108-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluvoxamine - omeprazole potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5138 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_7772 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX123-assertion> = {
+    obo:DIDEO_XXX123-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "erythromycin - simvastatin potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_48923 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9150 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX22-assertion> = {
+    obo:PR_000006118 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c19" ;
+        obo:DIDEO_00000096 obo:CHEBI_10119 .
+
+    obo:CHEBI_10119 a obo:CHEBI_24431 ;
+        rdfs:label "ziprasidone" .
+}
+
+<obo:DIDEO_XXX7-assertion> = {
+    obo:PR_000006118 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c19" ;
+        obo:DIDEO_00000096 obo:CHEBI_3723 .
+
+    obo:CHEBI_3723 a obo:CHEBI_24431 ;
+        rdfs:label "citalopram" .
+}
+
+<obo:DIDEO_XXX90-assertion> = {
+    obo:DIDEO_XXX90-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "venlafaxine - haloperidol potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9943 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5613 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX73-assertion> = {
+    obo:CHEBI_10119 a obo:CHEBI_24431 ;
+        rdfs:label "ziprasidone" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX14-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_5136 .
+
+    obo:CHEBI_5136 a obo:CHEBI_24431 ;
+        rdfs:label "fluvastatin" .
+}
+
+<obo:DIDEO_XXX41-assertion> = {
+    obo:CHEBI_5138 a obo:CHEBI_24431 ;
+        rdfs:label "fluvoxamine" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX9-assertion> = {
+    obo:PR_000006122 a obo:OBI_0000427 ;
+        rdfs:label "cyp2e1" ;
+        obo:DIDEO_00000096 obo:CHEBI_8707 .
+
+    obo:CHEBI_8707 a obo:CHEBI_24431 ;
+        rdfs:label "quetiapine" .
+}
+
+<obo:DIDEO_XXX126-assertion> = {
+    obo:DIDEO_XXX126-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluvoxamine - theophylline potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5138 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_28177 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX128-assertion> = {
+    obo:DIDEO_XXX128-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "diphenhydramine - venlafaxine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_4636 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9943 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX150-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_7915 .
+
+    obo:CHEBI_7915 a obo:CHEBI_24431 ;
+        rdfs:label "pantoprazole" .
+}
+
+<obo:DIDEO_XXX157-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_31236 .
+
+    obo:CHEBI_31236 a obo:CHEBI_24431 ;
+        rdfs:label "aripiprazole" .
+}
+
+<obo:DIDEO_XXX49-assertion> = {
+    obo:CHEBI_3520 a obo:CHEBI_24431 ;
+        rdfs:label "celecoxib" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX146-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_3766 .
+
+    obo:CHEBI_3766 a obo:CHEBI_24431 ;
+        rdfs:label "clozapine" .
+}
+
+<obo:DIDEO_XXX67-assertion> = {
+    obo:CHEBI_10023 a obo:CHEBI_24431 ;
+        rdfs:label "voriconazole" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX88-assertion> = {
+    obo:DIDEO_XXX88-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "omeprazole - escitalopram potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_7772 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_36791 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX80-assertion> = {
+    obo:CHEBI_9566 a obo:CHEBI_24431 ;
+        rdfs:label "thioridazine" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX110-assertion> = {
+    obo:DIDEO_XXX110-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "clarithromycin - lansoprazole potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3732 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6375 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX70-assertion> = {
+    obo:CHEBI_48339 a obo:CHEBI_24431 ;
+        rdfs:label "ketoconazole" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX158-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_10119 .
+
+    obo:CHEBI_10119 a obo:CHEBI_24431 ;
+        rdfs:label "ziprasidone" .
+}
+
+<obo:DIDEO_XXX130-assertion> = {
+    obo:DIDEO_XXX130-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "aripiprazole - venlafaxine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_31236 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9943 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX137-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_2611 .
+
+    obo:CHEBI_2611 a obo:CHEBI_24431 ;
+        rdfs:label "alprazolam" .
+}
+
+<obo:DIDEO_XXX118-assertion> = {
+    obo:DIDEO_XXX118-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "aripiprazole - escitalopram potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_31236 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_36791 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX164-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_7735 .
+
+    obo:CHEBI_7735 a obo:CHEBI_24431 ;
+        rdfs:label "olanzapine" .
+}
+
+<obo:DIDEO_XXX75-assertion> = {
+    obo:CHEBI_9943 a obo:CHEBI_24431 ;
+        rdfs:label "venlafaxine" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX89-assertion> = {
+    obo:DIDEO_XXX89-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "ketoconazole - simvastatin potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_48339 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9150 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX121-assertion> = {
+    obo:DIDEO_XXX121-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "erythromycin - alprazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_48923 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_2611 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX56-assertion> = {
+    obo:CHEBI_2663 a obo:CHEBI_24431 ;
+        rdfs:label "amiodarone" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX135-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_7494 .
+
+    obo:CHEBI_7494 a obo:CHEBI_24431 ;
+        rdfs:label "nefazodone" .
+}
+
+<obo:DIDEO_XXX165-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_6950 .
+
+    obo:CHEBI_6950 a obo:CHEBI_24431 ;
+        rdfs:label "mirtazapine" .
+}
+
+<obo:DIDEO_XXX39-assertion> = {
+    obo:CHEBI_46081 a obo:CHEBI_24431 ;
+        rdfs:label "fluconazole" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX168-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_5138 .
+
+    obo:CHEBI_5138 a obo:CHEBI_24431 ;
+        rdfs:label "fluvoxamine" .
+}
+
+<obo:DIDEO_XXX19-assertion> = {
+    obo:PR_000006118 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c19" ;
+        obo:DIDEO_00000096 obo:CHEBI_8707 .
+
+    obo:CHEBI_8707 a obo:CHEBI_24431 ;
+        rdfs:label "quetiapine" .
+}
+
+<obo:DIDEO_XXX166-assertion> = {
+    obo:DIDEO_XXX166-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "paroxetine - risperidone potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_7936 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_8871 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX30-assertion> = {
+    obo:CHEBI_9948 a obo:CHEBI_24431 ;
+        rdfs:label "verapamil" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX37-assertion> = {
+    obo:CHEBI_3520 a obo:CHEBI_24431 ;
+        rdfs:label "celecoxib" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX4-assertion> = {
+    obo:PR_000006118 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c19" ;
+        obo:DIDEO_00000096 obo:CHEBI_8768 .
+
+    obo:CHEBI_8768 a obo:CHEBI_24431 ;
+        rdfs:label "rabeprazole" .
+}
+
+<obo:DIDEO_XXX154-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_8028 .
+
+    obo:CHEBI_8028 a obo:CHEBI_24431 ;
+        rdfs:label "perphenazine" .
+}
+
+<obo:DIDEO_XXX156-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_9396 .
+
+    obo:CHEBI_9396 a obo:CHEBI_24431 ;
+        rdfs:label "tamoxifen" .
+}
+
+<obo:DIDEO_XXX92-assertion> = {
+    obo:DIDEO_XXX92-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "erythromycin - triazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_48923 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9674 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX101-assertion> = {
+    obo:DIDEO_XXX101-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "ketoconazole - triazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_48339 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9674 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX1-assertion> = {
+    obo:DIDEO_XXX1-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "diltiazem - triazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_101278 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9674 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX91-assertion> = {
+    obo:DIDEO_XXX91-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "ketoconazole - zolpidem potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_48339 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_10125 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX32-assertion> = {
+    obo:CHEBI_6992 a obo:CHEBI_24431 ;
+        rdfs:label "montelukast" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX109-assertion> = {
+    obo:DIDEO_XXX109-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "erythromycin - atorvastatin potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_48923 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_2910 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX142-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_36791 .
+
+    obo:CHEBI_36791 a obo:CHEBI_24431 ;
+        rdfs:label "escitalopram" .
+}
+
+<obo:DIDEO_XXX6-assertion> = {
+    obo:PR_000006118 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c19" ;
+        obo:DIDEO_00000096 obo:CHEBI_9123 .
+
+    obo:CHEBI_9123 a obo:CHEBI_24431 ;
+        rdfs:label "sertraline" .
+}
+
+<obo:DIDEO_XXX15-assertion> = {
+    obo:PR_000006120 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c9" ;
+        obo:DIDEO_00000096 obo:CHEBI_10100 .
+
+    obo:CHEBI_10100 a obo:CHEBI_24431 ;
+        rdfs:label "zafirlukast" .
+}
+
+<obo:DIDEO_XXX127-assertion> = {
+    obo:DIDEO_XXX127-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "paroxetine - desipramine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_7936 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_47781 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX45-assertion> = {
+    obo:CHEBI_53760 a obo:CHEBI_24431 ;
+        rdfs:label "eszopiclone" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX51-assertion> = {
+    obo:CHEBI_63631 a obo:CHEBI_24431 ;
+        rdfs:label "topiramate" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX97-assertion> = {
+    obo:DIDEO_XXX97-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "clopidogrel - bupropion potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_37941 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3219 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX102-assertion> = {
+    obo:DIDEO_XXX102-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "cimetidine - quetiapine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3699 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_8707 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX129-assertion> = {
+    obo:DIDEO_XXX129-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "erythromycin - quetiapine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_48923 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_8707 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX16-assertion> = {
+    obo:PR_000006101 a obo:OBI_0000427 ;
+        rdfs:label "cyp1a1" ;
+        obo:DIDEO_00000096 obo:CHEBI_2910 .
+
+    obo:CHEBI_2910 a obo:CHEBI_24431 ;
+        rdfs:label "atorvastatin" .
+}
+
+<obo:DIDEO_XXX120-assertion> = {
+    obo:DIDEO_XXX120-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "ketoconazole - alprazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_48339 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_2611 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX27-assertion> = {
+    obo:CHEBI_8707 a obo:CHEBI_24431 ;
+        rdfs:label "quetiapine" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX20-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_38545 .
+
+    obo:CHEBI_38545 a obo:CHEBI_24431 ;
+        rdfs:label "rosuvastatin" .
+}
+
+<obo:DIDEO_XXX161-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_7936 .
+
+    obo:CHEBI_7936 a obo:CHEBI_24431 ;
+        rdfs:label "paroxetine" .
+}
+
+<obo:DIDEO_XXX148-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_8768 .
+
+    obo:CHEBI_8768 a obo:CHEBI_24431 ;
+        rdfs:label "rabeprazole" .
+}
+
+<obo:DIDEO_XXX163-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_10102 .
+
+    obo:CHEBI_10102 a obo:CHEBI_24431 ;
+        rdfs:label "zaleplon" .
+}
+
+<obo:DIDEO_XXX54-assertion> = {
+    obo:CHEBI_6992 a obo:CHEBI_24431 ;
+        rdfs:label "montelukast" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX81-assertion> = {
+    obo:CHEBI_3647 a obo:CHEBI_24431 ;
+        rdfs:label "chlorpromazine" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX94-assertion> = {
+    obo:DIDEO_XXX94-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "paroxetine - mirtazapine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_7936 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6950 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX23-assertion> = {
+    obo:PR_000006122 a obo:OBI_0000427 ;
+        rdfs:label "cyp2e1" ;
+        obo:DIDEO_00000096 obo:CHEBI_6950 .
+
+    obo:CHEBI_6950 a obo:CHEBI_24431 ;
+        rdfs:label "mirtazapine" .
+}
+
+<obo:DIDEO_XXX77-assertion> = {
+    obo:CHEBI_2910 a obo:CHEBI_24431 ;
+        rdfs:label "atorvastatin" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX105-assertion> = {
+    obo:DIDEO_XXX105-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluvoxamine - duloxetine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5138 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_36795 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX82-assertion> = {
+    obo:CHEBI_6375 a obo:CHEBI_24431 ;
+        rdfs:label "lansoprazole" ;
+        obo:RO_0002449 obo:PR_000006121 .
+}
+
+<obo:DIDEO_XXX25-assertion> = {
+    obo:CHEBI_6950 a obo:CHEBI_24431 ;
+        rdfs:label "mirtazapine" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX131-assertion> = {
+    obo:DIDEO_XXX131-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "itraconazole - zolpidem potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6076 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_10125 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX119-assertion> = {
+    obo:DIDEO_XXX119-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluvoxamine - quinidine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5138 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_28593 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX85-assertion> = {
+    obo:CHEBI_9948 a obo:CHEBI_24431 ;
+        rdfs:label "verapamil" ;
+        obo:RO_0002449 obo:PR_000006102 .
+}
+
+<obo:DIDEO_XXX13-assertion> = {
+    obo:DIDEO_XXX13-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluoxetine - alprazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5118 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_2611 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX48-assertion> = {
+    obo:CHEBI_9943 a obo:CHEBI_24431 ;
+        rdfs:label "venlafaxine" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX42-assertion> = {
+    obo:CHEBI_37924 a obo:CHEBI_24431 ;
+        rdfs:label "atazanavir" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX43-assertion> = {
+    obo:CHEBI_8871 a obo:CHEBI_24431 ;
+        rdfs:label "risperidone" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX169-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_5118 .
+
+    obo:CHEBI_5118 a obo:CHEBI_24431 ;
+        rdfs:label "fluoxetine" .
+}
+
+<obo:DIDEO_XXX133-assertion> = {
+    obo:DIDEO_XXX133-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "nefazodone - alprazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_7494 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_2611 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX36-assertion> = {
+    obo:CHEBI_3723 a obo:CHEBI_24431 ;
+        rdfs:label "citalopram" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX141-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_53760 .
+
+    obo:CHEBI_53760 a obo:CHEBI_24431 ;
+        rdfs:label "eszopiclone" .
+}
+
+<obo:DIDEO_XXX103-assertion> = {
+    obo:DIDEO_XXX103-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "diltiazem - simvastatin potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_101278 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9150 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX74-assertion> = {
+    obo:CHEBI_37924 a obo:CHEBI_24431 ;
+        rdfs:label "atazanavir" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX173-assertion> = {
+    obo:PR_000006118 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c19" ;
+        obo:DIDEO_00000096 obo:CHEBI_10023 .
+
+    obo:CHEBI_10023 a obo:CHEBI_24431 ;
+        rdfs:label "voriconazole" .
+}
+
+<obo:DIDEO_XXX113-assertion> = {
+    obo:DIDEO_XXX113-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluvoxamine - thioridazine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5138 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9566 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX47-assertion> = {
+    obo:CHEBI_48390 a obo:CHEBI_24431 ;
+        rdfs:label "cinacalcet" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX86-assertion> = {
+    obo:CHEBI_7915 a obo:CHEBI_24431 ;
+        rdfs:label "pantoprazole" ;
+        obo:RO_0002449 obo:PR_000006121 .
+}
+
+<obo:DIDEO_XXX87-assertion> = {
+    obo:DIDEO_XXX87-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "duloxetine - theophylline potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_36795 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_28177 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX53-assertion> = {
+    obo:CHEBI_3723 a obo:CHEBI_24431 ;
+        rdfs:label "citalopram" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX38-assertion> = {
+    obo:CHEBI_36795 a obo:CHEBI_24431 ;
+        rdfs:label "duloxetine" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX106-assertion> = {
+    obo:DIDEO_XXX106-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "sertraline - desipramine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9123 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_47781 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX144-assertion> = {
+    obo:DIDEO_XXX144-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluconazole - triazolam potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_46081 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9674 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX124-assertion> = {
+    obo:DIDEO_XXX124-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "fluoxetine - olanzapine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_5118 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_7735 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX143-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_3766 .
+
+    obo:CHEBI_3766 a obo:CHEBI_24431 ;
+        rdfs:label "clozapine" .
+}
+
+<obo:DIDEO_XXX151-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_9943 .
+
+    obo:CHEBI_9943 a obo:CHEBI_24431 ;
+        rdfs:label "venlafaxine" .
+}
+
+<obo:DIDEO_XXX58-assertion> = {
+    obo:CHEBI_3520 a obo:CHEBI_24431 ;
+        rdfs:label "celecoxib" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX71-assertion> = {
+    obo:CHEBI_2663 a obo:CHEBI_24431 ;
+        rdfs:label "amiodarone" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX159-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_2910 .
+
+    obo:CHEBI_2910 a obo:CHEBI_24431 ;
+        rdfs:label "atorvastatin" .
+}
+
+<obo:DIDEO_XXX44-assertion> = {
+    obo:CHEBI_8028 a obo:CHEBI_24431 ;
+        rdfs:label "perphenazine" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX63-assertion> = {
+    obo:CHEBI_37924 a obo:CHEBI_24431 ;
+        rdfs:label "atazanavir" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX5-assertion> = {
+    obo:PR_000006118 a obo:OBI_0000427 ;
+        rdfs:label "cyp2c19" ;
+        obo:DIDEO_00000096 obo:CHEBI_36791 .
+
+    obo:CHEBI_36791 a obo:CHEBI_24431 ;
+        rdfs:label "escitalopram" .
+}
+
+<obo:DIDEO_XXX76-assertion> = {
+    obo:CHEBI_8707 a obo:CHEBI_24431 ;
+        rdfs:label "quetiapine" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX28-assertion> = {
+    obo:CHEBI_10100 a obo:CHEBI_24431 ;
+        rdfs:label "zafirlukast" ;
+        obo:RO_0002449 obo:PR_000006130 .
+}
+
+<obo:DIDEO_XXX29-assertion> = {
+    obo:CHEBI_36795 a obo:CHEBI_24431 ;
+        rdfs:label "duloxetine" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX60-assertion> = {
+    obo:CHEBI_50122 a obo:CHEBI_24431 ;
+        rdfs:label "rosiglitazone" ;
+        obo:RO_0002449 obo:PR_000006118 .
+}
+
+<obo:DIDEO_XXX26-assertion> = {
+    obo:CHEBI_46081 a obo:CHEBI_24431 ;
+        rdfs:label "fluconazole" ;
+        obo:RO_0002449 obo:PR_000006120 .
+}
+
+<obo:DIDEO_XXX21-assertion> = {
+    obo:PR_000006130 a obo:OBI_0000427 ;
+        rdfs:label "cyp3a4" ;
+        obo:DIDEO_00000096 obo:CHEBI_10125 .
+
+    obo:CHEBI_10125 a obo:CHEBI_24431 ;
+        rdfs:label "zolpidem" .
+}
+
+<obo:DIDEO_XXX114-assertion> = {
+    obo:DIDEO_XXX114-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "clarithromycin - trazodone potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_3732 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_9654 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
+<obo:DIDEO_XXX174-assertion> = {
+    obo:PR_000006102 a obo:OBI_0000427 ;
+        rdfs:label "cyp1a2" ;
+        obo:DIDEO_00000096 obo:CHEBI_8707 .
+
+    obo:CHEBI_8707 a obo:CHEBI_24431 ;
+        rdfs:label "quetiapine" .
+}
+
+
