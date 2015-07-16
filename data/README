@@ -1,0 +1,19 @@
+This folder have output MP & NP graphs
+
+(1) data/mp-graphs contains initial-dikb-mp-oa.xml as original MP graph that holding claim, data, method, etc.
+
+Load initial-dikb-mp-oa.xml into protege, run inference engine to export "inferred-graph-oa-mp.xml" as final version of MP graph which is ready to upload to virtuoso endpoint. 
+
+The reason that MP graph require inference is because MP sub types for mp:Claim, mp:Data, mp:Method, etc, have abstract type that needs to be inferred as translative relationship. (ex. data item have type "Non_Tracable_Statement_Data" is subclass of "mp:Data", protege inference engine will add rdf.type mp:Data for data item.)
+
+"processed-dikb-ddis.tsv" is MP data in tsv file which could be data inputs for MP graph creating program. It benefits for add missing cell to recreate MP graph.  
+
+(2) data/np-graphs holds nanopublication graphs
+
+full-nanopublications.trig is set of np head and provenance
+
+initial-dikb-nanopub-Jun2015.trig is list of np:assertions with attributes subject, predicate, object
+
+inferred-nanopub-to-owl is nanopublication ontology
+
+All of files need to be uploaded to single endpoint

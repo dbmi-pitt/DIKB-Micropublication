@@ -56,8 +56,8 @@ where {
 Deployment
 ############################################################################
 
-load mp graph "data/inferred-initial-graph-oa-mp.xml" to RDF endpoint as named graph
-"http://purl.org/mp/initial-graph-oa-mp"
+load mp graph "data/inferred-graph-oa-mp.xml" to RDF endpoint as named graph
+"inferred-graph-oa-mp.xml"
 
 load mp owl, inferred by protege "mp_1.17_inferred.owl" to RDF endpoint as named graph "http://purl.org/mp/inferred_1_17_owl"
 
@@ -140,3 +140,27 @@ $ python queryTesting.py
 
 outputs: data/queryBenchmark.csv
 
+
+############################################################################
+Virtuoso endpoint management
+############################################################################
+
+Initial load:
+$ isql-vt
+SQL> ld_dir ('/path/to/files', '*.n3', 'http://dbpedia.org');
+SQL> rdf_loader_run();
+SQL> select * from DB.DBA.load_list;
+
+Reloading (DELETE THE OLD GRAPH FIRST from Virtuoso composer!):
+$ isql-vt
+SQL> log_enable(3,1); # see http://www.openlinksw.com/dataspace/dav/wiki/Main/VirtTipsAndTricksGuideDeleteLargeGraphs
+
+SQL> SPARQL CLEAR GRAPH <>;
+SQL> update DB.DBA.load_list set ll_state = 0 where ll_file = '<name of RDF file>';
+SQL> rdf_loader_run();
+SQL> select * from DB.DBA.load_list; 
+
+
+sparql select ?s from <obo:DIDEO_XXX94> where { ?s ?p ?o };
+
+SPARQL DELETE { ?s ?p ?o } WHERE { GRAPH ?g { ?s1 rdf:type "http://www.nanopub.org/nschema#assertion"} };
