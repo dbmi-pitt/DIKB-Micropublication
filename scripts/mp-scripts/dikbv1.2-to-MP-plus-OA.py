@@ -35,7 +35,7 @@ from Bio import Entrez
 #reload(sys);
 #sys.setdefaultencoding("utf8")
 
-DRUGBANK_CHEBI = "../data/drugbank-to-chebi-06232015.txt"
+DRUGBANK_CHEBI = "../../data/drugbank-to-chebi-06232015.txt"
 
 
 ################################################################################
@@ -504,8 +504,8 @@ def createGraphFromDIKB(graph, inputCSV):
 
 def createGraphAucSubsInhib(graph):
 
-    increaseAUCFile = "../data/dikb-pddis/dikb-increaseAUC-ddis.tsv"
-    assertionFile = "../data/dikb-pddis/dikb-assertion-ddis.tsv"
+    increaseAUCFile = "../../data/dikb-pddis/dikb-increaseAUC-ddis.tsv"
+    assertionFile = "../../data/dikb-pddis/dikb-assertion-ddis.tsv"
 
     createGraphFromDIKB(graph, increaseAUCFile)
     createGraphFromDIKB(graph, assertionFile)
@@ -531,8 +531,8 @@ if __name__ == "__main__":
 
     ## default settings
 
-    OUT_GRAPH = "../data/mp-graphs/initial-dikb-mp-oa.xml"
-    OUT_CSV = "../data/mp-graphs/processed-dikb-ddis.tsv"
+    OUT_GRAPH = "../../data/mp-graphs/initial-dikb-mp-oa.xml"
+    OUT_CSV = "../../data/mp-graphs/processed-dikb-ddis.tsv"
 
     ## benchmark f( number of folds ) = query time
 

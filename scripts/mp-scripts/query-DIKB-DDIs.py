@@ -380,12 +380,12 @@ if __name__ == "__main__":
     
     aucSupportL = queryIncreaseAuc("support", num)
     aucRefuteL = queryIncreaseAuc("refute", num)
-    filepath = "../data/dikb-pddis/dikb-increaseAUC-ddis.tsv"
+    filepath = "../../data/dikb-pddis/dikb-increaseAUC-ddis.tsv"
     printIncreaseAuc(aucSupportL + aucRefuteL, filepath, "wb")
 
     # ###### substrate_of ######
 
-    filepath1 = "../data/dikb-pddis/dikb-assertion-ddis.tsv"
+    filepath1 = "../../data/dikb-pddis/dikb-assertion-ddis.tsv"
     substrateOfSupportL = queryAssertion("substrate_of", "support", num)
     substrateOfRefuteL = queryAssertion("substrate_of", "refute", num)
     printAssertionByType(substrateOfSupportL + substrateOfRefuteL, filepath1, "wb")

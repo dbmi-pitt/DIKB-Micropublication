@@ -128,9 +128,9 @@ How to run benchmark testing
 
 $ dikbv1.2-to-MP-plus-OA.py <number of folds> <output graph> <output csv>
 
-ex. $ python dikbv1.2-to-MP-plus-OA.py 3 "../data/mp-graphs/dikb-mp-fold-3.xml" "../data/mp-graphs/processed-dikb-ddis-fold-3.tsv"
+ex. $ python dikbv1.2-to-MP-plus-OA.py 3 "../../data/mp-graphs/dikb-mp-fold-3.xml" "../../data/mp-graphs/processed-dikb-ddis-fold-3.tsv"
 
-ex. $ python dikbv1.2-to-MP-plus-OA.py 0 "../data/mp-graphs/initial-dikb-mp-oa.xml" "../data/mp-graphs/processed-dikb-ddis.tsv"
+ex. $ python dikbv1.2-to-MP-plus-OA.py 0 "../../data/mp-graphs/initial-dikb-mp-oa.xml" "../../data/mp-graphs/processed-dikb-ddis.tsv"
 
 (2) run protege inference engine for each graph and load exported graph into Virtuso via isql-vt or via browser http://<hostname>:8890/conductor
 
