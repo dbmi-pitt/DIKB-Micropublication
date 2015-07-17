@@ -12,7 +12,7 @@ from datetime import datetime
 ################################################################################
 # Globals
 ################################################################################
-QUERIES_PATH = "../queries/benchmark-queries/"
+QUERIES_PATH = "../../queries/benchmark-queries/"
 
 #sparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu/sparql")
 sparql = SPARQLWrapper("https://dbmi-icode-01.dbmi.pitt.edu/sparql")
@@ -97,7 +97,7 @@ def runAllQueries(queryFolder):
     queriesD = readCSVfromDir(queryFolder)
     sparql.method = 'POST'
     
-    with open ("../data/queryBenchmark.csv","wb") as csvfile:
+    with open ("../../data/queryBenchmark.csv","wb") as csvfile:
 
         spamwriter = csv.writer(csvfile, delimiter='|', quotechar="'", quoting=csv.QUOTE_MINIMAL)
         ## read all queries

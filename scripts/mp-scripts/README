@@ -30,27 +30,9 @@ $ python query-DIKB-DDIs.py
 interactions in OA and Micropublication standard. This tries to fill
 in some parts of the model using simple string matching. 
 
-$ python dikbv1.2-to-MP-plus-OA.py3
+$ dikbv1.2-to-MP-plus-OA.py <number of folds> <output graph> <output csv>
 
-(3) add in the nanopublication assertion, provenance, and supporting
-graphs
-
-$ python  ../data/initial-dikb-mp-oa-Aug2014.xml > ../data/initial-dikb-nanopub-Nov2014.trig
-
-(4) Loading the data into an RDF endpoint. For example, see the
-documentation
-http://docs.openlinksw.com/virtuoso/fn_ttlp_mt_local_file.html. NOTE:
-this is not quite worked out as of 11/21/2014. Once it is, the
-following test query should work:
-
-select *
-where {
- ?nanopub <http://www.nanopub.org/nschema#hasAssertion> ?asrt.
-  graph ?asrt
-  { ?s <http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/interactsWith> ?o.}
-} LIMIT 10
-
-
+(3) load output graph to protege, run inference engine and export to MP graph
 
 ############################################################################
 Deployment
@@ -60,7 +42,6 @@ load mp graph "data/inferred-graph-oa-mp.xml" to RDF endpoint as named graph
 "inferred-graph-oa-mp.xml"
 
 load mp owl, inferred by protege "mp_1.17_inferred.owl" to RDF endpoint as named graph "http://purl.org/mp/inferred_1_17_owl"
-
 
 ############################################################################
 Benchmark query performance
