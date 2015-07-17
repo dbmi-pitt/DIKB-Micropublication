@@ -163,4 +163,9 @@ SQL> select * from DB.DBA.load_list;
 
 sparql select ?s from <obo:DIDEO_XXX94> where { ?s ?p ?o };
 
-SPARQL DELETE { ?s ?p ?o } WHERE { GRAPH ?g { ?s1 rdf:type "http://www.nanopub.org/nschema#assertion"} };
+
+SPARQL SELECT DISTINCT ?g WHERE {GRAPH ?g { ?s a <http://www.nanopub.org/nschema#assertion>. }} ;
+
+SPARQL SELECT DISTINCT ?g WHERE {GRAPH ?g { ?s a <http://www.nanopub.org/nschema#Nanopublication>. }} ;
+
+SPARQL SELECT DISTINCT ?s WHERE {GRAPH ?g { ?s a <http://www.nanopub.org/nschema#Nanopublication>. }} ;
