@@ -1,4 +1,4 @@
-This folder have output MP & NP graphs
+This folder contains the output MP & NP graphs
 
 (1) data/mp-graphs contains initial-dikb-mp-oa.xml as original MP graph that holding claim, data, method, etc.
 
@@ -8,12 +8,6 @@ The reason that MP graph require inference is because MP sub types for mp:Claim,
 
 "processed-dikb-ddis.tsv" is MP data in tsv file which could be data inputs for MP graph creating program. It benefits for add missing cell to recreate MP graph.  
 
-(2) data/np-graphs holds nanopublication graphs
-
-full-nanopublications.trig is set of np head and provenance
-
-initial-dikb-nanopub-Jun2015.trig is list of np:assertions with attributes subject, predicate, object
-
-inferred-nanopub-to-owl is nanopublication ontology
+(2) data/np-graphs holds nanopublication graphs... this folder has a README.md that elaborates on their functions and purpose
 
 All of files need to be uploaded to single endpoint

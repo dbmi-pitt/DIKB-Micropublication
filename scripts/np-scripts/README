@@ -2,38 +2,74 @@
 The program currently works by attempting to translate data in the
 current DIKB evidence base to an RDF graph with NP and MP according to
 the model diagrammed in the design folder.
+
+This file will outline the process of going from the dikb-micropublications
+to the dikb-full-nanopublications.
 ############################################################################
 
-(1) run python script to send sparql query against virtuoso endpoint.
-output is a tsv file contains DDI assertions associated with evidences in DIKB.
+First of all, the prerequisites for this process are as follows:
 
-$ python query-DIKB-DDIs.py
+Requires Python RDFLib >=4.2
+Requires Protege (Only been tested in Protege 4.3 using the HermiT 1.3.8 Reasoner)
+Requires Rapper (Raptor)
+Requires Virtuoso 6.1 and iSQL
 
-(2) run script to create XML/RDF graph represents drug drug
-interactions in OA and Micropublication standard. This tries to fill
-in some parts of the model using simple string matching. 
+NOTE: Besides the overall NP process, this folder also contains 
 
-$ python dikbv1.2-to-MP-plus-OA.py3
+(1) $ python dikb_mp_to_np_assertion.py  ../../data/mp-graphs/initial-dikb-mp-oa.xml > ../../data/np-graphs/dikb-np-assertion.trig
 
-(3) add in the nanopublication assertion, provenance, and supporting
-graphs
+This is the first script to be run in the process of making nanopublications. This script takes the mp:Claims found in the "processed-dikb-ddis-for-nanopub.csv" file, compares them to those queried out of the "initial-dikb-mp-oa.xml" file, and then produces np:Assertions of the appropriate type, depending on the type of mp:Claim passed into the script. This script also relies on "chebi_mapping.txt" and "pro_mapping.txt" as dictionaries to provide human-readable labels. This file will output a TriG file containing all the named graphs of the np:Assertions and references to the claims they formalized, titled "dikb-np-assertion.trig", which can be found in the data/np-graphs directory.
 
-$ python  ../data/initial-dikb-mp-oa-Aug2014.xml > ../data/initial-dikb-nanopub-Nov2014.trig
+(1b) $ rapper -i trig -o rdfxml ../../data/np-graphs/dikb-np-assertion.trig > ../../data/np-graphs/dikb-np-assertion-for-inference.xml
 
-(4) Loading the data into an RDF endpoint. For example, see the
-documentation
-http://docs.openlinksw.com/virtuoso/fn_ttlp_mt_local_file.html. NOTE:
-this is not quite worked out as of 11/21/2014. Once it is, the
-following test query should work:
+This is not a mandatory step, but is instead a route to take in order to infer interactions from the substrate_of/inhibits claims and np:Assertions. This rapper call converts the TriG file into turtle format, which drops the named graphs and allows it to loaded into Protege. Before loading in Protege, however, the file header must be edited so that the reasoner interprets the property chains correctly and has the correct namespaces. The header should be modified, the reasoner should be started, and then the inferred axioms should be exported. It may be necessary to disable disjoint properties when exporting axioms, as this can cause problems with the reasoner. The header should be modified to look as follows: 
 
-select *
-where {
- ?nanopub <http://www.nanopub.org/nschema#hasAssertion> ?asrt.
-  graph ?asrt
-  { ?s <http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/interactsWith> ?o.}
-} LIMIT 10
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY mp "http://purl.org/mp/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+]>
+
+<rdf:RDF xmlns="&obo;dideo/iswcTest/dideo.owl#"
+     xml:base="&obo;dideo/iswcTest/dideo.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:mp="http://purl.org/mp/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="&obo;dideo/iswcTest/dideo.owl">
+        <owl:imports rdf:resource="&obo;dideo/dev/dideo.owl"/>
+    </owl:Ontology>
+
+(2) Upload the "inferred-graph-oa-mp.xml" file to Virtuoso 6.1 using the "Quad Store Upload" on Virtuoso Conductor. Next, open "isql-vt" and load the np:Assertions using the rdf_loader as follows:
+
+ld_dir('/home/scr25/Desktop/Summer Work/DIKB-Micropublication/data/np-graphs', 'dikb-np-assertion.trig', 'dikb-np-assertion.trig') ;  
+rdf_loader_run();
+
+This will allow the querying of the np:Assertions and micropublication to see which np:Assertions meet belief criteria and should be made into full nanopublications.
+
+(3) Go to the SPARQL server and run the queries: "np-inhi-query.sparql", "np-subs-query.sparql", and "np-pddi-query.sparql" located in the /queries/np-queries/ directory. Get the results in N3/turtle format, and manually combine the results together into a file in the same directory, called "combined-results.ttl". These queries contain information about the belief criteria for each type of claim.
+
+(4) $ rapper -i turtle -o rdfxml queries/np-queries/combined-results.ttl > queries/np-queries/combined-results.xml
+
+This conversion is done so that the file can be more easily read into the next script.
+
+(5) $ python dikb_np_assertion_to_nanopublication.py ../../queries/np-queries/combined-results.xml > ../../data/np-graphs/dikb-full-nanopublications.trig
+
+This script reads in any np:Assertions that met belief criteria as well as their types, and creates full nanopublications for them, which includes head, nanopub, assertion, pubInfo, and provenance. This script outputs this information as a TriG file, called "dikb-full-nanopublications.trig" which is located in the /data/np-graphs/ directory. The TriG format is important because it allows you to keep the named graphs separate.
+
+(6) The final step is to upload the developed nanopublications to your Virtuoso server, which must be done through isql-vt again, because it is a TriG file. The command would look as follows:
+
+ld_dir('/home/scr25/Desktop/Summer Work/DIKB-Micropublication/data/np-graphs', 'dikb-full-nanopublications.trig', 'dikb-full-nanopublications.trig') ;
+rdf_loader_run();
 
 
-Load turtle into named graph
 
-SQL> DB.DBA.TTLP_MT(file_to_string_output ('/home/rdb20/DIKB-Micropublication-MASTER/data/np-graphs/initial-dikb-nanopub-Jun2015.turtle'),'','initial-dikb-nanopub-Jun2015.turtle');
