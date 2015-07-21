@@ -20,47 +20,28 @@ Results
 
 Original MP graph and folded graphs:
 
-(1) original MP graph: 13673 triples, 1.8 MB
+(1) original MP graph: 13636 triples, 1.8 MB
 
-(2) 1 fold: 27082 triples, 3.5 MB
+(2) 1 fold: 26988 triples, 3.4 MB
 
-(3) 2 folds: 53900 triples, 6.9 MB
+(3) 2 folds: 53692 triples, 6.7 MB
 
-(4) 3 folds: 107536 triples, 14 MB
+(4) 3 folds: 107100 triples, 14 MB
 
-(5) 4 folds: 214808 triples, 28 MB
+(5) 4 folds: 213916 triples, 27 MB
 
-(6) 5 folds: 345437 triples, 55 MB
+(6) 5 folds: 427548 triples, 54 MB
 
-(7) 6 folds: 690749 triples, 110 MB
+(7) 6 folds: 854812 triples, 107 MB
 
-Example query 1: find-assertion-where-methods-involve-drug-x.sparql
-
-folds	triples	costs
-0	13673	0.0195100307
-1	27082	0.0216679573
-2	53900	0.0194580555
-3	107536	0.0791659355
-4	214808	0.0276079178
-5	429352	0.076914072
-6	858440	0.1041250229
-
-Example query 2: FA-04.sparql
-
-folds	triples	costs
-0	13673	0.0287921429
-1	27082	0.0547981262
-2	53900	0.3161690235
-3	107536	0.188642025
-4	214808	0.4932990074
-5	429352	0.5172221661
-6	858440	1.4354860783
 
 -------------------------------
 How to run benchmark testing
 -------------------------------
 
 (1) create graph with number of folds
+
+$ cd scripts/mp-scripts
 
 $ dikbv1.2-to-MP-plus-OA.py <number of folds> <output graph> <output csv>
 
@@ -72,6 +53,18 @@ ex. $ python dikbv1.2-to-MP-plus-OA.py 0 "../../data/mp-graphs/initial-dikb-mp-o
 
 (3) run query testing program
 
-$ python queryTesting.py
+$ cd scripts/benchmarkQueries
 
-outputs: data/queryBenchmark.csv
+$ python benchMarkQueries.py
+
+outputs: queryBenchmark.csv
+
+
+--------------------------------------
+How to create benchmark diagram via R
+--------------------------------------
+
+(1) get time cost of 24 queries on original MP graph
+
+$ cat queryBenchmark.csv | grep "inferred-graph-oa-mp.xml" | cut -f4 -d\|
+
