@@ -189,14 +189,17 @@ def addOAItem(graph, item):
         exact = rgx.sub(u"",exact)
 
     source = "None"
-    if "pubmed" in item["evidenceSource"]:
-        source = item["evidenceSource"]
-    else:
-        if "resource/structuredProductLabelMetadata/" in item["evidenceSource"]:
-            setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/","")
-        if "page/structuredProductLabelMetadata/" in item["evidenceSource"]:
-            setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/","")
-            source = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
+    if item["evidenceSource"]:
+        
+        if "pubmed" not in item["evidenceSource"]:
+
+            if "resource/structuredProductLabelMetadata" in item["evidenceSource"]:
+                setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/","")
+                item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
+                
+            if "page/structuredProductLabelMetadata" in item["evidenceSource"]:
+                setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/","")
+                item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
 
     global annotationItemCntr
     currentAnnotItem = "ddi-spl-annotation-item-%s" % annotationItemCntr
@@ -212,7 +215,7 @@ def addOAItem(graph, item):
 
     graph.add((poc[currentAnnotItem], oa["hasTarget"], currentAnnotTargetUuid))
     graph.add((currentAnnotTargetUuid, RDF.type, oa["SpecificResource"]))
-    graph.add((currentAnnotTargetUuid, oa["hasSource"], Literal(source, datatype=XSD.String)))
+    graph.add((currentAnnotTargetUuid, oa["hasSource"], Literal(item["evidenceSource"], datatype=XSD.String)))
 
     graph.add((currentAnnotTargetUuid, oa["hasSelector"], textConstraintUuid))
     graph.add((textConstraintUuid, RDF.type, oa["TextQuoteSelector"]))
