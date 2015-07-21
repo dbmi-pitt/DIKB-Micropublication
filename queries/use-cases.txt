@@ -2,10 +2,10 @@
 1. List all assertions that are not supported by evidence  **done**
 2. Which assertions are supportedBy just one evidence item? **done**
 3. Which assertions are challengedBy just one evidence item? **done**
-4. Which assertions are supportedBy just one type of evidence? **done**
-5. Which assertions are challengedBy just one type of evidence? **done**
-6. Which assertions have supporting evidence of type X? **done**
-7. Which assertions have challenging evidence of type X? **done**
+4. Which assertions are supportedBy just one TYPE of evidence? **done**
+5. Which assertions are challengedBy just one TYPE of evidence? **done**
+6. Which assertions have supporting evidence of TYPE X? **done**
+7. Which assertions have challenging evidence of TYPE X? **done**
 8. Which assertions have both evidence for and evidence against from a single source X? **done**
 9. List all assertions for drug X? **done**
 10. List all assertions for drug pair X and Y? **done**
