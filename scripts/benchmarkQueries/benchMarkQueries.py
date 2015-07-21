@@ -97,7 +97,7 @@ def runAllQueries(queryFolder):
     queriesD = readCSVfromDir(queryFolder)
     sparql.method = 'POST'
     
-    with open ("../../data/queryBenchmark.csv","wb") as csvfile:
+    with open ("queryBenchmark.csv","wb") as csvfile:
 
         spamwriter = csv.writer(csvfile, delimiter='|', quotechar="'", quoting=csv.QUOTE_MINIMAL)
         ## read all queries
