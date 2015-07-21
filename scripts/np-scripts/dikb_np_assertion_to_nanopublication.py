@@ -1,4 +1,4 @@
-## np_to_nanopublication.py
+## dikb_np_assertion_to_nanopublication.py
 #
 # Convert NP:Assertion into full nanopublication
 #
@@ -15,7 +15,7 @@
 # NOTE: Requires Python RDFLib >=4.2
 #
 # Example usage and conversion to data that can be loaded into Virtuoso 6.0
-# $ python np_to_nanopublication.py ../../data/np-queries/combined-results.xml > ../../data/np-graphs/full-nanopublications.trig
+# $ python dikb_np_assertion_to_nanopublication.py ../../queries/np-queries/combined-results.xml > ../../data/np-graphs/dikb-full-nanopublications.trig
 
 import sys
 

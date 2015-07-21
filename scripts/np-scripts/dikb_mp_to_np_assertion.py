@@ -1,4 +1,4 @@
-## dikb_to_nanopub.py
+## dikb_mp_to_np_assertion.py
 #
 # Convert MP DIKB data to add nanopubs 
 #
@@ -15,8 +15,8 @@
 # NOTE: Requires Python RDFLib >=4.2
 #
 # Example usage and conversion to data that can be loaded into Virtuoso 6.0
-# $ python dikb_to_nanopub.py  ../../data/mp-graphs/initial-dikb-mp-oa.xml > ../../data/np-graphs/initial-dikb-nanopub-Jun2015.trig
-# $ rapper -i trig -o turtle ../../data/np-graphs/initial-dikb-nanopub-Jun2015.trig > ../../data/np-graphs/initial-dikb-nanopub-Jun2015.turtle
+# $ python dikb_mp_to_np_assertion.py  ../../data/mp-graphs/initial-dikb-mp-oa.xml > ../../data/np-graphs/dikb-np-assertion.trig
+# $ rapper -i trig -o rdfxml ../../data/np-graphs/dikb-np-assertion.trig > ../../data/np-graphs/dikb-np-assertion-for-inference.xml
 
 import sys
 

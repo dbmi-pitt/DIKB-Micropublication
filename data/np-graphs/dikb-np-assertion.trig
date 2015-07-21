@@ -2402,6 +2402,25 @@
             obo:DIDEO_00000000 .
 }
 
+<obo:DIDEO_XXX94-assertion> = {
+    obo:DIDEO_XXX94-assertion a np:assertion,
+            owl:Class ;
+        rdfs:label "paroxetine - mirtazapine potential drug-drug interaction" ;
+        rdfs:subClassOf [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_7936 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            [ a owl:Restriction ;
+                owl:onProperty obo:IAO_0000136 ;
+                owl:someValuesFrom [ a owl:Class ;
+                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
+                                    owl:hasValue obo:CHEBI_6950 ;
+                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
+            obo:DIDEO_00000000 .
+}
+
 <obo:DIDEO_XXX16-assertion> = {
     obo:PR_000006101 a obo:OBI_0000427 ;
         rdfs:label "cyp1a1" ;
@@ -2484,23 +2503,13 @@
         obo:RO_0002449 obo:PR_000006118 .
 }
 
-<obo:DIDEO_XXX94-assertion> = {
-    obo:DIDEO_XXX94-assertion a np:assertion,
-            owl:Class ;
-        rdfs:label "paroxetine - mirtazapine potential drug-drug interaction" ;
-        rdfs:subClassOf [ a owl:Restriction ;
-                owl:onProperty obo:IAO_0000136 ;
-                owl:someValuesFrom [ a owl:Class ;
-                        owl:intersectionOf ( obo:DIDEO_00000012 [ a owl:Restriction ;
-                                    owl:hasValue obo:CHEBI_7936 ;
-                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
-            [ a owl:Restriction ;
-                owl:onProperty obo:IAO_0000136 ;
-                owl:someValuesFrom [ a owl:Class ;
-                        owl:intersectionOf ( obo:DIDEO_00000013 [ a owl:Restriction ;
-                                    owl:hasValue obo:CHEBI_6950 ;
-                                    owl:onProperty obo:BFO_0000052 ] ) ] ],
-            obo:DIDEO_00000000 .
+<obo:DIDEO_XXX169-assertion> = {
+    obo:PR_000006121 a obo:OBI_0000427 ;
+        rdfs:label "cyp2d6" ;
+        obo:DIDEO_00000096 obo:CHEBI_5118 .
+
+    obo:CHEBI_5118 a obo:CHEBI_24431 ;
+        rdfs:label "fluoxetine" .
 }
 
 <obo:DIDEO_XXX23-assertion> = {
@@ -2628,15 +2637,6 @@
     obo:CHEBI_8871 a obo:CHEBI_24431 ;
         rdfs:label "risperidone" ;
         obo:RO_0002449 obo:PR_000006118 .
-}
-
-<obo:DIDEO_XXX169-assertion> = {
-    obo:PR_000006121 a obo:OBI_0000427 ;
-        rdfs:label "cyp2d6" ;
-        obo:DIDEO_00000096 obo:CHEBI_5118 .
-
-    obo:CHEBI_5118 a obo:CHEBI_24431 ;
-        rdfs:label "fluoxetine" .
 }
 
 <obo:DIDEO_XXX133-assertion> = {

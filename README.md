@@ -16,7 +16,7 @@ TEAM MEMBERS
 
 Principal Investigators: Richard D Boyce, Phd
 Lead Programmer: Yifan Ning, MS
-Collaborators/Co-Investigators: Jodi Schneider, PhD, Tim Clark, PhD, Paolo Ciccarese, PhD, Paul Groth, PhD
+Collaborators/Co-Investigators: Jodi Schneider, PhD, Samuel Rosko, Tim Clark, PhD, Paolo Ciccarese, PhD, Paul Groth, PhD
 
 
 =====================
