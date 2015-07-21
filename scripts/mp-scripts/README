@@ -32,6 +32,8 @@ in some parts of the model using simple string matching.
 
 $ dikbv1.2-to-MP-plus-OA.py <number of folds> <output graph> <output csv>
 
+ex. $ python dikbv1.2-to-MP-plus-OA.py 0 "../../data/mp-graphs/initial-dikb-mp-oa.xml" "../../data/mp-graphs/processed-dikb-ddis.tsv"
+
 (3) load output graph to protege, run inference engine and export to MP graph
 
 ############################################################################
@@ -43,83 +45,6 @@ load mp graph "data/inferred-graph-oa-mp.xml" to RDF endpoint as named graph
 
 load mp owl, inferred by protege "mp_1.17_inferred.owl" to RDF endpoint as named graph "http://purl.org/mp/inferred_1_17_owl"
 
-############################################################################
-Benchmark query performance
-############################################################################
-
---------------------------
-Method
---------------------------
-
-Case 1:
-
-Benchmark query performance by execute all queries across 7 different size of MP (Micropublication) graphs including original MP graph and 6 folded testing graphs. Folded graph doubling size from 2 times of original MP graph to 64 times. For each query, output is query performance table that have columns, graph name, folded times, number of triples and time cost in csv file. Using number of triples and time costs, two dimensional scatter diagram will be created to concisely describe the trends of query performance with increasing size of MP graph. 
- 
-Specifically, Original DDI data comes from existing DIKB (Drug interaction knowledge base 1.2) with assertion that typed as "inhibits", "does not inhibits", "substrate of", "is not substrate of", "increase auc". Python based parsing program query DIKB 1.2 via D2R server by sparql query that pulls assertions, evidences supports or refutes, and drug/ingredient entity label and URI. Then, shape and fill data into well designed MP model (point to cmap model or model image) to create original MP graph. MP graph creating program receives fold times as parameter to create MP graphs from 1 to 6 folds. All items in those folded MP graphs will keep same relationships compare to original graph so that all items in folded graph should be evenly distributed.
-
-Upload 7 MP graphs to a single virtuoso endpoint. Query testing program will take over the work that execute all queries in folder "../queries/benchmark-queries/" on 7 MP graphs and output performance table for each query.
-
---------------------------
-Results
---------------------------
-
-Original MP graph and folded graphs:
-
-(1) original MP graph: 13673 triples, 1.8 MB
-
-(2) 1 fold: 27082 triples, 3.5 MB
-
-(3) 2 folds: 53900 triples, 6.9 MB
-
-(4) 3 folds: 107536 triples, 14 MB
-
-(5) 4 folds: 214808 triples, 28 MB
-
-(6) 5 folds: 345437 triples, 55 MB
-
-(7) 6 folds: 690749 triples, 110 MB
-
-Example query 1: find-assertion-where-methods-involve-drug-x.sparql
-
-folds	triples	costs
-0	13673	0.0195100307
-1	27082	0.0216679573
-2	53900	0.0194580555
-3	107536	0.0791659355
-4	214808	0.0276079178
-5	429352	0.076914072
-6	858440	0.1041250229
-
-Example query 2: FA-04.sparql
-
-folds	triples	costs
-0	13673	0.0287921429
-1	27082	0.0547981262
-2	53900	0.3161690235
-3	107536	0.188642025
-4	214808	0.4932990074
-5	429352	0.5172221661
-6	858440	1.4354860783
-
--------------------------------
-How to run benchmark testing
--------------------------------
-
-(1) create graph with number of folds
-
-$ dikbv1.2-to-MP-plus-OA.py <number of folds> <output graph> <output csv>
-
-ex. $ python dikbv1.2-to-MP-plus-OA.py 3 "../../data/mp-graphs/dikb-mp-fold-3.xml" "../../data/mp-graphs/processed-dikb-ddis-fold-3.tsv"
-
-ex. $ python dikbv1.2-to-MP-plus-OA.py 0 "../../data/mp-graphs/initial-dikb-mp-oa.xml" "../../data/mp-graphs/processed-dikb-ddis.tsv"
-
-(2) run protege inference engine for each graph and load exported graph into Virtuso via isql-vt or via browser http://<hostname>:8890/conductor
-
-(3) run query testing program
-
-$ python queryTesting.py
-
-outputs: data/queryBenchmark.csv
 
 
 ############################################################################
@@ -140,6 +65,9 @@ SQL> SPARQL CLEAR GRAPH <>;
 SQL> update DB.DBA.load_list set ll_state = 0 where ll_file = '<name of RDF file>';
 SQL> rdf_loader_run();
 SQL> select * from DB.DBA.load_list; 
+
+clean load list:
+delete from DBA.load_list where ll_state=2;
 
 
 sparql select ?s from <obo:DIDEO_XXX94> where { ?s ?p ?o };
