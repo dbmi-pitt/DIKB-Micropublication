@@ -1,8 +1,6 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-10
-#
+# DIKB MP/NP version: 2015-07-21
 
-# CONTEXT
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
 PREFIX dailymed: <http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/vocab/resource/>
@@ -21,14 +19,21 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
-# List all the evidence (pick supports or challenge) and its type for assertion X?
-## supporting, claim-67
+# List all the evidence (supporting or challenging) and its type for claim X?
+## this example uses claim-71 as claim X
 
-SELECT DISTINCT ?evidence ?type
+SELECT DISTINCT xsd:string(?source) as ?evidence_source ?modality ?type
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      ?evidence mp:supports poc:ddi-spl-annotation-claim-67;
-	  rdf:type ?type.
-          FILTER regex ( ?type, dikbEvidence: )
+      {?evidence mp:supports poc:ddi-spl-annotation-claim-71} UNION {?evidence mp:challenges poc:ddi-spl-annotation-claim-71} .
+      ?evidence rdf:type ?type.  
+      ?evidence ?modality poc:ddi-spl-annotation-claim-71.
+
+      ?anItem oa:hasBody ?evidence;
+	     oa:hasTarget ?aURN.
+
+      ?aURN oa:hasSource ?source.
+
+      FILTER regex ( ?type, dikbEvidence: )
 }

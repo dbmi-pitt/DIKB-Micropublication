@@ -1,13 +1,13 @@
 ==Deferred==
-1. Which assertions have evidence from source X? (extend product labeling query to iterate over source types)
+1. Which claims have evidence from source X? (extend product labeling query to iterate over source types)
 2. Which evidence items are related to evidence item X, using PubMed "related to"?
-3. Show the distribution of the levels of evidence for various assertion types
-(e.g., pharmacokinetic assertions) **NOT DOING YET**
+3. Show the distribution of the levels of evidence for various claim types
+(e.g., pharmacokinetic claims) **NOT DOING YET**
 4. Are the evidence use assumptions for evidence item X concordant?
 5. Are the evidence use assumptions for evidence item X unique? 
 6. Are the evidence use assumptions for evidence item X non-ambiguous?
 7. How many pharmacokinetic studies in the DIKB used for evidence items
-for assertion X are based on data from the product label? **talking to rich, skip for now**
+for claim X are based on data from the product label? **talking to rich, skip for now**
 8. What is the result of applying some statistical operation to the values for pharmacokinetic parameter X across all relevant studies used for evidence items? (averaging is PK2)
 9. For the product labeling used for evidence item X: Original
 manufacturer or repackager? 
@@ -15,11 +15,11 @@ manufacturer or repackager?
 11. For the product labeling used for evidence item X: Is the drug on market in country X or not? 
 12. For the product labeling used for evidence item X: American or country X?
 
-==Deferred: Support updates to evidence and assertions==
+==Deferred: Support updates to evidence and claims==
 ===Change status of redundant and rejected evidence===
 1. Remove a older version of a redundant evidence item **NOT DOING YET**
 2. Change the modality of a supporting evidence item to be a refuting evidence item **NOT DOING YET**
 ==Update when key sources change==
-1. Get all assertions that are supported by evidence items identified from
+1. Get all claims that are supported by evidence items identified from
 an FDA guidance or other source document just released as an updated
 version. **done in a way, specialized version of 4.1.1.c**

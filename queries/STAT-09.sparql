@@ -1,4 +1,4 @@
-# SPARQL version: 1.1
+# SPARQL version: 1.1 
 # DIKB MP/NP version: 2015-07-21
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
@@ -17,16 +17,17 @@ PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
-PREFIX drugbank: <http://bio2rdf.org/drugbank:>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 
-##### List all claims involving enzyme Y - 'cyp3a4' (replace PRO for whatever drug you want)
+#### Show count of statements for potential drug-drug interaction claims
 
-SELECT ?claim ?cLabel
+SELECT ?type count(?type) as ?ev_count
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      ?claim rdf:type mp:Claim;
-	     rdfs:label ?cLabel.
-      ?claim mp:qualifiedBy obo:PR_000006130.
+     { ?statement mp:supports ?claim } UNION { ?statement mp:challenges ?claim }.
+     ?statement rdf:type ?type.
+     ?claim mp:qualifiedBy obo:DIDEO_00000000.
+     FILTER ( regex(?type, dikbEvidence:Non_traceable_Drug_Label_Statement) || regex(?type, dikbEvidence:Traceable_Drug_Label_Statement) )
 }
+GROUP BY ?type

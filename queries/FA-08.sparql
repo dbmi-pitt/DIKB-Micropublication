@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-06
+# DIKB MP/NP version: 2015-07-21
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -19,14 +19,24 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
-#### List all the assertions having both evidence for and evidence against from a single source X
+#### List all the claims having both evidence for and evidence against from a single source X
 
-SELECT DISTINCT ?assertion
+SELECT ?claim ?cLabel
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      ?assertion rdf:type mp:Claim .
-      ?evidence1 mp:supports ?assertion .
-      ?evidence2 mp:challenges ?assertion .
-            FILTER(sameTerm(?evidence1,?evidence2))
+      ?claim rdf:type mp:Claim;
+	     rdfs:label ?cLabel.
+      
+      ?evidence1 mp:supports ?claim.
+      ?anItem1 oa:hasBody ?evidence1;
+	     oa:hasTarget ?aURN1.
+      ?aURN1 oa:hasSource ?source1.  
+     
+      ?evidence2 mp:challenges ?claim.
+      ?anItem2 oa:hasBody ?evidence2;
+	     oa:hasTarget ?aURN2.
+      ?aURN2 oa:hasSource ?source2.      
+          
+      FILTER(sameTerm(?source1,?source2))
 }

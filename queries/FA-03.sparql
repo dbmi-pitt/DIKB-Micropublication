@@ -1,6 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-06
-#
+# DIKB MP/NP version: 2015-07-21
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -20,12 +19,22 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
-#### List all the assertions that are supported by exactly one piece of evidence
-SELECT ?assertion
+#### List all the claims that are challenged by exactly one piece of evidence
+
+SELECT ?claim ?cLabel
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      ?assertion rdf:type mp:Claim.
-      ?evidence mp:challenges ?assertion.
+     ?claim rdf:type mp:Claim;
+	    rdfs:label ?cLabel.
+	    
+     ?evidence mp:challenges ?claim.
+     
+     ?anItem oa:hasBody ?evidence;
+	     oa:hasTarget ?aURN.
+
+     ?aURN oa:hasSource ?source.      
+      
 } 
-HAVING (count(?evidence) = 1)
+GROUP BY ?claim ?cLabel
+HAVING (count(DISTINCT ?source) = 1)

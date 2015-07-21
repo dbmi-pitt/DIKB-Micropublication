@@ -1,8 +1,6 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-10
-#
+# DIKB MP/NP version: 2015-07-21
 
-# CONTEXT
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
 PREFIX dailymed: <http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/vocab/resource/>
@@ -21,15 +19,25 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
-# List all the in vivo evidence(pick supporting or challenging) for assertion X? 
-## In this case, claim-102 is used as assertion X, and evidence is supporting
+# List all the in vivo evidence(supporting or challenging) for claim X? 
+## In this case, claim-111 is used as claim X
 
-SELECT DISTINCT ?evidence
+SELECT DISTINCT xsd:string(?source) as ?evidence_source ?modality
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      ?evidence mp:supports poc:ddi-spl-annotation-claim-102;
-          rdf:type ?type.
-      FILTER (!regex(?type, dikbEvidence:EV_EX_Met_Enz) && !regex(?type, dikbEvidence:EV_EX_Trans_Prot))
+      {?evidence mp:supports poc:ddi-spl-annotation-claim-111} UNION {?evidence mp:challenges poc:ddi-spl-annotation-claim-111} .
+
+      ?evidence ?modality poc:ddi-spl-annotation-claim-111.
+      
+      ?method mp:supports ?evidence;
+              rdf:type ?type.
+
+      ?anItem oa:hasBody ?evidence;
+	     oa:hasTarget ?aURN.
+
+      ?aURN oa:hasSource ?source.   
+
+      FILTER (!regex(?type, dikbEvidence:EV_EX_Met_Enz) && !regex(?type, dikbEvidence:EV_EX_Trans_Prot) )
       FILTER regex(?type, dikbEvidence:)
 }

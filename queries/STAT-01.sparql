@@ -1,8 +1,6 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-07
-#
+# DIKB MP/NP version: 2015-07-21
 
-# CONTEXT
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
 PREFIX dailymed: <http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/vocab/resource/>
@@ -20,8 +18,9 @@ PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
-SELECT (COUNT(?c) as ?Number_of_Assertions)
+SELECT (COUNT(?c) as ?Number_of_Claims)
 FROM <inferred-graph-oa-mp.xml>
-WHERE {
-  ?c a mp:Claim.
+WHERE 
+{
+    ?c a mp:Claim.
 }

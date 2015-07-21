@@ -1,29 +1,29 @@
-==FA: Find assertions==
-1. List all assertions that are not supported by evidence  **done**
-2. Which assertions are supportedBy just one evidence item? **done**
-3. Which assertions are challengedBy just one evidence item? **done**
-4. Which assertions are supportedBy just one TYPE of evidence? **done**
-5. Which assertions are challengedBy just one TYPE of evidence? **done**
-6. Which assertions have supporting evidence of TYPE X? **done**
-7. Which assertions have challenging evidence of TYPE X? **done**
-8. Which assertions have both evidence for and evidence against from a single source X? **done**
-9. List all assertions for drug X? **done**
-10. List all assertions for drug pair X and Y? **done**
-11. List all assertions for metabolic enzyme X? **done**
+==FA: Find claims==
+1. List all claims that are not supported or challenged by any evidence  **done**
+2. Which claims are supportedBy just one evidence item? **done**
+3. Which claims are challengedBy just one evidence item? **done**
+4. Which claims are supportedBy just one TYPE of evidence? **done**
+5. Which claims are challengedBy just one TYPE of evidence? **done**
+6. Which claims have supporting evidence of TYPE X? **done**
+7. Which claims have challenging evidence of TYPE X? **done**
+8. Which claims have both evidence for and evidence against from a single source X? **done**
+9. List all claims for drug X? **done**
+10. List all claims for drug pair X and Y? **done**
+11. List all claims for metabolic enzyme X? **done**
 
 ==FE: Find evidence==
-1. List all evidence for or against assertion X and show its type? **done**
-2. List all evidence for or against assertion X by evidence type?  **done**
-3. What is the in vitro evidence for assertion X? **done**
-4. What is the in vivo evidence for assertion X? **done** 
+1. List all evidence for or against claim X and show its type? **done**
+2. List all evidence for or against claim X from a specific evidence type?  **done**
+3. What is the in vitro evidence for claim X? **done**
+4. What is the in vivo evidence for claim X? **done** 
 5. List all evidence that has been tagged as rejected from entry into the the knowledge base? **DEFERRED**
-6. Which single evidence items are unique support for multiple assertions 
+6. Which single evidence items are unique support for multiple claims 
 (i.e. it is the only piece of evidence)?
-7. Which single evidence items are unique challenge for multiple assertions 
+7. Which single evidence items are unique challenge for multiple claims 
 (i.e. it is the only piece of evidence)?
-8. Which single evidence items support or challenge multiple assertions of type "substrate of"? 
-9. Which single evidence items support or challenge multiple assertions of type "inhibits"?
-10. Which single evidence items support or challenge multiple assertions of type "increases AUC"?
+8. Which single evidence items support or challenge multiple claims of type "substrate of"? 
+9. Which single evidence items support or challenge multiple claims of type "inhibits"?
+10. Which single evidence items support or challenge multiple claims of type "increases AUC"?
 
 
 ==AE: Assess evidence==
@@ -34,19 +34,19 @@
 
 
 ===EP: Verify plausibility of an evidence item===
-1. Has evidence item X been rejected for assertion Y? **DEFERRED**
-2. Why was evidence item X rejected for assertion Y? **DEFERRED**
-3. Who rejected evidence item X for assertion Y? **DEFERRED**
-4. Which other assertions are supportedBy this evidence item?
-5. Which other assertions are challengedBy this evidence item?
-6. What are the assumptions required for use of this evidence item to support assertion X?
-7. What are the assumptions required for use of this evidence item to challenge assertion X?
+1. Has evidence item X been rejected for claim Y? **DEFERRED**
+2. Why was evidence item X rejected for claim Y? **DEFERRED**
+3. Who rejected evidence item X for claim Y? **DEFERRED**
+4. Which other claims are supportedBy this evidence item?
+5. Which other claims are challengedBy this evidence item?
+6. What are the assumptions required for use of this evidence item to support claim X?
+7. What are the assumptions required for use of this evidence item to challenge claim X?
 
 
-===PK: Check assertions about pharmacokinetic parameters (i.e., area under the concentration time curve (AUC))===
+===PK: Check claims about pharmacokinetic parameters (i.e., area under the concentration time curve (AUC))===
 1. How many pharmacokinetic studies provide data on the changes of a PK parameter in the case of a drug 
 interaction? **done**
-2. How many pharmacokinetic studies established a PK parameter about a drug (single drug case)? **done**
+2. How many pharmacokinetic studies established a PK parameter about a drug (single drug case)?
 3. What is the result of averaging the values for pharmacokinetic parameter X across all relevant studies used for evidence items? **done**
 
 
@@ -57,9 +57,12 @@ different versions of product labeling for the same drug?
 
 
 ==STAT: Summarize statistical information about the evidence base==
-1. Number of assertions in the system **done**
-2. Number of evidence items for each assertion type **done**
-3. Number of evidence items against each assertion type **done**
-4. Show the distribution of the evidence types for substrate_of assertions **done**
-5. Show the distribution of the evidence types for inhibits assertions **done**
-6. Show the distribution of the evidence types for increases_auc assertions **done**
+1. Number of claims in the system **done**
+2. Number of evidence items for each claim type **done**
+3. Number of evidence items against each claim type **done**
+4. Show the distribution of the evidence types for substrate_of claims **done**
+5. Show the count of label statements for substrate_of claims **done**
+6. Show the distribution of the evidence types for inhibits claims **done**
+7. Show the count of label statements for inhibits claims **done**
+8. Show the distribution of the evidence types for increases_auc claims **done**
+9. Show the count of label statements for increases_auc claims **done**
