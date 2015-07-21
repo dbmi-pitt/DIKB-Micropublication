@@ -1,8 +1,6 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-10
-#
+# DIKB MP/NP version: 2015-07-21 
 
-# CONTEXT
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
 PREFIX dailymed: <http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/vocab/resource/>
@@ -25,9 +23,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # What is the average of the pharmacokinetic value?
 
 SELECT avg(xsd:decimal(?v)) as ?average_value
-FROM <graph>
+FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-    ?e mp:supports poc:ddi-spl-annotation-claim-30.
-    ?e dikbD2R:increases_auc ?v
+    {?e mp:supports poc:ddi-spl-annotation-claim-30} UNION {?e mp:challenges poc:ddi-spl-annotation-claim-30} .
+    ?e dikbD2R:increases_auc ?v.
 }

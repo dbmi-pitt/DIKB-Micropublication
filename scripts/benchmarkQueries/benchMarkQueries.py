@@ -15,8 +15,8 @@ from datetime import datetime
 QUERIES_PATH = "../../queries/benchmark-queries/"
 
 #sparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu/sparql")
-sparql = SPARQLWrapper("https://dbmi-icode-01.dbmi.pitt.edu/sparql")
-#sparql = SPARQLWrapper("http://localhost:8890/sparql")
+#sparql = SPARQLWrapper("https://dbmi-icode-01.dbmi.pitt.edu/sparql")
+sparql = SPARQLWrapper("http://localhost:8890/sparql")
 
 
 
@@ -65,7 +65,7 @@ def countTriplesFromGraph(graphname):
 def runQuery(qry, graphname):
 
     #try:
-    qry = qry.replace("graph",graphname)
+    qry = qry.replace("inferred-graph-oa-mp.xml",graphname)
 
     # print "[INFO] testing query on graph (%s): \n %s" % (graphname, qry)
 

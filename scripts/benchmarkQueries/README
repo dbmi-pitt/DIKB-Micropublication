@@ -74,8 +74,14 @@ $ cat queryBenchmark.csv | grep "inferred-graph-oa-mp.xml" | cut -f4 -d\| > temp
 
 (2) R command:
 
-$ baseRun <- c(0.025083065033, 0.0478370189667, 0.0188231468201, 0.0210239887238, 0.0221660137177, 0.0179078578949, NA, NA, 0.0161311626434, 0.0172848701477, 0.0189769268036, 0.0199391841888, 0.0332069396973, 0.0223939418793, 0.0213429927826, 0.018951177597, 0.0319950580597, NA, 0.0186829566956, 0.0337378978729, 0.0170288085938, 0.0172920227051, 0.0247929096222, 0.0179018974304)
+ex.
 
-$ boxplot(baseRun)
+$ mp0 <- c()
+$ mp1 <- c() ....
 
+png('benchmark.png')
+
+$ boxplot(mp0,mp1,mp2,mp3,mp4,mp5,mp6,vertical=TRUE, names=c("MP graph", "1 fold", "2 fold", "3 fold", "4 fold", "5 fold", "6 fold"), xlab="number of folds", ylab="time costs")
+
+Example:
 
