@@ -96,8 +96,8 @@ def assertionQry(assertType, evidenceMode, num):
     dikbD2R:value ?valueURI;
     rdfs:label ?researchStatementLabel.
 
-  ?s dikbD2R:%s ?valueURI;
-     rdfs:label ?label.
+  # ?s dikbD2R:%s ?valueURI;
+  #    rdfs:label ?label.
 
     ## evidenceSupports
     optional {
@@ -130,8 +130,8 @@ def  doseNotInhibitQry(evidenceMode, num):
     rdfs:label ?researchStatementLabel.
     FILTER regex(str(?researchStatementLabel), "does_not_inhibit")
 
-  ?s dikbD2R:does_not_inhibit ?valueURI;
-     rdfs:label ?label.
+  # ?s dikbD2R:does_not_inhibit ?valueURI;
+  #    rdfs:label ?label.
 
     ## evidenceSupports
     optional {
@@ -322,27 +322,27 @@ def queryAssertion(assertType, evMode, num):
 
                  if resultset["results"]["bindings"][i].has_key("content"):
                      newPDDI["evidenceStatement"] = resultset["results"]["bindings"][i]["content"]["value"].encode("utf8")
-             newPDDI["label"] = resultset["results"]["bindings"][i]["label"]["value"].encode("utf8")
+             #newPDDI["label"] = resultset["results"]["bindings"][i]["label"]["value"].encode("utf8")
 
 
              ## handle biodirectional relationships for substrate_of and inhibits ##
 
-             if assertType in ["does_not_inhibit", "is_not_substrate_of"]:
+             # if assertType in ["does_not_inhibit", "is_not_substrate_of"]:
 
-                 if assertType == "does_not_inhibit":
-                     newPDDI["assertType"] = "inhibits"
-                     newPDDI["researchStatementLabel"] = newPDDI["researchStatementLabel"].replace("does_not_inhibit","inhibits")
-                     newPDDI["homepage"] = newPDDI["homepage"].replace("does_not_inhibit","inhibits")
-                 else:
-                     newPDDI["assertType"] = "substrate_of"
-                     newPDDI["researchStatementLabel"] = newPDDI["researchStatementLabel"].replace("is_not_substrate_of","substrate_of")
-                     newPDDI["homepage"] = newPDDI["homepage"].replace("is_not_substrate_of","substrate_of")
+             #     if assertType == "does_not_inhibit":
+             #         newPDDI["assertType"] = "inhibits"
+             #         newPDDI["researchStatementLabel"] = newPDDI["researchStatementLabel"].replace("does_not_inhibit","inhibits")
+             #         newPDDI["homepage"] = newPDDI["homepage"].replace("does_not_inhibit","inhibits")
+             #     else:
+             #         newPDDI["assertType"] = "substrate_of"
+             #         newPDDI["researchStatementLabel"] = newPDDI["researchStatementLabel"].replace("is_not_substrate_of","substrate_of")
+             #         newPDDI["homepage"] = newPDDI["homepage"].replace("is_not_substrate_of","substrate_of")
                      
 
-             if evMode == "support":
-                 newPDDI["evidenceRole"] = "refute"
-             elif evMode == "refute":
-                 newPDDI["evidenceRole"] = "support"
+             #    if evMode == "support":
+             #        newPDDI["evidenceRole"] = "refute"
+             #    elif evMode == "refute":
+             #        newPDDI["evidenceRole"] = "support"
 
              pddiDictL.append(newPDDI)
 
@@ -374,7 +374,7 @@ def printAssertionByType(assertionDictL, filepath, writeType):
 
 if __name__ == "__main__":
 
-    num = 100
+    num = 1000
 
     ###### increase_auc ######
     
@@ -392,9 +392,9 @@ if __name__ == "__main__":
 
     # ###### is_not_substrate_of ######
 
-    isNotSubstrateOfSupportL = queryAssertion("is_not_substrate_of", "support", num)
-    isNotSubstrateOfRefuteL = queryAssertion("is_not_substrate_of", "refute", num)
-    printAssertionByType(isNotSubstrateOfSupportL + isNotSubstrateOfRefuteL, filepath1, "a")
+    # isNotSubstrateOfSupportL = queryAssertion("is_not_substrate_of", "support", num)
+    # isNotSubstrateOfRefuteL = queryAssertion("is_not_substrate_of", "refute", num)
+    # printAssertionByType(isNotSubstrateOfSupportL + isNotSubstrateOfRefuteL, filepath1, "a")
 
     # ###### inhibits ######
 
@@ -404,8 +404,8 @@ if __name__ == "__main__":
 
     # ###### dose_not_inhibit ######
 
-    doesNotInhibitsSupportL = queryAssertion("does_not_inhibit", "support", num)
-    doesNotInhibitsRefuteL = queryAssertion("does_not_inhibit", "refute", num)
-    printAssertionByType(doesNotInhibitsSupportL + doesNotInhibitsRefuteL, filepath1, "a")
+    # doesNotInhibitsSupportL = queryAssertion("does_not_inhibit", "support", num)
+    # doesNotInhibitsRefuteL = queryAssertion("does_not_inhibit", "refute", num)
+    # printAssertionByType(doesNotInhibitsSupportL + doesNotInhibitsRefuteL, filepath1, "a")
 
 
