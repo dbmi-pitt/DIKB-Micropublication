@@ -64,17 +64,22 @@ outputs: queryBenchmark.csv
 How to create benchmark diagram via R
 --------------------------------------
 
-Preparetions:
+(1) Preparations
 
-Install: Emacs, ESS for use R in emacs, R
+Install: Emacs, ESS for use R in emacs, R 
 
-(1) get time cost of 24 queries on original MP graph
+write config file graph-config.properties
+config for script benchMarkQueries.py to run queries on different graphs
+format: <folded times>=<graph name> 
 
-$ cat queryBenchmark.csv | grep "inferred-graph-oa-mp.xml" | cut -f4 -d\| > temp.txt
+
+(2) get time cost of 24 queries on original MP graph
+
+merge time cost table "queryBenchmark.csv" to format that R needs
+$ mergeResultsForR.sh
+
 
 (2) R command:
-
-ex.
 
 $ mp0 <- c()
 $ mp1 <- c() ....
@@ -83,5 +88,4 @@ png('benchmark.png')
 
 $ boxplot(mp0,mp1,mp2,mp3,mp4,mp5,mp6,vertical=TRUE, names=c("MP graph", "1 fold", "2 fold", "3 fold", "4 fold", "5 fold", "6 fold"), xlab="number of folds", ylab="time costs")
 
-Example:
-
+Example "createBenchMarkDiagram.R"
