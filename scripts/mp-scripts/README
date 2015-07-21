@@ -17,8 +17,8 @@ from "https://github.com/RDFLib/rdflib-jsonld"
 
 ############################################################################
 The program currently works by attempting to translate data in the
-current DIKB evidence base to an RDF graph with NP and MP according to
-the model diagrammed in the design folder.
+current DIKB evidence base to an RDF graph according to
+MP model diagrammed in the design folder.
 ############################################################################
 
 (1) run python script to send sparql query against virtuoso endpoint.
