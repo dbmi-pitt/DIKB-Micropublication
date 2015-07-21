@@ -84,14 +84,15 @@ def createNanopubs(g):
 	for b in bindings:
 		
 		idIndex = b['a'].decode('utf-8').index('DIDEO_')
-		identifier = b['a'].decode('utf-8')[idIndex:]
+		asIndex = b['a'].decode('utf-8').index('-assertion')
+		identifier = b['a'].decode('utf-8')[idIndex:asIndex]
 		predicateType = b['t'].decode('utf-8')
 
 		npURI = URIRef('http://purl.obolibrary.org/obo/%s-nanopub') % identifier
 		headURI = URIRef('http://purl.obolibrary.org/obo/%s-head') % identifier
 		pubInfoURI = URIRef('http://purl.obolibrary.org/obo/%s-pubInfo') % identifier
 		provURI = URIRef('http://purl.obolibrary.org/obo/%s-provenance') % identifier
-		aURI = URIRef('http://purl.obolibrary.org/obo/%s') % identifier
+		aURI = URIRef('http://purl.obolibrary.org/obo/%s-assertion') % identifier
 
 		ds.add(( aURI, RDF.type, np.assertion))
 		
@@ -104,15 +105,15 @@ def createNanopubs(g):
 		head.add((npURI, np['hasPublicationInfo'], pubInfoURI))
 
 		pub = ds.add_graph(pubInfoURI)
-		pub.add((npURI, prov.wasAttributedTo, URIRef('http://www.linkedin.com/in/boycer')))
+		pub.add((npURI, prov.wasAttributedTo, URIRef('http://orcid.org/0000-0002-2993-2085')))
 		pub.add((npURI, prov.generatedAtTime, Literal(datetime.now()) ))
 		
 		if(predicateType == "http://purl.obolibrary.org/obo/DIDEO_00000000"):
 
 			provenance = ds.add_graph(provURI)
-			provenance.add(( aURI, prov.wasAttributedTo, URIRef('http://www.linkedin.com/in/boycer')))
+			provenance.add(( aURI, prov.wasAttributedTo, URIRef('http://orcid.org/0000-0002-2993-2085')))
 			provenance.add(( aURI, prov.generatedAtTime, Literal(datetime.now()) ))
-			provenance.add(( aURI, prov.wasDerivedFrom, URIRef('http://localhost:8890/practice-mp/')))
+			provenance.add(( aURI, prov.wasDerivedFrom, Literal("Derived from the DIKB's evidence base using the listed belief criteria")))
 			provenance.add(( aURI, prov.hadMember, dikbEvidence.EV_PK_DDI_RCT ))
 			provenance.add(( aURI, prov.hadMember, dikbEvidence.EV_PK_DDI_NR ))
 			provenance.add(( aURI, prov.hadMember, dikbEvidence.EV_PK_DDI_Par_Grps ))						 
@@ -120,9 +121,9 @@ def createNanopubs(g):
 		elif(predicateType == "http://purl.obolibrary.org/obo/DIDEO_00000096"):
 
 			provenance = ds.add_graph(provURI)
-			provenance.add(( aURI, prov.wasAttributedTo, URIRef('http://www.linkedin.com/in/boycer')))
+			provenance.add(( aURI, prov.wasAttributedTo, URIRef('http://orcid.org/0000-0002-2993-2085')))
 			provenance.add(( aURI, prov.generatedAtTime, Literal(datetime.now()) ))
-			provenance.add(( aURI, prov.wasDerivedFrom, URIRef('http://localhost:8890/practice-mp/')))
+			provenance.add(( aURI, prov.wasDerivedFrom, Literal("Derived from the DIKB's evidence base using the listed belief criteria")))
 			provenance.add(( aURI, prov.hadMember, dikbEvidence.EV_PK_DDI_RCT ))
 			provenance.add(( aURI, prov.hadMember, dikbEvidence.EV_PK_DDI_NR ))
 			provenance.add(( aURI, prov.hadMember, dikbEvidence.EV_PK_DDI_Par_Grps )) 
@@ -132,9 +133,9 @@ def createNanopubs(g):
 		elif(predicateType == "http://purl.obolibrary.org/obo/RO_0002449"):
 
 			provenance = ds.add_graph(provURI)
-			provenance.add(( aURI, prov.wasAttributedTo, URIRef('http://www.linkedin.com/in/boycer')))
+			provenance.add(( aURI, prov.wasAttributedTo, URIRef('http://orcid.org/0000-0002-2993-2085')))
 			provenance.add(( aURI, prov.generatedAtTime, Literal(datetime.now()) ))
-			provenance.add(( aURI, prov.wasDerivedFrom, URIRef('http://localhost:8890/practice-mp/')))
+			provenance.add(( aURI, prov.wasDerivedFrom, Literal("Derived from the DIKB's evidence base using the listed belief criteria")))
 			provenance.add(( aURI, prov.hadMember, dikbEvidence.EV_PK_DDI_RCT ))
 			provenance.add(( aURI, prov.hadMember, dikbEvidence.EV_PK_DDI_NR ))
 			provenance.add(( aURI, prov.hadMember, dikbEvidence.EV_PK_DDI_Par_Grps )) 

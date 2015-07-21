@@ -1,24 +1,30 @@
 @prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ns1:	<http://purl.obolibrary.org/obo/> .
 @prefix ns2:	<http://www.nanopub.org/nschema#> .
-ns1:DIDEO_XXX134	rdf:type	ns2:assertion .
+ns1:DIDEO_XXX12-assertion	rdf:type	ns2:assertion .
 @prefix ns3:	<http://purl.org/mp/> .
-ns1:DIDEO_XXX134	ns3:qualifiedBy	ns1:DIDEO_00000096 .
-ns1:DIDEO_XXX138	rdf:type	ns2:assertion ;
+ns1:DIDEO_XXX12-assertion	ns3:qualifiedBy	ns1:DIDEO_00000096 .
+ns1:DIDEO_XXX15-assertion	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns1:DIDEO_00000096 .
-ns1:DIDEO_XXX143	rdf:type	ns2:assertion ;
+ns1:DIDEO_XXX288-assertion	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns1:DIDEO_00000096 .
-ns1:DIDEO_XXX149	rdf:type	ns2:assertion ;
+ns1:DIDEO_XXX301-assertion	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns1:DIDEO_00000096 .
-ns1:DIDEO_XXX152	rdf:type	ns2:assertion ;
+ns1:DIDEO_XXX302-assertion	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns1:DIDEO_00000096 .
-ns1:DIDEO_XXX154	rdf:type	ns2:assertion ;
+ns1:DIDEO_XXX304-assertion	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns1:DIDEO_00000096 .
-ns1:DIDEO_XXX168	rdf:type	ns2:assertion ;
+ns1:DIDEO_XXX314-assertion	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns1:DIDEO_00000096 .
-ns1:DIDEO_XXX169	rdf:type	ns2:assertion ;
+ns1:DIDEO_XXX38-assertion	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns1:DIDEO_00000096 .
-ns1:DIDEO_XXX3	rdf:type	ns2:assertion ;
+ns1:DIDEO_XXX41-assertion	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns1:DIDEO_00000096 .
-ns1:DIDEO_XXX6	rdf:type	ns2:assertion ;
+ns1:DIDEO_XXX5-assertion	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns1:DIDEO_00000096 .
+ns1:DIDEO_XXX62-assertion	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns1:DIDEO_00000096 .
+ns1:DIDEO_XXX66-assertion	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns1:DIDEO_00000096 .
+ns1:DIDEO_XXX7-assertion	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns1:DIDEO_00000096 .

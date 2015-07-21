@@ -83,12 +83,12 @@ if __name__ == "__main__":
     sparql_service = "http://localhost:8890/sparql"
 
     ## delete graphs np-head 
-    #deleteGraphByIdx("-head", sparql_service)
+    deleteGraphByIdx("-head", sparql_service)
     
-    # deleteGraphByType("Nanopublication", sparql_service)
-    # deleteGraphByType("assertion", sparql_service)
-    # deleteGraphByType("Provenance", sparql_service)
-    # deleteGraphByType("PublicationInfo", sparql_service)
+    deleteGraphByType("Nanopublication", sparql_service)
+    deleteGraphByType("assertion", sparql_service)
+    deleteGraphByType("Provenance", sparql_service)
+    deleteGraphByType("PublicationInfo", sparql_service)
 
-    #npGraphL = ['ns1:default']
-    #deleteListOfGraphsISQL(npGraphL)
+    npGraphL = ['ns1:default']
+    deleteListOfGraphsISQL(npGraphL)
