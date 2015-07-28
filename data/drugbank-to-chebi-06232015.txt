@@ -1941,3 +1941,8 @@ http://purl.obolibrary.org/obo/CHEBI_310957	http://bio2rdf.org/chebi:310957	http
 http://purl.obolibrary.org/obo/CHEBI_77032	http://bio2rdf.org/chebi:77032	http://www.drugbank.ca/drugs/DB09019	http://bio2rdf.org/drugbank:DB09019
 http://purl.obolibrary.org/obo/CHEBI_518415	http://bio2rdf.org/chebi:518415	http://www.drugbank.ca/drugs/DB09022	http://bio2rdf.org/drugbank:DB09022
 http://purl.obolibrary.org/obo/CHEBI_4055	http://bio2rdf.org/chebi:4055	http://www.drugbank.ca/drugs/DB09028	http://bio2rdf.org/drugbank:DB09028
+http://purl.obolibrary.org/obo/CHEBI_6931	http://bio2rdf.org/chebi:6931	http://www.drugbank.ca/drugs/DB00683	http://bio2rdf.org/drugbank:DB00683
+http://purl.obolibrary.org/obo/CHEBI_63619	http://bio2rdf.org/chebi:63619	http://www.drugbank.ca/drugs/DB01182	http://bio2rdf.org/drugbank:DB01182
+http://purl.obolibrary.org/obo/CHEBI_82978	http://bio2rdf.org/chebi:82978	http://www.drugbank.ca/drugs/DB01267	http://bio2rdf.org/drugbank:DB01267
+http://purl.obolibrary.org/obo/CHEBI_9448	http://bio2rdf.org/chebi:9448	http://www.drugbank.ca/drugs/DB00857	http://bio2rdf.org/drugbank:DB00857
+http://purl.obolibrary.org/obo/CHEBI_63618	http://bio2rdf.org/chebi:63618	http://www.drugbank.ca/drugs/DB00175	http://bio2rdf.org/drugbank:DB00175
