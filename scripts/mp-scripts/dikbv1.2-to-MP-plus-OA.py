@@ -426,15 +426,21 @@ def createGraph(graph, dataset):
 
                 #print "[DEBUG] current Claim Cntr:" + str(annotationClaimCntr)
 
+                currentMP = "ddi-spl-annotation-mp-%s" % (annotationClaimCntr)
+                graph.add((poc[currentMP],RDF.type, mp["Micropublication"]))
+
                 currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % (annotationClaimCntr)
                 annotationClaimCntr += 1
+
+                # mp:Micropublication mp:argues mp:Claim
+                graph.add((poc[currentMP], mp["argues"], poc[currentAnnotationClaim]))
 
                 assert_claimD[item['researchStatementLabel']] = currentAnnotationClaim
             else:
                 currentAnnotationClaim = assert_claimD[item['researchStatementLabel']]
 
             graph.add((poc[currentAnnotationClaim],RDF.type, mp["Claim"]))
-            graph.add((poc[currentAnnotationClaim],RDF.type, mp["Representation"]))
+
             graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
             graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["objectURI"])))
             graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
