@@ -1,5 +1,5 @@
-# SPARQL version: 1.1 
-# DIKB MP/NP version: 2015-07-21
+# SPARQL version: 1.1
+# DIKB MP/NP version: 2015-07-22
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -13,23 +13,30 @@ PREFIX mp: <http://purl.org/mp/> # namespace for micropublication
 PREFIX ncbit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX oa: <http://www.w3.org/ns/oa#>
 PREFIX pav: <http://purl.org/pav>
-PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
+PREFIX poc: <http://dbmi-icode-01.dbmi.pitt.edu/mp/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
 
-#### Show distribution of evidence types for inhibits claims
-### LIMITATION OF THE CURRENT MODEL - have to query for count of label statements separately, see STAT-07
 
-SELECT ?type count(?type) as ?ev_count
+# What data, methods, materials, are reported in evidence item X?
+## Sample evidence item is pubmed 10771452... the casting as a string looks bad, probably a better way but this works
+
+SELECT DISTINCT ?data ?methods ?materials
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-     { ?data mp:supports ?claim } UNION { ?data mp:challenges ?claim }.
-     ?methods mp:supports ?data;
-	      rdf:type ?type.
-     ?claim mp:qualifiedBy obo:RO_0002449.
-     FILTER regex ( ?type, dikbEvidence: )
+      ?aURN oa:hasSource "http://www.ncbi.nlm.nih.gov/pubmed/10771452"^^<http://www.w3.org/2001/XMLSchema#String>.  
+      
+      ?anItem oa:hasTarget ?aURN.
+      
+      ?anItem oa:hasBody ?data.
+      
+      ?data mp:supports ?claim.
+      
+      ?claim a mp:Claim.
+      
+      ?methods mp:supports ?data.
+      
+      ?materials mp:usedIn ?methods.
 }
-GROUP BY ?type

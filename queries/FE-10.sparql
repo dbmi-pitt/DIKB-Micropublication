@@ -1,5 +1,5 @@
-# SPARQL version: 1.1 
-# DIKB MP/NP version: 2015-07-21
+# SPARQL version: 1.1
+# DIKB MP/NP version: 2015-07-22
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -13,23 +13,29 @@ PREFIX mp: <http://purl.org/mp/> # namespace for micropublication
 PREFIX ncbit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX oa: <http://www.w3.org/ns/oa#>
 PREFIX pav: <http://purl.org/pav>
-PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
+PREFIX poc: <http://dbmi-icode-01.dbmi.pitt.edu/mp/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 
-#### Show distribution of evidence types for potential drug-drug interaction claims
-### LIMITATION OF THE CURRENT MODEL - have to query for count of label statements separately, see STAT-09
+# Which single evidence items support or challenge multiple claims of the type "potential drug-drug interaction"?
 
-SELECT ?type count(?type) as ?ev_count
+SELECT DISTINCT xsd:string(?source) as ?evidence_source
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-     { ?data mp:supports ?claim } UNION { ?data mp:challenges ?claim }.
-     ?methods mp:supports ?data;
-	      rdf:type ?type.
-     ?claim mp:qualifiedBy obo:DIDEO_00000000.
-     FILTER regex ( ?type, dikbEvidence: )
+      ?aURN oa:hasSource ?source.  
+      
+      ?anItem oa:hasTarget ?aURN.
+      
+      ?anItem oa:hasBody ?data.
+      
+      {?data mp:supports ?claim} UNION {?data mp:challenges ?claim}.
+      
+      ?claim a mp:Claim.  
+      
+      ?claim mp:qualifiedBy obo:DIDEO_00000000.
 }
-GROUP BY ?type
+GROUP BY ?source
+HAVING ( count(DISTINCT ?claim) > 1 )

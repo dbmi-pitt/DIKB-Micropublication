@@ -1,5 +1,5 @@
-# SPARQL version: 1.1 
-# DIKB MP/NP version: 2015-07-21
+# SPARQL version: 1.1
+# DIKB MP/NP version: 2015-07-22
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -13,21 +13,30 @@ PREFIX mp: <http://purl.org/mp/> # namespace for micropublication
 PREFIX ncbit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX oa: <http://www.w3.org/ns/oa#>
 PREFIX pav: <http://purl.org/pav>
-PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
+PREFIX poc: <http://dbmi-icode-01.dbmi.pitt.edu/mp/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
 
-#### Show count of statements for potential drug-drug interaction claims
 
-SELECT ?type count(?type) as ?ev_count
+# What other claims are challenged by this evidence item?
+## using <http://www.ncbi.nlm.nih.gov/pubmed/10771452> as "this evidence item" and claim-192 as "other than this claim"
+
+SELECT DISTINCT ?claim ?cLabel
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-     { ?statement mp:supports ?claim } UNION { ?statement mp:challenges ?claim }.
-     ?statement rdf:type ?type.
-     ?claim mp:qualifiedBy obo:DIDEO_00000000.
-     FILTER ( regex(?type, dikbEvidence:Non_traceable_Drug_Label_Statement) || regex(?type, dikbEvidence:Traceable_Drug_Label_Statement) )
+      ?aURN oa:hasSource "http://www.ncbi.nlm.nih.gov/pubmed/10771452"^^<http://www.w3.org/2001/XMLSchema#String>.  
+      
+      ?anItem oa:hasTarget ?aURN.
+      
+      ?anItem oa:hasBody ?data.
+      
+      ?data mp:challenges ?claim.
+      
+      ?claim a mp:Claim.
+      
+      ?claim rdfs:label ?cLabel.
+      
+      FILTER (!regex( ?claim, poc:ddi-spl-annotation-claim-192 ))
 }
-GROUP BY ?type

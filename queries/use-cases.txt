@@ -18,18 +18,20 @@
 4. What is the in vivo evidence for claim X? **done** 
 5. List all evidence that has been tagged as rejected from entry into the the knowledge base? **DEFERRED**
 6. Which single evidence items are unique support for multiple claims 
-(i.e. it is the only piece of evidence)?
+(i.e. it is the only piece of evidence)? **done**
 7. Which single evidence items are unique challenge for multiple claims 
-(i.e. it is the only piece of evidence)?
-8. Which single evidence items support or challenge multiple claims of type "substrate of"? 
-9. Which single evidence items support or challenge multiple claims of type "inhibits"?
-10. Which single evidence items support or challenge multiple claims of type "increases AUC"?
+(i.e. it is the only piece of evidence)? **done**
+8. Which single evidence items support or challenge multiple claims of type "substrate of"? **done**
+9. Which single evidence items support or challenge multiple claims of type "inhibits"? **done**
+10. Which single evidence items support or challenge multiple claims of type
+"potential drug-drug interaction"? **done**
 
 
 ==AE: Assess evidence==
-1. What data, methods, materials, are reported in evidence item X?
-2. Which evidence items cite an existing evidence item (or something from the evidence item)?
-3. Which evidence items update a regulatory item (e.g. FDA guidance document, change to product label, etc...)?
+1. What data, methods, materials, are reported in evidence item X? **done**
+2. Which evidence items cite an existing evidence item (or something from the evidence item)? **DEFERRED**
+3. Which evidence items update a regulatory item (e.g. FDA guidance document, 
+change to product label, etc...)?  **DEFERRED**
 4. Which research group conducted the study used for evidence item X? **DEFERRED**
 
 
@@ -37,32 +39,29 @@
 1. Has evidence item X been rejected for claim Y? **DEFERRED**
 2. Why was evidence item X rejected for claim Y? **DEFERRED**
 3. Who rejected evidence item X for claim Y? **DEFERRED**
-4. Which other claims are supportedBy this evidence item?
-5. Which other claims are challengedBy this evidence item?
-6. What are the assumptions required for use of this evidence item to support claim X?
-7. What are the assumptions required for use of this evidence item to challenge claim X?
+4. Which other claims are supportedBy this evidence item? **done**
+5. Which other claims are challengedBy this evidence item? **done**
+6. What are the assumptions required for use of this evidence item to support claim X? **DEFERRED**
+7. What are the assumptions required for use of this evidence item to challenge claim X? **DEFERRED**
 
 
 ===PK: Check claims about pharmacokinetic parameters (i.e., area under the concentration time curve (AUC))===
 1. How many pharmacokinetic studies provide data on the changes of a PK parameter in the case of a drug 
 interaction? **done**
-2. How many pharmacokinetic studies established a PK parameter about a drug (single drug case)?
-3. What is the result of averaging the values for pharmacokinetic parameter X across all relevant studies used for evidence items? **done**
+2. How many pharmacokinetic studies established a PK parameter about a drug (single drug case)? **DEFERRED**
+3. What is the result of averaging the values for pharmacokinetic parameter X across all relevant 
+studies used for evidence items? **done**
 
 
 ===PROD: Check for differences in product labeling===
 1. Are there differences in the evidence items that were identified across
-different versions of product labeling for the same drug?
-2. What version of product labeling was used for evidence item X?
+different versions of product labeling for the same drug? **DEFERRED**
+2. What version of product labeling was used for evidence item X? **DEFERRED**
 
 
 ==STAT: Summarize statistical information about the evidence base==
 1. Number of claims in the system **done**
 2. Number of evidence items for each claim type **done**
 3. Number of evidence items against each claim type **done**
-4. Show the distribution of the evidence types for substrate_of claims **done**
-5. Show the count of label statements for substrate_of claims **done**
-6. Show the distribution of the evidence types for inhibits claims **done**
-7. Show the count of label statements for inhibits claims **done**
-8. Show the distribution of the evidence types for increases_auc claims **done**
-9. Show the count of label statements for increases_auc claims **done**
+4. Show the distribution of the evidence types for types of claims **done**
+5. Show the count of label statements for all types of claims **done**

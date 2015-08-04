@@ -61,7 +61,7 @@ mp = Namespace('http://purl.org/mp/')
 def createNanopubs(g):
 		
 	ds = Dataset()
-	ds.namespace_manager.bind("ddi","http://purl.org/net/nlprepository/spl-ddi-annotation-poc#")
+	ds.namespace_manager.bind("ddi","http://dbmi-icode-01.dbmi.pitt.edu/mp/")
 	ds.namespace_manager.bind("np", "http://www.nanopub.org/nschema#")
 	ds.namespace_manager.bind("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 	ds.namespace_manager.bind("rdfs", "http://www.w3.org/2000/01/rdf-schema#")
@@ -93,7 +93,7 @@ def createNanopubs(g):
 				
 			if(predicateType == "increases_auc"):
 
-				aURI =	URIRef("http://purl.obolibrary.org/obo/DIDEO_XXX%s-assertion") % assertionCount
+				aURI =	URIRef("http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-assertion-%s") % assertionCount
 				assertionCount += 1
 			
 				bn1 = BNode('1')
@@ -146,7 +146,7 @@ def createNanopubs(g):
 				
 			elif(predicateType == "substrate_of"):
 						
-				aURI =	URIRef("http://purl.obolibrary.org/obo/DIDEO_XXX%s-assertion") % assertionCount
+				aURI =	URIRef("http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-assertion-%s") % assertionCount
 				assertionCount += 1
 				
 				dLabel = cL[claimSub.strip('\n')].strip('\n')
@@ -168,7 +168,7 @@ def createNanopubs(g):
 				
 			elif(predicateType == "inhibits"):
 
-				aURI =	URIRef("http://purl.obolibrary.org/obo/DIDEO_XXX%s-assertion") % assertionCount
+				aURI =	URIRef("http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-assertion-%s") % assertionCount
 				assertionCount += 1
 				
 				dLabel = cL[claimSub.strip('\n')].strip('\n')

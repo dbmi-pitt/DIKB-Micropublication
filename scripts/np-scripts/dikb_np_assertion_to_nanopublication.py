@@ -67,7 +67,7 @@ dikbEvidence = Namespace('http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_
 def createNanopubs(g):
 		
 	ds = Dataset()
-	ds.namespace_manager.bind("ddi","http://purl.org/net/nlprepository/spl-ddi-annotation-poc#")
+	ds.namespace_manager.bind("ddi","http://dbmi-icode-01.dbmi.pitt.edu/mp/")
 	ds.namespace_manager.bind("np", "http://www.nanopub.org/nschema#")
 	ds.namespace_manager.bind("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 	ds.namespace_manager.bind("rdfs", "http://www.w3.org/2000/01/rdf-schema#")
@@ -82,17 +82,16 @@ def createNanopubs(g):
 	
 	bindings = g.query(interactSelect)
 	for b in bindings:
-		
-		idIndex = b['a'].decode('utf-8').index('DIDEO_')
-		asIndex = b['a'].decode('utf-8').index('-assertion')
-		identifier = b['a'].decode('utf-8')[idIndex:asIndex]
+	
+		asIndex = b['a'].decode('utf-8').rfind('-')		   
+		identifier = b['a'].decode('utf-8')[asIndex:]
 		predicateType = b['t'].decode('utf-8')
 
-		npURI = URIRef('http://purl.obolibrary.org/obo/%s-nanopub') % identifier
-		headURI = URIRef('http://purl.obolibrary.org/obo/%s-head') % identifier
-		pubInfoURI = URIRef('http://purl.obolibrary.org/obo/%s-pubInfo') % identifier
-		provURI = URIRef('http://purl.obolibrary.org/obo/%s-provenance') % identifier
-		aURI = URIRef('http://purl.obolibrary.org/obo/%s-assertion') % identifier
+		npURI = URIRef('http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-nanopub%s') % identifier
+		headURI = URIRef('http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-head%s') % identifier
+		pubInfoURI = URIRef('http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-pubInfo%s') % identifier
+		provURI = URIRef('http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-provenance%s') % identifier
+		aURI = URIRef('http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-assertion%s') % identifier
 
 		ds.add(( aURI, RDF.type, np.assertion))
 		

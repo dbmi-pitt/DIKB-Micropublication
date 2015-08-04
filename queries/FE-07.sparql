@@ -1,5 +1,5 @@
-# SPARQL version: 1.1 
-# DIKB MP/NP version: 2015-07-21
+# SPARQL version: 1.1
+# DIKB MP/NP version: 2015-07-23
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -19,20 +19,41 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 
-#### Show distribution of evidence types for all types of claims
-### LIMITATION OF THE CURRENT MODEL - have to query for count of label statements separately, see STAT-05
+# Which single evidence items are unique challenge for multiple claims (i.e. it is the only piece of evidence)?
 
-SELECT ?cType as ?claim_type ?type as ?evidence_type count(?type) as ?evidence_count
+SELECT DISTINCT xsd:string(?source) as ?evidence_source
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-     { ?data mp:supports ?claim } UNION { ?data mp:challenges ?claim }.
-     ?methods mp:supports ?data;
-	      rdf:type ?type.
-     {?claim mp:qualifiedBy obo:DIDEO_00000096} UNION {?claim mp:qualifiedBy obo:RO_0002449} UNION {?claim mp:qualifiedBy obo:DIDEO_00000000}.
-     ?claim mp:qualifiedBy ?cType.
-     FILTER (!regex ( ?cType, obo:CHEBI_ ) && !regex( ?cType, obo:PR_ ))
-     FILTER regex ( ?type, dikbEvidence: )
-}
-GROUP BY ?cType ?type
+      ?aURN oa:hasSource ?source.  
+      
+      ?anItem oa:hasTarget ?aURN.
+      
+      ?anItem oa:hasBody ?data.
+            
+      ?data mp:challenges ?claim.
+      
+      ?claim a mp:Claim.
 
+  {      
+      SELECT DISTINCT ?claim count(DISTINCT ?source)
+      FROM <inferred-graph-oa-mp.xml>
+      WHERE 
+      {
+	   ?claim a mp:Claim.
+	   
+	   ?data mp:challenges ?claim.
+	   
+	   ?anItem oa:hasBody ?data.
+	   
+	   ?anItem oa:hasTarget ?aURN.
+	   
+	   ?aURN oa:hasSource ?source.
+      }
+      GROUP BY ?claim
+      HAVING ( count(DISTINCT ?source) = 1 )
+  }
+ 
+}
+GROUP BY ?source
+HAVING ( count(DISTINCT ?claim) > 1 )
