@@ -70,7 +70,9 @@ siocns = Namespace('http://rdfs.org/sioc/ns#')
 swande = Namespace('http://purl.org/swan/1.2/discourse-elements#')
 dikbD2R = Namespace('http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/resource/')
 linkedspls = Namespace('file:///home/rdb20/Downloads/d2rq-0.8.1/linkedSPLs-dump.nt#structuredProductLabelMetadata/')
-poc = Namespace('http://purl.org/net/nlprepository/spl-ddi-annotation-poc#')
+#poc = Namespace('http://purl.org/net/nlprepository/spl-ddi-annotation-poc#')
+poc = Namespace('http://dbmi-icode-01.dbmi.pitt.edu/fct/')
+
 ncbit = Namespace('http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#')
 dikbEvidence = Namespace('http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#')
 mp = Namespace('http://purl.org/mp/') # namespace for micropublication
