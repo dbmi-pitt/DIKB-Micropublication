@@ -7,90 +7,55 @@ from rdflib import Graph
 from SPARQLWrapper import SPARQLWrapper, JSON
 from isql_connector import ISQLWrapper
 
-def getNPGraphByTypeQry(type):
-    qry = """
-    PREFIX np: <http://www.nanopub.org/nschema#>
-    SELECT DISTINCT ?s
-    WHERE { ?s a np:%s.}
-
-    """ % (type)
-    return qry
-
-def getNPAssertIndxQry():
-    qry = """
-    PREFIX np: <http://www.nanopub.org/nschema#>
-    PREFIX mp: <http://purl.org/mp/>
-    SELECT ?s
-    WHERE
-    {
-    #?s rdf:type np:assertion.
-    ?m np:hasAssertion ?s.
-    }
-    """
-    return qry
+ISQL_CONFIG = "isql-connection.conf"
 
 
-def getListOfURIsByQry(qry, sparql_service):
-    
-    npsparql = SPARQLWrapper(sparql_service)
+## delete np graphs using ddi namespace
 
-    npsparql.setQuery(qry)
-    npsparql.setReturnFormat(JSON)
-    resultset = npsparql.query().convert()
-    
-    nanopubL = []
-    if len(resultset["results"]["bindings"]) == 0:
-        print "INFO: No result!"
+def deleteListOfGraphsISQL(maxIdxNum, npType):
+
+    USER = None
+    PWD = None
+
+    dbconfig = file = open(ISQL_CONFIG)
+    if dbconfig:
+        for line in dbconfig:
+            if "USERNAME" in line:
+                USER = line[(line.find("USERNAME=")+len("USERNAME=")):line.find(";")]
+            elif "PASSWORD" in line:  
+                PWD = line[(line.find("PASSWORD=")+len("PASSWORD=")):line.find(";")]
+
+    if USER and PWD:
+        isql = ISQLWrapper("localhost", USER, PWD)
+
+        for i in range (1,int(maxIdxNum)):
+
+            graphname = "ddi:ddi-spl-annotation-np-" + npType + "-" + str(i)
+
+            print "[INFO] delete graph " + graphname
+            isql.clean_graph(graphname)
     else:
-        for i in range(0, len(resultset["results"]["bindings"])):
-            nanopubL.append(resultset["results"]["bindings"][i]["s"]["value"].strip())
-    return nanopubL
+        print "[DEBUG] isql connection fail, check isql_config"
 
+## delete old np graphs using obo namespace
 
+def deleteListOfGraphsISQLOBO(maxIdxNum, npType):
 
-def deleteListOfGraphsISQL(URIsL):
+    isql = ISQLWrapper("localhost","dba","cjirtR01")
 
-    isql = ISQLWrapper("localhost","dba","dba")
+    for i in range (1,int(maxIdxNum)):
 
-    for uri in URIsL:
-        graphname = uri.replace("http://purl.obolibrary.org/obo/","obo:") 
+        graphname = "obo:DIDEO_XXX" + str(i) + "-" + npType
+
         print "[INFO] delete graph " + graphname
         isql.clean_graph(graphname)
 
-    
-def deleteGraphByIdx(name, sparql_service):
 
-    qry = getNPAssertIndxQry()
-    npIdxL = getListOfURIsByQry(qry, sparql_service)
-
-    graphL = []
-    for npIdx in npIdxL:
-        npIdx = npIdx.replace("-assertion","")
-        graphL.append(npIdx + name)
-    
-    deleteListOfGraphsISQL(graphL)
-    #print npIdxL
-
-
-def deleteGraphByType(type, sparql_service):
-
-    qry = getNPGraphByTypeQry(type)
-    graphL = getListOfURIsByQry(qry, sparql_service)
-    deleteListOfGraphsISQL(graphL)
-
-    
 if __name__ == "__main__":
 
-    #sparql_service = "https://dbmi-icode-01.dbmi.pitt.edu/dikb/sparql"
-    sparql_service = "http://localhost:8890/sparql"
+    deleteListOfGraphsISQL(355, "head")    
+    deleteListOfGraphsISQL(355, "assertion")    
 
-    ## delete graphs np-head 
-    deleteGraphByIdx("-head", sparql_service)
-    
-    deleteGraphByType("Nanopublication", sparql_service)
-    deleteGraphByType("assertion", sparql_service)
-    deleteGraphByType("Provenance", sparql_service)
-    deleteGraphByType("PublicationInfo", sparql_service)
+    deleteListOfGraphsISQLOBO(355, "pubInfo")
+    deleteListOfGraphsISQLOBO(355, "provenance")
 
-    npGraphL = ['ns1:default']
-    deleteListOfGraphsISQL(npGraphL)
