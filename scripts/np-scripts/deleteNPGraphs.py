@@ -39,23 +39,25 @@ def deleteListOfGraphsISQL(maxIdxNum, npType):
 
 ## delete old np graphs using obo namespace
 
-def deleteListOfGraphsISQLOBO(maxIdxNum, npType):
+# def deleteListOfGraphsISQLOBO(maxIdxNum, npType):
 
-    isql = ISQLWrapper("localhost","dba","cjirtR01")
+#     isql = ISQLWrapper("","","")
 
-    for i in range (1,int(maxIdxNum)):
+#     for i in range (1,int(maxIdxNum)):
 
-        graphname = "obo:DIDEO_XXX" + str(i) + "-" + npType
+#         graphname = "obo:DIDEO_XXX" + str(i) + "-" + npType
 
-        print "[INFO] delete graph " + graphname
-        isql.clean_graph(graphname)
+#         print "[INFO] delete graph " + graphname
+#         isql.clean_graph(graphname)
 
 
 if __name__ == "__main__":
 
-    deleteListOfGraphsISQL(355, "head")    
-    deleteListOfGraphsISQL(355, "assertion")    
+    maxIdx = 355
 
-    deleteListOfGraphsISQLOBO(355, "pubInfo")
-    deleteListOfGraphsISQLOBO(355, "provenance")
+    deleteListOfGraphsISQL(maxIdx, "head")    
+    deleteListOfGraphsISQL(maxIdx, "assertion")    
+
+    # deleteListOfGraphsISQLOBO(355, "pubInfo")
+    # deleteListOfGraphsISQLOBO(355, "provenance")
 

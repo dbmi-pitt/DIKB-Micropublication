@@ -73,3 +73,10 @@ rdf_loader_run();
 
 
 
+(7) (Optional) delete all np graphs
+
+python script deleteNPGraphs.py can delete np graphs from trig. Firstly, check username and password in isql-connection.conf that specified isql login information. Then, run script by following command:
+
+$ deleteNPGraphs.py
+
+Notes: maxIdx in main function depends on the number of np:assertions. script will go from 1 to maxIdx in order to delete all np graphs within indx range. 
