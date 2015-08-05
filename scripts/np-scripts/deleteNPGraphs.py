@@ -23,7 +23,7 @@ def getNPAssertIndxQry():
     SELECT ?s
     WHERE
     {
-    ?s rdf:type np:assertion.
+    #?s rdf:type np:assertion.
     ?m np:hasAssertion ?s.
     }
     """
@@ -47,6 +47,7 @@ def getListOfURIsByQry(qry, sparql_service):
     return nanopubL
 
 
+
 def deleteListOfGraphsISQL(URIsL):
 
     isql = ISQLWrapper("localhost","dba","dba")
@@ -64,6 +65,7 @@ def deleteGraphByIdx(name, sparql_service):
 
     graphL = []
     for npIdx in npIdxL:
+        npIdx = npIdx.replace("-assertion","")
         graphL.append(npIdx + name)
     
     deleteListOfGraphsISQL(graphL)
