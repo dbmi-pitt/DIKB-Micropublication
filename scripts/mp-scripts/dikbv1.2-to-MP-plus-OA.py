@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 ### dikbv1.2-to-MP-plus-OA.py
 ##
 ## TRANSLATE PDDI ASSERTIONS AND EVIDENCE IN THE DIKB TO MICROPUBLICATION LINKED TO	 OPEN DATA ANNOTATION
@@ -22,6 +24,8 @@ import traceback
 import csv
 import difflib
 
+reload(sys)  # Reload does the trick!
+sys.setdefaultencoding('UTF8')
 
 ## import Sparql-related
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -184,9 +188,9 @@ def addOAItem(graph, item):
 	index_quoted = item["evidenceStatement"].find('Quote') 
 
 	if index_quoted > 0:
-		exact=item["evidenceStatement"][index_quoted:]
+		exact= unicode(item["evidenceStatement"][index_quoted:])
 	else:
-		exact= item["evidenceStatement"]
+		exact= unicode(item["evidenceStatement"])
 		rgx = re.compile(u"quote ?:", re.I)
 		exact = rgx.sub(u"",exact)
 
@@ -511,7 +515,7 @@ def printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV):
 
 	## write in tsv file
 	#try:
-	with open(OUT_CSV, 'wb') as tsvfile:
+	with codecs.open(OUT_CSV, 'wb', 'utf8') as tsvfile:
 		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatementLabel", "claim", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
 		writer.writeheader()
 		writer.writerows(mp_list)
@@ -520,7 +524,7 @@ def printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV):
 def createGraphFromDIKB(graph, inputCSV):
 
 	# PDDIs from DIKB
-	dataset = csv.DictReader(open(inputCSV,"rb"), delimiter='\t')
+	dataset = csv.DictReader(codecs.open(inputCSV,"rb","utf-8"), delimiter='\t')
 	createGraph(graph, dataset)
 
 def createGraphAucSubsInhib(graph):
