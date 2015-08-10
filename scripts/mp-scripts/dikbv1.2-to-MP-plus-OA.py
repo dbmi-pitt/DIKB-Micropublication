@@ -290,7 +290,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
 	annotationDataCntr += 1
 	graph.add((poc[currentAnnotationData], RDF.type, mp["Data"]))
 	graph.add((poc[currentAnnotationData], RDF.type, URIRef(item["evidenceType"]+"_Data")))
-	graph.add((URIRef(item["evidenceType"]), RDFS.subClassOf, mp["Data"]))
+	graph.add((URIRef(item["evidenceType"]+"_Data"), RDFS.subClassOf, mp["Data"]))
 
 	# Material
 	global annotationMaterialCntr
