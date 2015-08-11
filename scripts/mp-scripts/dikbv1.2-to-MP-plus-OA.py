@@ -231,7 +231,7 @@ def addOAItem(graph, item):
 
 	graph.add((poc[currentAnnotItem], oa["hasTarget"], currentAnnotTargetUuid))
 	graph.add((currentAnnotTargetUuid, RDF.type, oa["SpecificResource"]))
-	graph.add((currentAnnotTargetUuid, oa["hasSource"], Literal(item["evidenceSource"], datatype=XSD.String)))
+	graph.add((currentAnnotTargetUuid, oa["hasSource"], URIRef(item["evidenceSource"])))
 
 	graph.add((currentAnnotTargetUuid, oa["hasSelector"], textConstraintUuid))
 	graph.add((textConstraintUuid, RDF.type, oa["TextQuoteSelector"]))

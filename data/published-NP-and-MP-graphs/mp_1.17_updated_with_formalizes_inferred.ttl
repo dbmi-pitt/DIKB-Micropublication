@@ -1,0 +1,750 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.semanticweb.org/scr25/ontologies/untitled-ontology-63#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+
+<http://purl.org/mp/ArticleText>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Representation> .
+
+<http://purl.org/mp/Artifact>
+    a owl:Class ;
+    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+<http://purl.org/mp/Attribution>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Representation> .
+
+<http://purl.org/mp/Claim>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Statement> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/Statement>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/arguedBy> ;
+                owl:someValuesFrom <http://purl.org/mp/Micropublication>
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/Data>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Representation> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/Representation>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/dataSupports> ;
+                owl:someValuesFrom <http://purl.org/mp/Representation>
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/Holotype>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Statement> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/Statement>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/holotypeFor> ;
+                owl:someValuesFrom <http://purl.org/mp/Statement>
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/Material>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Method> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/Method>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/represents> ;
+                owl:someValuesFrom <http://purl.org/mp/Artifact>
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/Method>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Representation> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/Representation>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/methodSupports> ;
+                owl:someValuesFrom <http://purl.org/mp/Representation>
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/Micropublication>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Representation> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/Representation>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/argues> ;
+                owl:someValuesFrom <http://purl.org/mp/Statement>
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/Procedure>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Method> .
+
+<http://purl.org/mp/QualifiedStatement>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Statement> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/Statement>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/qualifiedBy> ;
+                owl:someValuesFrom <http://purl.org/mp/Sentence>
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/Qualifier>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Sentence> .
+
+<http://purl.org/mp/Reference>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Qualifier> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/Sentence>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/citation> ;
+                owl:someValuesFrom xsd:string
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/ReferencedStatement>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/QualifiedStatement> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/QualifiedStatement>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/referencedBy> ;
+                owl:someValuesFrom <http://purl.org/mp/Reference>
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/Representation>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Artifact> .
+
+<http://purl.org/mp/SemanticQualifier>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Qualifier> .
+
+<http://purl.org/mp/Sentence>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Representation> .
+
+<http://purl.org/mp/Statement>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/Sentence> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/Sentence>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/statement> ;
+                owl:someValuesFrom xsd:string
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/TaggedStatement>
+    a owl:Class ;
+    rdfs:subClassOf <http://purl.org/mp/QualifiedStatement> ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (<http://purl.org/mp/QualifiedStatement>
+            [
+                a owl:Restriction ;
+                owl:onProperty <http://purl.org/mp/semtaggedBy> ;
+                owl:someValuesFrom <http://purl.org/mp/SemanticQualifier>
+            ]
+        )
+    ] .
+
+<http://purl.org/mp/arguedBy>
+    a owl:InverseFunctionalProperty, owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/supports>, [
+        owl:inverseOf <http://purl.org/mp/supportedBy>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/argues> .
+
+<http://purl.org/mp/argues>
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Micropublication> ;
+    rdfs:range <http://purl.org/mp/Claim> ;
+    rdfs:subPropertyOf <http://purl.org/mp/supportedBy>, [
+        owl:inverseOf <http://purl.org/mp/supports>
+    ] .
+
+<http://purl.org/mp/assertedBy>
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Representation> ;
+    rdfs:range <http://purl.org/mp/Micropublication> ;
+    rdfs:subPropertyOf <http://purl.org/mp/elementOf>, [
+        owl:inverseOf <http://purl.org/mp/hasElement>
+    ] ;
+    owl:propertyDisjointWith <http://purl.org/mp/quotedBy> .
+
+<http://purl.org/mp/asserts>
+    a owl:InverseFunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Micropublication> ;
+    rdfs:range <http://purl.org/mp/Representation> ;
+    rdfs:subPropertyOf <http://purl.org/mp/hasElement>, [
+        owl:inverseOf <http://purl.org/mp/elementOf>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/assertedBy> ;
+    owl:propertyDisjointWith <http://purl.org/mp/quotes> .
+
+<http://purl.org/mp/atTime>
+    a owl:DatatypeProperty ;
+    rdfs:domain <http://purl.org/mp/Attribution> ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/mp/attributedTo>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Artifact> ;
+    rdfs:range <http://www.w3.org/ns/prov#Agent> ;
+    rdfs:subPropertyOf owl:topObjectProperty, <http://www.w3.org/ns/prov#wasAttributedTo> .
+
+<http://purl.org/mp/attributionAsAuthor>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://www.w3.org/ns/prov#hasAttribution> .
+
+<http://purl.org/mp/attributionAsCurator>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://www.w3.org/ns/prov#hasAttribution> .
+
+<http://purl.org/mp/attributionAsEditor>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://www.w3.org/ns/prov#hasAttribution> .
+
+<http://purl.org/mp/attributionAsPublisher>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://www.w3.org/ns/prov#hasAttribution> .
+
+<http://purl.org/mp/attributionOfAgent>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Attribution> ;
+    rdfs:range <http://www.w3.org/ns/prov#Agent> ;
+    rdfs:subPropertyOf <http://www.w3.org/ns/prov#agent> .
+
+<http://purl.org/mp/authoredBy>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/attributedTo> ;
+    owl:propertyChainAxiom (<http://purl.org/mp/attributionAsAuthor>
+        <http://purl.org/mp/attributionOfAgent>
+    ) .
+
+<http://purl.org/mp/authoredOn>
+    a owl:DatatypeProperty ;
+    rdfs:domain <http://purl.org/mp/Artifact> ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+<http://purl.org/mp/challengeGraphElementOf>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Micropublication> ;
+    rdfs:range <http://purl.org/mp/Representation> .
+
+<http://purl.org/mp/challengedBy>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Representation> ;
+    rdfs:range <http://purl.org/mp/Representation> ;
+    owl:inverseOf <http://purl.org/mp/challenges> .
+
+<http://purl.org/mp/challenges>
+    a owl:ObjectProperty .
+
+<http://purl.org/mp/citation>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain <http://purl.org/mp/Reference> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf <http://dublincore.org/documents/2012/06/14/dcmi-terms/bibliographicCitation>, <http://purl.org/mp/value> .
+
+<http://purl.org/mp/curatedBy>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/attributedTo> ;
+    owl:propertyChainAxiom (<http://purl.org/mp/attributionAsCurator>
+        <http://purl.org/mp/attributionOfAgent>
+    ) .
+
+<http://purl.org/mp/dataSupports>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Data> ;
+    rdfs:range <http://purl.org/mp/Representation> ;
+    rdfs:subPropertyOf <http://purl.org/mp/evidenceSupports>, [
+        owl:inverseOf <http://purl.org/mp/supportedByEvidence>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/supportedByData> .
+
+<http://purl.org/mp/directlyChallengedBy>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/challengedBy>, [
+        owl:inverseOf <http://purl.org/mp/challenges>
+    ] .
+
+<http://purl.org/mp/directlyChallenges>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/challenges>, [
+        owl:inverseOf <http://purl.org/mp/challengedBy>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/directlyChallengedBy> .
+
+<http://purl.org/mp/editedBy>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/attributedTo> ;
+    owl:propertyChainAxiom (<http://purl.org/mp/attributionAsEditor>
+        <http://purl.org/mp/attributionOfAgent>
+    ) .
+
+<http://purl.org/mp/elementOf>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Representation> ;
+    rdfs:range <http://purl.org/mp/Micropublication> ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://purl.org/mp/evidenceSupports>
+    a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/supports>, [
+        owl:inverseOf <http://purl.org/mp/supportedBy>
+    ] .
+
+<http://purl.org/mp/formalizedAs>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/supports>, [
+        owl:inverseOf <http://purl.org/mp/supportedBy>
+    ] .
+
+<http://purl.org/mp/formalizes>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/supportedBy>, [
+        owl:inverseOf <http://purl.org/mp/supports>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/formalizedAs> .
+
+<http://purl.org/mp/hasAttribution>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Artifact> ;
+    rdfs:range <http://purl.org/mp/Attribution> ;
+    rdfs:subPropertyOf <http://purl.org/mp/supportedBy>, <http://www.w3.org/ns/prov#qualifiedAttribution>, [
+        owl:inverseOf <http://purl.org/mp/supports>
+    ] .
+
+<http://purl.org/mp/hasChallengeGraphElement>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Micropublication> ;
+    rdfs:range <http://purl.org/mp/Representation> ;
+    owl:inverseOf <http://purl.org/mp/challengeGraphElementOf> .
+
+<http://purl.org/mp/hasElement>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Micropublication> ;
+    rdfs:range <http://purl.org/mp/Representation> .
+
+<http://purl.org/mp/hasHolotype>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Statement> ;
+    rdfs:range <http://purl.org/mp/Statement> ;
+    rdfs:subPropertyOf <http://purl.org/mp/representedBy>, [
+        owl:inverseOf <http://purl.org/mp/represents>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/holotypeFor> .
+
+<http://purl.org/mp/hasSupportGraphElement>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Micropublication> ;
+    rdfs:range <http://purl.org/mp/Representation> ;
+    owl:inverseOf <http://purl.org/mp/supportGraphElementOf> .
+
+<http://purl.org/mp/holotypeFor>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/represents>, [
+        owl:inverseOf <http://purl.org/mp/representedBy>
+    ] .
+
+<http://purl.org/mp/indirectlyChallengedBy>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/challengedBy>, [
+        owl:inverseOf <http://purl.org/mp/challenges>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/indirectlyChallenges> .
+
+<http://purl.org/mp/indirectlyChallenges>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/challenges>, [
+        owl:inverseOf <http://purl.org/mp/challengedBy>
+    ] ;
+    owl:propertyChainAxiom (<http://purl.org/mp/directlyChallenges>
+        <http://purl.org/mp/supports>
+    ) .
+
+<http://purl.org/mp/methodSupports>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Method> ;
+    rdfs:range <http://purl.org/mp/Representation> ;
+    rdfs:subPropertyOf <http://purl.org/mp/evidenceSupports>, [
+        owl:inverseOf <http://purl.org/mp/supportedByEvidence>
+    ] .
+
+<http://purl.org/mp/publishedBy>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/attributedTo> ;
+    owl:propertyChainAxiom (<http://purl.org/mp/attributionAsPublisher>
+        <http://purl.org/mp/attributionOfAgent>
+    ) .
+
+<http://purl.org/mp/publishedOn>
+    a owl:DatatypeProperty ;
+    rdfs:domain <http://purl.org/mp/Attribution> .
+
+<http://purl.org/mp/qualifiedBy>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+    rdfs:range <http://purl.org/mp/Sentence> .
+
+<http://purl.org/mp/qualifies>
+    a owl:ObjectProperty ;
+    rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+    owl:inverseOf <http://purl.org/mp/qualifiedBy> .
+
+<http://purl.org/mp/quotedBy>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Claim> ;
+    rdfs:range <http://purl.org/mp/Representation> ;
+    rdfs:subPropertyOf <http://purl.org/mp/elementOf>, [
+        owl:inverseOf <http://purl.org/mp/hasElement>
+    ] .
+
+<http://purl.org/mp/quotes>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/hasElement>, [
+        owl:inverseOf <http://purl.org/mp/elementOf>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/quotedBy> .
+
+<http://purl.org/mp/referencedBy>
+    a owl:ObjectProperty ;
+    rdfs:range <http://purl.org/mp/Reference> ;
+    rdfs:subPropertyOf <http://purl.org/mp/qualifiedBy>, [
+        owl:inverseOf <http://purl.org/mp/qualifies>
+    ] .
+
+<http://purl.org/mp/references>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/qualifies>, [
+        owl:inverseOf <http://purl.org/mp/qualifiedBy>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/referencedBy> .
+
+<http://purl.org/mp/representedBy>
+    a owl:ObjectProperty .
+
+<http://purl.org/mp/represents>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Representation> ;
+    rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+    owl:inverseOf <http://purl.org/mp/representedBy> .
+
+<http://purl.org/mp/semtaggedBy>
+    a owl:ObjectProperty ;
+    rdfs:range <http://purl.org/mp/SemanticQualifier> ;
+    rdfs:subPropertyOf <http://purl.org/mp/qualifiedBy>, [
+        owl:inverseOf <http://purl.org/mp/qualifies>
+    ] .
+
+<http://purl.org/mp/semtags>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/qualifies>, [
+        owl:inverseOf <http://purl.org/mp/qualifiedBy>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/semtaggedBy> .
+
+<http://purl.org/mp/statement>
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain <http://purl.org/mp/Sentence> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf <http://purl.org/mp/value> .
+
+<http://purl.org/mp/supportGraphElementOf>
+    a owl:ObjectProperty ;
+    rdfs:domain <http://purl.org/mp/Representation> ;
+    rdfs:range <http://purl.org/mp/Micropublication> .
+
+<http://purl.org/mp/supportedBy>
+    a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain <http://purl.org/mp/Representation> ;
+    rdfs:range <http://purl.org/mp/Representation> .
+
+<http://purl.org/mp/supportedByData>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/supportedByEvidence>, [
+        owl:inverseOf <http://purl.org/mp/evidenceSupports>
+    ] .
+
+<http://purl.org/mp/supportedByEvidence>
+    a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/supportedBy>, [
+        owl:inverseOf <http://purl.org/mp/supports>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/evidenceSupports> .
+
+<http://purl.org/mp/supportedByMethod>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://purl.org/mp/supportedByEvidence>, [
+        owl:inverseOf <http://purl.org/mp/evidenceSupports>
+    ] ;
+    owl:inverseOf <http://purl.org/mp/methodSupports> .
+
+<http://purl.org/mp/supports>
+    a owl:ObjectProperty, owl:TransitiveProperty ;
+    owl:inverseOf <http://purl.org/mp/supportedBy> .
+
+<http://purl.org/mp/value>
+    a owl:DatatypeProperty, owl:FunctionalProperty .
+
+<http://www.semanticweb.org/scr25/ontologies/untitled-ontology-63>
+    a owl:Ontology ;
+    rdfs:comment """Micropublications: a Semantic Model for Claims, Evidence, Arguments and Annotations in Biomedical Communications.
+
+Author:         	Tim Clark (1,2,3)
+Contributors:   	Paolo Ciccarese (1,2), Carole Goble (3)
+
+Version 1.16, September 12, 2013.
+
+(1) Massachusetts General Hospital, Dept. of Neurology
+(2) Harvard Medical School
+(3) University of Manchester, School of Computer Science 
+
+""" ;
+    owl:priorVersion "1.15" ;
+    owl:versionInfo "1.16" .
+
+owl:topObjectProperty
+    a owl:SymmetricProperty, owl:TransitiveProperty ;
+    owl:inverseOf owl:topObjectProperty .
+
+<http://www.w3.org/ns/prov#Agent>
+    a owl:Class ;
+    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.w3.org/ns/prov#Entity>
+    a owl:Class .
+
+<http://www.w3.org/ns/prov#Organization>
+    a owl:Class ;
+    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.w3.org/ns/prov#Person>
+    a owl:Class ;
+    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+<urn:swrl#a>
+    a swrl:Variable .
+
+<urn:swrl#b>
+    a swrl:Variable .
+
+<urn:swrl#c>
+    a swrl:Variable .
+
+<urn:swrl#m>
+    a swrl:Variable .
+
+<urn:swrl#r>
+    a swrl:Variable .
+
+<urn:swrl#t>
+    a swrl:Variable .
+
+[]
+    a swrl:Imp ;
+    swrl:body ([
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#a> ;
+            swrl:argument2 <urn:swrl#b> ;
+            swrl:propertyPredicate <http://purl.org/mp/attributionAsEditor>
+        ]
+        [
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#b> ;
+            swrl:argument2 <urn:swrl#c> ;
+            swrl:propertyPredicate <http://purl.org/mp/attributionOfAgent>
+        ]
+        [
+            a swrl:DatavaluedPropertyAtom ;
+            swrl:argument1 <urn:swrl#b> ;
+            swrl:argument2 <urn:swrl#t> ;
+            swrl:propertyPredicate <http://purl.org/mp/atTime>
+        ]
+    ) ;
+    swrl:head ([
+            a swrl:DatavaluedPropertyAtom ;
+            swrl:argument1 <urn:swrl#a> ;
+            swrl:argument2 <urn:swrl#t> ;
+            swrl:propertyPredicate <http://purl.org/mp/editedOn>
+        ]
+    ) .
+
+[]
+    a swrl:Imp ;
+    swrl:body ([
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#r> ;
+            swrl:argument2 <urn:swrl#m> ;
+            swrl:propertyPredicate <http://purl.org/mp/elementOf>
+        ]
+        [
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#r> ;
+            swrl:argument2 <urn:swrl#m> ;
+            swrl:propertyPredicate <http://purl.org/mp/supports>
+        ]
+    ) ;
+    swrl:head ([
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#m> ;
+            swrl:argument2 <urn:swrl#r> ;
+            swrl:propertyPredicate <http://purl.org/mp/hasSupportGraphElement>
+        ]
+    ) .
+
+[]
+    a swrl:Imp ;
+    swrl:body ([
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#a> ;
+            swrl:argument2 <urn:swrl#b> ;
+            swrl:propertyPredicate <http://purl.org/mp/attributionAsPublisher>
+        ]
+        [
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#b> ;
+            swrl:argument2 <urn:swrl#c> ;
+            swrl:propertyPredicate <http://purl.org/mp/attributionOfAgent>
+        ]
+        [
+            a swrl:DatavaluedPropertyAtom ;
+            swrl:argument1 <urn:swrl#b> ;
+            swrl:argument2 <urn:swrl#t> ;
+            swrl:propertyPredicate <http://purl.org/mp/atTime>
+        ]
+    ) ;
+    swrl:head ([
+            a swrl:DatavaluedPropertyAtom ;
+            swrl:argument1 <urn:swrl#a> ;
+            swrl:argument2 <urn:swrl#t> ;
+            swrl:propertyPredicate <http://purl.org/mp/publishedOn>
+        ]
+    ) .
+
+[]
+    a swrl:Imp ;
+    swrl:body ([
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#r> ;
+            swrl:argument2 <urn:swrl#m> ;
+            swrl:propertyPredicate <http://purl.org/mp/challenges>
+        ]
+        [
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#r> ;
+            swrl:argument2 <urn:swrl#m> ;
+            swrl:propertyPredicate <http://purl.org/mp/elementOf>
+        ]
+    ) ;
+    swrl:head ([
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#m> ;
+            swrl:argument2 <urn:swrl#r> ;
+            swrl:propertyPredicate <http://purl.org/mp/hasChallengeGraphElement>
+        ]
+    ) .
+
+[]
+    a swrl:Imp ;
+    swrl:body ([
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#a> ;
+            swrl:argument2 <urn:swrl#b> ;
+            swrl:propertyPredicate <http://purl.org/mp/attributionAsCurator>
+        ]
+        [
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#b> ;
+            swrl:argument2 <urn:swrl#c> ;
+            swrl:propertyPredicate <http://purl.org/mp/attributionOfAgent>
+        ]
+        [
+            a swrl:DatavaluedPropertyAtom ;
+            swrl:argument1 <urn:swrl#b> ;
+            swrl:argument2 <urn:swrl#t> ;
+            swrl:propertyPredicate <http://purl.org/mp/atTime>
+        ]
+    ) ;
+    swrl:head ([
+            a swrl:DatavaluedPropertyAtom ;
+            swrl:argument1 <urn:swrl#a> ;
+            swrl:argument2 <urn:swrl#t> ;
+            swrl:propertyPredicate <http://purl.org/mp/curatedOn>
+        ]
+    ) .
+
+[]
+    a swrl:Imp ;
+    swrl:body ([
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#a> ;
+            swrl:argument2 <urn:swrl#b> ;
+            swrl:propertyPredicate <http://purl.org/mp/attributionAsAuthor>
+        ]
+        [
+            a swrl:IndividualPropertyAtom ;
+            swrl:argument1 <urn:swrl#b> ;
+            swrl:argument2 <urn:swrl#c> ;
+            swrl:propertyPredicate <http://purl.org/mp/attributionOfAgent>
+        ]
+        [
+            a swrl:DatavaluedPropertyAtom ;
+            swrl:argument1 <urn:swrl#b> ;
+            swrl:argument2 <urn:swrl#t> ;
+            swrl:propertyPredicate <http://purl.org/mp/atTime>
+        ]
+    ) ;
+    swrl:head ([
+            a swrl:DatavaluedPropertyAtom ;
+            swrl:argument1 <urn:swrl#a> ;
+            swrl:argument2 <urn:swrl#t> ;
+            swrl:propertyPredicate <http://purl.org/mp/authoredOn>
+        ]
+    ) .
+
