@@ -112,6 +112,9 @@ ages:18-60
 
 description:
 Clarithromycin significantly (p <0.001) increased the AUC (and C(max)) of all 3 statins, most markedly simvastatin ( approximately 10-fold increase in AUC) and simvastatin acid (12-fold), followed by atorvastatin (greater than fourfold) and then pravastatin (almost twofold)."	0.08	0.5	15
+nefazodone_increases_auc_alprazolam	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	nefazodone increases the AUC of alprazolam 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_increases_auc_alprazolam.html	DIKB	"10/16/2007 11:08:32
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/137	2	support	ALPRAZOLAM	NEFAZODONE	2.0	2	high	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/51ff7db5-aaf9-4c3c-86e6-958ebf16b60f	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"
+&quot;When alprazolam (1 mg BID) and nefazodone (200 mg BID) were coadministered, steady-state peak concentrations, AUC and half-life values for alprazolam increased by approximately 2-fold. Nefazodone plasma concentrations were unaffected by alprazolam. If alprazolam is coadministered with nefazodone, a 50% reduction in the initial alprazolam dosage is recommended. No dosage adjustment is required for nefazodone.&quot;"	0.001	0.2	
 nefazodone_increases_auc_alprazolam	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00404	nefazodone increases the AUC of alprazolam 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_increases_auc_alprazolam.html	DIKB	"11/13/2007 08:46:01
 "	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/138	1.987	support	ALPRAZOLAM	NEFAZODONE	2.0	1.987	high	http://www.ncbi.nlm.nih.gov/pubmed/8748428	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
 Route of administration: oral
@@ -172,7 +175,9 @@ Eighteen healthy Japanese volunteers (9 men and 9 women) who were H. pylori-nega
 METHODS: A randomized double-blind placebo-controlled crossover study design in 3 phases was conducted at intervals of 2 weeks. Clarithromycin (400 mg) as a capsule containing the equivalent of 2 tablets, fluvoxamine (25 mg) as a capsule containing the equivalent of a tablet, or matched placebo was given orally twice a
 day (9 AM, 9 PM) for 6 days. Six volunteers within each group were allocated to each of the 3 different drug sequences: placebo-clarithromycin-fluvoxamine, fluvoxamine-placebo-clarithromycin, or clarithromycin-fluvoxamine-placebo. On day 6, they took a single oral 60-mg dose of lansoprazole with 400 mg dose of clarithromycin, 25mg dose of fluvoxamine, or placebo after overnight fasting (9 AM). No other medications were taken during the study periods. No meal was allowed until 4 hours after the dosing (1 PM). The use of alcohol, tea, coffee, and cola was forbidden during the test days.
 RESULTS: Clarithromycin treatment significantly increased Cmax and AUC_0-24 of lansoprazole in heterozygous EMs (P&lt;0.05) and in PMs (P&lt;0.01), and prolonged elimination half-life by 1.6-fold (P&lt;0.05) in PMs. Calculated from Table 1, the AUC_i/AUC were: 1.62 (homozygous EMs), 1.71 (heterozygous EMs [p&lt;0.05]), and 1.89 (PMs [p&lt;0.01])."	0.06	0.8	18
-paroxetine_increases_auc_risperidone	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00715	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00734	paroxetine increases the AUC of risperidone 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paroxetine_increases_auc_risperidone.html	DIKB																
+paroxetine_increases_auc_risperidone	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00715	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00734	paroxetine increases the AUC of risperidone 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paroxetine_increases_auc_risperidone.html	DIKB	"06/16/2009 16:47:59
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/183	4	support	RISPERIDONE	PAROXETINE	4.0	4	high	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/08320ea3-8f93-6f04-5d1c-f69af3eb5a81	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"
+&quot;Concomitant use of paroxetine with risperidone, a CYP2D6 substrate has also been evaluated. In 1 study, daily dosing of paroxetine 20 mg in patients stabilized on risperidone (4 to 8 mg/day) increased mean plasma concentrations of risperidone approximately 4-fold, decreased 9-hydroxyrisperidone concentrations approximately 10%, and increased concentrations of the active moiety (the sum of risperidone plus 9-hydroxyrisperidone) approximately 1.4-fold.&quot;"	0.008	0.02	
 clarithromycin_increases_auc_midazolam	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01211	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00683	clarithromycin increases the AUC of midazolam 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/clarithromycin_increases_auc_midazolam.html	DIKB	"10/30/2007 07:09:46
 "	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/294	8.45	support	MIDAZOLAM	CLARITHROMYCIN	8.45	8.45	high	http://www.ncbi.nlm.nih.gov/pubmed/16432272	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_NR	"
 Route of administration: oral
@@ -289,7 +294,10 @@ dose: 20mg of atorvastatin on day one, three days no drug, days 6-10 participant
 
 description: 
 n this single-site, randomized, three-way crossover, open-labeled study, healthy subjects (n = 18) received single doses of cerivastatin 0.8 mg, atorvastatin 20 mg, or pravastatin 40 mg without and with itraconazole 200 mg. Pharmacokinetic parameters [AUC(0-infinity), AUC(0-tn), peak concentration (Cmax), time to reach Cmax (tmax), and half-life (t1/2)] were determined for parent statins and major metabolites. RESULTS: Concomitant cerivastatin/itraconazole treatment produced small elevations in the cerivastatin AUC(0-infinity), Cmax, and t1/2 (27%, 25%, and 19%, respectively; P &lt; .05 versus cerivastatin alone). Itraconazole coadministration produced similar changes in pravastatin pharmacokinetics [AUC elevated 51% (P &lt; .05 versus pravastatin alone), 24% (Cmax), and 23% (t1/2), respectively]. However, itraconazole dramatically increased atorvastatin AUC (150%), Cmax (38%), and t1/2 (30%) (P &lt; .05)."	0.02	0.2	18
-cimetidine_increases_auc_citalopram	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00501	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00215	cimetidine increases the AUC of citalopram 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cimetidine_increases_auc_citalopram.html	DIKB																
+cimetidine_increases_auc_citalopram	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00501	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00215	cimetidine increases the AUC of citalopram 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cimetidine_increases_auc_citalopram.html	DIKB	"02/09/2012 10:26:38
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/423	1.43	support	CITALOPRAM	CIMETIDINE	1.43	1.43	medium	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/4259d9b1-de34-43a4-85a8-41dd214e9177 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	Cimetidine - In subjects who had received 21 days of 40 mg/day Celexa, combined administration of 400 mg/day cimetidine for 8 days resulted in an increase in citalopram AUC and Cmax of 43% and 39%, respectively.	0.04	0.4	
+nefazodone_increases_auc_triazolam	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897	nefazodone increases the AUC of triazolam 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_increases_auc_triazolam.html	DIKB	"10/16/2007 11:03:11
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/424	4	support	TRIAZOLAM	NEFAZODONE	4.0	4	high	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/51ff7db5-aaf9-4c3c-86e6-958ebf16b60f	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	&quot;When a single oral 0.25 mg dose of triazolam was coadministered with nefazodone (200 mg BID) at steady state, triazolam half-life and AUC increased 4-fold and peak concentrations increased 1.7-fold. Nefazodone plasma concentrations were unaffected by triazolam. Coadministration of nefazodone potentiated the effects of triazolam on psychomotor performance tests. &quot;	0.00025	0.2	
 nefazodone_increases_auc_triazolam	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01149	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897	nefazodone increases the AUC of triazolam 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/nefazodone_increases_auc_triazolam.html	DIKB	"10/29/2007 11:25:10
 "	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/425	3.899	support	TRIAZOLAM	NEFAZODONE	4.0	3.899	high	http://www.ncbi.nlm.nih.gov/pubmed/8830062	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"
 Route of administration: oral
@@ -632,7 +640,22 @@ derivatives had a significant effect on the AUC of
 bupropion: in the clopidogrel phase, the bupropion
 AUC increased by 60% (P = .02; 95% CI, 21% to
 98%)."	0.15	0.075	12
-ketoconazole_increases_auc_venlafaxine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01026	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	ketoconazole increases the AUC of venlafaxine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/ketoconazole_increases_auc_venlafaxine.html	DIKB																
+ketoconazole_increases_auc_venlafaxine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01026	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	ketoconazole increases the AUC of venlafaxine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/ketoconazole_increases_auc_venlafaxine.html	DIKB	"02/16/2012 21:49:26
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/720	1.21	support	VENLAFAXINE	KETOCONAZOLE	1.21	1.21	medium	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/cf2d9bee-f8e3-477a-e4b4-f0e82657b7d2	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"NOTE: The object dose given and AUC are for EMs.
+
+route of administration: not mentioned
+
+study duration: not mentioned
+
+population: 20 subjects
+
+tested for known CYP450 polymorphisms?
+YES - CYP2D6 -- 14 EMs, 6 PMs
+
+ages:
+
+Quote:
+A pharmacokinetic study with ketoconazole 100 mg b.i.d. with a single dose of venlafaxine 50 mg in extensive metabolizers (EM; n = 14) and 25 mg in poor metabolizers (PM; n = 6) of CYP2D6 resulted in higher plasma concentrations of both venlafaxine and O-desvenlafaxine (ODV) in most subjects following administration of ketoconazole. Venlafaxine Cmax increased by 26% in EM subjects and 48% in PM subjects. Cmax values for ODV increased by 14% and 29% in EM and PM subjects, respectively."	0.05	0.2	
 fluoxetine_increases_auc_desipramine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00472	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151	fluoxetine increases the AUC of desipramine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluoxetine_increases_auc_desipramine.html	DIKB	"05/05/2009 15:27:35
 "	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/722	4.8	support	DESIPRAMINE	FLUOXETINE	4.8	4.8	high	http://www.ncbi.nlm.nih.gov/pubmed/8195463	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_NR	"Route of administration: oral (inferred because IV formulations do not appear to be available for fluoxetine and desipramine)
 
@@ -644,6 +667,19 @@ ages: mean(std dev): &quot;adults&quot; but no mention of age. It can be inferre
 
 Description: 
 he pharmacokinetic interactions of sertraline and fluoxetine with the tricyclic antidepressant desipramine were studied in 18 healthy male volunteers phenotyped as extensive metabolizers of dextromethorphan. Concentrations in plasma were determined after 7 days of desipramine (50 mg/day) dosing alone, during the 21 days of desipramine and selective serotonin reuptake inhibitor (SSRI) coadministration (fluoxetine, 20 mg/day; sertraline, 50 mg/day), and for 21 days of continued desipramine administration after SSRI discontinuation. Desipramine Cmax was increased 4.0-fold versus 31% and AUC0-24 was increased 4.8-fold versus 23% for fluoxetine versus sertraline, respectively, relative to baseline after 3 weeks of coadministration. Desipramine trough concentrations approached baseline within 1 week of sertraline discontinuation but remained elevated for the 3-week follow-up period after fluoxetine discontinuation. Concentrations of SSRIs and their metabolites correlated significantly with desipramine concentration changes (for fluoxetine/norfluoxetine, r = 0.94 to 0.96; p &lt; 0.001; for sertraline/desmethylsertraline, r = 0.63; p &lt; 0.01). Thus, sertraline had less pharmacokinetic interaction with desipramine than did fluoxetine at their respective, minimum, usually effective doses."	0.05	0.02	9
+fluoxetine_increases_auc_desipramine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00472	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151	fluoxetine increases the AUC of desipramine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluoxetine_increases_auc_desipramine.html	DIKB	"05/09/2012 12:02:07
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/1578	7.43	support	DESIPRAMINE	FLUOXETINE	4.8	7.43	high	http://www.ncbi.nlm.nih.gov/pubmed/1544284	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_NR	"NOTE: THE AUC_i/AUC value is calculated from Table II.
+
+route of administration: oral
+
+study duration: at least 8 days
+
+population: 5 normal white male volunteers
+
+tested for known CYP450 polymorphisms?
+NO
+
+ages: 35-53"	0.05	0.06	
 ketoconazole_increases_auc_triazolam	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01026	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00897	ketoconazole increases the AUC of triazolam 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/ketoconazole_increases_auc_triazolam.html	DIKB	"06/05/2007 07:36:33
 "	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/729	22.4	support	TRIAZOLAM	KETOCONAZOLE	22.4	22.4	high	http://www.ncbi.nlm.nih.gov/pubmed/7995001	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"Route of administration: oral
 
@@ -771,6 +807,8 @@ description: Healthy subjects were selected by the investigators based on their 
 METHODS: This was an open-label, four-period, sequential crossover study. The dosing sequence started with duloxetine administration only (intravenous or oral; dosing periods 1 and 2), followed by duloxetine (intravenous or oral) in the presence of steady-state fluvoxamine (dosing periods 3 and 4). Duloxetine administration was planned on days 1, 5, 14 and 20 and fluvoxamine was administered from days 8 to 24. The sequence of intravenous and oral duloxetine dosing was randomized. The oral dose of duloxetine was a single 60-mg dose and the intravenous dose of duloxetine was a 10-mg infusion over 30 minutes. Fluvoxamine was initiated at a single dose of 50 mg for 1 day followed by 100 mg once daily for at least 16 additional days. Subjects unable to tolerate fluvoxamine 100 mg once daily were discontinued from the study. The washout period between each dose of duloxetine was a minimum of 4 days and a maximum of 14 days.
 
 RESULTS: The oral duloxetine C_max and AUC_inf were increased by 141% (90% CI 93, 200) and 460% (90% CI 359, 584), respectively, whereas the intravenous duloxetine AUC_inf increased by 170% (90% CI 121, 230)."	0.06	0.1	14
+fluvoxamine_increases_auc_duloxetine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00476	fluvoxamine increases the AUC of duloxetine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluvoxamine_increases_auc_duloxetine.html	DIKB	"04/26/2012 12:12:24
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/1569	6	support	DULOXETINE	FLUVOXAMINE	4.6	6	high	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/2f7d4d67-10c1-4bf4-a7f2-c185fbad64ba 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Drug_Label	When duloxetine 60 mg was co-administered with fluvoxamine 100 mg, a potent CYP1A2 inhibitor, to male subjects (n = 14) duloxetine AUC was increased approximately 6-fold, the Cmax was increased about 2.5-fold, and duloxetine t_1/2 was increased approximately 3-fold.	0.06	0.1	
 terbinafine_increases_auc_venlafaxine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00857	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	terbinafine increases the AUC of venlafaxine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/terbinafine_increases_auc_venlafaxine.html	DIKB	"09/01/2010 15:40:49
 "	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/873	4.9	support	VENLAFAXINE	TERBINAFINE	4.9	4.9	high	http://www.ncbi.nlm.nih.gov/pubmed/17687273	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"NOTE: The AUC_i/AUC is from the AUC_0-inf of all the subjects taken together, not separated by genotype.
 
@@ -982,7 +1020,9 @@ METHODS: On the first study day at 8:00 a.m., each patient received a single CLZ
 
 RESULTS: The total AUC of CLZ increased by a factor of 2.84 upon FLV addition (t = 5.364, P = 0.0007).
 "	0.05	0.1	9
-fluvoxamine_increases_auc_thioridazine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00679	fluvoxamine increases the AUC of thioridazine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluvoxamine_increases_auc_thioridazine.html	DIKB																
+fluvoxamine_increases_auc_thioridazine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00176	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00679	fluvoxamine increases the AUC of thioridazine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/fluvoxamine_increases_auc_thioridazine.html	DIKB	"06/16/2009 16:50:58
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/1091	3	support	THIORIDAZINE	FLUVOXAMINE	3.0	3	high	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/56b3f4c2-52af-4947-b225-6808ae9f26f5	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"
+&quot;The effect of fluvoxamine (25 mg b.i.d. for one week) on thioridazine steady state concentration was evaluated in 10 male in-patients with schizophrenia. Concentrations of thioridazine and its two active metabolites, mesoridazine and sulforidazine, increased three-fold following co-administration of fluvoxamine. Fluvoxamine and thioridazine should not be co-administered.&quot;"		0.025	
 clarithromycin_increases_auc_trazodone	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01211	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00656	clarithromycin increases the AUC of trazodone 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/clarithromycin_increases_auc_trazodone.html	DIKB	"09/01/2010 14:29:10
 "	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/1092	1.99	support	TRAZODONE	CLARITHROMYCIN	1.99	1.99	medium	http://www.ncbi.nlm.nih.gov/pubmed/19242403	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_RCT	"NOTE: The AUCi/AUC value is calculated from Table 1.
 
@@ -1049,6 +1089,20 @@ ages:18-60
 
 description: 
 Clarithromycin significantly (p <0.001) increased the AUC (and C(max)) of all 3 statins, most markedly simvastatin ( approximately 10-fold increase in AUC) and simvastatin acid (12-fold), followed by atorvastatin (greater than fourfold) and then pravastatin (almost twofold)."	0.04	0.5	15
+cimetidine_increases_auc_venlafaxine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00501	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	cimetidine increases the AUC of venlafaxine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cimetidine_increases_auc_venlafaxine.html	DIKB	"02/16/2012 21:43:46
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/1145	1.6	support	VENLAFAXINE	CIMETIDINE	1.62	1.6	medium	http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/cf2d9bee-f8e3-477a-e4b4-f0e82657b7d2	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement	"route of administration: not mentioned
+
+study duration: not mentioned (both drugs at steady-state)
+
+population: 18 healthy subjects
+
+tested for known CYP450 polymorphisms?
+NO
+
+ages: not mentioned
+
+Quote:
+Concomitant administration of cimetidine and venlafaxine in a steady-state study for both drugs resulted in inhibition of first-pass metabolism of venlafaxine in 18 healthy subjects. The oral clearance of venlafaxine was reduced by about 43%, and the exposure (AUC) and maximum concentration (Cmax) of the drug were increased by about 60%."	0	0	
 cimetidine_increases_auc_venlafaxine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00501	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	cimetidine increases the AUC of venlafaxine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/cimetidine_increases_auc_venlafaxine.html	DIKB	"09/16/2010 13:02:43
 "	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/1146	1.62	support	VENLAFAXINE	CIMETIDINE	1.62	1.62	medium	http://www.ncbi.nlm.nih.gov/pubmed/9602962	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_NR	"
 NOTE: The AUC_i/AUC value given is the AUC_0-24 and calculated from Table II.
@@ -1296,7 +1350,55 @@ NOTE: AUC increase mentioned is for the phase of the study using 20mg of paroxet
 
 Description: 
 The pharmacokinetics of desipramine when coadministered with the selective serotonin reuptake inhibitors (SSRIs) paroxetine and sertraline were studied in 24 healthy male volunteers (CYP2D6 extensive metabolizers). Desipramine (50 mg/day) was administered for 23 days in each phase of the crossover study with a 7-day drug-free period between phases. In addition, subjects were randomly assigned to receive concomitant paroxetine (20 mg/day on days 8 through 17 followed by 30 mg/day on days 18 through 20) or sertraline (50 mg/day on days 8 through 17 and 100 mg/day on days 18 through 20). SSRI treatments were switched between phases. After 10 days of coadministration at the lower dose, mean desipramine maximum concentration in plasma (Cmax) relative to baseline increased from 37.8 to 173 ng/mL (+358%) with paroxetine versus from 36.1 to 51.9 ng/mL (+44%) with sertraline; the mean desipramine 24-hour area under the concentration-time curve (AUC[24]) increased from 634 to 3,305 ng x h/mL (+421%) with paroxetine versus from 611 to 838 ng x h/mL (+37%) with sertraline; and the mean desipramine trough value (C0) increased from 18.5 to 113 ng/mL (+511%) with paroxetine versus from 18.3 to 21.8 ng/mL (+19%) with sertraline (all increases, p &lt; 0.001). An approximately 10-fold increase in the Cmax and AUC(24) of paroxetine and an approximately 2-fold increase in these parameters for sertraline occurred simultaneously with the desipramine concentration changes. Thus, when coadministered with 50 mg/day desipramine, sertraline had significantly less pharmacokinetic interaction than paroxetine with desipramine at the recommended starting dosages of 50 mg/day and 20 mg/day, respectively."	0.05	0.02	17
-diphenhydramine_increases_auc_venlafaxine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01075	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	diphenhydramine increases the AUC of venlafaxine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/diphenhydramine_increases_auc_venlafaxine.html	DIKB																
+paroxetine_increases_auc_desipramine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00715	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151	paroxetine increases the AUC of desipramine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paroxetine_increases_auc_desipramine.html	DIKB	"05/09/2012 13:31:59
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/1580	4.28	support	DESIPRAMINE	PAROXETINE	5.2	4.28	high	http://www.ncbi.nlm.nih.gov/pubmed/8930024	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_NR	"NOTE: The AUC_i/AUC was calculated from Table 2. The object_dose is the dose of imipramine given.
+
+route of administration: not sure, but likely oral
+
+study duration: 15 days
+
+population: 9 male inpatient veterans
+
+tested for known CYP450 polymorphisms?
+NO
+
+ages: 31-60"	0.05	0.03	
+paroxetine_increases_auc_desipramine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00715	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01151	paroxetine increases the AUC of desipramine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/paroxetine_increases_auc_desipramine.html	DIKB	"05/09/2012 14:08:12
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/1581	4.64	support	DESIPRAMINE	PAROXETINE	5.2	4.64	high	http://www.ncbi.nlm.nih.gov/pubmed/8513845	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_NR	"NOTE: The AUC_i/AUC value is calculated from Table 3 using the equation CL=dose/AUC, where CL is the total clearance, and is for all EMs. For PMs, the AUC_i/AUC is 0.83.
+
+route of administration: oral
+
+study duration: 11 days
+
+population: 17 male Dutch volunteers
+
+tested for known CYP450 polymorphisms?
+YES -- CYP2D6 phenotyping via sparteine - 9 EMs and 8 PMs
+
+ages: 20-24"	0.1	0.02	
+diphenhydramine_increases_auc_venlafaxine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01075	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00285	diphenhydramine increases the AUC of venlafaxine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/diphenhydramine_increases_auc_venlafaxine.html	DIKB	"02/16/2012 21:55:54
+"	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/1433	2.42	support	VENLAFAXINE	DIPHENHYDRAMINE	2.42	2.42	high	http://www.ncbi.nlm.nih.gov/pubmed/11270914	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_NR	"NOTE: The AUC_i/AUC given is for EMs and calculated from Table 2 using the formula AUC = dose/Cl
+
+route of administration: oral
+
+study duration: 2 days
+
+population: 15 healthy men, all nonsmokers
+
+tested for known CYP450 polymorphisms?
+YES - CYP2D6 phenotyping -- 9 EMs (7 CYP2D6*1/*1, 2 CYP2D6*1/*4), 6 PMs (1 CYP2D6*3/*4, 4 CYP2D6*4/*4, 1 CYP2D6*7/*7)
+
+ages: average age 27 +/- 5
+
+description:
+SUBJECTS: Fifteen healthy men (nine EMs and six PMs) participated in the study. Their mean (+/-SD) age was 27 +/- 4 years and 27 +/- 5 years, and their mean body weight was 71 +/- 8 kg and 84 +/- 11 kg for EMs and PMs, respectively (Table 1). All volunteers were nonsmokers and healthy as determined by routine physical examination, electrocardiogram, and laboratory tests.
+
+METHODS: Subjects received oral doses (N = 5) of 18.75 mg venlafaxine hydrochloride (Effexor, Wyeth-Ayerst Canada, Inc., Montreal, Canada) every 12 hours for 48 hours on two occasions: once alone and once during the concomitant administration of 50 mg of diphenhydramine hydrochloride (Benadryl, Warner Wellcome, Scarborough, Canada) every 12 hours. Diphenhydramine was also administered alone and during concomitant administration of venlafaxine. The three study arms were performed 1 week apart. Venlafaxine tablets were prepared by the Department of Pharmacy, Laval Hospital, by cutting 37.5-mg venlafaxine hydrochloride tablets in half. No other drugs, caffeine-containing foods or beverages, chocolate, or alcohol were allowed 48 hours before and during the study.
+
+RESULTS: When venlafaxine was administered alone, mean
+AUC0–12 values for all subjects studied were 3.1 +/- 2.2 umol.hr-1.L-1 in PMs and 0.8 +/- 0.6 umol.hr-1.L-1 in EMs, respectively ( p &amp;lt; 0.05). The right panels of Figure 2 illustrate plasma concentrations of venlafaxine measured after the oral administration of venlafaxine during concomitant administration of diphenhydramine in the same PM and EM. Coadministration of diphenhydramine did not alter the plasma concentrations of venlafaxine in the PM. In contrast, diphenhydramine increased the AUC0–12 of venlafaxine more than 4-fold in the EM, leading to values toward those measured in the PM subject. On average, diphenhydramine increased venlafaxine AUC0–12 by more than 2-fold in EMs ( p &amp;lt; 0.05).
+
+Figure 3 and Table 2 report the pharmacokinetic parameters observed in EMs and PMs on venlafaxine alone and during concomitant administration of diphenhydramine. The mean oral clearance of venlafaxine was more than 4-fold greater in EMs compared with PMs when venlafaxine was administered alone. In EMs, coadministration of diphenhydramine decreased oral clearance of venlafaxine by more than 2-fold ( p &amp;lt; 0.05), leading to values close to those measured in PMs. In contrast, coadministration of diphenhydramine did not affect the oral clearance of venlafaxine in PMs."	0.0375	0.1	
 erythromycin_increases_auc_quetiapine	increases_auc	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00199	http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB01224	erythromycin increases the AUC of quetiapine 	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/erythromycin_increases_auc_quetiapine.html	DIKB	"09/16/2010 14:49:44
 "	boycer	https://dbmi-icode-01.dbmi.pitt.edu/dikb/resource/Evidence/1472	2.29	support	QUETIAPINE	ERYTHROMYCIN	2.29	2.29	high	http://www.ncbi.nlm.nih.gov/pubmed/15599502	http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#EV_PK_DDI_NR	"
 NOTE: The AUC_i/AUC value is calculated from Table 1.
