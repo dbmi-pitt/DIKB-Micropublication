@@ -1,5 +1,5 @@
-# SPARQL version: 1.1 
-# DIKB MP/NP version: 2015-07-21
+# SPARQL version: 1.1
+# DIKB MP/NP version: 2015-07-22
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -17,22 +17,26 @@ PREFIX poc: <http://dbmi-icode-01.dbmi.pitt.edu/mp/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
 
-#### Show distribution of evidence types for all types of claims
-### LIMITATION OF THE CURRENT MODEL - have to query for count of label statements separately, see STAT-05
 
-SELECT ?cType as ?claim_type ?type as ?evidence_type count(?type) as ?evidence_count
+# What other claims are supported by this evidence item?
+## using <http://www.ncbi.nlm.nih.gov/pubmed/10771452> as "this evidence item" and claim-154 as "other than this claim"
+
+SELECT DISTINCT ?claim ?cLabel
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-     { ?data mp:supports ?claim } UNION { ?data mp:challenges ?claim }.
-     ?methods mp:supports ?data;
-	      rdf:type ?type.
-     {?claim mp:qualifiedBy obo:DIDEO_00000096} UNION {?claim mp:qualifiedBy obo:RO_0002449} UNION {?claim mp:qualifiedBy obo:DIDEO_00000000}.
-     ?claim mp:qualifiedBy ?cType.
-     FILTER (!regex ( ?cType, obo:CHEBI_ ) && !regex( ?cType, obo:PR_ ))
-     FILTER regex ( ?type, dikbEvidence: )
+      ?aURN oa:hasSource "http://www.ncbi.nlm.nih.gov/pubmed/10771452"^^<http://www.w3.org/2001/XMLSchema#String>.  
+      
+      ?anItem oa:hasTarget ?aURN.
+      
+      ?anItem oa:hasBody ?data.
+      
+      ?data mp:supports ?claim.
+      
+      ?claim a mp:Claim.
+      
+      ?claim rdfs:label ?cLabel.
+      
+      FILTER (!regex( ?claim, poc:ddi-spl-annotation-claim-154 ))
 }
-GROUP BY ?cType ?type
-

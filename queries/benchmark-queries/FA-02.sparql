@@ -13,7 +13,7 @@ PREFIX mp: <http://purl.org/mp/> # namespace for micropublication
 PREFIX ncbit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX oa: <http://www.w3.org/ns/oa#>
 PREFIX pav: <http://purl.org/pav>
-PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
+PREFIX poc: <http://dbmi-icode-01.dbmi.pitt.edu/mp/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>

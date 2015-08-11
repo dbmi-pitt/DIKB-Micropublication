@@ -1,5 +1,5 @@
-# SPARQL version: 1.1 
-# DIKB MP/NP version: 2015-07-21
+# SPARQL version: 1.1
+# DIKB MP/NP version: 2015-08-07
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -13,23 +13,22 @@ PREFIX mp: <http://purl.org/mp/> # namespace for micropublication
 PREFIX ncbit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX oa: <http://www.w3.org/ns/oa#>
 PREFIX pav: <http://purl.org/pav>
-PREFIX poc: <http://purl.org/net/nlprepository/spl-ddi-annotation-poc#>
+PREFIX poc: <http://dbmi-icode-01.dbmi.pitt.edu/mp/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX drugbank: <http://bio2rdf.org/drugbank:>
+PREFIX ChEBI: <http://purl.obolibrary.org/obo/>
 
-#### Show distribution of evidence types for inhibits claims
-### LIMITATION OF THE CURRENT MODEL - have to query for count of label statements separately, see STAT-07
+##### Shows count of distinct drug entities in new DIKB
 
-SELECT ?type count(?type) as ?ev_count
+SELECT COUNT(DISTINCT ?drug) as ?Num_of_Drugs
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-     { ?data mp:supports ?claim } UNION { ?data mp:challenges ?claim }.
-     ?methods mp:supports ?data;
-	      rdf:type ?type.
-     ?claim mp:qualifiedBy obo:RO_0002449.
-     FILTER regex ( ?type, dikbEvidence: )
+      ?claim rdf:type mp:Claim.
+      ?claim mp:qualifiedBy ?drug.
+
+FILTER regex( ?drug, ChEBI:CHEBI )
+
 }
-GROUP BY ?type
