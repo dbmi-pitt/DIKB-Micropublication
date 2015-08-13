@@ -195,17 +195,17 @@ def addOAItem(graph, item):
 		exact = rgx.sub(u"",exact)
 
 	source = "None"
-	if item["evidenceSource"]:
+	# if item["evidenceSource"]:
 		
-		if "pubmed" not in item["evidenceSource"]:
+	# 	if "pubmed" not in item["evidenceSource"]:
 
-			if "resource/structuredProductLabelMetadata" in item["evidenceSource"]:
-				setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/","")
-				item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
+	# 		if "resource/structuredProductLabelMetadata" in item["evidenceSource"]:
+	# 			setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/","")
+	# 			item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
 				
-			if "page/structuredProductLabelMetadata" in item["evidenceSource"]:
-				setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/","")
-				item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
+	# 		if "page/structuredProductLabelMetadata" in item["evidenceSource"]:
+	# 			setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/","")
+	# 			item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
 
 	global annotationItemCntr
 	currentAnnotItem = "ddi-spl-annotation-item-%s" % annotationItemCntr
@@ -268,10 +268,6 @@ def addAssertion(graph, item, currentAnnotationClaim):
 	oaItem = addOAItem(graph, item)
 
 	# Claim : is a research statement label qualified by assertion URI
-	# global annotationClaimCntr 
-	# currentAnnotationClaim = "ddi-spl-annotation-claim-%s" % annotationClaimCntr
-	# annotationClaimCntr += 1
-	# graph.add((poc[currentAnnotationClaim],RDF.type, mp["Claim"]))
 
 	if item['researchStatementLabel']:
 		graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
@@ -427,6 +423,19 @@ def createGraph(graph, dataset):
 			else:
 				continue
 
+		if item["evidenceSource"]:
+		
+			if "pubmed" not in item["evidenceSource"]:
+				
+				if "resource/structuredProductLabelMetadata" in item["evidenceSource"]:
+					setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/","")
+					item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
+				
+			if "page/structuredProductLabelMetadata" in item["evidenceSource"]:
+				setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/","")
+				item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
+
+
 
 		###################################################################
 		# MP - Claim (label, 3 qualifiedBy for subject, predicate, object)
@@ -458,6 +467,10 @@ def createGraph(graph, dataset):
 			graph.add((poc[currentAnnotationClaim],RDF.type, mp["Claim"]))
 
 			graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
+
+			# URI(evidence source URL) mp:supports mp:claim
+			graph.add((URIRef(item["evidenceSource"]), mp["supports"], poc[currentAnnotationClaim]))
+
 			graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["objectURI"])))
 			graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
 
