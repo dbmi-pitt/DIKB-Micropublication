@@ -444,6 +444,12 @@
   <rdf:Description rdf:about="http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-assertion-318">
     <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-assertion-319">
+    <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-assertion-319">
+    <ns3:qualifiedBy rdf:resource="http://purl.obolibrary.org/obo/DIDEO_00000000"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-np-assertion-320">
     <rdf:type rdf:resource="http://www.nanopub.org/nschema#assertion"/>
   </rdf:Description>

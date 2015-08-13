@@ -13,7 +13,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <ddi:ddi-spl-annotation-np-provenance-298> = {
-    ddi:ddi-spl-annotation-np-assertion-298 prov:generatedAtTime "2015-08-04T15:20:41.337012"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-298 prov:generatedAtTime "2015-08-13T15:46:38.733771"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -22,17 +22,17 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-113> = {
-    ddi:ddi-spl-annotation-nanopub-113 prov:generatedAtTime "2015-08-04T15:20:41.338621"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-113 prov:generatedAtTime "2015-08-13T15:46:38.789897"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-115> = {
-    ddi:ddi-spl-annotation-nanopub-115 prov:generatedAtTime "2015-08-04T15:20:41.387435"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-115 prov:generatedAtTime "2015-08-13T15:46:38.770881"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-354> = {
-    ddi:ddi-spl-annotation-np-assertion-354 prov:generatedAtTime "2015-08-04T15:20:41.337847"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-354 prov:generatedAtTime "2015-08-13T15:46:38.744312"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
             dikbEvidence:EV_CT_PK_Phenotype,
             dikbEvidence:EV_PK_DDI_NR,
@@ -42,13 +42,17 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-240> = {
-    ddi:ddi-spl-annotation-nanopub-240 prov:generatedAtTime "2015-08-04T15:20:41.371922"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-provenance-292> = {
+    ddi:ddi-spl-annotation-np-assertion-292 prov:generatedAtTime "2015-08-13T15:46:38.774705"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-293> = {
-    ddi:ddi-spl-annotation-np-assertion-293 prov:generatedAtTime "2015-08-04T15:20:41.396161"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-293 prov:generatedAtTime "2015-08-13T15:46:38.786910"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -57,7 +61,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-290> = {
-    ddi:ddi-spl-annotation-np-assertion-290 prov:generatedAtTime "2015-08-04T15:20:41.409618"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-290 prov:generatedAtTime "2015-08-13T15:46:38.759787"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -66,7 +70,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-291> = {
-    ddi:ddi-spl-annotation-np-assertion-291 prov:generatedAtTime "2015-08-04T15:20:41.375081"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-291 prov:generatedAtTime "2015-08-13T15:46:38.739677"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -75,7 +79,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-296> = {
-    ddi:ddi-spl-annotation-np-assertion-296 prov:generatedAtTime "2015-08-04T15:20:41.393010"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-296 prov:generatedAtTime "2015-08-13T15:46:38.777107"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -84,7 +88,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-297> = {
-    ddi:ddi-spl-annotation-np-assertion-297 prov:generatedAtTime "2015-08-04T15:20:41.372813"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-297 prov:generatedAtTime "2015-08-13T15:46:38.738952"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -92,13 +96,17 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-246> = {
-    ddi:ddi-spl-annotation-nanopub-246 prov:generatedAtTime "2015-08-04T15:20:41.346297"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-provenance-294> = {
+    ddi:ddi-spl-annotation-np-assertion-294 prov:generatedAtTime "2015-08-13T15:46:38.735224"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-295> = {
-    ddi:ddi-spl-annotation-np-assertion-295 prov:generatedAtTime "2015-08-04T15:20:41.408801"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-295 prov:generatedAtTime "2015-08-13T15:46:38.795496"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -129,7 +137,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-299> = {
-    ddi:ddi-spl-annotation-np-assertion-299 prov:generatedAtTime "2015-08-04T15:20:41.371221"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-299 prov:generatedAtTime "2015-08-13T15:46:38.746838"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -138,7 +146,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-77> = {
-    ddi:ddi-spl-annotation-nanopub-77 prov:generatedAtTime "2015-08-04T15:20:41.404908"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-77 prov:generatedAtTime "2015-08-13T15:46:38.781515"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -153,8 +161,13 @@
     ddi:ddi-spl-annotation-np-pubInfo-224 a np:PublicationInfo .
 }
 
+<ddi:ddi-spl-annotation-np-pubInfo-292> = {
+    ddi:ddi-spl-annotation-nanopub-292 prov:generatedAtTime "2015-08-13T15:46:38.774619"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
 <ddi:ddi-spl-annotation-np-provenance-35> = {
-    ddi:ddi-spl-annotation-np-assertion-35 prov:generatedAtTime "2015-08-04T15:20:41.362393"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-35 prov:generatedAtTime "2015-08-13T15:46:38.730529"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -162,13 +175,19 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-291> = {
-    ddi:ddi-spl-annotation-nanopub-291 prov:generatedAtTime "2015-08-04T15:20:41.374992"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-head-318> = {
+    ddi:ddi-spl-annotation-nanopub-318 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-318 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-318 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-318 .
+
+    ddi:ddi-spl-annotation-np-provenance-318 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-318 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-113> = {
-    ddi:ddi-spl-annotation-np-assertion-113 prov:generatedAtTime "2015-08-04T15:20:41.338718"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-113 prov:generatedAtTime "2015-08-13T15:46:38.789985"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -177,7 +196,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-112> = {
-    ddi:ddi-spl-annotation-np-assertion-112 prov:generatedAtTime "2015-08-04T15:20:41.398589"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-112 prov:generatedAtTime "2015-08-13T15:46:38.782396"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -186,7 +205,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-115> = {
-    ddi:ddi-spl-annotation-np-assertion-115 prov:generatedAtTime "2015-08-04T15:20:41.387524"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-115 prov:generatedAtTime "2015-08-13T15:46:38.770972"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -205,29 +224,24 @@
     ddi:ddi-spl-annotation-np-pubInfo-82 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-297> = {
-    ddi:ddi-spl-annotation-nanopub-297 prov:generatedAtTime "2015-08-04T15:20:41.372720"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-head-135> = {
+    ddi:ddi-spl-annotation-nanopub-135 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-135 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-135 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-135 .
+
+    ddi:ddi-spl-annotation-np-provenance-135 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-135 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-333> = {
-    ddi:ddi-spl-annotation-nanopub-333 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-333 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-333 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-333 .
-
-    ddi:ddi-spl-annotation-np-provenance-333 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-333 a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-46> = {
-    ddi:ddi-spl-annotation-nanopub-46 prov:generatedAtTime "2015-08-04T15:20:41.378744"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-pubInfo-296> = {
+    ddi:ddi-spl-annotation-nanopub-296 prov:generatedAtTime "2015-08-13T15:46:38.777020"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-212> = {
-    ddi:ddi-spl-annotation-np-assertion-212 prov:generatedAtTime "2015-08-04T15:20:41.397785"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-212 prov:generatedAtTime "2015-08-13T15:46:38.764961"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -235,27 +249,18 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-292> = {
-    ddi:ddi-spl-annotation-np-assertion-292 prov:generatedAtTime "2015-08-04T15:20:41.375818"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-203> = {
-    ddi:ddi-spl-annotation-nanopub-203 prov:generatedAtTime "2015-08-04T15:20:41.361479"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-pubInfo-240> = {
+    ddi:ddi-spl-annotation-nanopub-240 prov:generatedAtTime "2015-08-13T15:46:38.776284"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-190> = {
-    ddi:ddi-spl-annotation-nanopub-190 prov:generatedAtTime "2015-08-04T15:20:41.352832"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-190 prov:generatedAtTime "2015-08-13T15:46:38.742637"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-190> = {
-    ddi:ddi-spl-annotation-np-assertion-190 prov:generatedAtTime "2015-08-04T15:20:41.352942"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-190 prov:generatedAtTime "2015-08-13T15:46:38.742728"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -263,18 +268,13 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-294> = {
-    ddi:ddi-spl-annotation-nanopub-294 prov:generatedAtTime "2015-08-04T15:20:41.356070"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
 <ddi:ddi-spl-annotation-np-pubInfo-194> = {
-    ddi:ddi-spl-annotation-nanopub-194 prov:generatedAtTime "2015-08-04T15:20:41.395240"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-194 prov:generatedAtTime "2015-08-13T15:46:38.736599"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-194> = {
-    ddi:ddi-spl-annotation-np-assertion-194 prov:generatedAtTime "2015-08-04T15:20:41.395337"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-194 prov:generatedAtTime "2015-08-13T15:46:38.736687"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -282,8 +282,13 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
+<ddi:ddi-spl-annotation-np-pubInfo-123> = {
+    ddi:ddi-spl-annotation-nanopub-123 prov:generatedAtTime "2015-08-13T15:46:38.756619"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
 <ddi:ddi-spl-annotation-np-provenance-341> = {
-    ddi:ddi-spl-annotation-np-assertion-341 prov:generatedAtTime "2015-08-04T15:20:41.379632"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-341 prov:generatedAtTime "2015-08-13T15:46:38.765690"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
             dikbEvidence:EV_CT_PK_Phenotype,
             dikbEvidence:EV_PK_DDI_NR,
@@ -294,19 +299,10 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-342> = {
-    ddi:ddi-spl-annotation-np-assertion-342 prov:generatedAtTime "2015-08-04T15:20:41.347188"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-342 prov:generatedAtTime "2015-08-13T15:46:38.752167"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
             dikbEvidence:EV_CT_PK_Phenotype,
             dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-68> = {
-    ddi:ddi-spl-annotation-np-assertion-68 prov:generatedAtTime "2015-08-04T15:20:41.365617"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
@@ -314,7 +310,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-344> = {
-    ddi:ddi-spl-annotation-np-assertion-344 prov:generatedAtTime "2015-08-04T15:20:41.351312"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-344 prov:generatedAtTime "2015-08-13T15:46:38.731263"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -322,15 +318,9 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-345> = {
-    ddi:ddi-spl-annotation-np-assertion-345 prov:generatedAtTime "2015-08-04T15:20:41.360762"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
-            dikbEvidence:EV_CT_PK_Phenotype,
-            dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+<ddi:ddi-spl-annotation-np-pubInfo-102> = {
+    ddi:ddi-spl-annotation-nanopub-102 prov:generatedAtTime "2015-08-13T15:46:38.773071"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-head-299> = {
@@ -433,31 +423,24 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-250> = {
-    ddi:ddi-spl-annotation-nanopub-250 prov:generatedAtTime "2015-08-04T15:20:41.359151"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-250 prov:generatedAtTime "2015-08-13T15:46:38.734410"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-222> = {
-    ddi:ddi-spl-annotation-nanopub-222 prov:generatedAtTime "2015-08-04T15:20:41.348792"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-head-212> = {
+    ddi:ddi-spl-annotation-nanopub-212 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-212 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-212 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-212 .
+
+    ddi:ddi-spl-annotation-np-provenance-212 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-212 a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-223> = {
+    ddi:ddi-spl-annotation-nanopub-223 prov:generatedAtTime "2015-08-13T15:46:38.766388"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-289> = {
-    ddi:ddi-spl-annotation-np-assertion-289 prov:generatedAtTime "2015-08-04T15:20:41.340375"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-294> = {
-    ddi:ddi-spl-annotation-np-assertion-294 prov:generatedAtTime "2015-08-04T15:20:41.356161"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
 <ddi:ddi-spl-annotation-np-head-194> = {
@@ -483,7 +466,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-46> = {
-    ddi:ddi-spl-annotation-np-assertion-46 prov:generatedAtTime "2015-08-04T15:20:41.378837"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-46 prov:generatedAtTime "2015-08-13T15:46:38.796224"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -513,6 +496,11 @@
     ddi:ddi-spl-annotation-np-pubInfo-101 a np:PublicationInfo .
 }
 
+<ddi:ddi-spl-annotation-np-pubInfo-57> = {
+    ddi:ddi-spl-annotation-nanopub-57 prov:generatedAtTime "2015-08-13T15:46:38.749059"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
 <ddi:ddi-spl-annotation-np-head-268> = {
     ddi:ddi-spl-annotation-nanopub-268 a np:Nanopublication ;
         np:hasAssertion ddi:ddi-spl-annotation-np-assertion-268 ;
@@ -524,15 +512,15 @@
     ddi:ddi-spl-annotation-np-pubInfo-268 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-146> = {
-    ddi:ddi-spl-annotation-nanopub-146 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-146 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-146 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-146 .
+<ddi:ddi-spl-annotation-np-head-300> = {
+    ddi:ddi-spl-annotation-nanopub-300 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-300 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-300 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-300 .
 
-    ddi:ddi-spl-annotation-np-provenance-146 a np:Provenance .
+    ddi:ddi-spl-annotation-np-provenance-300 a np:Provenance .
 
-    ddi:ddi-spl-annotation-np-pubInfo-146 a np:PublicationInfo .
+    ddi:ddi-spl-annotation-np-pubInfo-300 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-head-345> = {
@@ -557,69 +545,6 @@
     ddi:ddi-spl-annotation-np-pubInfo-344 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-102> = {
-    ddi:ddi-spl-annotation-np-assertion-102 prov:generatedAtTime "2015-08-04T15:20:41.388277"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-268> = {
-    ddi:ddi-spl-annotation-np-assertion-268 prov:generatedAtTime "2015-08-04T15:20:41.350505"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-316> = {
-    ddi:ddi-spl-annotation-nanopub-316 prov:generatedAtTime "2015-08-04T15:20:41.385155"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-317> = {
-    ddi:ddi-spl-annotation-nanopub-317 prov:generatedAtTime "2015-08-04T15:20:41.411096"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-314> = {
-    ddi:ddi-spl-annotation-nanopub-314 prov:generatedAtTime "2015-08-04T15:20:41.402495"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-315> = {
-    ddi:ddi-spl-annotation-nanopub-315 prov:generatedAtTime "2015-08-04T15:20:41.382826"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-312> = {
-    ddi:ddi-spl-annotation-nanopub-312 prov:generatedAtTime "2015-08-04T15:20:41.347976"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-313> = {
-    ddi:ddi-spl-annotation-nanopub-313 prov:generatedAtTime "2015-08-04T15:20:41.382033"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-310> = {
-    ddi:ddi-spl-annotation-nanopub-310 prov:generatedAtTime "2015-08-04T15:20:41.344696"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-311> = {
-    ddi:ddi-spl-annotation-nanopub-311 prov:generatedAtTime "2015-08-04T15:20:41.385956"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-318> = {
-    ddi:ddi-spl-annotation-nanopub-318 prov:generatedAtTime "2015-08-04T15:20:41.381272"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
 <ddi:ddi-spl-annotation-np-head-341> = {
     ddi:ddi-spl-annotation-nanopub-341 a np:Nanopublication ;
         np:hasAssertion ddi:ddi-spl-annotation-np-assertion-341 ;
@@ -631,8 +556,102 @@
     ddi:ddi-spl-annotation-np-pubInfo-341 a np:PublicationInfo .
 }
 
+<ddi:ddi-spl-annotation-np-pubInfo-235> = {
+    ddi:ddi-spl-annotation-nanopub-235 prov:generatedAtTime "2015-08-13T15:46:38.764113"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-268> = {
+    ddi:ddi-spl-annotation-np-assertion-268 prov:generatedAtTime "2015-08-13T15:46:38.780102"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-316> = {
+    ddi:ddi-spl-annotation-nanopub-316 prov:generatedAtTime "2015-08-13T15:46:38.794604"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-317> = {
+    ddi:ddi-spl-annotation-nanopub-317 prov:generatedAtTime "2015-08-13T15:46:38.778506"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-314> = {
+    ddi:ddi-spl-annotation-nanopub-314 prov:generatedAtTime "2015-08-13T15:46:38.745973"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-315> = {
+    ddi:ddi-spl-annotation-nanopub-315 prov:generatedAtTime "2015-08-13T15:46:38.767195"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-312> = {
+    ddi:ddi-spl-annotation-nanopub-312 prov:generatedAtTime "2015-08-13T15:46:38.791454"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-313> = {
+    ddi:ddi-spl-annotation-nanopub-313 prov:generatedAtTime "2015-08-13T15:46:38.743390"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-310> = {
+    ddi:ddi-spl-annotation-nanopub-310 prov:generatedAtTime "2015-08-13T15:46:38.726754"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-311> = {
+    ddi:ddi-spl-annotation-nanopub-311 prov:generatedAtTime "2015-08-13T15:46:38.758076"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-head-305> = {
+    ddi:ddi-spl-annotation-nanopub-305 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-305 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-305 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-305 .
+
+    ddi:ddi-spl-annotation-np-provenance-305 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-305 a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-318> = {
+    ddi:ddi-spl-annotation-nanopub-318 prov:generatedAtTime "2015-08-13T15:46:38.737326"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-319> = {
+    ddi:ddi-spl-annotation-nanopub-319 prov:generatedAtTime "2015-08-13T15:46:38.728981"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-35> = {
+    ddi:ddi-spl-annotation-nanopub-35 prov:generatedAtTime "2015-08-13T15:46:38.730439"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-308> = {
+    ddi:ddi-spl-annotation-nanopub-308 prov:generatedAtTime "2015-08-13T15:46:38.767925"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-102> = {
+    ddi:ddi-spl-annotation-np-assertion-102 prov:generatedAtTime "2015-08-13T15:46:38.773159"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
 <ddi:ddi-spl-annotation-np-pubInfo-135> = {
-    ddi:ddi-spl-annotation-nanopub-135 prov:generatedAtTime "2015-08-04T15:20:41.390642"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-135 prov:generatedAtTime "2015-08-13T15:46:38.755157"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -658,13 +677,15 @@
     ddi:ddi-spl-annotation-np-pubInfo-324 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-13> = {
-    ddi:ddi-spl-annotation-np-assertion-13 prov:generatedAtTime "2015-08-04T15:20:41.355333"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+<ddi:ddi-spl-annotation-np-head-323> = {
+    ddi:ddi-spl-annotation-nanopub-323 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-323 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-323 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-323 .
+
+    ddi:ddi-spl-annotation-np-provenance-323 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-323 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-head-322> = {
@@ -700,8 +721,18 @@
     ddi:ddi-spl-annotation-np-pubInfo-320 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-322> = {
-    ddi:ddi-spl-annotation-np-assertion-322 prov:generatedAtTime "2015-08-04T15:20:41.354541"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-pubInfo-129> = {
+    ddi:ddi-spl-annotation-nanopub-129 prov:generatedAtTime "2015-08-13T15:46:38.727487"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-52> = {
+    ddi:ddi-spl-annotation-nanopub-52 prov:generatedAtTime "2015-08-13T15:46:38.773827"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-101> = {
+    ddi:ddi-spl-annotation-np-assertion-101 prov:generatedAtTime "2015-08-13T15:46:38.753000"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -709,29 +740,13 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-52> = {
-    ddi:ddi-spl-annotation-nanopub-52 prov:generatedAtTime "2015-08-04T15:20:41.339412"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-head-342> = {
-    ddi:ddi-spl-annotation-nanopub-342 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-342 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-342 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-342 .
-
-    ddi:ddi-spl-annotation-np-provenance-342 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-342 a np:PublicationInfo .
-}
-
 <ddi:ddi-spl-annotation-np-pubInfo-55> = {
-    ddi:ddi-spl-annotation-nanopub-55 prov:generatedAtTime "2015-08-04T15:20:41.341080"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-55 prov:generatedAtTime "2015-08-13T15:46:38.753641"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-19> = {
-    ddi:ddi-spl-annotation-np-assertion-19 prov:generatedAtTime "2015-08-04T15:20:41.368812"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-19 prov:generatedAtTime "2015-08-13T15:46:38.726025"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
             dikbEvidence:EV_CT_PK_Phenotype,
             dikbEvidence:EV_PK_DDI_NR,
@@ -741,13 +756,19 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-57> = {
-    ddi:ddi-spl-annotation-nanopub-57 prov:generatedAtTime "2015-08-04T15:20:41.343540"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-head-328> = {
+    ddi:ddi-spl-annotation-nanopub-328 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-328 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-328 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-328 .
+
+    ddi:ddi-spl-annotation-np-provenance-328 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-328 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-135> = {
-    ddi:ddi-spl-annotation-np-assertion-135 prov:generatedAtTime "2015-08-04T15:20:41.390732"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-135 prov:generatedAtTime "2015-08-13T15:46:38.755243"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -789,7 +810,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-235> = {
-    ddi:ddi-spl-annotation-np-assertion-235 prov:generatedAtTime "2015-08-04T15:20:41.357718"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-235 prov:generatedAtTime "2015-08-13T15:46:38.764210"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -798,7 +819,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-82> = {
-    ddi:ddi-spl-annotation-np-assertion-82 prov:generatedAtTime "2015-08-04T15:20:41.400127"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-82 prov:generatedAtTime "2015-08-13T15:46:38.775553"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
             dikbEvidence:EV_CT_PK_Phenotype,
             dikbEvidence:EV_PK_DDI_NR,
@@ -842,12 +863,12 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-341> = {
-    ddi:ddi-spl-annotation-nanopub-341 prov:generatedAtTime "2015-08-04T15:20:41.379535"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-341 prov:generatedAtTime "2015-08-13T15:46:38.765602"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-308> = {
-    ddi:ddi-spl-annotation-np-assertion-308 prov:generatedAtTime "2015-08-04T15:20:41.367167"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-308 prov:generatedAtTime "2015-08-13T15:46:38.768014"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -856,7 +877,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-333> = {
-    ddi:ddi-spl-annotation-np-assertion-333 prov:generatedAtTime "2015-08-04T15:20:41.369644"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-333 prov:generatedAtTime "2015-08-13T15:46:38.787641"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -865,27 +886,33 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-342> = {
-    ddi:ddi-spl-annotation-nanopub-342 prov:generatedAtTime "2015-08-04T15:20:41.347091"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-342 prov:generatedAtTime "2015-08-13T15:46:38.752077"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-345> = {
-    ddi:ddi-spl-annotation-nanopub-345 prov:generatedAtTime "2015-08-04T15:20:41.360672"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-head-29> = {
+    ddi:ddi-spl-annotation-nanopub-29 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-29 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-29 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-29 .
+
+    ddi:ddi-spl-annotation-np-provenance-29 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-29 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-344> = {
-    ddi:ddi-spl-annotation-nanopub-344 prov:generatedAtTime "2015-08-04T15:20:41.351213"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-344 prov:generatedAtTime "2015-08-13T15:46:38.731176"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-268> = {
-    ddi:ddi-spl-annotation-nanopub-268 prov:generatedAtTime "2015-08-04T15:20:41.350406"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-268 prov:generatedAtTime "2015-08-13T15:46:38.780015"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-324> = {
-    ddi:ddi-spl-annotation-np-assertion-324 prov:generatedAtTime "2015-08-04T15:20:41.410440"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-324 prov:generatedAtTime "2015-08-13T15:46:38.731986"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -894,7 +921,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-325> = {
-    ddi:ddi-spl-annotation-np-assertion-325 prov:generatedAtTime "2015-08-04T15:20:41.380601"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-325 prov:generatedAtTime "2015-08-13T15:46:38.740411"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -902,13 +929,17 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-129> = {
-    ddi:ddi-spl-annotation-nanopub-129 prov:generatedAtTime "2015-08-04T15:20:41.359921"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-provenance-289> = {
+    ddi:ddi-spl-annotation-np-assertion-289 prov:generatedAtTime "2015-08-13T15:46:38.741214"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-323> = {
-    ddi:ddi-spl-annotation-np-assertion-323 prov:generatedAtTime "2015-08-04T15:20:41.370390"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-provenance-288> = {
+    ddi:ddi-spl-annotation-np-assertion-288 prov:generatedAtTime "2015-08-13T15:46:38.733031"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -917,7 +948,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-320> = {
-    ddi:ddi-spl-annotation-np-assertion-320 prov:generatedAtTime "2015-08-04T15:20:41.403330"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-320 prov:generatedAtTime "2015-08-13T15:46:38.741973"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -926,7 +957,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-321> = {
-    ddi:ddi-spl-annotation-np-assertion-321 prov:generatedAtTime "2015-08-04T15:20:41.374305"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-321 prov:generatedAtTime "2015-08-13T15:46:38.784673"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -935,7 +966,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-285> = {
-    ddi:ddi-spl-annotation-np-assertion-285 prov:generatedAtTime "2015-08-04T15:20:41.399351"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-285 prov:generatedAtTime "2015-08-13T15:46:38.735951"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -944,12 +975,12 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-124> = {
-    ddi:ddi-spl-annotation-nanopub-124 prov:generatedAtTime "2015-08-04T15:20:41.383578"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-124 prov:generatedAtTime "2015-08-13T15:46:38.769426"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-287> = {
-    ddi:ddi-spl-annotation-np-assertion-287 prov:generatedAtTime "2015-08-04T15:20:41.352120"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-287 prov:generatedAtTime "2015-08-13T15:46:38.783199"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -958,7 +989,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-286> = {
-    ddi:ddi-spl-annotation-np-assertion-286 prov:generatedAtTime "2015-08-04T15:20:41.345603"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-286 prov:generatedAtTime "2015-08-13T15:46:38.729799"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -966,13 +997,19 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-123> = {
-    ddi:ddi-spl-annotation-nanopub-123 prov:generatedAtTime "2015-08-04T15:20:41.384360"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-provenance-328> = {
+    ddi:ddi-spl-annotation-np-assertion-328 prov:generatedAtTime "2015-08-13T15:46:38.738167"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
+            dikbEvidence:EV_CT_PK_Phenotype,
+            dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-21> = {
-    ddi:ddi-spl-annotation-np-assertion-21 prov:generatedAtTime "2015-08-04T15:20:41.404103"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-21 prov:generatedAtTime "2015-08-13T15:46:38.779312"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
             dikbEvidence:EV_CT_PK_Phenotype,
             dikbEvidence:EV_PK_DDI_NR,
@@ -993,13 +1030,19 @@
     ddi:ddi-spl-annotation-np-pubInfo-235 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-68> = {
-    ddi:ddi-spl-annotation-nanopub-68 prov:generatedAtTime "2015-08-04T15:20:41.365524"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-provenance-27> = {
+    ddi:ddi-spl-annotation-np-assertion-27 prov:generatedAtTime "2015-08-13T15:46:38.788378"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
+            dikbEvidence:EV_CT_PK_Phenotype,
+            dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-24> = {
-    ddi:ddi-spl-annotation-np-assertion-24 prov:generatedAtTime "2015-08-04T15:20:41.396934"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-24 prov:generatedAtTime "2015-08-13T15:46:38.751440"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1007,8 +1050,28 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
+<ddi:ddi-spl-annotation-np-provenance-305> = {
+    ddi:ddi-spl-annotation-np-assertion-305 prov:generatedAtTime "2015-08-13T15:46:38.777838"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-head-319> = {
+    ddi:ddi-spl-annotation-nanopub-319 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-319 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-319 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-319 .
+
+    ddi:ddi-spl-annotation-np-provenance-319 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-319 a np:PublicationInfo .
+}
+
 <ddi:ddi-spl-annotation-np-provenance-29> = {
-    ddi:ddi-spl-annotation-np-assertion-29 prov:generatedAtTime "2015-08-04T15:20:41.367929"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-29 prov:generatedAtTime "2015-08-13T15:46:38.748355"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
             dikbEvidence:EV_CT_PK_Phenotype,
             dikbEvidence:EV_PK_DDI_NR,
@@ -1019,7 +1082,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-124> = {
-    ddi:ddi-spl-annotation-np-assertion-124 prov:generatedAtTime "2015-08-04T15:20:41.383672"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-124 prov:generatedAtTime "2015-08-13T15:46:38.769512"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1038,19 +1101,28 @@
     ddi:ddi-spl-annotation-np-pubInfo-246 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-129> = {
-    ddi:ddi-spl-annotation-nanopub-129 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-129 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-129 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-129 .
+<ddi:ddi-spl-annotation-np-provenance-307> = {
+    ddi:ddi-spl-annotation-np-assertion-307 prov:generatedAtTime "2015-08-13T15:46:38.762750"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
 
-    ddi:ddi-spl-annotation-np-provenance-129 a np:Provenance .
+<ddi:ddi-spl-annotation-np-head-240> = {
+    ddi:ddi-spl-annotation-nanopub-240 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-240 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-240 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-240 .
 
-    ddi:ddi-spl-annotation-np-pubInfo-129 a np:PublicationInfo .
+    ddi:ddi-spl-annotation-np-provenance-240 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-240 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-123> = {
-    ddi:ddi-spl-annotation-np-assertion-123 prov:generatedAtTime "2015-08-04T15:20:41.384458"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-123 prov:generatedAtTime "2015-08-13T15:46:38.756710"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1081,7 +1153,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-129> = {
-    ddi:ddi-spl-annotation-np-assertion-129 prov:generatedAtTime "2015-08-04T15:20:41.360015"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-129 prov:generatedAtTime "2015-08-13T15:46:38.727580"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1101,7 +1173,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-90> = {
-    ddi:ddi-spl-annotation-np-assertion-90 prov:generatedAtTime "2015-08-04T15:20:41.358501"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-90 prov:generatedAtTime "2015-08-13T15:46:38.780874"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1110,7 +1182,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-277> = {
-    ddi:ddi-spl-annotation-nanopub-277 prov:generatedAtTime "2015-08-04T15:20:41.341950"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-277 prov:generatedAtTime "2015-08-13T15:46:38.728244"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -1125,8 +1197,8 @@
     ddi:ddi-spl-annotation-np-pubInfo-13 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-201> = {
-    ddi:ddi-spl-annotation-np-assertion-201 prov:generatedAtTime "2015-08-04T15:20:41.353773"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-provenance-322> = {
+    ddi:ddi-spl-annotation-np-assertion-322 prov:generatedAtTime "2015-08-13T15:46:38.790779"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1135,7 +1207,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-203> = {
-    ddi:ddi-spl-annotation-np-assertion-203 prov:generatedAtTime "2015-08-04T15:20:41.361569"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-203 prov:generatedAtTime "2015-08-13T15:46:38.772431"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1155,12 +1227,12 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-279> = {
-    ddi:ddi-spl-annotation-nanopub-279 prov:generatedAtTime "2015-08-04T15:20:41.356818"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-279 prov:generatedAtTime "2015-08-13T15:46:38.749785"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-208> = {
-    ddi:ddi-spl-annotation-np-assertion-208 prov:generatedAtTime "2015-08-04T15:20:41.407892"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-208 prov:generatedAtTime "2015-08-13T15:46:38.757440"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1168,47 +1240,35 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-27> = {
-    ddi:ddi-spl-annotation-np-assertion-27 prov:generatedAtTime "2015-08-04T15:20:41.401775"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
-            dikbEvidence:EV_CT_PK_Phenotype,
-            dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+<ddi:ddi-spl-annotation-np-head-57> = {
+    ddi:ddi-spl-annotation-nanopub-57 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-57 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-57 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-57 .
+
+    ddi:ddi-spl-annotation-np-provenance-57 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-57 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-328> = {
-    ddi:ddi-spl-annotation-np-assertion-328 prov:generatedAtTime "2015-08-04T15:20:41.393757"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
-            dikbEvidence:EV_CT_PK_Phenotype,
-            dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+<ddi:ddi-spl-annotation-np-pubInfo-68> = {
+    ddi:ddi-spl-annotation-nanopub-68 prov:generatedAtTime "2015-08-13T15:46:38.783849"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-285> = {
-    ddi:ddi-spl-annotation-nanopub-285 prov:generatedAtTime "2015-08-04T15:20:41.399259"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-285 prov:generatedAtTime "2015-08-13T15:46:38.735864"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-286> = {
-    ddi:ddi-spl-annotation-nanopub-286 prov:generatedAtTime "2015-08-04T15:20:41.345502"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-286 prov:generatedAtTime "2015-08-13T15:46:38.729709"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-head-135> = {
-    ddi:ddi-spl-annotation-nanopub-135 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-135 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-135 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-135 .
-
-    ddi:ddi-spl-annotation-np-provenance-135 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-135 a np:PublicationInfo .
+<ddi:ddi-spl-annotation-np-pubInfo-287> = {
+    ddi:ddi-spl-annotation-nanopub-287 prov:generatedAtTime "2015-08-13T15:46:38.783043"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-head-46> = {
@@ -1223,37 +1283,37 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-328> = {
-    ddi:ddi-spl-annotation-nanopub-328 prov:generatedAtTime "2015-08-04T15:20:41.393667"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-328 prov:generatedAtTime "2015-08-13T15:46:38.738079"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-325> = {
-    ddi:ddi-spl-annotation-nanopub-325 prov:generatedAtTime "2015-08-04T15:20:41.380509"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-325 prov:generatedAtTime "2015-08-13T15:46:38.740320"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-324> = {
-    ddi:ddi-spl-annotation-nanopub-324 prov:generatedAtTime "2015-08-04T15:20:41.410348"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-324 prov:generatedAtTime "2015-08-13T15:46:38.731899"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-288> = {
-    ddi:ddi-spl-annotation-nanopub-288 prov:generatedAtTime "2015-08-04T15:20:41.411889"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-pubInfo-323> = {
+    ddi:ddi-spl-annotation-nanopub-323 prov:generatedAtTime "2015-08-13T15:46:38.797655"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-322> = {
-    ddi:ddi-spl-annotation-nanopub-322 prov:generatedAtTime "2015-08-04T15:20:41.354450"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-pubInfo-289> = {
+    ddi:ddi-spl-annotation-nanopub-289 prov:generatedAtTime "2015-08-13T15:46:38.741052"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-321> = {
-    ddi:ddi-spl-annotation-nanopub-321 prov:generatedAtTime "2015-08-04T15:20:41.374216"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-321 prov:generatedAtTime "2015-08-13T15:46:38.784585"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-320> = {
-    ddi:ddi-spl-annotation-nanopub-320 prov:generatedAtTime "2015-08-04T15:20:41.403236"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-320 prov:generatedAtTime "2015-08-13T15:46:38.741884"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -1268,15 +1328,15 @@
     ddi:ddi-spl-annotation-np-pubInfo-301 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-300> = {
-    ddi:ddi-spl-annotation-nanopub-300 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-300 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-300 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-300 .
+<ddi:ddi-spl-annotation-np-head-146> = {
+    ddi:ddi-spl-annotation-nanopub-146 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-146 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-146 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-146 .
 
-    ddi:ddi-spl-annotation-np-provenance-300 a np:Provenance .
+    ddi:ddi-spl-annotation-np-provenance-146 a np:Provenance .
 
-    ddi:ddi-spl-annotation-np-pubInfo-300 a np:PublicationInfo .
+    ddi:ddi-spl-annotation-np-pubInfo-146 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-head-303> = {
@@ -1290,24 +1350,9 @@
     ddi:ddi-spl-annotation-np-pubInfo-303 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-250> = {
-    ddi:ddi-spl-annotation-np-assertion-250 prov:generatedAtTime "2015-08-04T15:20:41.359246"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-head-305> = {
-    ddi:ddi-spl-annotation-nanopub-305 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-305 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-305 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-305 .
-
-    ddi:ddi-spl-annotation-np-provenance-305 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-305 a np:PublicationInfo .
+<ddi:ddi-spl-annotation-np-pubInfo-112> = {
+    ddi:ddi-spl-annotation-nanopub-112 prov:generatedAtTime "2015-08-13T15:46:38.782309"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-head-304> = {
@@ -1365,29 +1410,9 @@
     ddi:ddi-spl-annotation-np-pubInfo-308 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-101> = {
-    ddi:ddi-spl-annotation-np-assertion-101 prov:generatedAtTime "2015-08-04T15:20:41.391513"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
 <ddi:ddi-spl-annotation-np-pubInfo-29> = {
-    ddi:ddi-spl-annotation-nanopub-29 prov:generatedAtTime "2015-08-04T15:20:41.367828"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-29 prov:generatedAtTime "2015-08-13T15:46:38.748260"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-head-179> = {
-    ddi:ddi-spl-annotation-nanopub-179 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-179 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-179 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-179 .
-
-    ddi:ddi-spl-annotation-np-provenance-179 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-179 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-head-279> = {
@@ -1401,24 +1426,8 @@
     ddi:ddi-spl-annotation-np-pubInfo-279 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-286> = {
-    ddi:ddi-spl-annotation-nanopub-286 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-286 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-286 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-286 .
-
-    ddi:ddi-spl-annotation-np-provenance-286 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-286 a np:PublicationInfo .
-}
-
 <ddi:ddi-spl-annotation-np-pubInfo-21> = {
-    ddi:ddi-spl-annotation-nanopub-21 prov:generatedAtTime "2015-08-04T15:20:41.404012"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-308> = {
-    ddi:ddi-spl-annotation-nanopub-308 prov:generatedAtTime "2015-08-04T15:20:41.367074"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-21 prov:generatedAtTime "2015-08-13T15:46:38.779226"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -1434,22 +1443,22 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-24> = {
-    ddi:ddi-spl-annotation-nanopub-24 prov:generatedAtTime "2015-08-04T15:20:41.396842"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-24 prov:generatedAtTime "2015-08-13T15:46:38.751352"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-27> = {
-    ddi:ddi-spl-annotation-nanopub-27 prov:generatedAtTime "2015-08-04T15:20:41.401668"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-27 prov:generatedAtTime "2015-08-13T15:46:38.788285"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-154> = {
-    ddi:ddi-spl-annotation-nanopub-154 prov:generatedAtTime "2015-08-04T15:20:41.394472"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-154 prov:generatedAtTime "2015-08-13T15:46:38.758914"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-154> = {
-    ddi:ddi-spl-annotation-np-assertion-154 prov:generatedAtTime "2015-08-04T15:20:41.394566"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-154 prov:generatedAtTime "2015-08-13T15:46:38.759001"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1458,103 +1467,12 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-208> = {
-    ddi:ddi-spl-annotation-nanopub-208 prov:generatedAtTime "2015-08-04T15:20:41.405799"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-208 prov:generatedAtTime "2015-08-13T15:46:38.757353"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-153> = {
-    ddi:ddi-spl-annotation-np-assertion-153 prov:generatedAtTime "2015-08-04T15:20:41.377342"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-153> = {
-    ddi:ddi-spl-annotation-nanopub-153 prov:generatedAtTime "2015-08-04T15:20:41.377252"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-317> = {
-    ddi:ddi-spl-annotation-np-assertion-317 prov:generatedAtTime "2015-08-04T15:20:41.411189"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-316> = {
-    ddi:ddi-spl-annotation-np-assertion-316 prov:generatedAtTime "2015-08-04T15:20:41.385246"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-315> = {
-    ddi:ddi-spl-annotation-np-assertion-315 prov:generatedAtTime "2015-08-04T15:20:41.382916"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-314> = {
-    ddi:ddi-spl-annotation-np-assertion-314 prov:generatedAtTime "2015-08-04T15:20:41.402585"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-313> = {
-    ddi:ddi-spl-annotation-np-assertion-313 prov:generatedAtTime "2015-08-04T15:20:41.382122"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-201> = {
-    ddi:ddi-spl-annotation-nanopub-201 prov:generatedAtTime "2015-08-04T15:20:41.353680"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-311> = {
-    ddi:ddi-spl-annotation-np-assertion-311 prov:generatedAtTime "2015-08-04T15:20:41.386045"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-310> = {
-    ddi:ddi-spl-annotation-np-assertion-310 prov:generatedAtTime "2015-08-04T15:20:41.344796"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-168> = {
-    ddi:ddi-spl-annotation-np-assertion-168 prov:generatedAtTime "2015-08-04T15:20:41.386786"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-288> = {
-    ddi:ddi-spl-annotation-np-assertion-288 prov:generatedAtTime "2015-08-04T15:20:41.411980"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-provenance-319> = {
+    ddi:ddi-spl-annotation-np-assertion-319 prov:generatedAtTime "2015-08-13T15:46:38.729068"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1563,7 +1481,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-318> = {
-    ddi:ddi-spl-annotation-np-assertion-318 prov:generatedAtTime "2015-08-04T15:20:41.381362"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-318 prov:generatedAtTime "2015-08-13T15:46:38.737418"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1571,8 +1489,110 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
+<ddi:ddi-spl-annotation-np-provenance-317> = {
+    ddi:ddi-spl-annotation-np-assertion-317 prov:generatedAtTime "2015-08-13T15:46:38.778592"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-316> = {
+    ddi:ddi-spl-annotation-np-assertion-316 prov:generatedAtTime "2015-08-13T15:46:38.794692"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-315> = {
+    ddi:ddi-spl-annotation-np-assertion-315 prov:generatedAtTime "2015-08-13T15:46:38.767283"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-314> = {
+    ddi:ddi-spl-annotation-np-assertion-314 prov:generatedAtTime "2015-08-13T15:46:38.746060"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-313> = {
+    ddi:ddi-spl-annotation-np-assertion-313 prov:generatedAtTime "2015-08-13T15:46:38.743477"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-312> = {
+    ddi:ddi-spl-annotation-np-assertion-312 prov:generatedAtTime "2015-08-13T15:46:38.793110"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-311> = {
+    ddi:ddi-spl-annotation-np-assertion-311 prov:generatedAtTime "2015-08-13T15:46:38.758263"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-203> = {
+    ddi:ddi-spl-annotation-nanopub-203 prov:generatedAtTime "2015-08-13T15:46:38.772343"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-head-208> = {
+    ddi:ddi-spl-annotation-nanopub-208 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-208 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-208 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-208 .
+
+    ddi:ddi-spl-annotation-np-provenance-208 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-208 a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-153> = {
+    ddi:ddi-spl-annotation-np-assertion-153 prov:generatedAtTime "2015-08-13T15:46:38.747595"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-323> = {
+    ddi:ddi-spl-annotation-np-assertion-323 prov:generatedAtTime "2015-08-13T15:46:38.797813"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-153> = {
+    ddi:ddi-spl-annotation-nanopub-153 prov:generatedAtTime "2015-08-13T15:46:38.747505"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
 <ddi:ddi-spl-annotation-np-pubInfo-146> = {
-    ddi:ddi-spl-annotation-nanopub-146 prov:generatedAtTime "2015-08-04T15:20:41.376508"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-146 prov:generatedAtTime "2015-08-13T15:46:38.793851"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -1598,19 +1618,13 @@
     ddi:ddi-spl-annotation-np-pubInfo-313 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-310> = {
-    ddi:ddi-spl-annotation-nanopub-310 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-310 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-310 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-310 .
-
-    ddi:ddi-spl-annotation-np-provenance-310 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-310 a np:PublicationInfo .
+<ddi:ddi-spl-annotation-np-pubInfo-299> = {
+    ddi:ddi-spl-annotation-nanopub-299 prov:generatedAtTime "2015-08-13T15:46:38.746707"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-298> = {
-    ddi:ddi-spl-annotation-nanopub-298 prov:generatedAtTime "2015-08-04T15:20:41.336891"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-298 prov:generatedAtTime "2015-08-13T15:46:38.733679"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -1659,64 +1673,62 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-293> = {
-    ddi:ddi-spl-annotation-nanopub-293 prov:generatedAtTime "2015-08-04T15:20:41.396062"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-293 prov:generatedAtTime "2015-08-13T15:46:38.786823"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-292> = {
-    ddi:ddi-spl-annotation-nanopub-292 prov:generatedAtTime "2015-08-04T15:20:41.375730"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-head-129> = {
+    ddi:ddi-spl-annotation-nanopub-129 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-129 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-129 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-129 .
+
+    ddi:ddi-spl-annotation-np-provenance-129 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-129 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-318> = {
-    ddi:ddi-spl-annotation-nanopub-318 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-318 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-318 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-318 .
-
-    ddi:ddi-spl-annotation-np-provenance-318 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-318 a np:PublicationInfo .
+<ddi:ddi-spl-annotation-np-pubInfo-291> = {
+    ddi:ddi-spl-annotation-nanopub-291 prov:generatedAtTime "2015-08-13T15:46:38.739589"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-290> = {
-    ddi:ddi-spl-annotation-nanopub-290 prov:generatedAtTime "2015-08-04T15:20:41.409527"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-290 prov:generatedAtTime "2015-08-13T15:46:38.759700"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-head-240> = {
-    ddi:ddi-spl-annotation-nanopub-240 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-240 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-240 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-240 .
-
-    ddi:ddi-spl-annotation-np-provenance-240 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-240 a np:PublicationInfo .
+<ddi:ddi-spl-annotation-np-pubInfo-297> = {
+    ddi:ddi-spl-annotation-nanopub-297 prov:generatedAtTime "2015-08-13T15:46:38.738864"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-296> = {
-    ddi:ddi-spl-annotation-nanopub-296 prov:generatedAtTime "2015-08-04T15:20:41.392920"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-pubInfo-46> = {
+    ddi:ddi-spl-annotation-nanopub-46 prov:generatedAtTime "2015-08-13T15:46:38.796135"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-295> = {
-    ddi:ddi-spl-annotation-nanopub-295 prov:generatedAtTime "2015-08-04T15:20:41.408697"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-295 prov:generatedAtTime "2015-08-13T15:46:38.795403"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-289> = {
-    ddi:ddi-spl-annotation-nanopub-289 prov:generatedAtTime "2015-08-04T15:20:41.340278"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-pubInfo-294> = {
+    ddi:ddi-spl-annotation-nanopub-294 prov:generatedAtTime "2015-08-13T15:46:38.735136"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-112> = {
-    ddi:ddi-spl-annotation-nanopub-112 prov:generatedAtTime "2015-08-04T15:20:41.398497"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-provenance-68> = {
+    ddi:ddi-spl-annotation-np-assertion-68 prov:generatedAtTime "2015-08-13T15:46:38.783937"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-77> = {
-    ddi:ddi-spl-annotation-np-assertion-77 prov:generatedAtTime "2015-08-04T15:20:41.405007"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-77 prov:generatedAtTime "2015-08-13T15:46:38.781606"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
             dikbEvidence:EV_CT_PK_Phenotype,
             dikbEvidence:EV_PK_DDI_NR,
@@ -1727,7 +1739,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-223> = {
-    ddi:ddi-spl-annotation-np-assertion-223 prov:generatedAtTime "2015-08-04T15:20:41.364774"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-223 prov:generatedAtTime "2015-08-13T15:46:38.766476"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1736,7 +1748,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-222> = {
-    ddi:ddi-spl-annotation-np-assertion-222 prov:generatedAtTime "2015-08-04T15:20:41.348889"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-222 prov:generatedAtTime "2015-08-13T15:46:38.750713"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1744,22 +1756,24 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-35> = {
-    ddi:ddi-spl-annotation-nanopub-35 prov:generatedAtTime "2015-08-04T15:20:41.362226"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-head-342> = {
+    ddi:ddi-spl-annotation-nanopub-342 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-342 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-342 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-342 .
+
+    ddi:ddi-spl-annotation-np-provenance-342 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-342 a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-201> = {
+    ddi:ddi-spl-annotation-nanopub-201 prov:generatedAtTime "2015-08-13T15:46:38.761210"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-224> = {
-    ddi:ddi-spl-annotation-np-assertion-224 prov:generatedAtTime "2015-08-04T15:20:41.366408"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
 <ddi:ddi-spl-annotation-np-pubInfo-212> = {
-    ddi:ddi-spl-annotation-nanopub-212 prov:generatedAtTime "2015-08-04T15:20:41.397690"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-212 prov:generatedAtTime "2015-08-13T15:46:38.764874"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -1775,7 +1789,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-146> = {
-    ddi:ddi-spl-annotation-np-assertion-146 prov:generatedAtTime "2015-08-04T15:20:41.376600"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-146 prov:generatedAtTime "2015-08-13T15:46:38.793944"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1784,21 +1798,16 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-309> = {
-    ddi:ddi-spl-annotation-np-assertion-309 prov:generatedAtTime "2015-08-04T15:20:41.373562"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-309 prov:generatedAtTime "2015-08-13T15:46:38.768785"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-323> = {
-    ddi:ddi-spl-annotation-nanopub-323 prov:generatedAtTime "2015-08-04T15:20:41.370301"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-304> = {
-    ddi:ddi-spl-annotation-np-assertion-304 prov:generatedAtTime "2015-08-04T15:20:41.400985"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-304 prov:generatedAtTime "2015-08-13T15:46:38.754515"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1806,8 +1815,8 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-305> = {
-    ddi:ddi-spl-annotation-np-assertion-305 prov:generatedAtTime "2015-08-04T15:20:41.378089"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-provenance-13> = {
+    ddi:ddi-spl-annotation-np-assertion-13 prov:generatedAtTime "2015-08-13T15:46:38.745327"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1816,7 +1825,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-306> = {
-    ddi:ddi-spl-annotation-np-assertion-306 prov:generatedAtTime "2015-08-04T15:20:41.363965"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-306 prov:generatedAtTime "2015-08-13T15:46:38.755968"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1824,8 +1833,8 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-307> = {
-    ddi:ddi-spl-annotation-np-assertion-307 prov:generatedAtTime "2015-08-04T15:20:41.389210"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-provenance-310> = {
+    ddi:ddi-spl-annotation-np-assertion-310 prov:generatedAtTime "2015-08-13T15:46:38.726843"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1834,7 +1843,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-300> = {
-    ddi:ddi-spl-annotation-np-assertion-300 prov:generatedAtTime "2015-08-04T15:20:41.412829"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-300 prov:generatedAtTime "2015-08-13T15:46:38.760567"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1843,7 +1852,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-301> = {
-    ddi:ddi-spl-annotation-np-assertion-301 prov:generatedAtTime "2015-08-04T15:20:41.342850"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-301 prov:generatedAtTime "2015-08-13T15:46:38.785407"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1852,12 +1861,12 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-354> = {
-    ddi:ddi-spl-annotation-nanopub-354 prov:generatedAtTime "2015-08-04T15:20:41.337747"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-354 prov:generatedAtTime "2015-08-13T15:46:38.744124"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-provenance-303> = {
-    ddi:ddi-spl-annotation-np-assertion-303 prov:generatedAtTime "2015-08-04T15:20:41.363154"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-303 prov:generatedAtTime "2015-08-13T15:46:38.763474"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -1887,6 +1896,11 @@
     ddi:ddi-spl-annotation-np-pubInfo-203 a np:PublicationInfo .
 }
 
+<ddi:ddi-spl-annotation-np-pubInfo-322> = {
+    ddi:ddi-spl-annotation-nanopub-322 prov:generatedAtTime "2015-08-13T15:46:38.790691"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
 <ddi:ddi-spl-annotation-np-head-285> = {
     ddi:ddi-spl-annotation-nanopub-285 a np:Nanopublication ;
         np:hasAssertion ddi:ddi-spl-annotation-np-assertion-285 ;
@@ -1898,15 +1912,15 @@
     ddi:ddi-spl-annotation-np-pubInfo-285 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-323> = {
-    ddi:ddi-spl-annotation-nanopub-323 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-323 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-323 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-323 .
+<ddi:ddi-spl-annotation-np-head-286> = {
+    ddi:ddi-spl-annotation-nanopub-286 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-286 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-286 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-286 .
 
-    ddi:ddi-spl-annotation-np-provenance-323 a np:Provenance .
+    ddi:ddi-spl-annotation-np-provenance-286 a np:Provenance .
 
-    ddi:ddi-spl-annotation-np-pubInfo-323 a np:PublicationInfo .
+    ddi:ddi-spl-annotation-np-pubInfo-286 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-head-287> = {
@@ -1942,11 +1956,6 @@
     ddi:ddi-spl-annotation-np-pubInfo-289 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-235> = {
-    ddi:ddi-spl-annotation-nanopub-235 prov:generatedAtTime "2015-08-04T15:20:41.357626"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
 <ddi:ddi-spl-annotation-np-head-163> = {
     ddi:ddi-spl-annotation-nanopub-163 a np:Nanopublication ;
         np:hasAssertion ddi:ddi-spl-annotation-np-assertion-163 ;
@@ -1958,60 +1967,19 @@
     ddi:ddi-spl-annotation-np-pubInfo-163 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-29> = {
-    ddi:ddi-spl-annotation-nanopub-29 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-29 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-29 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-29 .
+<ddi:ddi-spl-annotation-np-head-290> = {
+    ddi:ddi-spl-annotation-nanopub-290 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-290 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-290 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-290 .
 
-    ddi:ddi-spl-annotation-np-provenance-29 a np:Provenance .
+    ddi:ddi-spl-annotation-np-provenance-290 a np:Provenance .
 
-    ddi:ddi-spl-annotation-np-pubInfo-29 a np:PublicationInfo .
+    ddi:ddi-spl-annotation-np-pubInfo-290 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-13> = {
-    ddi:ddi-spl-annotation-nanopub-13 prov:generatedAtTime "2015-08-04T15:20:41.355227"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-52> = {
-    ddi:ddi-spl-annotation-np-assertion-52 prov:generatedAtTime "2015-08-04T15:20:41.339509"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
-            dikbEvidence:EV_CT_PK_Phenotype,
-            dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-57> = {
-    ddi:ddi-spl-annotation-np-assertion-57 prov:generatedAtTime "2015-08-04T15:20:41.343636"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-19> = {
-    ddi:ddi-spl-annotation-nanopub-19 prov:generatedAtTime "2015-08-04T15:20:41.368706"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-55> = {
-    ddi:ddi-spl-annotation-np-assertion-55 prov:generatedAtTime "2015-08-04T15:20:41.341177"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
-            dikbEvidence:EV_CT_PK_Phenotype,
-            dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-102> = {
-    ddi:ddi-spl-annotation-nanopub-102 prov:generatedAtTime "2015-08-04T15:20:41.388187"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-13 prov:generatedAtTime "2015-08-13T15:46:38.745240"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -2026,6 +1994,42 @@
     ddi:ddi-spl-annotation-np-pubInfo-168 a np:PublicationInfo .
 }
 
+<ddi:ddi-spl-annotation-np-provenance-57> = {
+    ddi:ddi-spl-annotation-np-assertion-57 prov:generatedAtTime "2015-08-13T15:46:38.749147"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-19> = {
+    ddi:ddi-spl-annotation-nanopub-19 prov:generatedAtTime "2015-08-13T15:46:38.725919"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-55> = {
+    ddi:ddi-spl-annotation-np-assertion-55 prov:generatedAtTime "2015-08-13T15:46:38.753730"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
+            dikbEvidence:EV_CT_PK_Phenotype,
+            dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-345> = {
+    ddi:ddi-spl-annotation-np-assertion-345 prov:generatedAtTime "2015-08-13T15:46:38.789194"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
+            dikbEvidence:EV_CT_PK_Phenotype,
+            dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
 <ddi:ddi-spl-annotation-np-head-115> = {
     ddi:ddi-spl-annotation-nanopub-115 a np:Nanopublication ;
         np:hasAssertion ddi:ddi-spl-annotation-np-assertion-115 ;
@@ -2038,7 +2042,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-179> = {
-    ddi:ddi-spl-annotation-np-assertion-179 prov:generatedAtTime "2015-08-04T15:20:41.389981"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-179 prov:generatedAtTime "2015-08-13T15:46:38.797008"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -2046,17 +2050,13 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-277> = {
-    ddi:ddi-spl-annotation-np-assertion-277 prov:generatedAtTime "2015-08-04T15:20:41.342052"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+<ddi:ddi-spl-annotation-np-pubInfo-345> = {
+    ddi:ddi-spl-annotation-nanopub-345 prov:generatedAtTime "2015-08-13T15:46:38.789102"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-101> = {
-    ddi:ddi-spl-annotation-nanopub-101 prov:generatedAtTime "2015-08-04T15:20:41.391423"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-101 prov:generatedAtTime "2015-08-13T15:46:38.752910"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -2094,7 +2094,7 @@
 }
 
 <ddi:ddi-spl-annotation-np-provenance-279> = {
-    ddi:ddi-spl-annotation-np-assertion-279 prov:generatedAtTime "2015-08-04T15:20:41.356912"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-279 prov:generatedAtTime "2015-08-13T15:46:38.749977"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -2103,68 +2103,89 @@
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-305> = {
-    ddi:ddi-spl-annotation-nanopub-305 prov:generatedAtTime "2015-08-04T15:20:41.377996"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-305 prov:generatedAtTime "2015-08-13T15:46:38.777751"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-304> = {
-    ddi:ddi-spl-annotation-nanopub-304 prov:generatedAtTime "2015-08-04T15:20:41.400894"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-304 prov:generatedAtTime "2015-08-13T15:46:38.754429"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-307> = {
-    ddi:ddi-spl-annotation-nanopub-307 prov:generatedAtTime "2015-08-04T15:20:41.389113"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-307 prov:generatedAtTime "2015-08-13T15:46:38.762660"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-306> = {
-    ddi:ddi-spl-annotation-nanopub-306 prov:generatedAtTime "2015-08-04T15:20:41.363860"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-306 prov:generatedAtTime "2015-08-13T15:46:38.755880"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-301> = {
-    ddi:ddi-spl-annotation-nanopub-301 prov:generatedAtTime "2015-08-04T15:20:41.342753"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-301 prov:generatedAtTime "2015-08-13T15:46:38.785320"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-300> = {
-    ddi:ddi-spl-annotation-nanopub-300 prov:generatedAtTime "2015-08-04T15:20:41.412737"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-300 prov:generatedAtTime "2015-08-13T15:46:38.760439"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-303> = {
-    ddi:ddi-spl-annotation-nanopub-303 prov:generatedAtTime "2015-08-04T15:20:41.363049"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-303 prov:generatedAtTime "2015-08-13T15:46:38.763385"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-287> = {
-    ddi:ddi-spl-annotation-nanopub-287 prov:generatedAtTime "2015-08-04T15:20:41.352021"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-pubInfo-222> = {
+    ddi:ddi-spl-annotation-nanopub-222 prov:generatedAtTime "2015-08-13T15:46:38.750622"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-223> = {
-    ddi:ddi-spl-annotation-nanopub-223 prov:generatedAtTime "2015-08-04T15:20:41.364679"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-provenance-201> = {
+    ddi:ddi-spl-annotation-np-assertion-201 prov:generatedAtTime "2015-08-13T15:46:38.761297"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-179> = {
-    ddi:ddi-spl-annotation-nanopub-179 prov:generatedAtTime "2015-08-04T15:20:41.389891"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-179 prov:generatedAtTime "2015-08-13T15:46:38.796921"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-309> = {
-    ddi:ddi-spl-annotation-nanopub-309 prov:generatedAtTime "2015-08-04T15:20:41.373470"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-309 prov:generatedAtTime "2015-08-13T15:46:38.768698"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
-<ddi:ddi-spl-annotation-np-pubInfo-82> = {
-    ddi:ddi-spl-annotation-nanopub-82 prov:generatedAtTime "2015-08-04T15:20:41.400036"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+<ddi:ddi-spl-annotation-np-head-333> = {
+    ddi:ddi-spl-annotation-nanopub-333 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-333 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-333 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-333 .
+
+    ddi:ddi-spl-annotation-np-provenance-333 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-333 a np:PublicationInfo .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-224> = {
-    ddi:ddi-spl-annotation-nanopub-224 prov:generatedAtTime "2015-08-04T15:20:41.366298"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-224 prov:generatedAtTime "2015-08-13T15:46:38.770153"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-52> = {
+    ddi:ddi-spl-annotation-np-assertion-52 prov:generatedAtTime "2015-08-13T15:46:38.773915"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_CT_PK_Genotype,
+            dikbEvidence:EV_CT_PK_Phenotype,
+            dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
 <ddi:ddi-spl-annotation-np-head-55> = {
@@ -2178,19 +2199,8 @@
     ddi:ddi-spl-annotation-np-pubInfo-55 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-57> = {
-    ddi:ddi-spl-annotation-nanopub-57 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-57 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-57 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-57 .
-
-    ddi:ddi-spl-annotation-np-provenance-57 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-57 a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-1> = {
-    ddi:ddi-spl-annotation-np-assertion-1 prov:generatedAtTime "2015-08-04T15:20:41.349704"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-provenance-224> = {
+    ddi:ddi-spl-annotation-np-assertion-224 prov:generatedAtTime "2015-08-13T15:46:38.770240"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -2198,8 +2208,8 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-312> = {
-    ddi:ddi-spl-annotation-np-assertion-312 prov:generatedAtTime "2015-08-04T15:20:41.348073"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-provenance-1> = {
+    ddi:ddi-spl-annotation-np-assertion-1 prov:generatedAtTime "2015-08-13T15:46:38.762022"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -2218,13 +2228,18 @@
     ddi:ddi-spl-annotation-np-pubInfo-52 a np:PublicationInfo .
 }
 
+<ddi:ddi-spl-annotation-np-pubInfo-82> = {
+    ddi:ddi-spl-annotation-nanopub-82 prov:generatedAtTime "2015-08-13T15:46:38.775464"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
 <ddi:ddi-spl-annotation-np-pubInfo-333> = {
-    ddi:ddi-spl-annotation-nanopub-333 prov:generatedAtTime "2015-08-04T15:20:41.369552"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-333 prov:generatedAtTime "2015-08-13T15:46:38.787553"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-1> = {
-    ddi:ddi-spl-annotation-nanopub-1 prov:generatedAtTime "2015-08-04T15:20:41.349601"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-1 prov:generatedAtTime "2015-08-13T15:46:38.761935"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
@@ -2239,6 +2254,15 @@
     ddi:ddi-spl-annotation-np-pubInfo-77 a np:PublicationInfo .
 }
 
+<ddi:ddi-spl-annotation-np-provenance-277> = {
+    ddi:ddi-spl-annotation-np-assertion-277 prov:generatedAtTime "2015-08-13T15:46:38.728340"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
 <ddi:ddi-spl-annotation-np-head-1> = {
     ddi:ddi-spl-annotation-nanopub-1 a np:Nanopublication ;
         np:hasAssertion ddi:ddi-spl-annotation-np-assertion-1 ;
@@ -2250,15 +2274,20 @@
     ddi:ddi-spl-annotation-np-pubInfo-1 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-290> = {
-    ddi:ddi-spl-annotation-nanopub-290 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-290 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-290 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-290 .
+<ddi:ddi-spl-annotation-np-pubInfo-246> = {
+    ddi:ddi-spl-annotation-nanopub-246 prov:generatedAtTime "2015-08-13T15:46:38.798465"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
 
-    ddi:ddi-spl-annotation-np-provenance-290 a np:Provenance .
+<ddi:ddi-spl-annotation-np-head-179> = {
+    ddi:ddi-spl-annotation-nanopub-179 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-179 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-179 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-179 .
 
-    ddi:ddi-spl-annotation-np-pubInfo-290 a np:PublicationInfo .
+    ddi:ddi-spl-annotation-np-provenance-179 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-179 a np:PublicationInfo .
 }
 
 <ns1:default> = {
@@ -2404,6 +2433,8 @@
 
     ddi:ddi-spl-annotation-np-assertion-318 a np:assertion .
 
+    ddi:ddi-spl-annotation-np-assertion-319 a np:assertion .
+
     ddi:ddi-spl-annotation-np-assertion-320 a np:assertion .
 
     ddi:ddi-spl-annotation-np-assertion-321 a np:assertion .
@@ -2449,19 +2480,8 @@
     ddi:ddi-spl-annotation-np-assertion-90 a np:assertion .
 }
 
-<ddi:ddi-spl-annotation-np-head-208> = {
-    ddi:ddi-spl-annotation-nanopub-208 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-208 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-208 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-208 .
-
-    ddi:ddi-spl-annotation-np-provenance-208 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-208 a np:PublicationInfo .
-}
-
-<ddi:ddi-spl-annotation-np-provenance-240> = {
-    ddi:ddi-spl-annotation-np-assertion-240 prov:generatedAtTime "2015-08-04T15:20:41.372021"^^xsd:dateTime ;
+<ddi:ddi-spl-annotation-np-provenance-168> = {
+    ddi:ddi-spl-annotation-np-assertion-168 prov:generatedAtTime "2015-08-13T15:46:38.771694"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -2469,8 +2489,22 @@
         prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
+<ddi:ddi-spl-annotation-np-provenance-240> = {
+    ddi:ddi-spl-annotation-np-assertion-240 prov:generatedAtTime "2015-08-13T15:46:38.776378"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-288> = {
+    ddi:ddi-spl-annotation-nanopub-288 prov:generatedAtTime "2015-08-13T15:46:38.732663"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
 <ddi:ddi-spl-annotation-np-provenance-246> = {
-    ddi:ddi-spl-annotation-np-assertion-246 prov:generatedAtTime "2015-08-04T15:20:41.346392"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-np-assertion-246 prov:generatedAtTime "2015-08-13T15:46:38.798570"^^xsd:dateTime ;
         prov:hadMember dikbEvidence:EV_PK_DDI_NR,
             dikbEvidence:EV_PK_DDI_Par_Grps,
             dikbEvidence:EV_PK_DDI_RCT ;
@@ -2489,25 +2523,6 @@
     ddi:ddi-spl-annotation-np-pubInfo-201 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-provenance-163> = {
-    ddi:ddi-spl-annotation-np-assertion-163 prov:generatedAtTime "2015-08-04T15:20:41.392268"^^xsd:dateTime ;
-        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
-            dikbEvidence:EV_PK_DDI_Par_Grps,
-            dikbEvidence:EV_PK_DDI_RCT ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
-        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-299> = {
-    ddi:ddi-spl-annotation-nanopub-299 prov:generatedAtTime "2015-08-04T15:20:41.371044"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-pubInfo-163> = {
-    ddi:ddi-spl-annotation-nanopub-163 prov:generatedAtTime "2015-08-04T15:20:41.392177"^^xsd:dateTime ;
-        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
 <ddi:ddi-spl-annotation-np-head-311> = {
     ddi:ddi-spl-annotation-nanopub-311 a np:Nanopublication ;
         np:hasAssertion ddi:ddi-spl-annotation-np-assertion-311 ;
@@ -2519,36 +2534,48 @@
     ddi:ddi-spl-annotation-np-pubInfo-311 a np:PublicationInfo .
 }
 
-<ddi:ddi-spl-annotation-np-head-328> = {
-    ddi:ddi-spl-annotation-nanopub-328 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-328 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-328 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-328 .
+<ddi:ddi-spl-annotation-np-provenance-163> = {
+    ddi:ddi-spl-annotation-np-assertion-163 prov:generatedAtTime "2015-08-13T15:46:38.786179"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
+}
 
-    ddi:ddi-spl-annotation-np-provenance-328 a np:Provenance .
+<ddi:ddi-spl-annotation-np-head-310> = {
+    ddi:ddi-spl-annotation-nanopub-310 a np:Nanopublication ;
+        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-310 ;
+        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-310 ;
+        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-310 .
 
-    ddi:ddi-spl-annotation-np-pubInfo-328 a np:PublicationInfo .
+    ddi:ddi-spl-annotation-np-provenance-310 a np:Provenance .
+
+    ddi:ddi-spl-annotation-np-pubInfo-310 a np:PublicationInfo .
+}
+
+<ddi:ddi-spl-annotation-np-pubInfo-163> = {
+    ddi:ddi-spl-annotation-nanopub-163 prov:generatedAtTime "2015-08-13T15:46:38.786087"^^xsd:dateTime ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
+}
+
+<ddi:ddi-spl-annotation-np-provenance-250> = {
+    ddi:ddi-spl-annotation-np-assertion-250 prov:generatedAtTime "2015-08-13T15:46:38.734499"^^xsd:dateTime ;
+        prov:hadMember dikbEvidence:EV_PK_DDI_NR,
+            dikbEvidence:EV_PK_DDI_Par_Grps,
+            dikbEvidence:EV_PK_DDI_RCT ;
+        prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> ;
+        prov:wasDerivedFrom "Derived from the DIKB's evidence base using the listed belief criteria" .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-168> = {
-    ddi:ddi-spl-annotation-nanopub-168 prov:generatedAtTime "2015-08-04T15:20:41.386697"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-168 prov:generatedAtTime "2015-08-13T15:46:38.771607"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
 }
 
 <ddi:ddi-spl-annotation-np-pubInfo-90> = {
-    ddi:ddi-spl-annotation-nanopub-90 prov:generatedAtTime "2015-08-04T15:20:41.358412"^^xsd:dateTime ;
+    ddi:ddi-spl-annotation-nanopub-90 prov:generatedAtTime "2015-08-13T15:46:38.780786"^^xsd:dateTime ;
         prov:wasAttributedTo <http://orcid.org/0000-0002-2993-2085> .
-}
-
-<ddi:ddi-spl-annotation-np-head-212> = {
-    ddi:ddi-spl-annotation-nanopub-212 a np:Nanopublication ;
-        np:hasAssertion ddi:ddi-spl-annotation-np-assertion-212 ;
-        np:hasProvenance ddi:ddi-spl-annotation-np-provenance-212 ;
-        np:hasPublicationInfo ddi:ddi-spl-annotation-np-pubInfo-212 .
-
-    ddi:ddi-spl-annotation-np-provenance-212 a np:Provenance .
-
-    ddi:ddi-spl-annotation-np-pubInfo-212 a np:PublicationInfo .
 }
 
 

@@ -124,6 +124,8 @@ ns1:ddi-spl-annotation-np-assertion-317	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-318	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-319	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-320	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-321	rdf:type	ns2:assertion ;
