@@ -18,22 +18,29 @@ Upload 7 MP graphs to a single virtuoso endpoint. Query testing program will tak
 Results
 --------------------------
 
-Original MP graph and folded graphs:
+Original MP graph and folded graphs (updated at 08/13/2015):
 
-(1) original MP graph: 13636 triples, 1.8 MB
+(1) original MP graph: 16670 triples, 2.0 MB
 
-(2) 1 fold: 26988 triples, 3.4 MB
+(2) 1 fold: 32674 triples, 4.0 MB
 
-(3) 2 folds: 53692 triples, 6.7 MB
+(3) 2 folds: 64682 triples, 7.8 MB
 
-(4) 3 folds: 107100 triples, 14 MB
+(4) 3 folds: 128698 triples, 16 MB
 
-(5) 4 folds: 213916 triples, 27 MB
+(5) 4 folds: 256730 triples, 31 MB
 
-(6) 5 folds: 427548 triples, 54 MB
+(6) 5 folds: 512794 triples, 62 MB
 
-(7) 6 folds: 854812 triples, 107 MB
+(7) 6 folds: 1024922 triples, 124 MB
 
+
+---------------------------------------------------
+Machine hardware specification (virtuoso endpoint)
+---------------------------------------------------
+
+CPU Intel(R) Core(TM)2 Duo CPU     E6550  @ 2.33GHz
+8 GB RAM
 
 -------------------------------
 How to run benchmark testing
