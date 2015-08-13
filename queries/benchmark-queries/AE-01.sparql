@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-22
+# DIKB MP/NP version: 2015-08-13
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -20,13 +20,12 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
 # What data, methods, materials, are reported in evidence item X?
-## Sample evidence item is pubmed 10771452... the casting as a string looks bad, probably a better way but this works
 
 SELECT DISTINCT ?data ?methods ?materials
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      ?aURN oa:hasSource "http://www.ncbi.nlm.nih.gov/pubmed/10771452"^^<http://www.w3.org/2001/XMLSchema#String>.  
+      ?aURN oa:hasSource <http://www.ncbi.nlm.nih.gov/pubmed/10771452>.  
       
       ?anItem oa:hasTarget ?aURN.
       
