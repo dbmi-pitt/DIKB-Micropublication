@@ -1,62 +1,62 @@
 FA-05.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0338430404663
+inferred-graph-oa-mp.xml|0|16670|0.101935863495
 FE-08.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0386788845062
+inferred-graph-oa-mp.xml|0|16670|0.104606866837
 FA-06.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0203638076782
+inferred-graph-oa-mp.xml|0|16670|0.0273671150208
 FA-10.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.00818109512329
+inferred-graph-oa-mp.xml|0|16670|0.0101320743561
 FA-01.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0179030895233
+inferred-graph-oa-mp.xml|0|16670|0.0263979434967
 STAT-04.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0637798309326
+inferred-graph-oa-mp.xml|0|16670|0.0943379402161
 FE-04.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0213301181793
+inferred-graph-oa-mp.xml|0|16670|0.0363800525665
 FE-07.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0303678512573
+inferred-graph-oa-mp.xml|0|16670|0.0274169445038
 FA-08.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0500168800354
+inferred-graph-oa-mp.xml|0|16670|0.0443580150604
 FE-09.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0256881713867
+inferred-graph-oa-mp.xml|0|16670|0.0797989368439
 FE-03.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0172138214111
+inferred-graph-oa-mp.xml|0|16670|0.0189020633698
 STAT-01.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.00649499893188
+inferred-graph-oa-mp.xml|0|16670|0.00634288787842
 FA-11.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.00959897041321
+inferred-graph-oa-mp.xml|0|16670|0.00897908210754
 FA-09.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.00742101669312
+inferred-graph-oa-mp.xml|0|16670|0.00675392150879
 STAT-06.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0116710662842
+inferred-graph-oa-mp.xml|0|16670|0.0105760097504
 STAT-05.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.050843000412
+inferred-graph-oa-mp.xml|0|16670|0.0575079917908
 FA-03.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0146820545197
+inferred-graph-oa-mp.xml|0|16670|0.0127968788147
 STAT-02.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0692520141602
+inferred-graph-oa-mp.xml|0|16670|0.0598859786987
 FA-04.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0379140377045
+inferred-graph-oa-mp.xml|0|16670|0.056795835495
 EP-05.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.106064796448
+inferred-graph-oa-mp.xml|0|16670|No results
 FA-07.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.00954413414001
+inferred-graph-oa-mp.xml|0|16670|0.0167269706726
 FA-02.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.041522026062
+inferred-graph-oa-mp.xml|0|16670|0.0467619895935
 EP-04.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0128028392792
+inferred-graph-oa-mp.xml|0|16670|No results
 STAT-03.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0416281223297
+inferred-graph-oa-mp.xml|0|16670|0.0249979496002
 FE-06.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0790748596191
+inferred-graph-oa-mp.xml|0|16670|0.130707025528
 FE-10.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0192759037018
+inferred-graph-oa-mp.xml|0|16670|0.033970117569
 PK-01.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0129201412201
+inferred-graph-oa-mp.xml|0|16670|0.027281999588
 PK-03.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0150339603424
+inferred-graph-oa-mp.xml|0|16670|0.0197939872742
 FE-01.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0144460201263
+inferred-graph-oa-mp.xml|0|16670|0.024377822876
 AE-01.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.012580871582
+inferred-graph-oa-mp.xml|0|16670|No results
 FE-02.sparql|Number of folds|triples|costs
-inferred-graph-oa-mp.xml|0|15531|0.0149619579315
+inferred-graph-oa-mp.xml|0|16670|0.0118699073792
