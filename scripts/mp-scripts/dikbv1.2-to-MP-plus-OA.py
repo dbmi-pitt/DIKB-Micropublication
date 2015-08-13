@@ -469,7 +469,9 @@ def createGraph(graph, dataset):
 			graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
 
 			# URI(evidence source URL) mp:supports mp:claim
-			graph.add((URIRef(item["evidenceSource"]), mp["supports"], poc[currentAnnotationClaim]))
+			if item["evidenceSource"]:
+				graph.add((URIRef(item["evidenceSource"]), mp["supports"], poc[currentAnnotationClaim]))
+				graph.add((URIRef(item["evidenceSource"]), RDF.type, mp["Reference"]))
 
 			graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["objectURI"])))
 			graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
