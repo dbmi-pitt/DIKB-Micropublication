@@ -11,3 +11,17 @@ The reason that MP graph require inference is because MP sub types for mp:Claim,
 (2) data/np-graphs holds nanopublication graphs... this folder has a README.md that elaborates on their functions and purpose
 
 All of files need to be uploaded to single endpoint
+
+(3) drug URI mappings (Drugbank URI to ChEBI)
+
+In old DIKB, we have 162 drug entities. 145 have Drugbank URI assigned and 17 URIs are missing
+
+Endpoint:
+https://dbmi-icode-01.dbmi.pitt.edu/dikb/snorql/
+
+Query:
+  SELECT count(distinct *) WHERE {
+    ?drug rdf:type ncbit:Pharmacologic_Substance;
+    rdfs:label ?label.
+    OPTIONAL { ?drug owl:sameAs ?drugURI}
+} 

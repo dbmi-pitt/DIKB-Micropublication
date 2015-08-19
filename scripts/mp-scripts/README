@@ -78,3 +78,14 @@ SPARQL SELECT DISTINCT ?g WHERE {GRAPH ?g { ?s a <http://www.nanopub.org/nschema
 SPARQL SELECT DISTINCT ?g WHERE {GRAPH ?g { ?s a <http://www.nanopub.org/nschema#Nanopublication>. }} ;
 
 SPARQL SELECT DISTINCT ?s WHERE {GRAPH ?g { ?s a <http://www.nanopub.org/nschema#Nanopublication>. }} ;
+
+
+############################################################################
+Query bioportal to get mappings of drugname and ChEBI URI
+############################################################################
+
+(1) add list of drug names from old DIKB (162)
+
+(2) run python script to query ChEBI URIs
+
+$ python queryChEBIfromBioPortal.py drug-names.txt > drug-mappings-bioportal-08192015.txt &
