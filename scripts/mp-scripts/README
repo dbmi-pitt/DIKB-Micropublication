@@ -89,3 +89,5 @@ Query bioportal to get mappings of drugname and ChEBI URI
 (2) run python script to query ChEBI URIs
 
 $ python queryChEBIfromBioPortal.py drug-names.txt > drug-mappings-bioportal-08192015.txt &
+
+Current ChEBI mapping is incomplete (Manully add required). Need more work on improve mapping strategy in order to get high quality ChEBI mapping. 
