@@ -15,7 +15,7 @@ S-warfarin
 rosuvastatin
 capecitabine
 quinupristin
-fluorouracil
+5-fluorouracil
 fluoxetine
 diphenhydramine
 methoxsalen
@@ -27,7 +27,7 @@ clotrimazole
 norfloxacin
 paclitaxel
 atomoxetine
-cyclosporine
+cyclosporin A
 oxcarbazepine
 voriconazole
 erythromycin
@@ -80,7 +80,7 @@ sulfinpyrazone
 montelukast
 nicardipine
 quinine
-chlorpheniramine
+chlorphenamine
 phenacetin
 rosiglitazone
 aprepitant
@@ -90,7 +90,7 @@ clomipramine
 ciprofloxacin
 fluvoxamine
 atorvastatin
-sulphaphenazole
+sulfaphenazole
 flecainide
 alosetron
 zolpidem
@@ -119,23 +119,23 @@ chlorzoxazone
 mirtazapine
 paroxetine
 haloperidol
-debrisoquine
+debrisoquin
 theophylline
 fluconazole
-dasatinib
+dasatinib (anhydrous)
 promethazine
 cimetidine
 cinacalcet
 nefazodone
 zileuton
 pioglitazone
-isoniazid
+isoniazide
 molindone
 lansoprazole
-oxycarbazepine
+oxcarbazepine
 citalopram
 simvastatin
-lithium
+lithium carbonate
 teniposide
 thiabendazole
 ritonavir
@@ -147,16 +147,16 @@ valproate
 amiodarone
 hydroxychloroquine
 iloperidone
-cotrimoxazole
+co-trimoxazole
 propafenone
 olanzapine
 lovastatin
 danazol
 clarithromycin
-desvenlafaxine
+O-desmethylvenlafaxine
 methadone
 perphenazine
 bupropion
-indomethacin
+indometacin
 clopidogrel
 celecoxib
