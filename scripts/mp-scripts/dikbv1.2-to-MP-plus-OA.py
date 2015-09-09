@@ -36,6 +36,12 @@ from rdflib import Graph, BNode, Literal, Namespace, URIRef, RDF, RDFS, XSD
 ## to retrieve from PubMed
 from Bio import Entrez
 
+## parse pubmed metadata xml from EUtil
+from lxml import etree
+from io import StringIO
+import urllib
+import xml.etree.ElementTree as ElementTree
+
 #reload(sys);
 #sys.setdefaultencoding("utf8")
 
@@ -178,6 +184,77 @@ WHERE {
 
 	return secD
 
+
+def getPubmedMetaDataByPubmedId(pubmedId):
+
+	url = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=" + pubmedId
+	#print "Eutil url: " +url
+
+	root = etree.parse(urllib.urlopen(url))
+	source = root.xpath('//Item[@Name="Source"]/text()')
+	print source
+
+	pages = root.xpath('//Item[@Name="Pages"]/text()')
+	print pages
+
+	authorL = root.xpath('//Item[@Name="Author"]/text()')
+	print authorL
+
+	history = root.xpath('//Item[@Name="History"]/Item[@Name="pubmed"]/text()')
+	print history
+
+	metaD = {
+		"source":source,
+		"pages":pages,
+		"authorL":authorL,
+		"date":history
+		}
+	return metaD
+
+
+
+def getDailymedSPLMetaDataByUrl(url, sparql):
+	
+	qry = '''
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX linkedspls_vocabulary: <http://bio2rdf.org/linkedspls_vocabulary:>
+PREFIX linkedspls_resource: <http://bio2rdf.org/linkedspls_resource:>
+
+SELECT ?fullname ?splId ?version ?setId ?org ?date
+FROM <http://purl.org/net/nlprepository/spl-core>
+WHERE {
+
+?splId rdfs:label ?label.
+?splId linkedspls_vocabulary:versionNumber ?version.
+?splId linkedspls_vocabulary:setId ?setId.
+?splId linkedspls_vocabulary:representedOrganization ?org.
+?splId linkedspls_vocabulary:effectiveTime ?date.
+?splId linkedspls_vocabulary:fullName ?fullname.
+?splId foaf:homepage <%s>.
+
+} 
+        ''' % (url)
+	sparql.setQuery(qry)
+	sparql.setReturnFormat(JSON)
+	results = sparql.query().convert()
+
+	if len(results["results"]["bindings"]) == 0:
+		print "ERROR: no results from query"
+		return {}
+	
+	metaD = {
+		"fullname":None,
+		"version":None,
+		"org":None,
+		"date":None
+		}
+
+	for k in metaD.keys():
+		if results["results"]["bindings"][0].has_key(k):
+			metaD[k] = unicode(results["results"]["bindings"][0][k]["value"])
+	return metaD
 
 
 def addOAItem(graph, item):
@@ -339,7 +416,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
 
 ## set up SPARQL for acquiring the SPL sections
 #lsplsparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/sparql")
-lsplsparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu:8080/sparql")
+lsplsparql = SPARQLWrapper("http://dbmi-icode-01.dbmi.pitt.edu/sparql")
 
 
 def initialGraph(graph):
@@ -468,7 +545,7 @@ def createGraph(graph, dataset):
 
 			graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
 
-			# URI(evidence source URL) mp:supports mp:claim
+			# mp:Reference (evidence source URL) mp:supports mp:Claim
 			if item["evidenceSource"]:
 				graph.add((URIRef(item["evidenceSource"]), mp["supports"], poc[currentAnnotationClaim]))
 				graph.add((URIRef(item["evidenceSource"]), RDF.type, mp["Reference"]))
@@ -574,8 +651,6 @@ if __name__ == "__main__":
 	OUT_GRAPH = "../../data/mp-graphs/initial-dikb-mp-oa.xml"
 	OUT_CSV = "../../data/mp-graphs/processed-dikb-ddis.tsv"
 
-	## benchmark f( number of folds ) = query time
-
 	if len(sys.argv) > 3:
 		numFolds = str(sys.argv[1])
 		OUT_GRAPH = str(sys.argv[2])
@@ -589,13 +664,22 @@ if __name__ == "__main__":
 	graph = Graph()
 	initialGraph(graph)
 
-	#createGraphAucSubsInhib(graph)
 	createGraphByFold(graph, int(numFolds), OUT_GRAPH, OUT_CSV)
 
 	print "[INFO] create MP graph with %s triples" % str(len(graph))
 
 	printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV)
 
+
+	## TESTING
+	
+	# dailymedUrl = "http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=56b3f4c2-52af-4947-b225-6808ae9f26f5"
+	# dailyMedD = getDailymedSPLMetaDataByUrl(dailymedUrl, lsplsparql)
+	# print dailyMedD
+
+	# pubmedId = "18307373"
+	# pubMedD = getPubmedMetaDataByPubmedId(pubmedId)
+	# print pubMedD
 
 ################################# trash #################################
 

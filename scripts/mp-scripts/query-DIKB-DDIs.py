@@ -114,7 +114,7 @@ def assertionQry(assertType, evidenceMode, num):
 		return dikbPrefixQry() + query_string
 
 ## return Qry for does_not_inhibit, which don't have dikbD2R:slot
-def	 doseNotInhibitQry(evidenceMode, num):
+def doseNotInhibitQry(evidenceMode, num):
 
 	if not evidenceMode:
 		return None
@@ -160,8 +160,7 @@ def increaseAucQry(evidenceMode, num):
   ## assertion - increase auc
   SELECT DISTINCT * WHERE {
 
-  ?s a dikbD2R:DDIObservation;
-	 dikbD2R:PharmacokineticDDIAssertion ?asrt;
+  ?s dikbD2R:PharmacokineticDDIAssertion ?asrt;
 	 dikbD2R:ObjectDrugOfInteraction  ?object;
 	 dikbD2R:PrecipitantDrugOfInteraction ?precip;
 	 rdfs:label ?label.
@@ -173,11 +172,13 @@ def increaseAucQry(evidenceMode, num):
 	rdfs:label ?researchStatementLabel;
 	dikbD2R:object ?objectURI;
 	dikbD2R:value ?precipURI;
-	dikbD2R:Assertions_cont_val ?contVal;
-	dikbD2R:Assertions_numeric_val ?numericVal.
 
 	## evidenceSupports
 	optional {
+
+	?asrt dikbD2R:Assertions_cont_val ?contVal;
+	      dikbD2R:Assertions_numeric_val ?numericVal.
+
 	?asrt swanco:%s ?evidence.
 	?evidence dikbEvidence:Evidence_type ?evType;
 			  dc:creator ?whoAnnotated;
