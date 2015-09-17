@@ -13,7 +13,7 @@
 ## This code is licensed under Apache License Version 2.0, January
 ## 2004. Please see the license in the root folder of this project
 
-import sys
+import sys, time
 sys.path = sys.path + ['.']
 
 import re, codecs, uuid, datetime
@@ -155,7 +155,7 @@ WHERE {
 	#print "%s" % results
 
 	if len(results["results"]["bindings"]) == 0:
-		print "ERROR: no results from query"
+		print "[WARN] No results from query - getSPLSectionsSparql -%s" % spl
 		return {}
 
 	secD = {
@@ -192,28 +192,47 @@ def getPubmedMetaDataByPubmedId(pubmedId):
 
 	root = etree.parse(urllib.urlopen(url))
 	source = root.xpath('//Item[@Name="Source"]/text()')
-	print source
+	#print source
 
 	pages = root.xpath('//Item[@Name="Pages"]/text()')
-	print pages
+	#print pages
 
 	authorL = root.xpath('//Item[@Name="Author"]/text()')
-	print authorL
+	#print authorL
 
 	history = root.xpath('//Item[@Name="History"]/Item[@Name="pubmed"]/text()')
-	print history
+	#print history
+
+	title = root.xpath('//Item[@Name="Title"]/text()')
 
 	metaD = {
-		"source":source,
-		"pages":pages,
+		"source":source[0],
+		"pages":pages[0],
 		"authorL":authorL,
-		"date":history
+		"date":history[0],
+		"title":title[0]
 		}
-	return metaD
+
+	authorStr = ""
+	for author in authorL:
+		authorStr = authorStr + author.strip()
+
+	#print "[DEBUG] pubmed (%s) meta: %s" % (pubmedId, str(metaD))
+
+	refMetaStr = "%s, %s; %s. pubmed Id: %s. %s. Last Accessed: %s." % (str(metaD["title"]), authorStr, str(metaD["date"]), str(pubmedId), str(metaD["source"]), str(time.strftime("%m/%d/%Y")))
+	return refMetaStr
+
+	
 
 
+'''
+Format:
+Lexapro (escitalopram oxalate) tablet, film coated/liquid [package insert]. St. Louis, MO: Forest Laboratories, Inc.; 2011 May. Set ID: D174F2B8-FEE2-4817-AD6C-364A1880E24B.http://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=d174f2b8-fee2-4817-ad6c-364a1880e24b. Last Accessed: August 26, 2015.
+'''
 
 def getDailymedSPLMetaDataByUrl(url, sparql):
+
+	#print "[DEBUG] " + url
 	
 	qry = '''
 
@@ -222,7 +241,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX linkedspls_vocabulary: <http://bio2rdf.org/linkedspls_vocabulary:>
 PREFIX linkedspls_resource: <http://bio2rdf.org/linkedspls_resource:>
 
-SELECT ?fullname ?splId ?version ?setId ?org ?date
+SELECT ?fullname ?splId ?version ?setId ?org ?effectiveTime
 FROM <http://purl.org/net/nlprepository/spl-core>
 WHERE {
 
@@ -230,31 +249,38 @@ WHERE {
 ?splId linkedspls_vocabulary:versionNumber ?version.
 ?splId linkedspls_vocabulary:setId ?setId.
 ?splId linkedspls_vocabulary:representedOrganization ?org.
-?splId linkedspls_vocabulary:effectiveTime ?date.
+?splId linkedspls_vocabulary:effectiveTime ?effectiveTime.
 ?splId linkedspls_vocabulary:fullName ?fullname.
 ?splId foaf:homepage <%s>.
 
 } 
-        ''' % (url)
+        ''' % (url.strip())
 	sparql.setQuery(qry)
 	sparql.setReturnFormat(JSON)
 	results = sparql.query().convert()
 
 	if len(results["results"]["bindings"]) == 0:
-		print "ERROR: no results from query"
+		print "[WARN] No results from query - getDailymedSPLMetaDataByUrl - %s" % (url)
 		return {}
 	
 	metaD = {
 		"fullname":None,
 		"version":None,
 		"org":None,
-		"date":None
+		"effectiveTime":None,
+		"setId":None,
+		"source":url
 		}
 
 	for k in metaD.keys():
 		if results["results"]["bindings"][0].has_key(k):
 			metaD[k] = unicode(results["results"]["bindings"][0][k]["value"])
-	return metaD
+
+	#print "[DEBUG] dailymed meta: " + str(metaD)
+
+	refMetaStr = str(metaD["fullname"][0]) + "," + str(metaD["org"][0]) + ";" + metaD["effectiveTime"][0] + ". setId: " + metaD["setId"][0] + ". " + metaD["source"][0] + ". Last Accessed: " + time.strftime("%m/%d/%Y") + "."
+
+	return refMetaStr
 
 
 def addOAItem(graph, item):
@@ -407,7 +433,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
 	elif "refute" in item["evidenceRole"]:
 		graph.add((poc[currentAnnotationData], mp["challenges"], poc[currentAnnotationClaim]))
 	else:
-		print "[WARNING] evidence typed neither supports nor refutes"
+		print "[WARN] evidence typed neither supports nor refutes"
 
 	graph.add((poc[oaItem], oa["hasBody"], poc[currentAnnotationData]))
 
@@ -500,18 +526,22 @@ def createGraph(graph, dataset):
 			else:
 				continue
 
+		referenceId = ""
+
 		if item["evidenceSource"]:
 		
 			if "pubmed" not in item["evidenceSource"]:
 				
 				if "resource/structuredProductLabelMetadata" in item["evidenceSource"]:
-					setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/","")
-					item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
+					referenceId = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/resource/structuredProductLabelMetadata/","")
+					item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(referenceId)
 				
-			if "page/structuredProductLabelMetadata" in item["evidenceSource"]:
-				setid = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/","")
-				item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(setid)
+				if "page/structuredProductLabelMetadata" in item["evidenceSource"]:
+					referenceId = item["evidenceSource"].replace("http://dbmi-icode-01.dbmi.pitt.edu/linkedSPLs/page/structuredProductLabelMetadata/","")
+					item["evidenceSource"] = u"http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=%s" % unicode(referenceId)
 
+			else:
+				referenceId = item["evidenceSource"].replace("http://www.ncbi.nlm.nih.gov/pubmed/","")
 
 
 		###################################################################
@@ -519,6 +549,7 @@ def createGraph(graph, dataset):
 		###################################################################
 
 		global annotationClaimCntr 
+		referenceD = {}
 
 		# Claim : is a research statement label qualified by assertion URI
 		if item['researchStatementLabel']:
@@ -546,9 +577,35 @@ def createGraph(graph, dataset):
 			graph.add((poc[currentAnnotationClaim], RDFS.label, Literal(item["researchStatementLabel"])))
 
 			# mp:Reference (evidence source URL) mp:supports mp:Claim
-			if item["evidenceSource"]:
-				graph.add((URIRef(item["evidenceSource"]), mp["supports"], poc[currentAnnotationClaim]))
-				graph.add((URIRef(item["evidenceSource"]), RDF.type, mp["Reference"]))
+			if referenceId and item["evidenceRole"]:
+
+				#if not referenceId:
+				#	print "[DEUBG] referenceId: " + referenceId + " | source: " + item["evidenceSource"]
+
+				referenceStr = ""
+
+				if referenceId in referenceD.keys():
+					referenceStr = referenceD[referenceId]
+				else:
+					if "pubmed" in item["evidenceSource"]:
+						referenceStr = getPubmedMetaDataByPubmedId(referenceId)
+					elif "dailymed" in item["evidenceSource"]:
+						referenceStr = getDailymedSPLMetaDataByUrl("http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=" + referenceId, lsplsparql)
+				
+				#print referenceStr
+
+				if referenceStr:
+					
+					referenceD[referenceId] = referenceStr
+
+
+					if "support" in item["evidenceRole"]:
+						graph.add((URIRef(item["evidenceSource"]), mp["supports"], poc[currentAnnotationClaim]))						
+					elif "refute" in item["evidenceRole"]:
+						graph.add((URIRef(item["evidenceSource"]), mp["challenges"], poc[currentAnnotationClaim]))
+
+					graph.add((URIRef(item["evidenceSource"]), RDF.type, mp["Reference"]))
+					graph.add((URIRef(item["evidenceSource"]), mp["qualifiedBy"], Literal(referenceStr)))
 
 			graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["objectURI"])))
 			graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
