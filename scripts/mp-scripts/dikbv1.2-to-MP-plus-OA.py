@@ -278,7 +278,7 @@ WHERE {
 
 	#print "[DEBUG] dailymed meta: " + str(metaD)
 
-	refMetaStr = str(metaD["fullname"][0]) + "," + str(metaD["org"][0]) + ";" + metaD["effectiveTime"][0] + ". setId: " + metaD["setId"][0] + ". " + metaD["source"][0] + ". Last Accessed: " + time.strftime("%m/%d/%Y") + "."
+	refMetaStr = str(metaD["fullname"]) + "," + str(metaD["org"]) + ";" + metaD["effectiveTime"] + ". setId: " + metaD["setId"] + ". " + metaD["source"] + ". Last Accessed: " + time.strftime("%m/%d/%Y") + "."
 
 	return refMetaStr
 
