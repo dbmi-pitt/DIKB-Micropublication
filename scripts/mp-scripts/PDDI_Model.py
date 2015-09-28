@@ -26,4 +26,5 @@ def getIncreaseAUCDict():
 def getAssertionDict():
     return { "objectURI": None, "valueURI": None,"assertType": None, "homepage":None, "label": None, 
              "evidence": None, "evidenceRole": None, "source":"DIKB",
-             "evidenceType":None, "dateAnnotated":None, "whoAnnotated":None, "evidenceStatement": None, "evidenceSource": None, "researchStatementLabel": None}
+             "evidenceType":None, "dateAnnotated":None, "whoAnnotated":None, "evidenceStatement": None, "evidenceSource": None, "researchStatementLabel": None,
+             "asrt": None}

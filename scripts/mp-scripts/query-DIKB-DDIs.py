@@ -1,6 +1,7 @@
 ## query-DIKB-DDIs.py
 ##
-## Simple Python script to query http://dbmi-icode-01.dbmi.pitt.edu:2020/sparql for DIKB observed DDIs"
+## Simple Python script to query dikb v1.2 via d2r server at https://dbmi-icode-01.dbmi.pitt.edu/dikb/sparql for DIKB observed DDIs"
+## test query at "http://dbmi-icode-01.dbmi.pitt.edu:2023/snorql/"
 ## No extra libraries required.
 
 # Authors: Yifan Ning
@@ -16,7 +17,6 @@ import json
 import urllib2
 import urllib
 import traceback
-#import pickle
 import csv
 import sys, copy
 reload(sys);
@@ -92,12 +92,10 @@ def assertionQry(assertType, evidenceMode, num):
   ?asrt a swande:ResearchStatement;
 	foaf:homepage ?homepage;
 	dikbD2R:slot dikbD2R:%s;
-	dikbD2R:object ?objectURI;
-	dikbD2R:value ?valueURI;
 	rdfs:label ?researchStatementLabel.
 
-  # ?s dikbD2R:%s ?valueURI;
-  #	   rdfs:label ?label.
+        optional { ?asrt dikbD2R:object ?objectURI. }
+        optional { ?asrt dikbD2R:value ?valueURI. }
 
 	## evidenceSupports
 	optional {
@@ -110,7 +108,7 @@ def assertionQry(assertType, evidenceMode, num):
 	}
   
 } LIMIT %s
-""" % (assertType, assertType, evidenceMode, num)
+""" % (assertType, evidenceMode, num)
 		return dikbPrefixQry() + query_string
 
 ## return Qry for does_not_inhibit, which don't have dikbD2R:slot
@@ -125,13 +123,11 @@ def doseNotInhibitQry(evidenceMode, num):
 
   ?asrt a swande:ResearchStatement;
 	foaf:homepage ?homepage;
-	dikbD2R:object ?objectURI;
-	dikbD2R:value ?valueURI;
 	rdfs:label ?researchStatementLabel.
 	FILTER regex(str(?researchStatementLabel), "does_not_inhibit")
 
-  # ?s dikbD2R:does_not_inhibit ?valueURI;
-  #	   rdfs:label ?label.
+        optional { ?asrt dikbD2R:object ?objectURI. }
+        optional { ?asrt dikbD2R:value ?valueURI. }
 
 	## evidenceSupports
 	optional {
@@ -168,10 +164,10 @@ def increaseAucQry(evidenceMode, num):
   ?asrt a swande:ResearchStatement;
 	foaf:homepage ?homepage;
 	dikbD2R:slot dikbD2R:increases_auc;
-	dikbD2R:value ?valueURI;
-	rdfs:label ?researchStatementLabel;
-	dikbD2R:object ?objectURI;
-	dikbD2R:value ?precipURI;
+	rdfs:label ?researchStatementLabel.
+
+        optional { ?asrt dikbD2R:object ?objectURI. }
+        optional { ?asrt dikbD2R:value ?valueURI. }
 
 	## evidenceSupports
 	optional {
@@ -227,12 +223,18 @@ def queryIncreaseAuc(evMode, num):
 
 			 newPDDI = getIncreaseAUCDict()
 			 newPDDI["assertType"] = "increases_auc"
-			 #newPDDI["researchStatement"] = resultset["results"]["bindings"][i]["asrt"]["value"].encode("utf8")
+
+			 newPDDI["asrt"] = resultset["results"]["bindings"][i]["asrt"]["value"].encode("utf8")
+
 			 newPDDI["researchStatementLabel"] = resultset["results"]["bindings"][i]["researchStatementLabel"]["value"].encode("utf8")
-			 newPDDI["objectURI"] = resultset["results"]["bindings"][i]["objectURI"]["value"].encode("utf8")
-			 newPDDI["valueURI"] = resultset["results"]["bindings"][i]["precipURI"]["value"].encode("utf8")
 
 			 newPDDI["homepage"] = resultset["results"]["bindings"][i]["homepage"]["value"].encode("utf8")
+
+                         if resultset["results"]["bindings"][i].has_key("objectURI"):
+                                 newPDDI["objectURI"] = resultset["results"]["bindings"][i]["objectURI"]["value"].encode("utf8")
+
+                         if resultset["results"]["bindings"][i].has_key("valueURI"):
+                                 newPDDI["valueURI"] = resultset["results"]["bindings"][i]["valueURI"]["value"].encode("utf8")
 
 			 if resultset["results"]["bindings"][i].has_key("whoAnnotated"):
 				 newPDDI["whoAnnotated"] = resultset["results"]["bindings"][i]["whoAnnotated"]["value"].encode("utf8")
@@ -299,6 +301,7 @@ def queryAssertion(assertType, evMode, num):
 
 			 newPDDI = getAssertionDict()
 
+			 newPDDI["asrt"] = resultset["results"]["bindings"][i]["asrt"]["value"].encode("utf8")
 			 newPDDI["researchStatementLabel"] = resultset["results"]["bindings"][i]["researchStatementLabel"]["value"].encode("utf8")
 
 			 if assertType in ["substrate_of", "inhibits", "is_not_substrate_of"]:
@@ -308,9 +311,12 @@ def queryAssertion(assertType, evMode, num):
 			 else:
 				 newPDDI["assertType"] = "None"
 			 
-			 newPDDI["valueURI"] = resultset["results"]["bindings"][i]["valueURI"]["value"].encode("utf8")
-			 newPDDI["objectURI"] = resultset["results"]["bindings"][i]["objectURI"]["value"].encode("utf8")
 			 newPDDI["homepage"] = resultset["results"]["bindings"][i]["homepage"]["value"].encode("utf8")
+
+                         if resultset["results"]["bindings"][i].has_key("valueURI"):
+                                 newPDDI["valueURI"] = resultset["results"]["bindings"][i]["valueURI"]["value"].encode("utf8")
+                         if resultset["results"]["bindings"][i].has_key("objectURI"):
+                                 newPDDI["objectURI"] = resultset["results"]["bindings"][i]["objectURI"]["value"].encode("utf8")
 
 			 if resultset["results"]["bindings"][i].has_key("whoAnnotated"):
 				 newPDDI["whoAnnotated"] = resultset["results"]["bindings"][i]["whoAnnotated"]["value"].encode("utf8")
@@ -358,7 +364,7 @@ def queryAssertion(assertType, evMode, num):
 def printIncreaseAuc(increaseAUCDictL, filepath, writeType):
 
 	with open(filepath, writeType) as tsvfile:
-		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatementLabel", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","evidenceVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
+		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["asrt", "researchStatementLabel", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","evidenceVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
 		if writeType is "wb":
 			writer.writeheader()
 
@@ -368,7 +374,7 @@ def printIncreaseAuc(increaseAUCDictL, filepath, writeType):
 
 def printAssertionByType(assertionDictL, filepath, writeType):
 	with open(filepath, writeType) as tsvfile:
-		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatementLabel","assertType", "objectURI","valueURI","label","homepage","source", "dateAnnotated","whoAnnotated", "evidence", "evidenceRole","evidenceSource","evidenceType","evidenceStatement"])
+		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["asrt", "researchStatementLabel","assertType", "objectURI","valueURI","label","homepage","source", "dateAnnotated","whoAnnotated", "evidence", "evidenceRole","evidenceSource","evidenceType","evidenceStatement"])
 		if writeType is "wb":
 			writer.writeheader()
 

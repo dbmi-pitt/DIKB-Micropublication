@@ -42,15 +42,14 @@ from io import StringIO
 import urllib
 import xml.etree.ElementTree as ElementTree
 
-#reload(sys);
-#sys.setdefaultencoding("utf8")
-
-DRUGBANK_CHEBI = "../../data/drugbank-to-chebi-06232015.txt"
-
-
 ################################################################################
 # Globals
 ################################################################################
+
+DRUGBANK_CHEBI = "../../data/drugbank-to-chebi-06232015.txt"
+DRUGNAME_CHEBI = "../../data/chebi_mapping.txt"
+GENENAME_PRO = "../../data/pro_mapping.txt"
+
 PRE_POST_CHARS=50
 mp_list = []
 
@@ -106,6 +105,8 @@ def retrieveByEUtils(pmid, limit=None):
 	return data
 
 
+## read mappings of drugbank id and chebi URI
+## return dictionary
 def getDrugbankIdChEBIMappingD(fileInput):
 	drugbankChEBID = {}
 	with open(fileInput, "r") as inputMapping:
@@ -115,6 +116,28 @@ def getDrugbankIdChEBIMappingD(fileInput):
 			drugbankId = array[2].replace("http://www.drugbank.ca/drugs/","")
 			drugbankChEBID[drugbankId] = array[0]
 	return drugbankChEBID
+
+## read mappings of drugname and chebi URI
+## return dictionary
+def getDrugNameChEBIMappingD(fileInput):
+        drugnameChEBID = {}
+        with open(fileInput, "r") as inputMapping:
+		lines = inputMapping.readlines()
+		for line in lines:
+			array = line.split("\t")
+			drugnameChEBID[array[1].lower().strip()] = array[0].strip()
+	return drugnameChEBID
+
+## read mappings of gene name and PRO URI
+## return dictionary
+def getGeneNameProMappingD(fileInput):
+        genenameProD = {}
+        with open(fileInput, "r") as inputMapping:
+		lines = inputMapping.readlines()
+		for line in lines:
+			array = line.split("\t")
+			drugnameChEBID[array[1].lower().strip()] = array[0].strip()
+	return genenameProD
 
 
 def getSPLSectionsSparql(spl, sparql):
@@ -502,6 +525,24 @@ def initialGraph(graph):
 	graph.add((sio["SIO_000338"], dcterms["description"], Literal("A relation between an information content entity and a product that it (directly/indirectly) specifies")))
 
 
+## parse researchStatementLabel to return precipt-object name
+
+def getDrugnameInLabel(label):
+
+        labelType = ""
+        if "_increases_auc_" in label:
+                labelType = "_increases_auc_"
+                return [label[0:label.find(labelType)], label[label.find(labelType) + len(labelType):]]
+        elif "_substrate_of_" in label:
+                labelType = "_substrate_of_"
+                return [label[label.find(labelType) + len(labelType):],label[0:label.find(labelType)]]
+        elif "_inhibits_" in label:
+                labelType = "_inhibits_"
+                return [label[0:label.find(labelType)], label[label.find(labelType) + len(labelType):]]
+        else:
+                print "[WARN] researchStatementLabel is not increase_auc or substrate_of or inhibits"
+                return None
+                
 
 ## create MP graph
 
@@ -511,20 +552,49 @@ def createGraph(graph, dataset):
 
 	for item in dataset:   
 
-		if "www4.wiwiss" in item["objectURI"]:
-			objectDBId = item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
-			if drugbankIdChEBID.has_key(objectDBId):
-				item["objectURI"] = drugbankIdChEBID[objectDBId]
-			else:
-				continue
+                drugnameL = getDrugnameInLabel(item["researchStatementLabel"])
 
-		if "www4.wiwiss" in item["valueURI"]:
-			valueDBId = item["valueURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
+                ## object URI is available in dikb v1.2
+                if item["objectURI"]:
 
-			if drugbankIdChEBID.has_key(valueDBId):
-				item["valueURI"] = drugbankIdChEBID[valueDBId]
-			else:
-				continue
+                        ## URI in dikb v1.2 is drugbank URI
+                        if "www4.wiwiss" in item["objectURI"]:
+                                objectDBId = item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
+                                if drugbankIdChEBID.has_key(objectDBId):
+                                        item["objectURI"] = drugbankIdChEBID[objectDBId]
+                                else:
+                                        print "[WARN] ChEBI for drugbank URI (%s) no found!" % (objectDBId)
+
+                ## find ChEBI in mappings of drugname and ChEBI or PRO in mappings of gene name and Pro        
+                else:
+        
+                        objectStr = drugnameL[1].lower()
+                        if drugnameChEBID.has_key(objectStr):
+                                item["objectURI"] = drugnameChEBID[objectStr]
+                        elif genenamePROD.has_key(objectStr):
+                                item["objectURI"] = genenamePROD[objectStr]
+                        else:
+                                print "[WARN] asrt (%s) ChEBI for drug (%s) no found!" % (item["asrt"], objectStr)
+
+                ## precipt URI is available in dikb v1.2
+                if item["valueURI"]:
+
+                        if "www4.wiwiss" in item["valueURI"]:
+                                valueDBId = item["valueURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
+
+                                if drugbankIdChEBID.has_key(valueDBId):
+                                        item["valueURI"] = drugbankIdChEBID[valueDBId]
+                                else:
+                                        print "[WARN] ChEBI for drugbank URI (%s) no found!" % (valueDBId)
+
+                else:                        
+                        preciptStr = drugnameL[0].lower()
+                        if drugnameChEBID.has_key(preciptStr):
+                                item["valueURI"] = drugnameChEBID[preciptStr]
+                        elif genenamePROD.has_key(preciptStr):
+                                item["valueURI"] = genenamePROD[preciptStr]
+                        else:
+                                print "[WARN] asrt (%s) ChEBI for drug/gene (%s) no found!" % (item["asrt"], preciptStr)
 
 		referenceId = ""
 
@@ -665,7 +735,7 @@ def printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV):
 	## write in tsv file
 	#try:
 	with codecs.open(OUT_CSV, 'wb', 'utf8') as tsvfile:
-		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["researchStatementLabel", "claim", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
+		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["asrt", "researchStatementLabel", "claim", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
 		writer.writeheader()
 		writer.writerows(mp_list)
 
@@ -717,6 +787,8 @@ if __name__ == "__main__":
 		sys.exit(1)
 
 	drugbankIdChEBID = getDrugbankIdChEBIMappingD(DRUGBANK_CHEBI)
+	drugnameChEBID = getDrugNameChEBIMappingD(DRUGNAME_CHEBI)
+        genenamePROD = getGeneNameProMappingD(GENENAME_PRO)
 
 	graph = Graph()
 	initialGraph(graph)
