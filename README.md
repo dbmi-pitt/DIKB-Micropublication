@@ -25,3 +25,17 @@ ACKNOWLEDGEMENTS
 This project is supported by a grant from the National Library of
 Medicine: "Addressing gaps in clinically useful evidence on drug-drug
 interactions" (1R01LM011838-01)
+
+=====================
+MP/NP EXAMPLES
+
+There are few sample MP claims about DDI (increases AUC) listed below. 
+
+diltiazem_increases_auc_triazolam
+http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-claim-1
+
+itraconazole_increases_auc_3alpha-hydroxypravastatin
+http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-claim-10
+
+diltiazem_increases_auc_beta-hydroxy-lovastatin
+http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-claim-15
