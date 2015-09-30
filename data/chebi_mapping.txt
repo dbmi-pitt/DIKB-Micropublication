@@ -1946,3 +1946,8 @@ http://purl.obolibrary.org/obo/CHEBI_63619	Propafenone
 http://purl.obolibrary.org/obo/CHEBI_82978	Paliperidone
 http://purl.obolibrary.org/obo/CHEBI_9448	Terbinafine
 http://purl.obolibrary.org/obo/CHEBI_63618	Pravastatin
+http://purl.obolibrary.org/obo/CHEBI_87681	Ranolazine
+http://purl.obolibrary.org/obo/CHEBI_29688	Telithromycin
+http://purl.obolibrary.org/obo/CHEBI_9571	Thiothixene
+http://purl.obolibrary.org/obo/CHEBI_31859	Modafinil
+http://purl.obolibrary.org/obo/CHEBI_45409	Ritonavir
