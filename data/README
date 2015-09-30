@@ -25,3 +25,30 @@ Query:
     rdfs:label ?label.
     OPTIONAL { ?drug owl:sameAs ?drugURI}
 } 
+
+Manually add missing mappings of drugbank and ChEBI:
+
+DB00243 - Ranolazine (recently added by ChEBI at our request)
+DB00976 - Telithromycin
+DB01623 - Thiothixene
+DB00745 - Modafinil
+DB00503 - Ritonavir
+
+
+(4) mapping file "chebi_mapping.txt" comes from query ChEBI Java based API "https://www.ebi.ac.uk/chebi/webServices.do"
+
+Manually add missing URIs below:
+  
+valproate	 https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:60654
+r-citalopram	 https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:36792
+desvenlafaxine(under O-desmethylvenlafaxine)	https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:83527
+iloperidone	     https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:65173
+
+(5) For motabolites, we will have to figure out a workaround for entities belows:
+hydroxybupropion
+desacetyldiltiazem
+n-desalkylquetiapine
+r-demethylcitalopram
+s-demethylcitalopram
+dehydro-aripiprazole
+beta-hydroxy-simvastatin
