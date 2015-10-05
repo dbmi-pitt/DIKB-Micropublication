@@ -596,6 +596,11 @@ def createGraph(graph, dataset):
                         else:
                                 print "[WARN] asrt (%s) ChEBI for drug/gene (%s) no found!" % (item["asrt"], preciptStr)
 
+                ## if object or precipt URI no found, skip this row
+                if not item["objectURI"] or not item["valueURI"]:
+                        print "[ERROR] URI no found for precipt: %s | object: %s" % (drugnameL[0], drugnameL[1]) 
+                        continue
+
 		referenceId = ""
 
 		if item["evidenceSource"]:
