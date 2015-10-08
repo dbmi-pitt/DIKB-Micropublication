@@ -1951,7 +1951,8 @@ http://purl.obolibrary.org/obo/CHEBI_29688	Telithromycin
 http://purl.obolibrary.org/obo/CHEBI_9571	Thiothixene
 http://purl.obolibrary.org/obo/CHEBI_31859	Modafinil
 http://purl.obolibrary.org/obo/CHEBI_45409	Ritonavir
-http://purl.obolibrary.org/obo/CHEBI:60654	valproate
-http://purl.obolibrary.org/obo/CHEBI:36792	r-citalopram 
-http://purl.obolibrary.org/obo/CHEBI:83527	desvenlafaxine 
-http://purl.obolibrary.org/obo/CHEBI:65173	iloperidone 
+http://purl.obolibrary.org/obo/CHEBI_60654	Valproate
+http://purl.obolibrary.org/obo/CHEBI_36792	R-citalopram 
+http://purl.obolibrary.org/obo/CHEBI_83527	Desvenlafaxine 
+http://purl.obolibrary.org/obo/CHEBI_65173	Iloperidone
+
