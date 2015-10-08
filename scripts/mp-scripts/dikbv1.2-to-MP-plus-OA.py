@@ -554,6 +554,10 @@ def createGraph(graph, dataset):
 
                 drugnameL = getDrugnameInLabel(item["researchStatementLabel"])
 
+                ## skip motabolites
+                if "metabolite" in str(item["objectURI"] + item["valueURI"]).lower():
+                        continue
+
                 ## object URI is available in dikb v1.2
                 if item["objectURI"]:
 
