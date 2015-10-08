@@ -380,8 +380,8 @@ def addNonTraceable(graph, item, currentAnnotationClaim):
 	currentAnnotationStatement = "ddi-spl-annotation-statement-%s" % annotationStatementCntr
 	annotationStatementCntr += 1
 
-	graph.add((poc[currentAnnotationStatement], RDF.type, dikbEvidence["Non_traceable_Drug_Label_Statement"]))
-	graph.add((dikbEvidence["Non_traceable_Drug_Label_Statement"], RDFS.subClassOf, mp["Statement"]))
+	graph.add((poc[currentAnnotationStatement], RDF.type, dikbEvidence["Non_traceable_Statement"]))
+	graph.add((dikbEvidence["Non_traceable_Statement"], RDFS.subClassOf, mp["Statement"]))
 
 	# Relationships
 	graph.add((poc[oaItem], oa["hasBody"], poc[currentAnnotationStatement]))
@@ -701,7 +701,7 @@ def createGraph(graph, dataset):
 
 		if item["evidence"]:
 
-			if item["evidenceType"] != u'http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement':
+			if item["evidenceType"] != u'http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_traceable_Drug_Label_Statement' and item["evidenceType"] != u'http://dbmi-icode-01.dbmi.pitt.edu/dikb-evidence/DIKB_evidence_ontology_v1.3.owl#Non_Tracable_Statement':
 				addAssertion(graph, item, currentAnnotationClaim)
 
 		## The bodies of non_traceable statement is different
