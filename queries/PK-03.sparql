@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-21 
+# DIKB MP/NP version: 2015-10-09
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -19,13 +19,13 @@ PREFIX siocns: <http://rdfs.org/sioc/ns#>
 PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 
-# For a given pharmacokinetic property, ie ketoconazole_increases_auc_triazolam (claim-30)
+# For a given pharmacokinetic property, ie fluoxetine_increases_auc_despiramine (claim-34)
 # What is the average of the pharmacokinetic value?
 
 SELECT avg(xsd:decimal(?v)) as ?average_value
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-    {?e mp:supports poc:ddi-spl-annotation-claim-30} UNION {?e mp:challenges poc:ddi-spl-annotation-claim-30} .
+    {?e mp:supports poc:ddi-spl-annotation-claim-34} UNION {?e mp:challenges poc:ddi-spl-annotation-claim-34} .
     ?e dikbD2R:increases_auc ?v.
 }
