@@ -1957,3 +1957,4 @@ http://purl.obolibrary.org/obo/CHEBI_83527	Desvenlafaxine
 http://purl.obolibrary.org/obo/CHEBI_65173	Iloperidone
 http://purl.obolibrary.org/obo/CHEBI_87737	R-warfarin
 http://purl.obolibrary.org/obo/CHEBI_87738	S-warfarin
+http://purl.obolibrary.org/obo/CHEBI_87715	prasugrel

@@ -283,7 +283,7 @@ WHERE {
 	results = sparql.query().convert()
 
 	if len(results["results"]["bindings"]) == 0:
-		print "[WARN] No results from query - getDailymedSPLMetaDataByUrl - %s" % (url)
+		#print "[WARN] No results from query - getDailymedSPLMetaDataByUrl - %s" % (url)
 		return {}
 	
 	metaD = {
@@ -430,7 +430,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
 		graph.add((poc[currentAnnotationMaterial], RDFS.label, Literal("%s (object) - %s (precipitant)" % (item["object"], item["precip"]))))
 
 		graph.add((poc[currentAnnotationMaterial], dikbD2R['ObjectDrugOfInteraction'], URIRef(item["objectURI"])))
-		graph.add((poc[currentAnnotationMaterial], dikbD2R['PrecipitantDrugOfInteraction'], URIRef(item["valueURI"])))
+		graph.add((poc[currentAnnotationMaterial], dikbD2R['PrecipitantDrugOfInteraction'], URIRef(item["preciptURI"])))
 		graph.add((poc[currentAnnotationMaterial], dikbD2R['objectDose'], Literal(item["objectDose"])))
 		graph.add((poc[currentAnnotationMaterial], dikbD2R['precipitantDose'], Literal(item["precipDose"])))
 		graph.add((poc[currentAnnotationMaterial], dikbD2R['numOfSubjects'], Literal(item["numOfSubjects"])))
@@ -535,7 +535,8 @@ def getDrugnameInLabel(label):
                 return [label[0:label.find(labelType)], label[label.find(labelType) + len(labelType):]]
         elif "_substrate_of_" in label:
                 labelType = "_substrate_of_"
-                return [label[label.find(labelType) + len(labelType):],label[0:label.find(labelType)]]
+                return [label[0:label.find(labelType)], label[label.find(labelType) + len(labelType):]]
+                #return [label[label.find(labelType) + len(labelType):],label[0:label.find(labelType)]]
         elif "_inhibits_" in label:
                 labelType = "_inhibits_"
                 return [label[0:label.find(labelType)], label[label.find(labelType) + len(labelType):]]
@@ -552,53 +553,81 @@ def createGraph(graph, dataset):
 
 	for item in dataset:   
 
-                drugnameL = getDrugnameInLabel(item["researchStatementLabel"])
+
+                drugnameL = getDrugnameInLabel(item["researchStatementLabel"].strip())
+
+                ## add new field precipt URI
+                item["preciptURI"] = ""
 
                 ## skip motabolites
                 if "metabolite" in str(item["objectURI"] + item["valueURI"]).lower():
                         continue
 
-                ## object URI is available in dikb v1.2
+                ## handle wrong URI pair from dikb v1.2
+                #if item["objectURI"] == item["valueURI"]:
+                #        item["objectURI"] = ""
+                #        item["valueURI"] = ""
+
+
+                ## objectURI from old DIKB is preciptURI in DDI, valueURI is objectURI
+                ## label format: precipt - assertionType - object
+
+                ## precipt URI is available in dikb v1.2
                 if item["objectURI"]:
 
                         ## URI in dikb v1.2 is drugbank URI
                         if "www4.wiwiss" in item["objectURI"]:
-                                objectDBId = item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
-                                if drugbankIdChEBID.has_key(objectDBId):
-                                        item["objectURI"] = drugbankIdChEBID[objectDBId]
+                                preciptDBId = item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
+                                if drugbankIdChEBID.has_key(preciptDBId):
+                                        print "[DEBUG] find URI %s for precipt %s" % (drugbankIdChEBID[preciptDBId],preciptDBId)
+                                        item["preciptURI"] = drugbankIdChEBID[preciptDBId]
                                 else:
-                                        print "[WARN] ChEBI for drugbank URI (%s) no found!" % (objectDBId)
+                                        print "[WARN] ChEBI for drugbank URI (%s) no found!" % (preciptDBId)
+                        else:
+                                item["objectURI"] = item["valueURI"]
 
                 ## find ChEBI in mappings of drugname and ChEBI or PRO in mappings of gene name and Pro        
                 else:
         
-                        objectStr = drugnameL[1].lower()
-                        if drugnameChEBID.has_key(objectStr):
-                                item["objectURI"] = drugnameChEBID[objectStr]
-                        elif genenamePROD.has_key(objectStr):
-                                item["objectURI"] = genenamePROD[objectStr]
+                        preciptStr = drugnameL[0].lower()
+                        if drugnameChEBID.has_key(preciptStr):
+                                print "[DEBUG] find URI %s for %s" % (drugnameChEBID[preciptStr],preciptStr)
+                                item["preciptURI"] = drugnameChEBID[preciptStr]
+                        elif genenamePROD.has_key(preciptStr):
+                                print "[DEBUG] find URI %s for %s" % (genenamePROD[preciptStr],preciptStr)
+                                item["preciptURI"] = genenamePROD[preciptStr]
                         else:
-                                print "[WARN] asrt (%s) ChEBI for drug (%s) no found!" % (item["asrt"], objectStr)
+                                print "[WARN] asrt (%s) ChEBI for drug (%s) no found!" % (item["asrt"], preciptStr)
 
-                ## precipt URI is available in dikb v1.2
+                ## object URI is available in dikb v1.2
                 if item["valueURI"]:
 
                         if "www4.wiwiss" in item["valueURI"]:
-                                valueDBId = item["valueURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
+                                objectDBId = item["valueURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
 
-                                if drugbankIdChEBID.has_key(valueDBId):
-                                        item["valueURI"] = drugbankIdChEBID[valueDBId]
+                                if drugbankIdChEBID.has_key(objectDBId):
+                                        print "[DEBUG] find URI %s for object %s" % (drugbankIdChEBID[objectDBId],objectDBId)
+                                        item["objectURI"] = drugbankIdChEBID[objectDBId]
                                 else:
-                                        print "[WARN] ChEBI for drugbank URI (%s) no found!" % (valueDBId)
+                                        print "[WARN] ChEBI for drugbank URI (%s) no found!" % (objectDBId)
+                        else:
+                                item["objectURI"] = item["valueURI"]
 
                 else:                        
-                        preciptStr = drugnameL[0].lower()
-                        if drugnameChEBID.has_key(preciptStr):
-                                item["valueURI"] = drugnameChEBID[preciptStr]
-                        elif genenamePROD.has_key(preciptStr):
-                                item["valueURI"] = genenamePROD[preciptStr]
+                        objectStr = drugnameL[1].lower()
+                        if drugnameChEBID.has_key(objectStr):
+                                print "[DEBUG] find URI %s for %s" % (drugnameChEBID[objectStr],objectStr)
+                                item["objectURI"] = drugnameChEBID[objectStr]
+                        elif genenamePROD.has_key(objectStr):
+                                print "[DEBUG] find URI %s for %s" % (genenamePROD[objectStr],objectStr)
+                                item["objectURI"] = genenamePROD[objectStr]
                         else:
-                                print "[WARN] asrt (%s) ChEBI for drug/gene (%s) no found!" % (item["asrt"], preciptStr)
+                                print "[WARN] asrt (%s) ChEBI for drug/gene (%s) no found!" % (item["asrt"], objectStr)
+
+                ## find wrong URI entities
+                if item["preciptURI"] == item["objectURI"]:
+                        print "[ERROR] asrt (%s), URI wrong for d1 - d2 (%s - %s) (%s - %s)!" % (item["asrt"], drugnameL[0], drugnameL[1], item["preciptURI"], item["objectURI"])
+                        continue
 
 		referenceId = ""
 
@@ -681,11 +710,11 @@ def createGraph(graph, dataset):
 					graph.add((URIRef(item["evidenceSource"]), RDF.type, mp["Reference"]))
 					graph.add((URIRef(item["evidenceSource"]), mp["qualifiedBy"], Literal(referenceStr)))
 
+			graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["preciptURI"])))
+			graph.add((URIRef(item["preciptURI"]), RDF.type, mp["SemanticQualifier"]))
+
 			graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["objectURI"])))
 			graph.add((URIRef(item["objectURI"]), RDF.type, mp["SemanticQualifier"]))
-
-			graph.add((poc[currentAnnotationClaim], mp["qualifiedBy"], URIRef(item["valueURI"])))
-			graph.add((URIRef(item["valueURI"]), RDF.type, mp["SemanticQualifier"]))
 
 			## assert type : using dideo URI for inhibits, substrate_of, increase_auc
 			if dideoD.has_key(item["assertType"].strip()):
@@ -714,9 +743,9 @@ def createGraph(graph, dataset):
 				addNonTraceable(graph, item, currentAnnotationClaim)
 
 		item["claim"] = currentAnnotationClaim
-
+                item.pop("valueURI", None)
+                
 		mp_list.append(item)
-
 
 	############################# QUYERY VALIDATION ###############################
 
@@ -738,8 +767,9 @@ def printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV):
 
 	## write in tsv file
 	#try:
+
 	with codecs.open(OUT_CSV, 'wb', 'utf8') as tsvfile:
-		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["asrt", "researchStatementLabel", "claim", "assertType", "objectURI","valueURI","label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
+		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["asrt", "researchStatementLabel", "claim", "assertType", "objectURI","preciptURI", "label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
 		writer.writeheader()
 		writer.writerows(mp_list)
 
@@ -793,6 +823,8 @@ if __name__ == "__main__":
 	drugbankIdChEBID = getDrugbankIdChEBIMappingD(DRUGBANK_CHEBI)
 	drugnameChEBID = getDrugNameChEBIMappingD(DRUGNAME_CHEBI)
         genenamePROD = getGeneNameProMappingD(GENENAME_PRO)
+
+        print genenamePROD
 
 	graph = Graph()
 	initialGraph(graph)
