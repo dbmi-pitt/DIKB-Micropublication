@@ -4,29 +4,29 @@
 @prefix ns3:	<http://purl.org/mp/> .
 @prefix ns4:	<http://purl.obolibrary.org/obo/> .
 
-ns1:ddi-spl-annotation-np-assertion-19	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-409	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-21	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-15	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-27	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-16	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-29	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-20	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-52	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-30	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-55	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-49	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-77	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-51	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-82	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-58	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-328	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-60	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-341	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-85	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-342	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-88	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-345	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-118	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-354	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-122	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .

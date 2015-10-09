@@ -4,31 +4,31 @@
 @prefix ns3:	<http://purl.org/mp/> .
 @prefix ns4:	<http://purl.obolibrary.org/obo/> .
 
-ns1:ddi-spl-annotation-np-assertion-102	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-298	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-115	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-308	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-123	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-145	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-129	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-161	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-153	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-170	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-154	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-175	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-163	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-205	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-194	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-206	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-203	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-216	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-208	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-248	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-222	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-256	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-240	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-262	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-250	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-276	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-277	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-340	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .

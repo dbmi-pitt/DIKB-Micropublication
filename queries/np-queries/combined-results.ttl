@@ -4,76 +4,96 @@
 @prefix ns3:	<http://purl.org/mp/> .
 @prefix ns4:	<http://purl.obolibrary.org/obo/> .
 
-ns1:ddi-spl-annotation-np-assertion-102	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-298	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-115	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-308	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-123	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-145	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-129	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-161	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-153	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-170	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-154	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-175	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-163	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-205	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-194	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-206	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-203	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-216	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-208	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-248	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-222	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-256	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-240	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-262	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-250	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-276	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-ns1:ddi-spl-annotation-np-assertion-277	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-340	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:RO_0002449 .
-	
+
+ns1:ddi-spl-annotation-np-assertion-400	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-359	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-355	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-357	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-356	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-380	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-381	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-389	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-364	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-365	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-366	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-360	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-361	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-362	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-363	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-368	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-369	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-377	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-376	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-375	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-374	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-373	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-372	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-371	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-370	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-379	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-378	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-35	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-294	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-295	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-296	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-297	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-290	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-291	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-292	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-293	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-298	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-299	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-279	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-306	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-307	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-304	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-305	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-303	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-300	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-301	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-308	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-309	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-235	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
@@ -84,10 +104,6 @@ ns1:ddi-spl-annotation-np-assertion-113	rdf:type	ns2:assertion ;
 ns1:ddi-spl-annotation-np-assertion-112	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-46	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-344	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-333	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-201	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
@@ -125,72 +141,54 @@ ns1:ddi-spl-annotation-np-assertion-224	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-268	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-285	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-286	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-287	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-288	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-289	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-310	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-311	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-312	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-313	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-314	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-315	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-316	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-317	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-318	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-319	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-320	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-321	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-322	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-323	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-324	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-334	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-ns1:ddi-spl-annotation-np-assertion-325	rdf:type	ns2:assertion ;
+ns1:ddi-spl-annotation-np-assertion-335	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000000 .
-	
-ns1:ddi-spl-annotation-np-assertion-19	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-21	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-27	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-29	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-52	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-55	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-77	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-82	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-328	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-341	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-342	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
-ns1:ddi-spl-annotation-np-assertion-345	rdf:type	ns2:assertion ;
-	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-346	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-348	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-349	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-350	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-351	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-352	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+ns1:ddi-spl-annotation-np-assertion-353	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
 ns1:ddi-spl-annotation-np-assertion-354	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000000 .
+
+ns1:ddi-spl-annotation-np-assertion-409	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-15	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-16	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-20	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-30	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-49	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-51	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-58	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-60	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-85	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-88	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-118	rdf:type	ns2:assertion ;
+	ns3:qualifiedBy	ns4:DIDEO_00000096 .
+ns1:ddi-spl-annotation-np-assertion-122	rdf:type	ns2:assertion ;
 	ns3:qualifiedBy	ns4:DIDEO_00000096 .

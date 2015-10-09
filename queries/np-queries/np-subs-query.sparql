@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-10
+# DIKB MP/NP version: 2015-10-09
 
 # CONTEXT
 #### Get all the np:assertions of substrate_of that meet the belief criteria, which are EV_CT_PK_Genotype, EV_CT_PK_Phenotype, 
