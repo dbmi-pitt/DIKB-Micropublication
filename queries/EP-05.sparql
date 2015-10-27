@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-08-13
+# DIKB MP/NP version: 2015-10-09
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -20,7 +20,7 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
 # What other claims are challenged by this evidence item?
-## using <http://www.ncbi.nlm.nih.gov/pubmed/10771452> as "this evidence item" and claim-192 as "other than this claim"
+## using <http://www.ncbi.nlm.nih.gov/pubmed/10771452> as "this evidence item" and claim-96 as "other than this claim"
 
 SELECT DISTINCT ?claim ?cLabel
 FROM <inferred-graph-oa-mp.xml>
@@ -38,5 +38,5 @@ WHERE
       
       ?claim rdfs:label ?cLabel.
       
-      FILTER (!regex( ?claim, poc:ddi-spl-annotation-claim-192 ))
+      FILTER (!regex( ?claim, poc:ddi-spl-annotation-claim-96 ))
 }

@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-21
+# DIKB MP/NP version: 2015-10-09
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -20,15 +20,15 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
 # List all the in vivo evidence(supporting or challenging) for claim X? 
-## In this case, claim-90 is used as claim X
+## In this case, claim-11 is used as claim X
 
 SELECT DISTINCT xsd:string(?source) as ?evidence_source ?modality
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      {?evidence mp:supports poc:ddi-spl-annotation-claim-90} UNION {?evidence mp:challenges poc:ddi-spl-annotation-claim-90} .
+      {?evidence mp:supports poc:ddi-spl-annotation-claim-11} UNION {?evidence mp:challenges poc:ddi-spl-annotation-claim-11} .
 
-      ?evidence ?modality poc:ddi-spl-annotation-claim-90.
+      ?evidence ?modality poc:ddi-spl-annotation-claim-11.
       
       ?method mp:supports ?evidence;
               rdf:type ?type.

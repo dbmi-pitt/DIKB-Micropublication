@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-21
+# DIKB MP/NP version: 2015-10-09
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>

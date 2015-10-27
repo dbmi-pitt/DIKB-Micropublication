@@ -1,5 +1,5 @@
 # SPARQL version: 1.1
-# DIKB MP/NP version: 2015-07-21
+# DIKB MP/NP version: 2015-10-09
 
 PREFIX aoOld: <http://purl.org/ao/core/> # needed for AnnotationSet and item until the equivalent is in Open Data Annotation
 PREFIX cnt: <http://www.w3.org/2011/content#>
@@ -20,15 +20,15 @@ PREFIX swande: <http://purl.org/swan/1.2/discourse-elements#>
 
 
 # List all the evidence (supporting or challenging) for claim X from a specific evidence type?
-## The example claim here is claim-103, and the source is drug-label statements
+## The example claim here is claim-330, and the source is drug-label statements
 
 SELECT DISTINCT xsd:string(?source) as ?evidence_source ?modality
 FROM <inferred-graph-oa-mp.xml>
 WHERE 
 {
-      {?evidence mp:supports poc:ddi-spl-annotation-claim-103} UNION {?evidence mp:challenges poc:ddi-spl-annotation-claim-103} .
-      ?evidence rdf:type dikbEvidence:Non_traceable_Drug_Label_Statement.  
-      ?evidence ?modality poc:ddi-spl-annotation-claim-103.
+      {?evidence mp:supports poc:ddi-spl-annotation-claim-330} UNION {?evidence mp:challenges poc:ddi-spl-annotation-claim-330} .
+      ?evidence rdf:type dikbEvidence:Non_traceable_Statement.  
+      ?evidence ?modality poc:ddi-spl-annotation-claim-330.
 
       ?anItem oa:hasBody ?evidence;
 	     oa:hasTarget ?aURN.

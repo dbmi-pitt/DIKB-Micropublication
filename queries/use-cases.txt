@@ -64,7 +64,7 @@ different versions of product labeling for the same drug? **DEFERRED**
 2. Number of evidence items for each claim type **done**
 3. Number of evidence items against each claim type **done**
 4. Show the distribution of the evidence types for types of claims **done**
-5. Show the count of label statements for all types of claims **done**
+5. Show the count of label statements for all types of claims **no longer relevant, merged with 4**
 6. Show the count of drugs included in this version of the DIKB **done**
 7. Show the count of full nanopublications in the system **done**
 8. Show the count of claims by the type of claims
