@@ -79,6 +79,7 @@ siocns = Namespace('http://rdfs.org/sioc/ns#')
 swande = Namespace('http://purl.org/swan/1.2/discourse-elements#')
 dikbD2R = Namespace('http://dbmi-icode-01.dbmi.pitt.edu/dikb/vocab/resource/')
 linkedspls = Namespace('file:///home/rdb20/Downloads/d2rq-0.8.1/linkedSPLs-dump.nt#structuredProductLabelMetadata/')
+
 #poc = Namespace('http://purl.org/net/nlprepository/spl-ddi-annotation-poc#')
 poc = Namespace('http://dbmi-icode-01.dbmi.pitt.edu/mp/')
 
@@ -254,8 +255,6 @@ Lexapro (escitalopram oxalate) tablet, film coated/liquid [package insert]. St. 
 '''
 
 def getDailymedSPLMetaDataByUrl(url, sparql):
-
-	#print "[DEBUG] " + url
 	
 	qry = '''
 
@@ -382,6 +381,7 @@ def addNonTraceable(graph, item, currentAnnotationClaim):
 
 	graph.add((poc[currentAnnotationStatement], RDF.type, dikbEvidence["Non_traceable_Statement"]))
 	graph.add((dikbEvidence["Non_traceable_Statement"], RDFS.subClassOf, mp["Statement"]))
+        item["mp_evidence"] = currentAnnotationStatement
 
 	# Relationships
 	graph.add((poc[oaItem], oa["hasBody"], poc[currentAnnotationStatement]))
@@ -413,6 +413,7 @@ def addAssertion(graph, item, currentAnnotationClaim):
 	graph.add((poc[currentAnnotationData], RDF.type, mp["Data"]))
 	graph.add((poc[currentAnnotationData], RDF.type, URIRef(item["evidenceType"]+"_Data")))
 	graph.add((URIRef(item["evidenceType"]+"_Data"), RDFS.subClassOf, mp["Data"]))
+        item["mp_evidence"] = currentAnnotationData
 
 	# Material
 	global annotationMaterialCntr
@@ -579,7 +580,7 @@ def createGraph(graph, dataset):
                         if "www4.wiwiss" in item["objectURI"]:
                                 preciptDBId = item["objectURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
                                 if drugbankIdChEBID.has_key(preciptDBId):
-                                        print "[DEBUG] find URI %s for precipt %s" % (drugbankIdChEBID[preciptDBId],preciptDBId)
+                                        #print "[DEBUG] find URI %s for precipt %s" % (drugbankIdChEBID[preciptDBId],preciptDBId)
                                         item["preciptURI"] = drugbankIdChEBID[preciptDBId]
                                 else:
                                         print "[WARN] ChEBI for drugbank URI (%s) no found!" % (preciptDBId)
@@ -591,10 +592,10 @@ def createGraph(graph, dataset):
         
                         preciptStr = drugnameL[0].lower()
                         if drugnameChEBID.has_key(preciptStr):
-                                print "[DEBUG] find URI %s for %s" % (drugnameChEBID[preciptStr],preciptStr)
+                                #print "[DEBUG] find URI %s for %s" % (drugnameChEBID[preciptStr],preciptStr)
                                 item["preciptURI"] = drugnameChEBID[preciptStr]
                         elif genenamePROD.has_key(preciptStr):
-                                print "[DEBUG] find URI %s for %s" % (genenamePROD[preciptStr],preciptStr)
+                                #print "[DEBUG] find URI %s for %s" % (genenamePROD[preciptStr],preciptStr)
                                 item["preciptURI"] = genenamePROD[preciptStr]
                         else:
                                 print "[WARN] asrt (%s) ChEBI for drug (%s) no found!" % (item["asrt"], preciptStr)
@@ -606,7 +607,7 @@ def createGraph(graph, dataset):
                                 objectDBId = item["valueURI"].replace("http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/","")
 
                                 if drugbankIdChEBID.has_key(objectDBId):
-                                        print "[DEBUG] find URI %s for object %s" % (drugbankIdChEBID[objectDBId],objectDBId)
+                                        #print "[DEBUG] find URI %s for object %s" % (drugbankIdChEBID[objectDBId],objectDBId)
                                         item["objectURI"] = drugbankIdChEBID[objectDBId]
                                 else:
                                         print "[WARN] ChEBI for drugbank URI (%s) no found!" % (objectDBId)
@@ -616,10 +617,10 @@ def createGraph(graph, dataset):
                 else:                        
                         objectStr = drugnameL[1].lower()
                         if drugnameChEBID.has_key(objectStr):
-                                print "[DEBUG] find URI %s for %s" % (drugnameChEBID[objectStr],objectStr)
+                                #print "[DEBUG] find URI %s for %s" % (drugnameChEBID[objectStr],objectStr)
                                 item["objectURI"] = drugnameChEBID[objectStr]
                         elif genenamePROD.has_key(objectStr):
-                                print "[DEBUG] find URI %s for %s" % (genenamePROD[objectStr],objectStr)
+                                #print "[DEBUG] find URI %s for %s" % (genenamePROD[objectStr],objectStr)
                                 item["objectURI"] = genenamePROD[objectStr]
                         else:
                                 print "[WARN] asrt (%s) ChEBI for drug/gene (%s) no found!" % (item["asrt"], objectStr)
@@ -694,8 +695,6 @@ def createGraph(graph, dataset):
 						referenceStr = getPubmedMetaDataByPubmedId(referenceId)
 					elif "dailymed" in item["evidenceSource"]:
 						referenceStr = getDailymedSPLMetaDataByUrl("http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=" + referenceId, lsplsparql)
-				
-				#print referenceStr
 
 				if referenceStr:
 					
@@ -769,7 +768,9 @@ def printGraphToCSVRDF(mp_list, OUT_GRAPH, OUT_CSV):
 	#try:
 
 	with codecs.open(OUT_CSV, 'wb', 'utf8') as tsvfile:
-		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["asrt", "researchStatementLabel", "claim", "assertType", "objectURI","preciptURI", "label","homepage","source","dateAnnotated","whoAnnotated", "evidence", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
+
+                #add asrt, mp_evidence to provides mappings of evidence item for translation (Merged-PDDI)
+		writer = csv.DictWriter(tsvfile, delimiter='\t', fieldnames=["asrt", "claim", "evidence", "mp_evidence", "researchStatementLabel", "assertType", "objectURI","preciptURI", "label","homepage","source","dateAnnotated","whoAnnotated", "evidenceVal", "evidenceRole","object","precip","numericVal","contVal","evidenceSource","evidenceType","evidenceStatement","objectDose", "precipDose", "numOfSubjects"])
 		writer.writeheader()
 		writer.writerows(mp_list)
 
