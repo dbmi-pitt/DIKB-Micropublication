@@ -1,0 +1,1 @@
+This folder holding sql script that create relational DB, postgres, schema, for MP representation. May need script that translate data from dikbv1.2 in csv format to the format that supports RDB loading.
