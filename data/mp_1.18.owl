@@ -10,20 +10,21 @@
 
 <http://purl.org/mp/> rdf:type owl:Ontology ;
                       
-                      owl:versionInfo "1.16" ;
+                      owl:versionInfo "1.18" ;
                       
-                      owl:priorVersion "1.15" ;
+                      owl:priorVersion "1.17" ;
                       
                       rdfs:comment """Micropublications: a Semantic Model for Claims, Evidence, Arguments and Annotations in Biomedical Communications.
 
 Author:         	Tim Clark (1,2,3)
-Contributors:   	Paolo Ciccarese (1,2), Carole Goble (3)
+Contributors:   	Paolo Ciccarese (1,2), Carole Goble (3), Jodi Schneider (4), Samuel Rosko (4), Richard D. Boyce (4)
 
-Version 1.16, September 12, 2013.
+Version 1.18, August 10, 2015.
 
 (1) Massachusetts General Hospital, Dept. of Neurology
 (2) Harvard Medical School
 (3) University of Manchester, School of Computer Science 
+(4) University of Pittsburgh, Department of Biomedical Informatics
 
 """ .
 
