@@ -29,7 +29,7 @@ interactions" (1R01LM011838-01)
 =====================
 MP/NP EXAMPLES
 
-There are few sample MP claims about DDI (increases AUC) listed below. 
+There are few sample MP claims about DDI (increases AUC) listed below. You can check these out by entering DESCRIBE queries at https://dbmi-icode-01.dbmi.pitt.edu/sparql. We are working on setting up a secure faceted browser for a larger and more detailed dataset version.  
 
 http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-claim-1
 
