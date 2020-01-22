@@ -26,13 +26,29 @@ This project is supported by a grant from the National Library of
 Medicine: "Addressing gaps in clinically useful evidence on drug-drug
 interactions" (1R01LM011838-01)
 
+PUBLICATIONS
 =====================
-MP/NP EXAMPLES
+Schneider, J., Brochhausen, M., Rosko, S., Ciccarese, S., Hogan, WR., Malone, D., Ning, Y., Clark, T., and Boyce, RD. Formalizing knowledge and evidence about potential drug-drug interactions. The International Workshop on Biomedical Data Mining, Modeling, and Semantic Integration: A Promising Approach to Solving Unmet Medical Needs (BDM2I 2015) at the 14th International Semantic Web Conference (ISWC). October 11th 2015. Bethlehem, PA. http://ceur-ws.org/Vol-1428/BDM2I_2015_paper_10.pdf.
 
-There are few sample MP claims about DDI (increases AUC) listed below. You can check these out by entering DESCRIBE queries at https://dbmi-icode-01.dbmi.pitt.edu/sparql. We are working on setting up a secure faceted browser for a larger and more detailed dataset version.  
+Schneider, J., Collins, C., Hines, L., Horn, JR, Boyce, R. “Modeling Arguments in Scientific Papers.” at the 12th Annual ArgDiaP Conference: From Real Data to Argument Mining. Warsaw, Poland, May 23-24 2014. http://jodischneider.com/pubs/argdiap2014.pdf
 
-http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-claim-1
+Schneider, J., Ciccarese, P., Clark, T., Boyce, RD. Using the Micropublications ontology and the Open Annotation Data Model to represent evidence within a drug-drug interaction knowledge base. The 4th Workshop on Linked Science 2014— Making Sense Out of Data (LISC2014). Collocated with the 13th International Semantic Web Conference (ISWC2014). October 19th and 20th, Riva del Garda, Trentino, Italy. http://ceur-ws.org/Vol-1282/.
 
-http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-claim-10
+=====================
+MP/NP EXAMPLES (https://dbmi-icode-01.dbmi.pitt.edu/sparql)
 
-http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-claim-15
+A NP:
+```
+select *
+from <ddi:ddi-spl-annotation-np-head-389>
+where {
+ ?s ?p ?o.
+}
+```
+
+```
+DESCRIBE <http://dbmi-icode-01.dbmi.pitt.edu/mp/ddi-spl-annotation-claim-1>
+```
+Or, view the queries in the [example queries](DIKB-Micropublication/queries/)
+
+
